@@ -160,7 +160,9 @@ body {
     box-shadow: none;
 
 }
-
+.pagination li{
+    margin: 0 3px;
+}
 .main-slider .splide__pagination{
     bottom: -20px !important;
 }
@@ -2101,7 +2103,7 @@ margin: 5px;
     }
 
     .product-cards_wrapper{
-        border-radius: 20px 0px 0px 0px;
+        border-radius: 20px 20px 0px 0px;
 background: #F8F8FB;
 padding: 20px 10px;
     }
@@ -2298,8 +2300,27 @@ padding: 20px 10px;
 
 
 
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff; /* Change this to your desired background color */
+    z-index: 99999; /* Set a z-index to ensure the header is above other content */
+}
 
 
+.spacer {
+    /* Add space at the top equal to the height of the fixed header */
+    height: 56px; /* Adjust this height as needed */
+  }
+
+  @media(min-width:992px){
+    .spacer {
+        /* Add space at the top equal to the height of the fixed header */
+        height: 82px; /* Adjust this height as needed */
+      }
+    
+  }
 
 /* navbar */
 .main-mega-nav{

@@ -16,10 +16,12 @@
 
 
 
+
 .sm-blue {
   background: #fff !important;
   border-radius: 8px;
   /* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); */
+
 }
 .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active {
   padding: 10px 20px;
@@ -347,3 +349,11 @@
 }
 
 /*# sourceMappingURL=sm-blue.css.map */
+
+@media(max-width:768px){
+    .sm-blue {
+        background: #fff;
+        border-radius: 8px;
+        width: 100%;
+    }
+}
