@@ -2141,3 +2141,110 @@ padding: 20px 10px;
     .product-swatches-box input[type="radio"]{
         display: none;
     }
+
+
+
+
+    /* login page */
+    .dms_login_page{
+        background: #171717;
+        height: 100%;
+        min-height: 100vh;
+    }.dms_login_page hr{
+        background-color: #242525;
+        height: 1.5px;
+    }
+
+  
+    .dms_login_page_title{
+        color: #FFF;
+        text-align: center;
+        font-family: Inter;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .dms_login_page_text{
+        color: #6B6B6B;
+        text-align: center;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 135.023%; /* 20.253px */
+    }
+    
+    .dms_login_page_input-group{
+        border-radius: 5px;
+        background: #242525;
+        height: 42px;
+    }
+    .dms_login_page_input-item-text{
+        color: #606060;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 136.5%; /* 21.84px */
+    }
+    .dms_login_page_input-item{
+        max-width: 355px;
+    width: 100%;            
+    flex-shrink: 0;
+    margin: auto;
+    }
+    
+    .dms_login_page_button,.dms_login_page_button:hover{
+        border-radius: 4.264px;
+    background: #F78D1E;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    }
+    .otp-inputs{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .otp-inputs input{
+        border-radius: 5px;
+        border: 1px solid #404040;
+        background: #242525;
+        box-shadow: 0px 0px 17px 0px #232323;
+        width: 58px;
+        height: 58px;
+        flex-shrink: 0;
+        text-align: center;
+        color: #FFF !important;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 16px */
+        }
+        .otp-not-received-text{
+            color: #888;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+        }
+        .resend-otp-text,  .resend-otp-text:hover{
+            color: #F78D1E;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 100%;
+        }
+
+        .dms_login_page input{
+            color: #fff !important;
+        }

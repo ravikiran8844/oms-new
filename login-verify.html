@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Login - Emerald</title>
+    <!-- General CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+</head>
+<body>
+    <main class="dms_login_page d-flex align-items-center">
+        <div class="container py-5">
+            <div class="col-12 col-md-7 m-auto">
+                <div class="text-center mb-5">
+                    <img class="img-fluid" src="assets/img/logo.png" height="60" width="180" alt="">
+                </div>
+                <div>
+                    <div class="dms_login_page_title mb-4 ">Enter OTP</div>
+                    <div class="dms_login_page_text mb-5">Code is sent to +91 99*** **643</div>
+                </div>
+                <div>
+                    
+
+                   <div class="dms_login_page_input-item m-auto">
+                    <hr class="mb-5">
+
+                    <div id="inputs" class="otp-inputs">
+                        <input class="input" type="text" 
+                            inputmode="numeric" maxlength="1" />
+                        <input class="input" type="text" 
+                            inputmode="numeric" maxlength="1" />
+                        <input class="input" type="text" 
+                            inputmode="numeric" maxlength="1" />
+                        <input class="input" type="text" 
+                            inputmode="numeric" maxlength="1" />
+                    </div>
+                   
+                      <button class="mt-5 btn dms_login_page_button w-100 py-3">
+                        Continue
+                       </button>
+                   
+                    </div>
+                    <div class="text-center mt-3">
+                        <div class="otp-not-received-text">Don’t received code?  <span ><a href="#" class="resend-otp-text">Resend</a></span></div>
+                    </div>
+
+                   
+
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+    <script>
+        const inputs = document.getElementById("inputs");
+  
+  inputs.addEventListener("input", function (e) {
+      const target = e.target;
+      const val = target.value;
+    
+      if (isNaN(val)) {
+          target.value = "";
+          return;
+      }
+    
+      if (val != "") {
+          const next = target.nextElementSibling;
+          if (next) {
+              next.focus();
+          }
+      }
+  });
+    
+  inputs.addEventListener("keyup", function (e) {
+      const target = e.target;
+      const key = e.key.toLowerCase();
+    
+      if (key == "backspace" || key == "delete") {
+          target.value = "";
+          const prev = target.previousElementSibling;
+          if (prev) {
+              prev.focus();
+          }
+          return;
+      }
+  });
+    </script>
+</body>
+</html>
