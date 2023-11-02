@@ -24,7 +24,6 @@ $(function() {
 
 
 
-  document.addEventListener( 'DOMContentLoaded', function() {
     var splide1 = new Splide( '#home-main-slider' ).mount();
 
 
@@ -36,7 +35,6 @@ $(function() {
               pagination:false,
             } ).mount();
 
-  } );
 
 
 

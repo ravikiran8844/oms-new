@@ -1819,7 +1819,24 @@ aside{
 .sticky-add-to-cart{
     background-color: #fff;
 }
+
+header{
+    margin-bottom: 23px;
+}
+.home-section4_item{
+    border-radius: 14.569px;
+    border: 1.121px solid #D9D9D9;
+}
 @media (min-width:768px) {
+    .home-section4_item{
+        border-radius: 14.569px;
+        border: 1.121px solid #D9D9D9;
+        background: #F8F8FB;
+    }
+    header{
+        margin-bottom: 32px;
+    }
+
     .sticky-add-to-cart{
         position: fixed;
         bottom: 0;
@@ -2291,3 +2308,13 @@ justify-content: center;
 }
 
 
+.dms-cart-page .desktop-cart,.dms-cart-page .desktop-cart .table,.dms-cart-page .cart-page_total-card{
+    --bs-table-bg: #F8F8FB;
+    border-radius: 13px;
+    border: 1px solid #F0F0F0;
+    background: #F8F8FB;
+}
+
+.checkout_large-devices .SumoSelect>.CaptionCont>span.placeholder {
+    color: unset;
+}
