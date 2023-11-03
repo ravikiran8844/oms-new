@@ -453,8 +453,8 @@
                                     <!-- Button trigger modal -->
                                     <button type="button"
                                         class="product-size-option_btn"
-                                        data-toggle="modal"
-                                        data-target=".bd-sizeChartModal">
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#sizeChartModal">
                                         <span>Size guide</span>
                                         <i class="fas fa-angle-right"></i>
                                     </button>
@@ -505,8 +505,8 @@
                                     <!-- Button trigger modal -->
                                     <button type="button"
                                         class="product-size-option_btn"
-                                        data-toggle="modal"
-                                        data-target=".bd-weightChartModal">
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#weightChartModal">
                                         <span>weight ranges</span>
                                         <i class="fas fa-angle-right"></i>
                                     </button>
@@ -636,8 +636,8 @@
                             <div
                                 class="accordion product-specs-accordian">
                                 <div class="accordion-header"
-                                    role="button" data-toggle="collapse"
-                                    data-target="#panel-body-1"
+                                    role="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panel-body-1"
                                     aria-expanded="true">
                                     <h4>
                                         Product Specs <span
@@ -713,7 +713,7 @@
         </section>
 
         <!-- Size Chart Modal -->
-        <div class="modal fade bd-sizeChartModal" tabindex="-1" role="dialog"
+        <div class="modal fade" id="sizeChartModal" tabindex="-1" role="dialog"
             aria-labelledby="sizeChartModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -721,7 +721,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title text-dark"
                             id="sizeChartModalLabel">Size Chart</h5>
-                        <button type="button" class="close" data-dismiss="modal"
+                        <button type="button" class="close" data-bs-dismiss="modal"
                             aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -759,7 +759,7 @@
         </div>
 
         <!-- Weight Chart Modal -->
-        <div class="modal fade bd-weightChartModal" tabindex="-1" role="dialog"
+        <div class="modal fade" id="weightChartModal" tabindex="-1" role="dialog"
             aria-labelledby="weightChartModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -767,7 +767,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title text-dark"
                             id="weightChartModalLabel">Weight Chart</h5>
-                        <button type="button" class="close" data-dismiss="modal"
+                        <button type="button" class="close" data-bs-dismiss="modal"
                             aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
