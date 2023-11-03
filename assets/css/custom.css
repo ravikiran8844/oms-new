@@ -2305,7 +2305,7 @@ padding: 20px 10px;
     top: 0;
     width: 100%;
     background-color: #fff; /* Change this to your desired background color */
-    z-index: 99999; /* Set a z-index to ensure the header is above other content */
+    z-index: 999; /* Set a z-index to ensure the header is above other content */
 }
 
 
