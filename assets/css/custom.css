@@ -2339,3 +2339,136 @@ justify-content: center;
 .checkout_large-devices .SumoSelect>.CaptionCont>span.placeholder {
     color: unset;
 }
+
+
+.accordion-button:not(.collapsed) {
+    background-color: #fff;
+}
+.accordion-button:focus  {
+    box-shadow: none !important;
+    border-color: none;
+}
+
+
+
+
+.mobile-filters_wrapper .accordion{
+    --bs-accordion-bg:rgba(247, 141, 30, 0.10);
+}
+
+.mobile-filters_wrapper  .accordion-item{
+    color: #F78D1E;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 16px */
+    background-color: rgba(247, 141, 30, 0.10) !important;
+
+    }
+    .mobile-filters_wrapper .accordion-button:not(.collapsed) {
+        background-color: rgba(247, 141, 30, 0.10) !important;
+    }
+    
+
+    .mobile-filters_wrapper  .accordion-button{
+        color: #F78D1E;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%; /* 16px */
+    }
+.close{
+    border: 1px solid;
+    border-radius: 50%;
+    background-color: transparent;
+}
+    
+    
+    .mobile-filters_wrapper  input[type="radio" i] {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+    .mobile-filters_wrapper .form-check{
+        padding-left: 0;
+    }
+        
+.custom-accordian .accordion{
+    --bs-accordion-bg:#F8F8FB;
+}
+
+.custom-accordian .accordion-item{
+border: 1px solid #F0F0F0;
+background: #F8F8FB !important;
+color: #565656;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 192.5%; /* 38.5px */
+text-transform: capitalize;
+}
+.custom-accordian .accordion-button:not(.collapsed) {
+    background-color: #F8F8FB !important;
+}
+
+.custom-accordian .accordion-button{
+    color: #2D2D2D;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.45px;
+text-transform: uppercase;
+}
+
+
+.custom-accordian input[type="radio" i] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+    
+.custom-accordian .form-check{
+    padding-left: 0;
+}
+
+.top-dropdown-filters button[aria-expanded="false"]{
+    border-radius: none;
+    border: none;
+    background:transparent;
+    color: #2D2D2D;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+.top-dropdown-filters button[aria-expanded="true"]{
+    border-radius: 6px;
+    border: 1px solid #CECECE !important;
+    background: #F8F8FB;
+    color: #2D2D2D;
+
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    border: none;
+    }
+
+.filters-title{
+    color: #2D2D2D;
+font-family: Inter;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 30px */
+text-transform: uppercase;
+}
