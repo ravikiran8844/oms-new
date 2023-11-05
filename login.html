@@ -15,26 +15,34 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
 </head>
+
 <body>
-    <div class="dms_login-page">
-        <div class="dms-login-img_wrapper position-relative">  
-        <img class="img-fluid dms_login-image" src="assets/img/login-banner.webp"  alt="">
+    
+    <div class="oms_auth-pages">
 
+        <div class="oms_auth-pages_item-wrapper">
+            <div>
+                <div class="text-center mb-4">
+                    <img class="img-fluid" height="122" width="160" src="assets/img/emerald-logo.png" alt="logo">
 
-            <div class="dms-login_overlay-item">
-                <div>
-                    <div class="text-center mb-5">
-                        <img class="img-fluid" height="154" width="200" src="assets/img/emerald-logo.png" alt="logo">
+                    <div class="mt-4">
+                        <div class="mb-3 oms_auth-pages_title">Log In</div>
+                        <div class="oms_auth-pages_text">Welcome  to your <b>Emerald-Silver</b></div>
                     </div>
+                </div>
 
+                
+
+                <div class="oms_auth-pages_item">
                     <div class="mb-4">
-                        <div class="input-group dms-input-group">
+                        <div class="input-group dms-input-group oms-input-group">
                             <div class="input-group-prepend">
                               <span class="bg-transparent border-0  input-group-text h-100" id="inputGroupPrepend2">
-                                <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.71837 9.22189C11.0735 9.22189 12.9826 7.31271 12.9826 4.95762C12.9826 2.60254 11.0735 0.693359 8.71837 0.693359C6.36328 0.693359 4.4541 2.60254 4.4541 4.95762C4.4541 7.31271 6.36328 9.22189 8.71837 9.22189Z" stroke="white" stroke-width="1.06607"/>
-                                    <path d="M12.9902 11.354H13.2909C13.9155 11.3542 14.5186 11.5678 14.9868 11.9547C15.455 12.3416 15.7561 12.8752 15.8335 13.4552L16.1676 15.953C16.1976 16.178 16.1762 16.4065 16.1047 16.6231C16.0332 16.8398 15.9133 17.0398 15.7529 17.2097C15.5925 17.3797 15.3953 17.5158 15.1744 17.6091C14.9535 17.7023 14.714 17.7504 14.4717 17.7504H2.96498C2.72266 17.7504 2.48311 17.7023 2.26221 17.6091C2.04131 17.5158 1.84413 17.3797 1.68374 17.2097C1.52335 17.0398 1.40343 16.8398 1.33193 16.6231C1.26044 16.4065 1.239 16.178 1.26905 15.953L1.60225 13.4552C1.67974 12.8749 1.98109 12.3411 2.44965 11.9542C2.9182 11.5672 3.52167 11.3538 4.14657 11.354H4.44646" stroke="white" stroke-width="1.06607" stroke-linecap="round" stroke-linejoin="round"/>
+                                <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.46251 8.52853C9.81759 8.52853 11.7268 6.61935 11.7268 4.26426C11.7268 1.90918 9.81759 0 7.46251 0C5.10742 0 3.19824 1.90918 3.19824 4.26426C3.19824 6.61935 5.10742 8.52853 7.46251 8.52853Z" fill="#535353"/>
+                                    <path d="M11.7343 10.6606H12.0351C12.6597 10.6608 13.2627 10.8744 13.7309 11.2613C14.1991 11.6482 14.5002 12.1818 14.5777 12.7619L14.9117 15.2597C14.9418 15.4847 14.9203 15.7131 14.8489 15.9298C14.7774 16.1464 14.6574 16.3464 14.497 16.5164C14.3367 16.6864 14.1395 16.8225 13.9186 16.9157C13.6977 17.0089 13.4581 17.0571 13.2158 17.057H1.70912C1.4668 17.0571 1.22725 17.0089 1.00635 16.9157C0.785453 16.8225 0.588267 16.6864 0.427879 16.5164C0.267491 16.3464 0.14757 16.1464 0.0760734 15.9298C0.00457691 15.7131 -0.0168593 15.4847 0.0131878 15.2597L0.346393 12.7619C0.423882 12.1816 0.725235 11.6478 1.19379 11.2608C1.66234 10.8739 2.26581 10.6604 2.89071 10.6606H3.1906" fill="#535353"/>
                                     </svg>
+                                    
                                     
                                     
                               </span>
@@ -46,12 +54,13 @@
 
 
                     <div class="mb-4">
-                        <div class="input-group dms-input-group">
+                        <div class="input-group dms-input-group oms-input-group">
                             <div class="input-group-prepend">
                               <span class="bg-transparent border-0  input-group-text h-100" id="inputGroupPrepend2">
-                                <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.1426 9.08248H13.619V5.92501C13.619 3.16636 11.3742 0.921631 8.61559 0.921631C5.85693 0.921631 3.6122 3.16636 3.6122 5.92501V9.08277H2.08855C1.04142 9.08277 0.189453 9.93473 0.189453 10.9819V20.9746C0.189453 22.0217 1.04142 22.8737 2.08855 22.8737H15.1426C16.1898 22.8737 17.0417 22.0217 17.0417 20.9746V10.9816C17.0417 9.93444 16.1898 9.08248 15.1426 9.08248ZM4.48871 5.92501C4.48871 3.64961 6.34018 1.79814 8.61559 1.79814C10.891 1.79814 12.7425 3.64961 12.7425 5.92501V9.08277H4.48871V5.92501ZM16.1652 20.9743C16.1652 21.5382 15.7065 21.9969 15.1426 21.9969H2.08855C1.52466 21.9969 1.06596 21.5382 1.06596 20.9743V10.9816C1.06596 10.4177 1.52466 9.95898 2.08855 9.95898H15.1426C15.7065 9.95898 16.1652 10.4177 16.1652 10.9816V20.9743ZM8.61559 13.437C7.80307 13.437 7.14189 14.0981 7.14189 14.9106C7.14189 15.5698 7.57956 16.1223 8.17733 16.3101V18.3743C8.17733 18.6162 8.37367 18.8126 8.61559 18.8126C8.8575 18.8126 9.05384 18.6162 9.05384 18.3743V16.3101C9.65161 16.1223 10.0893 15.5698 10.0893 14.9106C10.0893 14.0978 9.42811 13.437 8.61559 13.437ZM8.61559 15.5075C8.28631 15.5075 8.01839 15.2396 8.01839 14.9104C8.01839 14.5811 8.28631 14.3132 8.61559 14.3132C8.94486 14.3132 9.21278 14.5811 9.21278 14.9104C9.21278 15.2396 8.94486 15.5075 8.61559 15.5075Z" fill="white"/>
+                                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.6198 6.43844V2.15827C10.6198 0.968079 9.62986 0 8.4128 0H3.58702C2.36995 0 1.38001 0.968079 1.38001 2.15827V6.43844C0.599423 6.5531 0 7.20987 0 8.00535V14.4136C0 15.2899 0.726515 16 1.62224 16H10.3778C11.2732 16 12 15.29 12 14.4136V8.00535C11.9998 7.20996 11.4003 6.55308 10.6198 6.43856L10.6198 6.43844ZM3.58702 1.55396H8.4128C8.75359 1.55396 9.03082 1.82507 9.03082 2.15834V6.41908H2.96912V2.15834C2.96912 1.82507 3.24635 1.55396 3.58702 1.55396ZM5.99994 12.9438C5.1212 12.9438 4.4091 12.2474 4.4091 11.3881C4.4091 10.5287 5.1212 9.83224 5.99994 9.83224C6.87867 9.83224 7.59078 10.5287 7.59078 11.3881C7.59078 12.2474 6.87867 12.9438 5.99994 12.9438Z" fill="#535353"/>
                                     </svg>
+                                    
                                     
                                     
                                     
@@ -73,16 +82,20 @@
                     <div>
                         <button class="dms-custom-btn">Log in</button>
                     </div>
-
-
-
-
-                    
+                    <div class="mt-2">
+                        <div class="text-white">Not register yet?  <a class="text-decoration-none custom-link-text" href="/forget-password">Sign up</a></div>
+                        
+                    </div>
                 </div>
+
+
+
+
+                
             </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 
 </body>

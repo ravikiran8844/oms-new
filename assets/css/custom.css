@@ -1885,7 +1885,14 @@ header{
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
+    border: none;
     line-height: 100%;
+    outline: none;
+}
+.mobile-sort_options select:focus{
+    border: none;
+    outline: none;
+
 }
 
 
@@ -2221,6 +2228,7 @@ padding: 20px 10px;
     font-weight: 400;
     line-height: normal;
     padding-left: 0;
+    height: 48px;
     }
     .dms-input-group input::placeholder{
         color: #FFF !important;
@@ -2486,4 +2494,83 @@ background: #F78D1E;
     box-shadow: unset;
     border: 1px solid #CECECE;
     border-radius: 3px;
+}
+.oms_auth-pages{
+    background: #171717;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oms_auth-pages_item-wrapper{
+    max-width:562px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.oms_auth-pages_item{
+    max-width: 352px;
+    margin: auto;
+}
+.oms_auth-pages_title{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.oms_auth-pages_text{
+    color: #6B6B6B;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.oms-input-group{
+    border-radius: 5px;
+background: #242525 !important;
+}
+
+.oms-input-group input::placeholder{
+    color: #535353 !important;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 100%; /* 14px */
+}
+.oms_auth-pages_text b{
+    color: #A5A5A5;
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.oms_auth-pages hr{
+    background-color: #242525;
+    opacity: 1;
+}
+
+.oms_auth-pages label{
+    color: #606060;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 136.5%; /* 21.84px */
+}
+.custom-link-text{
+    color: #F78D1E;
+font-family: Inter;
+font-style: normal;
+font-weight: 500;
+line-height: 100%;
 }
