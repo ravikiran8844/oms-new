@@ -74,7 +74,7 @@
                                     
                               </span>
                             </div>
-                            <input type="text" class="form-control border-0  bg-transparent"  placeholder="Phone Number" required>
+                            <input type="text" maxlength="10" onkeypress="return event.charCode >= 48 && event.charCode <= 57" class="form-control border-0  bg-transparent"  placeholder="Phone Number" required>
                           </div>
                     </div>
 
@@ -94,7 +94,7 @@
                                     
                               </span>
                             </div>
-                            <input type="text" class="form-control border-0  bg-transparent"  placeholder="Create password" required>
+                            <input type="password" class="form-control border-0  bg-transparent"  placeholder="Create password" required>
                           </div>
                     </div>
 
@@ -103,7 +103,7 @@
                     </div>
 
                     <div class="mt-2">
-                        <div class="text-white">Already have an account?  <a class="text-decoration-none custom-link-text" href="/forget-password">Log In</a></div>
+                        <div class="text-white">Already have an account?  <a class="text-decoration-none custom-link-text" href="/login.html">Log In</a></div>
                         
                     </div>
                 </div>

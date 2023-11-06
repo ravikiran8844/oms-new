@@ -574,12 +574,13 @@
   // Function to dynamically populate the table with cart items
   function populateCart() {
       const cartItemsContainer = document.getElementById("cart-items");
-
+      let count=1;
       for (let item of cartItems) {
           const row = document.createElement("tr");
+          count+=1;
           row.innerHTML = `
               <td>
-                  <a href="${item.image}" data-lightbox="image-DCRB2341-1" data-title="DCRB2341-1">
+                  <a href="${item.image}" data-lightbox="image-DCRB2341-${count}" data-title="DCRB2341-${count}">
                       <img class="square bg-white p-2" src="${item.image}" width="60" height="60" alt="">
                   </a>
               </td>
@@ -587,7 +588,6 @@
               <td>
                   <select name="size" id="size">
                       <option value="${item.size}">${item.size}</option>
-                      <!-- Add more size options if needed -->
                   </select>
               </td>
               <td>
@@ -602,7 +602,6 @@
               <td>
                   <select class="badge cart-items_card_finish-badge" name="size" id="size">
                       <option value="${item.finish}">${item.finish}</option>
-                      <!-- Add more finish options if needed -->
                   </select>
               </td>
               <td>

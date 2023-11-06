@@ -823,7 +823,8 @@ line-height: 100%; /* 20px */
 }
 
 .footer-links-section{
-    background: #333;
+    /* background: #333; */
+    background: #FFF;
 }
 .cart-page_total-card{
     max-width: 350px;
@@ -882,7 +883,7 @@ text-decoration-line: underline;
     color: #F00;
 }
 .text-green{
-    color: #17A500;
+    color: #17A500 !important;
 }
 /* width */
 .cart-items_card ::-webkit-scrollbar {
@@ -1292,7 +1293,7 @@ line-height: 156.5%;
 }
 
 .footer-links_title{
-    color: #FFF;
+    color: #2D2D2D;
 font-family: Inter;
 font-size: 20px;
 font-style: normal;
@@ -1300,9 +1301,11 @@ font-weight: 500;
 line-height: 140%; /* 44.8px */
 }
 
-
+.footer-links_link span{
+    margin-right: 10px;
+}
 .footer-links_link{
-    color: #B4B4B4;
+    color: #565656;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
@@ -1372,7 +1375,7 @@ margin:10px;
 
 @media (min-width:1400px) {
     .footer-links_title{
-        color: #FFF;
+        color: #2D2D2D;
     font-family: Inter;
     font-size: 24px;
     font-style: normal;
@@ -1382,7 +1385,7 @@ margin:10px;
     
     
     .footer-links_link{
-        color: #B4B4B4;
+        color: #565656;
         font-family: Inter;
         font-size: 16px;
         font-style: normal;
@@ -2573,4 +2576,8 @@ font-family: Inter;
 font-style: normal;
 font-weight: 500;
 line-height: 100%;
+}
+.btn-warning{
+    color: #fff !important;
+    background: #F78D1E !important;
 }
