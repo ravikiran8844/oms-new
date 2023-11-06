@@ -2045,9 +2045,9 @@ line-height: 136.5%; /* 27.3px */
     }
 }
 
-.tab-content .card{
+/* .checkout_large-devices .tab-content .card{
     min-height: 450px;
-}
+} */
 
 
 button:focus,button:active{
