@@ -94,7 +94,9 @@ body {
 .main-sidebar .sidebar-menu li a .feather {
     fill: none;
 }
-
+.thankyou-page_wrapper header{
+    margin-bottom: 0;
+}
 
 .top-main-nav li .nav-link,
 .mobile-navbar li .nav-link {
@@ -948,6 +950,7 @@ border: none !important;
 
 .thankyou-page{
     background: #2D2D2D !important;
+    min-height: 100vh;
 }
 .thankyou-page_title{
     color: #F78D1E;
