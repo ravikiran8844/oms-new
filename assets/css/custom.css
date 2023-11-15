@@ -1694,7 +1694,21 @@ line-height: 130%; /* 23.4px */
     visibility: visible;
 }
 
-
+.add-to-cart-btn,.add-to-cart-btn:hover{
+    border-radius: 4.72px;
+    border: 1px solid #F78D1E;
+    color: #F78D1E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14.16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 10px;
+    max-width: 300px;
+}
 
 .moq-inputs_wrapper input[type=checkbox]:after,
 .moq-inputs_wrapper input[type=checkbox]::after {
