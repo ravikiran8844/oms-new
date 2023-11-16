@@ -1548,14 +1548,11 @@ padding-bottom: 15px;
     grid-row-gap: 20px;
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
     .col-12.shop-page_product-cards.grid {
         grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     }
-
-
-
-}
+} */
 
     /* Additional style for single item */
     .shop-page_product-cards.grid .shop-page_product-card {
