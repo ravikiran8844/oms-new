@@ -261,7 +261,7 @@
     margin-left: 0;
     right: 10px;
     border-style: dashed dashed dashed solid;
-    border-color: transparent transparent transparent #F78D1E;
+    border-color: transparent transparent transparent #8D8D8D;
   }
   .sm-blue ul li {
     border: 0;
@@ -356,4 +356,36 @@
         border-radius: 8px;
         width: 100%;
     }
+}
+
+
+.sm-blue a .sub-arrow {
+
+  top: 50%;
+  margin-top: 0;
+  bottom: unset;
+  left: unset;
+  right: 0;
+ 
+  border-width: 5px;
+  border-style: solid dashed dashed dashed;
+  border-color: #8D8D8D transparent transparent transparent;
+  background: transparent;
+  border-radius: 0;
+}
+
+
+@media (min-width: 499px){
+.sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
+    background: #fff;
+    color: #393939;
+    padding:20px;
+}
+}
+
+
+@media (min-width:1200px) {
+  .sm li{
+    margin: 0 10px;
+  }
 }
