@@ -400,7 +400,7 @@
 
 @media (min-width: 499px){
 .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
-  padding:20px;
+  padding:10px 20px;
 }
   .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
     background: transparent;

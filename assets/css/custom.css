@@ -2536,7 +2536,7 @@ border: 1px solid #F0F0F0;
 background: #F8F8FB !important;
 color: #565656;
 font-family: Inter;
-font-size: 20px;
+font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 192.5%; /* 38.5px */
@@ -2559,8 +2559,8 @@ text-transform: uppercase;
 
 
 .custom-accordian input[type="radio" i] {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     flex-shrink: 0;
 }
     
