@@ -286,18 +286,18 @@
     overflow: hidden;
     border-width: 8px;
     border-style: dashed dashed solid dashed;
-    border-color: transparent transparent #F78D1E transparent;
+    border-color: transparent transparent #8D8D8D transparent;
   }
   .sm-blue .scroll-down-arrow {
     top: 6px;
     border-style: solid dashed dashed dashed;
-    border-color: #F78D1E transparent transparent transparent;
+    border-color: #8D8D8D transparent transparent transparent;
   }
   .sm-blue.sm-rtl.sm-vertical a .sub-arrow {
     right: auto;
     left: 10px;
     border-style: dashed solid dashed dashed;
-    border-color: transparent #F78D1E transparent transparent;
+    border-color: transparent #8D8D8D transparent transparent;
   }
   .sm-blue.sm-rtl > li:first-child > a, .sm-blue.sm-rtl > li:first-child > :not(ul) a {
     border-radius: 0 8px 8px 0;
@@ -359,33 +359,60 @@
 }
 
 
-.sm-blue a .sub-arrow {
 
-  top: 50%;
-  margin-top: 0;
-  bottom: unset;
-  left: unset;
-  right: 0;
- 
-  border-width: 5px;
-  border-style: solid dashed dashed dashed;
-  border-color: #8D8D8D transparent transparent transparent;
-  background: transparent;
-  border-radius: 0;
+
+
+
+
+
+@media (min-width:499px) {
+  .sm-blue a .sub-arrow {
+
+    top: 50%;
+    margin-top: 0;
+    bottom: unset;
+    left: unset;
+    right: 0;
+    
+    border-width: 5px;
+    border-style: solid dashed dashed dashed;
+    border-color: #8D8D8D transparent transparent transparent;
+    background: transparent;
+    border-radius: 0;
+    } 
 }
+
+
+
+
+
+@media(max-width:768px){
+  .sm-blue {
+      background: #fff;
+      border-radius: 8px;
+      width: 100%;
+  }
+}
+
+
+
 
 
 @media (min-width: 499px){
 .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
-    background: #fff;
-    color: #393939;
-    padding:20px;
+  padding:20px;
 }
+  .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
+    background: transparent;
+    /* background-image: linear-gradient(to bottom, #2d89b4, #297ca3); */
+    color: #F78D1E;
+
+  }
 }
 
 
 @media (min-width:1200px) {
-  .sm li{
-    margin: 0 10px;
-  }
+.sm li{
+  margin: 0px 10px;
+}
 }
