@@ -33,7 +33,7 @@
 
   font-family: "Inter";
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 23px;
   text-decoration: none;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
@@ -377,6 +377,7 @@
     border-width: 5px;
     border-style: solid dashed dashed dashed;
     border-color: #8D8D8D transparent transparent transparent;
+    opacity: .7;
     background: transparent;
     border-radius: 0;
     } 
@@ -416,3 +417,4 @@
   margin: 0px 10px;
 }
 }
+

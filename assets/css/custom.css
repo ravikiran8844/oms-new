@@ -172,11 +172,15 @@ border: 1.107px solid #D9D9D9;
 .main-slider .splide__pagination__page.is-active{
     background: #F78D1E !important;
     width: 25px !important;
-    border-radius: 2px !important;
+    border-radius: 8px !important;
     outline: none !important;
 }
 .main-slider .splide__pagination__page {
     margin: 3px 8px !important;
+    width: 9px;
+    color: #D9D9D9;
+    height: 9px;
+    opacity: 1;
 }
 .category-slider-card_title {
     color: #282828;
@@ -200,7 +204,7 @@ border: 1.107px solid #D9D9D9;
 }
 
 .nav-search-input {
-    max-width: 500px;
+    max-width: 360px;
     border-radius: 8px;
     background: #FFF;
     margin: auto;
@@ -1310,7 +1314,7 @@ line-height: 156.5%;
 
 .cart-badge{
     vertical-align: middle;
-    padding: 4px 7px;
+    padding: 3px 6px;
     font-weight: 500;
     letter-spacing: 0.3px;
     border-radius: 50%;
@@ -1320,8 +1324,8 @@ line-height: 156.5%;
     top: 0;
     right: 0;
     position: absolute;
-    min-width: 24px;
-    min-height: 24px;
+    min-width: 22px;
+    min-height: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2763,7 +2767,7 @@ line-height: 140%; /* 44.8px */
     .footer-links_title{
         color: #2D2D2D;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%; /* 44.8px */
@@ -2775,7 +2779,7 @@ line-height: 140%; /* 44.8px */
     .footer-links_link{
         color: #565656;
         font-family: Inter;
-        font-size: 14px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 247.5%; /* 44.55px */
@@ -2784,8 +2788,24 @@ line-height: 140%; /* 44.8px */
 }
 
 
+.main-slider .splide__arrows {
+    display: none;
+}
+.main-slider .splide__pagination{
+    background: #F8F8FB;
+    padding: 10px;
+}
 
-
+.view-all-link{
+    color: #313131;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 26.223px */
+    text-decoration-line: underline;
+}
 
 
 
