@@ -256,6 +256,8 @@ line-height: 100%; /* 18px */
 .category-slider-card img {
     width: auto;
     height: auto;
+    max-height: 220px;
+    object-fit: cover;
     margin: auto;
 }
 
