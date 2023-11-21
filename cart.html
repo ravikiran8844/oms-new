@@ -477,7 +477,24 @@
 
 
 
-
+<!-- Add the Bootstrap modal structure -->
+<div class="modal" tabindex="-1" role="dialog" id="remarksModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Remarks</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <textarea style="height: 150px;" id="remarksInput" class="form-control"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" onclick="saveRemarks()">Submit</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -504,6 +521,27 @@
 
 
   <script>
+      // Function to open the remarks modal
+  function openRemarksModal() {
+    $('#remarksModal').modal('show');
+  }
+
+  // Function to save remarks and close the modal
+  function saveRemarks() {
+    const remarksInput = document.getElementById("remarksInput");
+    const selectedRow = document.querySelector('tr.selected'); // Add a 'selected' class to the row when the modal is opened
+
+    if (selectedRow) {
+      const remarksColumn = selectedRow.querySelector('.text-green');
+      remarksColumn.textContent = remarksInput.value;
+      $('#remarksModal').modal('hide'); // Close the modal
+    }
+  }
+  </script>
+
+
+
+  <!-- <script>
     jQuery(document).ready(function() {
   // Handle increment and decrement for each container
   $('.quantity-container').each(function() {
@@ -532,7 +570,7 @@
   });
 });
 
-  </script>
+  </script> -->
 
 
 
@@ -598,7 +636,7 @@
                   </div>
               </td>
               <td>${item.weight}</td>
-              <td class="text-green">${item.remarks}</td>
+              <td class="text-green" onclick="openRemarksModal()">${item.remarks}</td>
               <td>
                   <select class="badge cart-items_card_finish-badge" name="size" id="size">
                       <option value="${item.finish}">${item.finish}</option>
@@ -653,9 +691,9 @@ function displayItems() {
                     <div class="cart-page_card-bold-title mb-2">${item.productSKU}</div>
                     <div class="cart-page_card-light-text mb-2">${item.weight}</div>
                     <div class="input-group quantity-input-group quantity-container">
-                        <input type='button' value='-' class='qtyminus' field='quantity' />
+                        <input type='button' onclick="decrementQuantity(button)" value='-' class='qtyminus' field='quantity' />
                         <input type='text' name='quantity' value='${item.quantity}' class='qty' />
-                        <input type='button' value='+' class='qtyplus' field='quantity' />
+                        <input type='button' onclick="incrementQuantity(button)" value='+' class='qtyplus' field='quantity' />
                     </div>
                 </div>
                 <div class="ms-auto">
@@ -686,6 +724,11 @@ function removeCartItem(index) {
 // Initial display of items
 displayItems();
 </script>
+
+
+
+
+
 </body>
 
 
