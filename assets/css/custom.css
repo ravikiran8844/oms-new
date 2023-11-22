@@ -248,7 +248,7 @@ line-height: 100%; /* 18px */
 
 .category-slider-card {
     width: 100%;
-    max-width: 240px;
+    /* max-width: 240px; */
     margin: auto;
 }
 .category-slider-card .owl-carousel .owl-item {
