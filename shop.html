@@ -628,10 +628,11 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb px-0">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Data</li>
+            <li class="breadcrumb-item"><a href="#">Bracelets</a></li>
+            <li class="breadcrumb-item" aria-current="page">Ladies</li>
           </ol>
         </nav>
+
 
 
         <div class="col-12 d-flex justify-content-between align-items-center custom-border-bottom">
@@ -640,22 +641,22 @@
       </div>
 
 
-      <div class="col-12 col-lg-9  p-lg-2">
+      <div class="col-12 col-lg-9  p-lg-2 d-flex justify-content-between">
         <div class="top-dropdown-filters d-none d-lg-block">
           <p class="d-inline-flex gap-1">
-            <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse"
-              data-bs-target="#WeightRangeFilter" aria-expanded="true" aria-controls="WeightRangeFilter">
+            <button class="btn custom-filter-btn active-btn" type="button" data-bs-toggle="collapse" data-bs-target="#WeightRangeFilter" aria-expanded="true" aria-controls="WeightRangeFilter">
               Weight Range
+              <i class="fas collapse-icon fa-chevron-up"></i>
             </button>
-
-            <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#colorFilter"
-              aria-expanded="false" aria-controls="colorFilter">
+            
+            <button class="btn custom-filter-btn" type="button" data-bs-toggle="collapse" data-bs-target="#colorFilter" aria-expanded="false" aria-controls="colorFilter">
               Color
+              <i class="fas collapse-icon fa-chevron-down"></i>
             </button>
-
-            <button class="btn btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#platingFilter"
-              aria-expanded="false" aria-controls="platingFilter">
+            
+            <button class="btn custom-filter-btn" type="button" data-bs-toggle="collapse" data-bs-target="#platingFilter" aria-expanded="false" aria-controls="platingFilter">
               Plating
+              <i class="fas collapse-icon fa-chevron-down"></i>
             </button>
           </p>
 
@@ -766,6 +767,26 @@
           </div>
 
         </div>
+
+        
+
+        <div class="view-toggle mt-2 ms-auto">
+          <button class="custom-icon-btn grid-view active">
+            <i class="fas fa-th-large"></i>
+          </button>
+
+          <button class="custom-icon-btn list-view">
+            <i class="fas fa-list"></i>
+
+          </button>
+
+        </div>
+
+
+
+
+
+
       </div>
 
 
@@ -1005,19 +1026,7 @@
 
       <section class="col-lg-9 p-lg-2">
 
-        <div class="col-12 mt-2">
-          <div class="view-toggle my-auto text-end">
-            <button class="custom-icon-btn grid-view active">
-              <i class="fas fa-th-large"></i>
-            </button>
-
-            <button class="custom-icon-btn list-view">
-              <i class="fas fa-list"></i>
-
-            </button>
-
-          </div>
-        </div>
+       
 
 
         
@@ -2299,24 +2308,37 @@
 
   </script>
 
-  <script>
-    $(document).ready(function () {
-      $('.top-dropdown-filters .btn').click(function () {
-        var target = $(this).attr('data-target');
-        var isExpanded = $(this).attr('aria-expanded') === 'true';
+<script>
+  $(document).ready(function () {
+    $('.top-dropdown-filters .btn').click(function () {
+      var target = $(this).attr('data-target');
+      var isExpanded = $(this).attr('aria-expanded') === 'true';
 
-        // Remove "show" class from all other collapses
-        $('.top-dropdown-filters .collapse').not(target).removeClass('show');
-        // Set "aria-expanded" to false for all other buttons
-        $('.top-dropdown-filters .btn').not(this).attr('aria-expanded', 'false');
+      // Remove "show" class from all other collapses and set icons to 'down'
+      $('.top-dropdown-filters .collapse').not(target).removeClass('show');
+      $('.top-dropdown-filters .btn .collapse-icon').removeClass('fa-chevron-up').addClass('fa-chevron-down');
 
-        // Toggle the current collapse
-        $(target).toggleClass('show');
-        // Set "aria-expanded" to the opposite of its current state for the clicked button
-        // $(this).attr('aria-expanded', !isExpanded);
-      });
+      // Remove custom class from all other buttons
+      $('.top-dropdown-filters .btn').not(this).removeClass('active-btn');
+
+      // Toggle the current collapse
+      $(target).toggleClass('show');
+      // Set "aria-expanded" to the opposite of its current state for the clicked button
+      $(this).attr('aria-expanded', !isExpanded);
+
+      // Toggle the icons based on the collapse state
+      if (!isExpanded) {
+        $(this).find('.collapse-icon').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+      } else {
+        $(this).find('.collapse-icon').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+      }
+
+      // Add custom class to the active button
+      $(this).toggleClass('active-btn');
     });
-  </script>
+  });
+</script>
+
 
 </body>
 

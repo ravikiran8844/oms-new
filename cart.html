@@ -526,53 +526,8 @@
     $('#remarksModal').modal('show');
   }
 
-  // Function to save remarks and close the modal
-  function saveRemarks() {
-    const remarksInput = document.getElementById("remarksInput");
-    const selectedRow = document.querySelector('tr.selected'); // Add a 'selected' class to the row when the modal is opened
 
-    if (selectedRow) {
-      const remarksColumn = selectedRow.querySelector('.text-green');
-      remarksColumn.textContent = remarksInput.value;
-      $('#remarksModal').modal('hide'); // Close the modal
-    }
-  }
   </script>
-
-
-
-  <!-- <script>
-    jQuery(document).ready(function() {
-  // Handle increment and decrement for each container
-  $('.quantity-container').each(function() {
-    var container = $(this);
-    var qtyInput = container.find('.qty');
-
-    container.find('.qtyplus').click(function(e) {
-      e.preventDefault();
-      var currentVal = parseInt(qtyInput.val());
-      if (!isNaN(currentVal)) {
-        qtyInput.val(currentVal + 1);
-      } else {
-        qtyInput.val(0);
-      }
-    });
-
-    container.find('.qtyminus').click(function(e) {
-      e.preventDefault();
-      var currentVal = parseInt(qtyInput.val());
-      if (!isNaN(currentVal) && currentVal > 200) {
-        qtyInput.val(currentVal - 1);
-      } else {
-        qtyInput.val(200);
-      }
-    });
-  });
-});
-
-  </script> -->
-
-
 
 
 
