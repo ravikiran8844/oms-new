@@ -286,8 +286,18 @@ line-height: 100%; /* 18px */
 .breadcrumb-item+.breadcrumb-item::before {
     display: inline-block;
     color: #5B5B5B;
-    content: "|";
+    content: "/";
 }
+.breadcrumb-item {
+    color: #5B5B5B;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 18px */
+}
+
 
 .breadcrumb-item a {
     color: #5B5B5B;
@@ -1181,6 +1191,17 @@ line-height: 156.5%;
         font-weight: 700;
         line-height: 100%;
         /* 30px */
+    }
+
+
+    .breadcrumb-item {
+        color: #5B5B5B;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        /* 18px */
     }
 
 
