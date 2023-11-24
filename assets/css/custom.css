@@ -1566,14 +1566,14 @@ padding-bottom: 15px;
 /* Responsive Grid for Extra Small Devices */
 @media (max-width: 360px) {
     .col-12.shop-page_product-cards.grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 }
 
 /* Responsive Grid for Small Devices */
-@media (min-width: 576px) {
+@media (min-width: 360px) {
     .col-12.shop-page_product-cards.grid {
-        grid-template-columns: repeat(2, minmax(160px, 1fr));
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -1584,15 +1584,18 @@ padding-bottom: 15px;
     }
 }
 
-/* Responsive Grid for Large Devices */
-@media (min-width: 992px) {
-    /* You can adjust the number of columns for large devices as needed */
-}
-
 /* Responsive Grid for Extra Large Devices */
 @media (min-width: 1200px) {
     .col-12.shop-page_product-cards.grid {
         grid-template-columns: repeat(5, minmax(160px, 1fr));
+    }
+}
+
+
+/* Responsive Grid for Extra Large Devices */
+@media (min-width: 1500px) {
+    .col-12.shop-page_product-cards.grid {
+        grid-template-columns: repeat(6, minmax(160px, 1fr));
     }
 }
 
