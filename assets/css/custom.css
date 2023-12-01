@@ -2953,7 +2953,6 @@ input[type="radio"] {
   text-align: center;
   font-family: Poppins;
   font-size: 10px;
-  width: 100%;
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
@@ -3086,4 +3085,24 @@ input[type="radio"] {
 }
 .items-container .wishlist_item:not(:last-child) {
   border-bottom: 1px solid #dcdcdc;
+}
+.star-product{
+    border-radius: 5px;
+    border: 0.2px solid #FFC32D;
+    background: #FBFBFB !important;
+    color: #000 !important;
+    font-family: Roboto;
+    font-size: 14px;
+    height: 25px;
+    flex-shrink: 0;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.jdgm-star.jdgm--on:before{
+    color: #FFC32D !important;
+}
+span.custom-star-text{
+    color: #000 !important;
 }
