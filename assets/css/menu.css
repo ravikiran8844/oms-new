@@ -2,7 +2,7 @@
    You need this once per page no matter how many menu trees or different themes you use.
 -------------------------------------------------------------------------------------------*/
 
-.sm{box-sizing:border-box;position:relative;z-index:99;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+.sm{box-sizing:border-box;position:relative;z-index:1;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .sm,.sm ul,.sm li{display:block;list-style:none;margin:0;padding:0;line-height:normal;direction:ltr;text-align:left;}
 .sm-rtl,.sm-rtl ul,.sm-rtl li{direction:rtl;text-align:right;}
 .sm>li>h1,.sm>li>h2,.sm>li>h3,.sm>li>h4,.sm>li>h5,.sm>li>h6{margin:0;padding:0;}
@@ -24,15 +24,15 @@
 
 }
 .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active {
-  padding: 10px 20px;
+  padding: 0px 20px;
   /* make room for the toggle button (sub indicator) */
-  padding-right: 58px;
+  /* padding-right: 58px; */
   background: #fff;
   /* background-image: linear-gradient(to bottom, #3298c8, #2e8cb8); */
   color: #393939;
 
   font-family: "Inter";
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 23px;
   text-decoration: none;
@@ -85,7 +85,7 @@
 .sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active {
   background: transparent;
   /* color: #2b82ac; */
-  font-size: 16px;
+  font-size: 12px;
   text-shadow: none;
   border-left: 8px solid transparent;
 }
@@ -401,7 +401,9 @@
 
 @media (min-width: 499px){
 .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
-  padding:10px 20px;
+  padding:0px;
+  padding-right: 20px;
+  padding-left: 10px;
 }
   .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
     background: transparent;
@@ -414,10 +416,24 @@
 
 @media (min-width:1200px) {
 .sm li{
-  margin: 0px 10px;
+  margin: 0px;
 }
 }
 
 
 
 
+/* #main-menu li ul li ul{
+  z-index: 9999 !important;
+} */
+
+
+@media (min-width:1200px) {
+  .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active {
+      font-size: 14px;
+  }
+  
+  .sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active {
+    font-size: 14px;
+  }
+}
