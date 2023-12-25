@@ -26,8 +26,9 @@
 
 body {
   font-family: "Inter";
-
+  font-size: 14px;
   background: #fff;
+  overflow: auto;
 }
 
 .main-content {
@@ -597,7 +598,7 @@ body {
 .product-main-title {
   color: #000;
   font-family: Inter;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 114%;
@@ -1629,7 +1630,7 @@ input[type="radio"]:checked + label button {
 .shop-page_product-card .card-body .card-title {
   color: #282828;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 130%; /* 23.4px */
@@ -1639,7 +1640,7 @@ input[type="radio"]:checked + label button {
 .shop-page_product-card .card-body .card-text {
   color: #818181;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 23.4px */
@@ -2258,8 +2259,15 @@ button:active {
   margin-right: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
+  font-size: 10px;
 }
 
+@media (min-width:999px) {
+ 
+.product-swatches-box label {
+  font-size: 14px;
+} 
+}
 /* Checked label styles */
 .product-swatches-box input[type="radio"]:checked + label {
   background-color: #f78d1e;
@@ -2405,7 +2413,7 @@ button:active {
 /* navbar */
 .main-mega-nav {
   display: flex;
-  justify-content: center;
+  justify-content: start;
 }
 
 .dms-cart-page .desktop-cart,
@@ -2824,25 +2832,26 @@ input[type="radio"] {
 }
 
 .main-mega-nav ul li a.has-submenu::after {
-  content: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Echevron-up%3C/title%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' /%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238D8D8D'%3E%3Ctitle%3Echevron-up%3C/title%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' /%3E%3C/svg%3E");
   position: absolute;
   right: 0;
   transition: transform 0.3s ease; /* Add transition for smooth animation */
-  transform: rotate(0deg);
+  transform: rotate(180deg);
+  top: -5px !important;
 }
 
 .main-mega-nav ul li a.has-submenu:hover::after,
 .main-mega-nav ul li.current-menu-item a.has-submenu::after {
-  content: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Echevron-up%3C/title%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' /%3E%3C/svg%3E");
-  transform: rotate(180deg);
+  content: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238D8D8D'%3E%3Ctitle%3Echevron-up%3C/title%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' /%3E%3C/svg%3E");
 }
 
 .main-mega-nav ul ul li a.has-submenu::after {
-  content: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Echevron-up%3C/title%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' /%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238D8D8D'%3E%3Ctitle%3Echevron-up%3C/title%3E%3Cpath d='M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z' /%3E%3C/svg%3E");
   position: absolute;
   right: 0;
   transform: rotate(90deg);
   padding: 0 5px;
+  top: 5px !important;
 }
 
 .wishlist-svg.active svg {
@@ -3140,4 +3149,28 @@ header {
   border-radius: 0px !important;
   margin-left:0px;
   margin-right: 10px;
+}
+
+
+.dms-cart-page table th{
+  font-size: 14px;
+}
+
+.dms-cart-page table td{
+  font-size: 14px;
+}
+
+#imageBlockContainer{
+  max-width: 650px;
+}
+
+.showMoreButton{
+  color: #2D2D2D;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 193%; /* 34.74px */
+  text-decoration-line: underline;
+  text-transform: capitalize;
 }
