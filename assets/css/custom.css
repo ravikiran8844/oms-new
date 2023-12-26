@@ -2552,7 +2552,7 @@ button:active {
 .filters-title {
   color: #2d2d2d;
   font-family: Inter;
-  font-size: 28px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 600;
   line-height: 100%; /* 30px */
@@ -3182,4 +3182,14 @@ header {
   line-height: 193%; /* 34.74px */
   text-decoration-line: underline;
   text-transform: capitalize;
+}
+
+
+.sticky-add-to-cart{
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  right: 0;
+  padding: 10px;
+  box-shadow: 0px 4px 14px 0px rgba(151, 151, 151, 0.25);
 }
