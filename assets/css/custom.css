@@ -3187,15 +3187,32 @@ header {
 }
 
 
+
+
+
+
+.sticky-add-to-cart input[type="checkbox"]:after, .moq-inputs_wrapper input[type="checkbox"]::after{
+  border-radius: 4.967px;
+  border: 1.65px solid #FFF;
+  background: #2D2D2D;
+}
+.stciky-add-to-cart-btn,.stciky-add-to-cart-btn:hover{
+  border-radius: 4px;
+  border: 1px solid #F78D1E;
+  background: transparent !important;
+  color: #F78D1E !important;
+  font-weight: 600;
+}
+
 .sticky-add-to-cart{
   position: fixed !important;
-  top: 50px;
+  top: 55px;
   height: 60px;
   z-index: 2;
   right: 0;
   padding: 10px;
-  background-color: #F8F8FB;
-  box-shadow: 0px 4px 14px 0px rgba(151, 151, 151, 0.25);
+  background: #2D2D2D;
+  box-shadow: 0px 4px 14px 0px rgba(168, 168, 168, 0.25);
 }
 
 @media (min-width:650px) {
