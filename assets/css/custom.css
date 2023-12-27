@@ -1913,9 +1913,7 @@ aside {
   border-top: 1px solid #dcdcdc;
   padding-top: 10px;
 }
-.sticky-add-to-cart {
-  background-color: #fff;
-}
+
 
 header {
   margin-bottom: 23px;
@@ -1934,12 +1932,6 @@ header {
     margin-bottom: 32px;
   }
 
-  .sticky-add-to-cart {
-    position: fixed;
-    bottom: 0;
-    z-index: 2;
-    background-color: #fff;
-  }
 }
 
 .mobile-filters_wrapper .SumoSelect {
@@ -3188,23 +3180,26 @@ header {
 
 
 
+.sticky-add-to-cart {
+  background-color: transparent;
+}
 
-
-
-.sticky-add-to-cart input[type="checkbox"]:after, .moq-inputs_wrapper input[type="checkbox"]::after{
+.sticky input[type="checkbox"]:after, .sticky  input[type="checkbox"]::after{
   border-radius: 4.967px;
   border: 1.65px solid #FFF;
   background: #2D2D2D;
 }
-.stciky-add-to-cart-btn,.stciky-add-to-cart-btn:hover{
+.sticky .btn-warning,.sticky .btn-warning:hover{
   border-radius: 4px;
   border: 1px solid #F78D1E;
   background: transparent !important;
   color: #F78D1E !important;
   font-weight: 600;
 }
-
-.sticky-add-to-cart{
+.sticky label {
+  color: #fff !important;
+}
+.sticky{
   position: fixed !important;
   top: 55px;
   height: 60px;
@@ -3216,13 +3211,13 @@ header {
 }
 
 @media (min-width:650px) {
-  .sticky-add-to-cart{
+  .sticky{
     top: 80px;
   } 
 }
 
 @media (min-width:992px) {
-  .sticky-add-to-cart{
+  .sticky{
     top: 137px;
   } 
 }
