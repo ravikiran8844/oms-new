@@ -891,7 +891,7 @@ body {
 .cart-page_card-light-text {
   color: #868686;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 16px */
@@ -3227,7 +3227,9 @@ header {
 
 
 
-
+.mobile-cart-image-container{
+  width: 60px;
+}
 .mobile-cart table td img{
   border-radius: 16px;
 border: 1px solid #E8E8E8;
