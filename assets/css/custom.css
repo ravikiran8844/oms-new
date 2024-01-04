@@ -2883,7 +2883,7 @@ input[type="radio"] {
 .wishlist_item_title {
   color: #000;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   line-height: 100%; /* 16px */
@@ -2981,7 +2981,7 @@ input[type="radio"] {
   .wishlist_light-text {
     color: #7e7e7e;
     font-family: Inter;
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 16px */
@@ -2991,7 +2991,7 @@ input[type="radio"] {
   .wishlist_bold-text {
     color: #2d2d2d;
     font-family: Inter;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
@@ -2999,7 +2999,7 @@ input[type="radio"] {
   .wishlist_item_title {
     color: #000;
     font-family: Inter;
-    font-size: 18px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 100%; /* 24px */
@@ -3011,7 +3011,7 @@ input[type="radio"] {
     color: #ff2626;
     text-align: center;
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 100%; /* 16px */
@@ -3025,7 +3025,7 @@ input[type="radio"] {
     color: #6cb08a;
     text-align: center;
     font-family: Poppins;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 100%; /* 16px */
@@ -3038,7 +3038,7 @@ input[type="radio"] {
     color: #fff !important;
     text-align: center;
     font-family: Inter;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 100%; /* 18px */
@@ -3054,7 +3054,7 @@ input[type="radio"] {
     color: #377ef1 !important;
     text-align: center;
     font-family: Inter;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 100%; /* 18px */
