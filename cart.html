@@ -704,7 +704,7 @@
           quantity: 200,
           weight: "19.9gms",
           totalWeight:"19.9gms",
-          remarks: "Add Remarks",
+          remarks: "Remark by User",
           finish: "Matt Matt Matt",
       },
       {
@@ -714,8 +714,7 @@
           quantity: 210,
           weight: "40gms",
           totalWeight: "40gms",
-
-          remarks: "Add Remarks",
+          remarks: "",
           finish: "Matt",
       },
       {
@@ -725,8 +724,7 @@
           quantity: 250,
           weight: "100gms",
           totalWeight: "100gms",
-
-          remarks: "Add Remarks",
+          remarks: "",
           finish: "Matt Matt Matt",
       },
       {
@@ -736,7 +734,7 @@
           quantity: 200,
           weight: "19.9gms",
           totalWeight:"19.9gms",
-          remarks: "Add Remarks",
+          remarks:"Remark by User",
           finish: "Matt",
       },
       {
@@ -747,7 +745,7 @@
           weight: "40gms",
           totalWeight: "40gms",
 
-          remarks: "Add Remarks",
+          remarks: "",
           finish: "Matt Matt Matt",
       },
       {
@@ -758,7 +756,7 @@
           weight: "100gms",
           totalWeight: "100gms",
 
-          remarks: "Add Remarks",
+          remarks: "",
           finish: "Matt",
       },
       {
@@ -768,7 +766,7 @@
           quantity: 200,
           weight: "19.9gms",
           totalWeight:"19.9gms",
-          remarks: "Add Remarks",
+          remarks: "Remark by User",
           finish: "Matt",
       },
       {
@@ -779,7 +777,7 @@
           weight: "40gms",
           totalWeight: "40gms",
 
-          remarks: "Add Remarks",
+          remarks: "",
           finish: "Matt",
       },
       {
@@ -790,7 +788,7 @@
           weight: "100gms",
           totalWeight: "100gms",
 
-          remarks: "Add Remarks",
+          remarks: "",
           finish: "Matt",
       },
       {
@@ -800,7 +798,7 @@
           quantity: 200,
           weight: "19.9gms",
           totalWeight:"19.9gms",
-          remarks: "Add Remarks",
+          remarks: "",
           finish: "Matt Matt Matt",
       },
       {
@@ -811,7 +809,7 @@
           weight: "40gms",
           totalWeight: "40gms",
 
-          remarks: "Add Remarks",
+          remarks: "",
           finish: "Matt Matt Matt",
       },
       {
@@ -822,7 +820,7 @@
           weight: "100gms",
           totalWeight: "100gms",
 
-          remarks: "Add Remarks",
+          remarks: "Remark by User",
           finish: "Matt",
       },
       // Add more items to the JSON object as needed
@@ -853,7 +851,7 @@
               <td class="text-center">${item.weight}</td>
               <td  class="text-center">${item.totalWeight}</td>
 
-              <td class="text-green text-center" onclick="openRemarksModal()">${item.remarks}</td>
+              <td class="text-center ${item.remarks ? 'text-dark' : 'text-green text-decoration-underline'}" onclick=${item.remarks ? '' : 'openRemarksModal(this)'}> ${item.remarks ? item.remarks : 'Add Remarks'}</td>
               <td  class="text-center">
                   <select class="badge cart-items_card_finish-badge" name="size" id="size">
                       <option value="${item.finish}">${item.finish}</option>
@@ -969,8 +967,8 @@ function displayItems() {
                           field="quantity">
                       </div>
 
-                      <div class="text-green text-decoration-underline" onclick="openRemarksModal(this)">Add
-                        Remarks</div>
+                     <div class="${item.remarks ? 'text-dark' : 'text-green text-decoration-underline'}" onclick=${item.remarks ? '' : 'openRemarksModal(this)'}> ${item.remarks ? item.remarks : 'Add Remarks'}</div>
+                      
 
                     </div>
 
