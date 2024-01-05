@@ -3236,3 +3236,14 @@ border: 1px solid #E8E8E8;
 background: #FFF;
 box-shadow: 0px 0px 23px 0px #E3E3E3;
 }
+
+
+
+.placeholder-green::placeholder {
+  color: rgb(23, 165, 0);
+}
+
+
+table tr{
+  vertical-align: middle;
+}

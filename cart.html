@@ -135,7 +135,7 @@
                 </li>
 
                 <li>
-                  <a class="nav-link" href="wishlist.html">
+                  <a class="nav-link" href="wish-list-new.html">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24"
                       height="24" viewBox="0 0 24 24" fill="none"
                       stroke="currentColor" stroke-width="2"
@@ -851,7 +851,16 @@
               <td class="text-center">${item.weight}</td>
               <td  class="text-center">${item.totalWeight}</td>
 
-              <td class="text-center ${item.remarks ? 'text-dark' : 'text-green text-decoration-underline'}" onclick=${item.remarks ? '' : 'openRemarksModal(this)'}> ${item.remarks ? item.remarks : 'Add Remarks'}</td>
+              <td>
+                <div>
+                      <input
+                        class="text-green placeholder-green bg-transparent"
+                        style="max-width: 100%; margin:10px 0px;"
+                        placeholder="Add Remark"
+                        value="${item.remarks || ''}"
+                      />
+                      </div>
+                </td>
               <td  class="text-center">
                   <select class="badge cart-items_card_finish-badge" name="size" id="size">
                       <option value="${item.finish}">${item.finish}</option>
@@ -966,11 +975,15 @@ function displayItems() {
                           value="+" class="qtyplus"
                           field="quantity">
                       </div>
-
-                     <div class="${item.remarks ? 'text-dark' : 'text-green text-decoration-underline'}" onclick=${item.remarks ? '' : 'openRemarksModal(this)'}> ${item.remarks ? item.remarks : 'Add Remarks'}</div>
-                      
-
                     </div>
+                    <div>
+                      <input
+                        class="text-green placeholder-green"
+                        style="max-width: 100%; margin:10px 0px;"
+                        placeholder="Add Remark"
+                        value="${item.remarks || ''}"
+                      />
+                      </div> 
 
                   </div>`;
             tr.appendChild(tdDetails);
