@@ -766,7 +766,7 @@
           quantity: 200,
           weight: "19.9gms",
           totalWeight:"19.9gms",
-          remarks: "Remark by User",
+          remarks: "Remark by User Remark by User Remark by User",
           finish: "Matt",
       },
       {
@@ -851,16 +851,9 @@
               <td class="text-center">${item.weight}</td>
               <td  class="text-center">${item.totalWeight}</td>
 
-              <td>
-                <div>
-                      <input
-                        class="text-green placeholder-green bg-transparent"
-                        style="max-width: 100%; margin:10px 0px;"
-                        placeholder="Add Remark"
-                        value="${item.remarks || ''}"
-                      />
-                      </div>
-                </td>
+              <td class="text-center ${item.remarks ? 'text-dark' : 'text-green text-decoration-underline'}" onclick='openRemarksModal(this)'>
+                      ${item.remarks ? truncateRemarks(item.remarks, 2) : 'Add Remarks'}
+                    </td>
               <td  class="text-center">
                   <select class="badge cart-items_card_finish-badge" name="size" id="size">
                       <option value="${item.finish}">${item.finish}</option>
@@ -975,15 +968,13 @@ function displayItems() {
                           value="+" class="qtyplus"
                           field="quantity">
                       </div>
+
+                     <div class="${item.remarks ? 'text-dark' : 'text-green text-decoration-underline'}" onclick='openRemarksModal(this)'>
+                      ${item.remarks ? truncateRemarks(item.remarks, 2) : 'Add Remarks'}
+                      </div>
+                      
+
                     </div>
-                    <div>
-                      <input
-                        class="text-green placeholder-green"
-                        style="max-width: 100%; margin:10px 0px;"
-                        placeholder="Add Remark"
-                        value="${item.remarks || ''}"
-                      />
-                      </div> 
 
                   </div>`;
             tr.appendChild(tdDetails);
@@ -1004,6 +995,28 @@ function removeCartItem(index) {
 
 // Initial display of items
 displayItems();
+
+
+
+
+function truncateRemarks(remarks, words) {
+  if (!remarks) {
+    return '';
+  }
+
+  // Split the string into an array of words
+  const remarkWords = remarks.split(' ');
+
+  // Truncate the array to the specified number of words
+  const truncatedWords = remarkWords.slice(0, words);
+
+  // Join the truncated words back into a string
+  const truncatedRemarks = truncatedWords.join(' ');
+
+  return `${truncatedRemarks}...`;
+}
+
+
 
 
 
