@@ -3263,12 +3263,13 @@ table tr{
 
 
 
-.top-main-nav li .nav-link, .mobile-navbar li .nav-link {
+.top-main-nav li .nav-link, .mobile-navbar li .nav-link ,.dropdown-menu .nav-link{
   font-family: Inter;
-  font-size: 13px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  padding: 10px 0px;
 }
 
 
@@ -3287,6 +3288,10 @@ background: #FFF;
 box-shadow: 0px 0px 15px 0px rgba(101, 101, 101, 0.25);
 }
 
+
+.dropdown-menu small{
+  color: #A3A1A1;
+}
 
 .dropdown-menu .dropdown-item{
   border-bottom: 1px solid #E3E3E3;
