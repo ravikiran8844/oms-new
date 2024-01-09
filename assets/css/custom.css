@@ -3251,3 +3251,48 @@ table tr{
 .cart-items_card.desktop-cart table{
   min-height: unset !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.top-main-nav li .nav-link, .mobile-navbar li .nav-link {
+  font-family: Inter;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+
+.profile-nav-link{
+  color: #2D2D2D !important;
+  text-align: left !important;
+}
+.profile-pic{
+  border-radius: 61.25px;
+  border: 2.5px solid rgba(255, 255, 255, 0.41);
+  background-color: lightgray;
+}
+.navbar-nav .dropdown-menu {
+  border-radius: 10px;
+background: #FFF;
+box-shadow: 0px 0px 15px 0px rgba(101, 101, 101, 0.25);
+}
+
+
+.dropdown-menu .dropdown-item{
+  border-bottom: 1px solid #E3E3E3;
+  padding: 5px 10px;
+}
+
+.dropdown-menu .dropdown-item:last-child{
+  border-bottom: none;
+}
