@@ -3351,3 +3351,9 @@ box-shadow: 0px 0px 15px 0px rgba(101, 101, 101, 0.25);
     transform: rotate(360deg);
   }
 }
+
+
+
+.shop-page_product-card{
+  height: 100%;
+}
