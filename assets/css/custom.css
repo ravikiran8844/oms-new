@@ -1364,14 +1364,14 @@ input.qtyminus {
   font-weight: 500;
   letter-spacing: 0.3px;
   border-radius: 50%;
-  font-size: 10px;
+  font-size: 8px;
   background: #f78d1e;
   color: #fff;
-  top: -5px;
-  right: 0px;
+  top: -10px;
+  right: -10px;
   position: absolute;
-  min-width: 18px;
-  min-height: 18px;
+  min-width: 14px;
+  min-height: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2151,22 +2151,22 @@ button:active {
 }
 @media (max-width: 650px) {
   .navbar-brand picture img {
-    max-width: 160px;
+    max-width: 100%;
     height: auto;
   }
 
   .header .navbar .nav-link svg {
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
   }
   .header .navbar-toggler svg {
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
   }
 }
 .header .nav-link svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 .nav-search-input svg {
   width: 16px;
@@ -3356,4 +3356,142 @@ box-shadow: 0px 0px 15px 0px rgba(101, 101, 101, 0.25);
 
 .shop-page_product-card{
   height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.myaccount-page .page-main-title{
+  color: #F78D1E;
+font-family: Inter;
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+  flex-wrap: nowrap !important;
+}
+
+.profile-page_img-wrapper label{
+  cursor: pointer;
+}
+
+.myaccount-page .edit-btn{
+  border-radius: 29.876px;
+    border: 2px solid #D9D9D9;
+    background: transparent;
+    padding: 5px 10px;
+    color: #7E7E7E;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.myaccount-page .tab-content .card {
+  border-radius: 16.527px;
+border: 1.271px solid #E6E6E6;
+background: #FFF;
+overflow: hidden;
+}
+.myaccount-page .tab-content .card .form-control:disabled {
+  opacity: 1;
+  background: transparent;
+  border: none;
+  padding: 0px;
+  color: #313131;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.myaccount-page .tab-content .card label{
+  color: #7C7C7C !important;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.profile-page_img-wrapper{
+ background-color: #F1F1F1;
+ border-radius: 50%;
+ overflow: hidden;
+ margin-right: 15px;
+ width: 100px;
+ height: 100px;
+}
+.profile-page_img-wrapper img{
+ max-width: 100%;
+ height: 100%;
+    object-fit: cover;
+ }
+.myaccount-page .nav-pills .nav-link.active,.myaccount-page .nav-pills .show>.nav-link{
+  border-radius: 6px;
+  background: rgba(247, 141, 30, 0.10);
+  color: #F78D1E;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+
+}
+
+
+.myaccount-page .nav-pills .nav-link{
+  color: #6D6D6D;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+padding: 10px 30px;
+}
+
+.myaccount-page .nav-pills button{
+  text-align: left;
+
+}
+
+
+@media (max-width:768px) {
+  .myaccount-page .nav-pills{
+    gap: 2px;
+  }
+  .myaccount-page .nav-pills .nav-link.active,.myaccount-page .nav-pills .show>.nav-link{
+    font-size: 12px;
+  }
+  .myaccount-page .nav-pills .nav-link{
+    font-size: 12px;
+  }
+  .myaccount-page .nav-pills .nav-link{
+   padding:5px 8px;
+  }
+}
+
+@media (min-width:768px) {
+  .myaccount-page .nav-pills .nav-link.active::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='14' viewBox='0 0 13 14' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.473531 14L12.4209 7.12121L0.47353 0.242426C2.30385 4.64726 2.30385 9.57505 0.473531 14Z' fill='%23F78D1E'/%3E%3C/svg%3E");
+    display: inline-block;
+    margin-right: 8px; /* Adjust margin as needed */
+  }
 }
