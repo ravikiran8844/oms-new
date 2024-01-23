@@ -467,5 +467,12 @@
   }
 }
 
+.offcanvas {
+  display: block;
+}
 
-
+@media (min-width:992px) {
+  .offcanvas {
+    display: none;
+  }
+}
