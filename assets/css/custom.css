@@ -3670,3 +3670,33 @@ border-radius: 0px;
 }
 
 
+
+
+#mobile-Filters input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+}
+#mobile-Filters .form-check{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#mobile-Filters input[type="checkbox"]:after,
+#mobile-Filters input[type="checkbox"]::after {
+  content: "";
+  background-color: transparent;
+  display: inline-block;
+  padding-bottom: 5px;
+  color: #f78d1e;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  visibility: visible;
+}
+
+#mobile-Filters input[type="checkbox"]:checked:after,
+#mobile-Filters input[type="checkbox"]:checked::after {
+  content: "";
+  font-weight: bold;
+  background-color: #f78d1e;
+}
