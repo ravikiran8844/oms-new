@@ -1178,11 +1178,11 @@
 	$.fn.smartmenus.defaults = {
 		isPopup:		false,		// is this a popup menu (can be shown via the popupShow/popupHide methods) or a permanent menu bar
 		mainMenuSubOffsetX:	0,		// pixels offset from default position
-		mainMenuSubOffsetY:	0,		// pixels offset from default position
+		mainMenuSubOffsetY:	5,		// pixels offset from default position
 		subMenusSubOffsetX:	0,		// pixels offset from default position
 		subMenusSubOffsetY:	0,		// pixels offset from default position
-		subMenusMinWidth:	'10em',		// min-width for the sub menus (any CSS unit) - if set, the fixed width set in CSS will be ignored
-		subMenusMaxWidth:	'20em',		// max-width for the sub menus (any CSS unit) - if set, the fixed width set in CSS will be ignored
+		subMenusMinWidth:	'15em',		// min-width for the sub menus (any CSS unit) - if set, the fixed width set in CSS will be ignored
+		subMenusMaxWidth:	'30em',		// max-width for the sub menus (any CSS unit) - if set, the fixed width set in CSS will be ignored
 		subIndicators: 		true,		// create sub menu indicators - creates a SPAN and inserts it in the A
 		subIndicatorsPos: 	'append',	// position of the SPAN relative to the menu item content ('append', 'prepend')
 		subIndicatorsText:	'',		// [optionally] add text in the SPAN (e.g. '+') (you may want to check the CSS for the sub indicators too)

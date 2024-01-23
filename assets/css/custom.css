@@ -7,7 +7,10 @@
   font-family: Bridesmaid;
   src: url(/assets/fonts/Bridesmaid.ttf);
 }
-
+body{
+  max-width: 1920px;
+  margin: auto;
+}
 /* @media(max-width:1918px) {
 	.container{max-width:1560px;}
 } */
@@ -2156,12 +2159,12 @@ button:active {
   }
 
   .header .navbar .nav-link svg {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
   }
   .header .navbar-toggler svg {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
   }
 }
 .header .nav-link svg {
@@ -3327,12 +3330,19 @@ box-shadow: 0px 0px 15px 0px rgba(101, 101, 101, 0.25);
   z-index: 999999;
 }
 #preloader .spinner {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border: 5px solid #F78D1E;
   border-top-color: transparent;
   border-radius: 50%;
   animation: spinner 0.9s linear infinite;
+}
+
+@media (max-width:768px) {
+  #preloader .spinner {
+    width: 32px;
+  height: 32px;
+  }
 }
 
 @keyframes spinner {
@@ -3658,3 +3668,5 @@ border-radius: 0px;
 .cart-badge{
   padding: 0px;
 }
+
+

@@ -24,7 +24,7 @@
 
 }
 .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active {
-  padding: 0px 20px;
+  padding: 5px;
   /* make room for the toggle button (sub indicator) */
   /* padding-right: 58px; */
   background: #fff;
@@ -32,7 +32,7 @@
   color: #393939;
 
   font-family: "Inter";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 23px;
   text-decoration: none;
@@ -48,18 +48,21 @@
 }
 .sm-blue a .sub-arrow {
   position: absolute;
-  top: 50%;
-  margin-top: -17px;
+  top: 5px;
+  /* margin-top: -17px; */
   left: auto;
   right: 4px;
-  width: 34px;
-  height: 34px;
+  width: 20px;
+  height: 20px;
   overflow: hidden;
   font: 500 16px/34px monospace !important;
   text-align: center;
   text-shadow: none;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sm-blue a .sub-arrow::before {
   content: '+';
@@ -85,7 +88,7 @@
 .sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active {
   background: transparent;
   /* color: #2b82ac; */
-  font-size: 12px;
+  font-size: 14px;
   text-shadow: none;
   border-left: 8px solid transparent;
 }
@@ -128,7 +131,7 @@
   border-top: 0;
 }
 
-@media (min-width: 499px) {
+@media (min-width: 992px) {
   /* Switch to desktop layout
   -----------------------------------------------
      These transform the menu tree from
@@ -365,7 +368,7 @@
 
 
 
-@media (min-width:499px) {
+@media (min-width:992px) {
   .sm-blue a .sub-arrow {
 
     top: 50%;
@@ -399,7 +402,7 @@
 
 
 
-@media (min-width: 499px){
+@media (min-width: 992px){
 .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active, .sm-blue a.highlighted {
   padding:0px;
   padding-right: 20px;
@@ -428,6 +431,26 @@
 } */
 
 
+@media (min-width:992px) {
+  .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active {
+      font-size: 12px;
+  }
+  
+  .sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active {
+    font-size: 12px;
+  }
+  .sm-blue ul{
+    top: 42px !important;
+  }
+
+  .sm li{
+    padding: 0px 5px;
+  }
+  .sm li ul li{
+    padding: 0px;
+  }
+}
+
 @media (min-width:1200px) {
   .sm-blue a, .sm-blue a:hover, .sm-blue a:focus, .sm-blue a:active {
       font-size: 14px;
@@ -436,4 +459,13 @@
   .sm-blue ul a, .sm-blue ul a:hover, .sm-blue ul a:focus, .sm-blue ul a:active {
     font-size: 14px;
   }
+  .sm li{
+    padding: 0px 15px;
+  }
+  .sm li ul li{
+    padding: 0px;
+  }
 }
+
+
+
