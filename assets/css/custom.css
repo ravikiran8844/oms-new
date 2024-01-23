@@ -3644,3 +3644,17 @@ outline: none !important;
 background: #F5F6F6 !important;
 border-radius: 0px;
 }
+
+
+.main-mega-nav{
+  justify-content: center !important;
+}
+
+.top-main-nav li .nav-link, .mobile-navbar li .nav-link, .dropdown-menu .nav-link{
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.cart-badge{
+  padding: 0px;
+}
