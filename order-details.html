@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Orders - Emerald OMS</title>
+    <title>Order Details - Emerald OMS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -805,182 +805,141 @@
                                 <a class="nav-link" href="dashboard.html">Dashboard</a>
                                 <a class="nav-link" href="my-profile.html">My Profile</a>
                                 <a class="nav-link active" href="orders.html">Orders</a>
+                                <!-- <a class="nav-link" href="">Return & Exchange</a>
+                                <a class="nav-link" href="">Cancel Orders</a> -->
                                 <a class="nav-link" href="">Logout</a>
                             </div>
                         </div>
                         <div class="col-12 col-md-9 col-lg-9 col-xxl-10 mt-4 mt-md-0">
-                            
+                            <div class="row mb-4">
 
-                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <a class="btn p-0 border-0" href="orders.html"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                                        <rect x="0.5" y="0.5" width="44" height="44" rx="10.5" fill="white" stroke="#E2E2E2"/>
+                                        <path d="M13.6586 21.9071L18.7252 16.2073C18.9901 15.9376 19.3747 15.9399 19.6208 16.1627C19.8669 16.3855 19.8881 16.8122 19.6653 17.0583L15.5388 21.6993H31.8667C32.2164 21.6993 32.5 21.9828 32.5 22.3326C32.5 22.6824 32.2164 22.9659 31.8667 22.9659H15.5388L19.6653 27.6069C19.8881 27.853 19.8595 28.2718 19.6208 28.5024C19.3722 28.7425 18.948 28.704 18.7252 28.4579L13.6586 22.7581C13.4348 22.4453 13.4615 22.1802 13.6586 21.9071Z" fill="#5E5E5E"/>
+                                      </svg></a>
+                                </div>
 
-                                <div class="col-12">
-                                  <nav class="dasboard-top-menu-links mb-4">
-                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                      <button class="nav-link active" id="nav-all-orders-tab" data-bs-toggle="tab" data-bs-target="#nav-all-orders" type="button" role="tab" aria-controls="nav-all-orders" aria-selected="true">All Orders</button>
-                                      <button class="nav-link" id="nav-pending-orders-tab" data-bs-toggle="tab" data-bs-target="#nav-pending-orders" type="button" role="tab" aria-controls="nav-pending-orders" aria-selected="true">Pending Orders</button>
-
-                                      <button class="nav-link" id="nav-exchange-orders-tab" data-bs-toggle="tab" data-bs-target="#nav-exchange-orders" type="button" role="tab" aria-controls="nav-exchange-orders" aria-selected="false">Return & Exchange</button>
-                                      <button class="nav-link" id="nav-cancel-orders-tab" data-bs-toggle="tab" data-bs-target="#nav-cancel-orders" type="button" role="tab" aria-controls="nav-cancel-orders" aria-selected="false">Cancel Orders</button>
-
-                                    </div>
-                                  </nav>
-
-                                  <div class="tab-content" id="nav-tabContent">
-                                    <div class="tab-pane fade show active" id="nav-all-orders" role="tabpanel" aria-labelledby="nav-all-orders-tab" tabindex="0">
-
-                                     
-
-
-                                      <div class="row">
-                                        <div class="col-12">
-                                          <div class="card h-100">
-                                            <div class="card-header pt-3">
-                                              <div class="d-flex flex-wrap justify-content-between w-100">
-                                                <div>
-                                                  <h5>Recent Orders</h5>
-                                                </div>
-                          
-                                                <div class="d-flex align-items-center">
-
-
-
-
-
-
-                                                    
-                          
-                                                  <div>
-                                                    <select class="custom-select-box" name="" id="order-date-select">
-                                                      <option selected value="">Today</option>
-                                                      <option  value="0-7">Last week</option>
-                                                      <option value="0-15">Last 15 Days</option>
-                                                      <option value="0-30">Last Month</option>
-                                                    </select>
-                                                  </div>
-                          
-                                                 
-                          
-                          
-                                                </div>
-                                              </div>
-                          
+                                <div class="col-12 mb-5">
+                                    <div class="card order-details-card">
+                                        <div class="card-body d-flex gap-2 justify-content-between align-items-center flex-wrap">
+                                            <div>
+                                                <h5 class="fw-bold">Jai Durga Jewellers</h5>
+                                                <div>Order Id : EJ/2324/00008089</div>
                                             </div>
-                          
-                                            <div class="card-body">
-                                              <div class="table-responsive">
-                                                <table id="myTable" class="pt-3 mb-3" style="width:100%">
-                                                  <thead>
-                                                      <tr>
-                                                          <th>S.No</th>
-                                                          <th>Order Id</th>
-                                                          <th>Order date</th>
-                                                          <th>Qty</th>
-                                                          <th>Total Weight</th>
-                                                          <th>Status</th>
-                                                          <th>Action</th>
-                                                      </tr>
-                                                  </thead>
-                                                  <tbody>
-                                                    <tr>
-                                                      <td>1</td>
-                                                     <td>EJ/2324/00008089</td>
-                                                      <td>Mar 13, 2023</td>
-                                                          <td>4</td>
-                                                          <td>360 gms</td>
-                                                          <td>
-                                                            <div class="badge lifting">Lifting</div>
-                                                          </td>
-                                                         <td>
-                                                          <a class="text-success view-details-btn" href="order-details.html">View details</a>
-                                                         </td>
 
-                                                    </tr>
+                                            <div>
+                                                <button class="btn btn-light order-status-btn">Status: <span class="text-success">Completed</span></button>
+                                                <button class="btn btn-warning ms-2">Download Invoice</button>
 
-
-                                                    <tr>
-                                                        <td>2</td>
-                                                       <td>EJ/2325/00008089</td>
-                                                        <td>Mar 13, 2023</td>
-                                                            <td>4</td>
-                                                            <td>320 gms</td>
-                                                            <td>
-                                                              <div class="badge pending">Pending</div>
-                                                            </td>
-                                                           <td>
-                                                            <a class="text-success view-details-btn" href="order-details.html">View details</a>
-                                                           </td>
-  
-                                                      </tr>
-
-
-                                                      <tr>
-                                                        <td>3</td>
-                                                       <td>EJ/2925/00008089</td>
-                                                        <td>Mar 13, 2023</td>
-                                                            <td>4</td>
-                                                            <td>320 gms</td>
-                                                            <td>
-                                                              <div class="badge overdue">Overdue</div>
-                                                            </td>
-                                                           <td>
-                                                            <a class="text-success view-details-btn" href="order-details.html">View details</a>
-                                                           </td>
-  
-                                                      </tr>
-
-
-
-                                                      <tr>
-                                                        <td>4</td>
-                                                       <td>EJ/2926/00008089</td>
-                                                        <td>Mar 13, 2023</td>
-                                                            <td>4</td>
-                                                            <td>320 gms</td>
-                                                            <td>
-                                                              <div class="badge wip">WIP</div>
-                                                            </td>
-                                                           <td>
-                                                            <a class="text-success view-details-btn" href="order-details.html">View details</a>
-                                                           </td>
-  
-                                                      </tr>
-
-
-
-                                                 
-
-
-                                                  </tbody>
-                                                
-                                              </table>
-                                          
-                                              </div>
                                             </div>
-                                          </div>
+
                                         </div>
-                                      </div>
-
-
-
-
                                     </div>
-
-                                    <div class="tab-pane fade" id="nav-pending-orders" role="tabpanel" aria-labelledby="nav-pending-orders-tab" tabindex="0">
-                                        Pending Orders
-                                    </div>
-
-
-
-
-
-                                    <div class="tab-pane fade" id="nav-exchange-orders" role="tabpanel" aria-labelledby="nav-exchange-orders-tab" tabindex="0">Exchange Orders</div>
-                                    <div class="tab-pane fade" id="nav-cancel-orders" role="tabpanel" aria-labelledby="nav-cancel-orders-tab" tabindex="0">Cancel Orders</div>
-                                  </div>
 
                                 </div>
 
-                              </div>
 
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="fw-bold mt-2 mb-4">
+                                                Order Details
+                                            </h4>
+
+                                            <div class="table-responsive">
+                                                <table class="table  table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                        <th>ProductID</th>
+                                                        <th>Product Name</th>
+                                                        <th>Project</th>
+                                                        <th>Purity</th>
+                                                        <th>Color</th>
+                                                        <th>Style</th>
+                                                        <th>Remarks</th>
+                                                        <th>Quantity</th>
+                                                        <th>Weight (in gms)</th>
+                                                        </tr>
+                                            
+                                                    </thead>
+                                                    <tbody>
+                                                       <tr>
+                                                        <td>SFIDOL093-001</td>
+                                                        <td>Silver Forming Idol</td>
+                                                        <td>EF Idol</td>
+                                                        <td>SIL-99.9</td>
+                                                        <td>-</td>
+                                                        <td>BX</td>
+                                                        <td>ND1 SF SILVER IDOL 999 HOLO...</td>
+                                                        <td>10</td>
+                                                        <td>35.40</td>
+                                                       </tr>
+
+                                                       <tr>
+                                                        <td>SFIDOL093-001</td>
+                                                        <td>Silver Forming Idol</td>
+                                                        <td>EF Idol</td>
+                                                        <td>SIL-99.9</td>
+                                                        <td>-</td>
+                                                        <td>BX</td>
+                                                        <td>ND1 SF SILVER IDOL 999 HOLO...</td>
+                                                        <td>10</td>
+                                                        <td>35.40</td>
+                                                       </tr>
+
+
+
+                                                       <tr>
+                                                        <td>SFIDOL093-001</td>
+                                                        <td>Silver Forming Idol</td>
+                                                        <td>EF Idol</td>
+                                                        <td>SIL-99.9</td>
+                                                        <td>-</td>
+                                                        <td>BX</td>
+                                                        <td>ND1 SF SILVER IDOL 999 HOLO...</td>
+                                                        <td>10</td>
+                                                        <td>35.40</td>
+                                                       </tr>
+
+
+                                                       <tr>
+                                                        <td>SFIDOL093-001</td>
+                                                        <td>Silver Forming Idol</td>
+                                                        <td>EF Idol</td>
+                                                        <td>SIL-99.9</td>
+                                                        <td>-</td>
+                                                        <td>BX</td>
+                                                        <td>ND1 SF SILVER IDOL 999 HOLO...</td>
+                                                        <td>10</td>
+                                                        <td>35.40</td>
+                                                       </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                      <tr>
+                                                        <th>Grand Total :</th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th>55</th>
+                                                        <th>216</th>
+                                                      </tr>
+
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        
                         </div>
                     </div>
                 </div>
@@ -1039,86 +998,6 @@
     <script src="assets/js/smartmenu.js"></script>
 
     <script src="assets/js/custom.js"></script>
-
-
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
-
-    <script
-        src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable({
-                'columnDefs': [
-                ],
-                language: {
-                    searchPlaceholder: "Search Orders"
-                },
-                'select': {
-                    'style': 'multi'
-                },
-                'order': [[1, 'asc']]
-            });
-        });
-    </script>
-
-
-    <script>
-        // JavaScript to handle the click event of "View details" button
-        $(document).ready(function () {
-            $('.view-details-btn').on('click', function () {
-                // Show the order details modal
-                $('#orderDetailsModal').modal('show');
-            });
-        });
-    </script>
-    <script>
-
-
-
-        $("#dealer-profile-edit").click(function () {
-            $("#dealer-profile input").attr("disabled", false);
-        })
-
-
-        $("#personal-info-edit").click(function () {
-            $("#personal-information input").attr("disabled", false);
-        })
-
-        $("#address-info-edit").click(function () {
-            $("#address-information input").attr("disabled", false);
-        })
-
-
-        // Get references to the input and image elements
-        const $inputElement = $('#profile-photo-edit-input');
-        const $imageElement = $('#user-profile-img');
-
-        // Add an event listener to the input element for the 'change' event
-        $inputElement.on('change', function () {
-            // Check if a file was selected
-            if ($inputElement[0].files.length > 0) {
-                // Get the selected file
-                const selectedFile = $inputElement[0].files[0];
-
-                // Create a FileReader to read the selected file
-                const reader = new FileReader();
-
-                // Define a function to execute when the FileReader has loaded the file
-                reader.onload = function (e) {
-                    // Set the 'src' attribute of the image element to the data URL of the selected file
-                    $imageElement.attr('src', e.target.result);
-                };
-
-                // Read the selected file as a data URL
-                reader.readAsDataURL(selectedFile);
-            }
-        });
-
-
-
-    </script>
-
 
 </body>
 
