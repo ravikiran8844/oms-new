@@ -1466,6 +1466,7 @@ input[type="radio"]:checked + label button {
 }
 .splide__arrow {
   background: #f78d1e !important;
+  opacity: 1;
 }
 .splide__arrow svg {
   fill: #fff !important;
@@ -1476,6 +1477,9 @@ input[type="radio"]:checked + label button {
 .splide__arrow:focus {
   outline: none;
 }
+
+
+
 
 .mobile-filter-btn {
   background: #fff;
@@ -3422,7 +3426,7 @@ border: 1.271px solid #E6E6E6;
 background: #FFF;
 overflow: hidden;
 }
-.myaccount-page .tab-content .card .form-control:disabled {
+.myaccount-page .my-profile .card .form-control:disabled {
   opacity: 1;
   background: transparent;
   border: none;
@@ -3434,7 +3438,7 @@ overflow: hidden;
   font-weight: 600;
 }
 
-.myaccount-page .tab-content .card label{
+.myaccount-page .my-profile .card label{
   color: #7C7C7C !important;
   font-family: Inter;
   font-size: 16px;
@@ -3622,6 +3626,24 @@ background: #F8F8FB !important;
     line-height: 100%; /* 14.212px */
     }
 
+    .myaccount-page .badge{
+  min-width: 98px;
+  text-align: center;
+
+}
+    .pending{
+      color: #FF6E01;
+      text-align: start;
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%; /* 14.212px */
+      border-radius: 15.396px;
+      background: #FFE2CC;
+      border: none !important;
+        outline: none !important;
+    }
 .matt,.overdue{
   color: #DC4D70;
   text-align: start;
@@ -3635,7 +3657,7 @@ background: #F8F8FB !important;
   border: none !important;
     outline: none !important;
   }
-.completed,.wip{
+.completed,.wip,.lifting{
   border-radius: 15.396px;
 background: #D1FAEF;
 color: #18B992;
@@ -3670,8 +3692,6 @@ border-radius: 0px;
 }
 
 
-
-
 #mobile-Filters input[type="checkbox"]{
   width: 18px;
   height: 18px;
@@ -3699,4 +3719,11 @@ border-radius: 0px;
   content: "";
   font-weight: bold;
   background-color: #f78d1e;
+}
+
+@media screen and (max-width: 640px){
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter {
+    float: left !important;
+    text-align: center;
+}
 }
