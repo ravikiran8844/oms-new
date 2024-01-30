@@ -6,19 +6,18 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Orders - Emerald OMS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- Custom style CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+    <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/lib/css/dataTables.css">
+    <link rel="stylesheet" href="assets/lib/css/daterangepicker.css">
+    <link rel="stylesheet" href="assets/lib/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/lib/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/lib/css/owlCarousel.min.css">
+    <link rel="stylesheet" href="assets/lib/css/select.dataTables.min.css">
+    <link rel="stylesheet" href="assets/lib/css/splide.min.css">
+    <link rel="stylesheet" href="assets/lib/css/sumoselect.min.css">
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.7.0/css/select.dataTables.min.css">
-
 </head>
 
 <body>
@@ -840,28 +839,21 @@
                                                   <h5>Recent Orders</h5>
                                                 </div>
                           
-                                                <div class="d-flex align-items-center">
-
-
-
-
-
-
-                                                    
-                          
-                                                  <div>
-                                                    <select class="custom-select-box" name="" id="order-date-select">
-                                                      <option selected value="">Today</option>
-                                                      <option  value="0-7">Last week</option>
-                                                      <option value="0-15">Last 15 Days</option>
-                                                      <option value="0-30">Last Month</option>
-                                                    </select>
+                                                <div class="d-flex align-items-center custom-date-input_wrapper">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+                                                        <path d="M11.9998 1.76229H10.1209V1.17855C10.1209 0.903458 9.89783 0.68042 9.62274 0.68042C9.34765 0.68042 9.12462 0.903458 9.12462 1.17855V1.76229H5.34294V1.17855C5.34294 0.903458 5.1199 0.68042 4.84481 0.68042C4.56973 0.68042 4.34669 0.903458 4.34669 1.17855V1.76229H2.46777C1.10692 1.76229 0 2.86933 0 4.23018V11.2063C0 12.5491 1.09233 13.6414 2.43493 13.6414H12.0326C13.3752 13.6414 14.4676 12.5491 14.4676 11.2063V4.23018C14.4676 2.86933 13.3606 1.76229 11.9998 1.76229ZM2.46777 2.75854H4.34669V3.04761C4.34669 3.3227 4.56973 3.54574 4.84481 3.54574C5.1199 3.54574 5.34294 3.3227 5.34294 3.04761V2.75854H9.12462V3.04761C9.12462 3.3227 9.34765 3.54574 9.62274 3.54574C9.89783 3.54574 10.1209 3.3227 10.1209 3.04761V2.75854H11.9998C12.8112 2.75854 13.4713 3.41866 13.4713 4.23018V4.70264H0.996253V4.23018C0.996253 3.41866 1.65637 2.75854 2.46777 2.75854ZM12.0326 12.6452H2.43493C1.64153 12.6452 0.996253 11.9997 0.996253 11.2063V5.6989H13.4713V11.2063C13.4713 11.9997 12.826 12.6452 12.0326 12.6452Z" fill="#F96421"/>
+                                                        <path d="M3.90841 7.17285H3.16414C2.88905 7.17285 2.66602 7.39589 2.66602 7.67098C2.66602 7.94607 2.88905 8.1691 3.16414 8.1691H3.90841C4.1835 8.1691 4.40654 7.94607 4.40654 7.67098C4.40654 7.39589 4.1835 7.17285 3.90841 7.17285Z" fill="#F96421"/>
+                                                        <path d="M7.60568 7.17285H6.86141C6.58632 7.17285 6.36328 7.39589 6.36328 7.67098C6.36328 7.94607 6.58632 8.1691 6.86141 8.1691H7.60568C7.88077 8.1691 8.1038 7.94607 8.1038 7.67098C8.1038 7.39589 7.88077 7.17285 7.60568 7.17285Z" fill="#F96421"/>
+                                                        <path d="M11.3049 7.17285H10.5606C10.2855 7.17285 10.0625 7.39589 10.0625 7.67098C10.0625 7.94607 10.2855 8.1691 10.5606 8.1691H11.3049C11.58 8.1691 11.803 7.94607 11.803 7.67098C11.803 7.39589 11.58 7.17285 11.3049 7.17285Z" fill="#F96421"/>
+                                                        <path d="M3.90841 9.72797H3.16414C2.88905 9.72797 2.66602 9.951 2.66602 10.2261C2.66602 10.5012 2.88905 10.7242 3.16414 10.7242H3.90841C4.1835 10.7242 4.40654 10.5012 4.40654 10.2261C4.40654 9.951 4.1835 9.72797 3.90841 9.72797Z" fill="#F96421"/>
+                                                        <path d="M7.60568 9.72797H6.86141C6.58632 9.72797 6.36328 9.951 6.36328 10.2261C6.36328 10.5012 6.58632 10.7242 6.86141 10.7242H7.60568C7.88077 10.7242 8.1038 10.5012 8.1038 10.2261C8.1038 9.951 7.88077 9.72797 7.60568 9.72797Z" fill="#F96421"/>
+                                                        <path d="M11.3049 9.72797H10.5606C10.2855 9.72797 10.0625 9.951 10.0625 10.2261C10.0625 10.5012 10.2855 10.7242 10.5606 10.7242H11.3049C11.58 10.7242 11.803 10.5012 11.803 10.2261C11.803 9.951 11.58 9.72797 11.3049 9.72797Z" fill="#F96421"/>
+                                                      </svg>
+                                                    <input class="form-control custom-date-input flex-grow-1 " type="text" placeholder="Date Range" name="datefilter" value="">
+                                
                                                   </div>
-                          
-                                                 
-                          
-                          
-                                                </div>
+
+
                                               </div>
                           
                                             </div>
@@ -993,59 +985,73 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
-        integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-
+    <script src="assets/lib/js/jquery.min.js"></script>
+    <script src="assets/lib/js/bootstrap.min.js"></script>
+    <script src="assets/lib/js/owlCarousel.min.js"></script>
+    <script src="assets/lib/js/splide.min.js"></script>
+    <script src="assets/lib/js/lightbox.min.js"></script>
+    <script src="assets/lib/js/dataTables.js"></script>
+    <script src="assets/lib/js/checkboxes.min.js"></script>
+    <script src="assets/lib/js/sumoselect.min.js"></script>
+    <script src="assets/lib/js/moment.min.js"></script>
+    <script src="assets/lib/js/daterangepicker.min.js"></script>
     <script src="assets/js/smartmenu.js"></script>
-
     <script src="assets/js/custom.js"></script>
-
-
-    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
-
-    <script
-        src="https://gyrocode.github.io/jquery-datatables-checkboxes/1.2.12/js/dataTables.checkboxes.min.js"></script>
-
+       
+       
+       <script type="text/javascript">
+            $(function() {
+            
+              $('input[name="datefilter"]').daterangepicker({
+            ranges: {
+                'Today': [moment(), moment()],
+                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+            "locale": {
+                "format": "MM/DD/YYYY",
+                "separator": " - ",
+                "applyLabel": "Apply",
+                "cancelLabel": "Cancel",
+                "fromLabel": "From",
+                "toLabel": "To",
+                "customRangeLabel": "Custom",
+                "weekLabel": "W",
+                "daysOfWeek": [
+                    "Su",
+                    "Mo",
+                    "Tu",
+                    "We",
+                    "Th",
+                    "Fr",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+                "firstDay": 1
+            }
+        }, function(start, end, label) {
+          console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+        });
+            
+            });
+            </script>
+            
     <script>
         $(document).ready(function () {
             $('#myTable').DataTable({
@@ -1054,70 +1060,12 @@
                 language: {
                     searchPlaceholder: "Search Orders"
                 },
-                'select': {
-                    'style': 'multi'
-                },
+                
                 'order': [[1, 'asc']]
             });
         });
     </script>
 
-
-    <script>
-        // JavaScript to handle the click event of "View details" button
-        $(document).ready(function () {
-            $('.view-details-btn').on('click', function () {
-                // Show the order details modal
-                $('#orderDetailsModal').modal('show');
-            });
-        });
-    </script>
-    <script>
-
-
-
-        $("#dealer-profile-edit").click(function () {
-            $("#dealer-profile input").attr("disabled", false);
-        })
-
-
-        $("#personal-info-edit").click(function () {
-            $("#personal-information input").attr("disabled", false);
-        })
-
-        $("#address-info-edit").click(function () {
-            $("#address-information input").attr("disabled", false);
-        })
-
-
-        // Get references to the input and image elements
-        const $inputElement = $('#profile-photo-edit-input');
-        const $imageElement = $('#user-profile-img');
-
-        // Add an event listener to the input element for the 'change' event
-        $inputElement.on('change', function () {
-            // Check if a file was selected
-            if ($inputElement[0].files.length > 0) {
-                // Get the selected file
-                const selectedFile = $inputElement[0].files[0];
-
-                // Create a FileReader to read the selected file
-                const reader = new FileReader();
-
-                // Define a function to execute when the FileReader has loaded the file
-                reader.onload = function (e) {
-                    // Set the 'src' attribute of the image element to the data URL of the selected file
-                    $imageElement.attr('src', e.target.result);
-                };
-
-                // Read the selected file as a data URL
-                reader.readAsDataURL(selectedFile);
-            }
-        });
-
-
-
-    </script>
 
 
 </body>
