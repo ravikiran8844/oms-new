@@ -3754,3 +3754,6 @@ padding: 5px 10px;
 .dropdown-menu .dropdown-item:active{
  background-color: var(--bs-tertiary-bg);
 }
+div.dataTables_processing div {
+  display: none;
+}
