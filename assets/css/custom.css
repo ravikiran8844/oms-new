@@ -3757,3 +3757,16 @@ padding: 5px 10px;
 div.dataTables_processing div {
   display: none;
 }
+
+
+
+.spinner-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-border{
+  color: inherit !important;
+  padding: 5px;
+}
