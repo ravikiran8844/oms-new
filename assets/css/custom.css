@@ -3770,3 +3770,30 @@ div.dataTables_processing div {
   color: inherit !important;
   padding: 5px;
 }
+
+.card-style{
+  background: #fff;
+    border-radius: 12.092px;
+    border: 1px solid #ECECEC;
+    box-sizing: border-box;
+    padding: 25px 30px;
+    position: relative;
+    box-shadow: 0px 12px 24px -4px rgba(145, 158, 171, 0.12), 0px 0px 2px 0px rgba(145, 158, 171, 0.2);
+}
+
+
+
+.confeti-wrapper canvas {
+  width:100%;
+  height:100%;
+}
+
+.confeti-wrapper{
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
