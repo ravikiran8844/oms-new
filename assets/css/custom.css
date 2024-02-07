@@ -7,6 +7,10 @@
   font-family: Bridesmaid;
   src: url(/assets/fonts/Bridesmaid.ttf);
 }
+@font-face {
+  font-family: BrittanySignature;
+  src: url(/assets/fonts/BrittanySignature.ttf);
+}
 body{
   max-width: 1920px;
   margin: auto;
@@ -999,14 +1003,11 @@ input.qtyminus {
     border-radius: 18px;
 } */
 
-.thankyou-page {
-  background: #2d2d2d !important;
-  min-height: 100vh;
-}
+
 .thankyou-page_title {
   color: #f78d1e;
   text-align: center;
-  font-family: Bridesmaid;
+  font-family: BrittanySignature;
   font-size: 52px;
   font-style: normal;
   font-weight: 400;
@@ -1042,8 +1043,8 @@ input.qtyminus {
   .thankyou-page_title {
     color: #f78d1e;
     text-align: center;
-    font-family: Bridesmaid;
-    font-size: 85px;
+    font-family: BrittanySignature;
+    font-size: 65px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -3796,4 +3797,17 @@ div.dataTables_processing div {
   height: 100%;
   position: absolute;
   top: 0;
+  z-index: 1;
+}
+.thankyou-page {
+  /* background: #2d2d2d !important; */
+  min-height: 100vh;
+}
+.thankyou-page_wrapper{
+  background: #2d2d2d !important;
+  position: relative;
+}
+.thankyou-page{
+  position: relative;
+  z-index: 9;
 }
