@@ -3811,3 +3811,41 @@ div.dataTables_processing div {
   position: relative;
   z-index: 9;
 }
+.custom-card .btn{
+  font-weight: 600;
+  border: none !important;
+  font-size: 14px;
+  border-radius: 30px !important;
+}
+
+.custom-card .btn.active{
+  box-shadow: none;
+  background: #FEF0E9;
+  color: #F96421;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+}
+.custom-card .total-orders-btn{
+  border: 0.8px solid #F0F0F0;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  background-color: #F0F0F0 !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+.custom-card .total-orders-btn span{
+  color: #F78D1E;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;  
+}
