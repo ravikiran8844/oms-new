@@ -1899,13 +1899,13 @@
                       <div class="form-check">
                         <input
                           checked
-                          id="Collection-God"
+                          id="popup-Collection-God"
                           type="checkbox"
-                          name="mobile-Collection-filter"
+                          name="mobile-popup-Collection-filter"
                         />
                         <label
                           class="form-check-label"
-                          for="mobile-Collection-God"
+                          for="mobile-popup-Collection-God"
                         >
                           God
                         </label>
@@ -1913,13 +1913,13 @@
 
                       <div class="form-check">
                         <input
-                          id="mobile-Collection-Animal"
+                          id="mobile-popup-Collection-Animal"
                           type="checkbox"
-                          name="mobile-Collection-filter"
+                          name="mobile-popup-Collection-filter"
                         />
                         <label
                           class="form-check-label"
-                          for="mobile-Collection-Animal"
+                          for="mobile-popup-Collection-Animal"
                         >
                           Animal
                         </label>
@@ -1927,13 +1927,13 @@
 
                       <div class="form-check">
                         <input
-                          id="mobile-Collection-Fancy"
+                          id="mobile-popup-Collection-Fancy"
                           type="checkbox"
-                          name="mobile-Collection-filter"
+                          name="mobile-popup-Collection-filter"
                         />
                         <label
                           class="form-check-label"
-                          for="mobile-Collection-Fancy"
+                          for="mobile-popup-Collection-Fancy"
                         >
                           Fancy
                         </label>
@@ -1941,13 +1941,13 @@
 
                       <div class="form-check">
                         <input
-                          id="mobile-Collection-Evil-Eye"
+                          id="mobile-popup-Collection-Evil-Eye"
                           type="checkbox"
-                          name="mobile-Collection-filter"
+                          name="mobile-popup-Collection-filter"
                         />
                         <label
                           class="form-check-label"
-                          for="mobile-Collection-Evil-Eye"
+                          for="mobile-popup-Collection-Evil-Eye"
                         >
                           Evil Eye
                         </label>
@@ -1955,13 +1955,13 @@
 
                       <div class="form-check">
                         <input
-                          id="mobile-Collection-Cocktail"
+                          id="mobile-popup-Collection-Cocktail"
                           type="checkbox"
-                          name="mobile-Collection-filter"
+                          name="mobile-popup-Collection-filter"
                         />
                         <label
                           class="form-check-label"
-                          for="mobile-Collection-Cocktail"
+                          for="mobile-popup-Collection-Cocktail"
                         >
                           Cocktail
                         </label>
@@ -1991,13 +1991,13 @@
                       <div class="form-check">
                         <input
                           checked
-                          id="mobile-sub-Collection-Balaji"
+                          id="mobile-sub-popup-Collection-Balaji"
                           type="checkbox"
-                          name="mobile-sub-Collection-filter"
+                          name="mobile-sub-popup-Collection-filter"
                         />
                         <label
                           class="form-check-label"
-                          for="mobile-sub-Collection-Balaji"
+                          for="mobile-sub-popup-Collection-Balaji"
                         >
                           Balaji
                         </label>
@@ -2005,13 +2005,13 @@
 
                       <div class="form-check">
                         <input
-                          id="mobile-sub-Collection-MURUGAN"
+                          id="mobile-sub-popup-Collection-MURUGAN"
                           type="checkbox"
-                          name="mobile-sub-Collection-filter"
+                          name="mobile-sub-popup-Collection-filter"
                         />
                         <label
                           class="form-check-label"
-                          for="mobile-sub-Collection-MURUGAN"
+                          for="mobile-sub-popup-Collection-MURUGAN"
                         >
                           MURUGAN
                         </label>
@@ -2019,13 +2019,13 @@
 
                       <div class="form-check">
                         <input
-                          id="mobile-sub-Collection-OM"
+                          id="mobile-sub-popup-Collection-OM"
                           type="checkbox"
-                          name="mobile-sub-Collection-filter"
+                          name="mobile-sub-popup-Collection-filter"
                         />
                         <label
                           class="form-check-label"
-                          for="mobile-sub-Collection-OM"
+                          for="mobile-sub-popup-Collection-OM"
                         >
                           OM
                         </label>
@@ -2158,7 +2158,71 @@
 
             <div class="col-12 custom-accordian">
               <div class="accordion" id="sidebarFilters">
+
+
+
                 <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#sidebarCollectionFilter"
+                      aria-expanded="true"
+                      aria-controls="sidebarCollectionFilter"
+                    >
+                    Collection
+                    </button>
+                  </h2>
+                  <div
+                    id="sidebarCollectionFilter"
+                    class="accordion-collapse collapse show"
+                  >
+                    
+
+                  <div class="accordion-body">
+
+                    <div>
+                      <div>    
+                        <input class="form-control mb-3" type="text" id="sidebarSearch" placeholder="Search Collection...">
+                      </div>
+
+                      <div id="sidebarLabels"></div>
+
+                    </div>
+
+                    <div>
+                      <button class="btn open-popup">Show More</button>
+                    </div>
+
+                  </div>
+
+
+                  </div>
+                </div>
+
+
+                <!-- Popup for filters -->
+<div class="popup rk-filter" id="popup" style="display: none;">
+<button class="btn" onclick="togglePopup()" style=" position: absolute; right: 0px; top: 0px; ">
+  <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close-circle-outline</title><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z"></path></svg>
+</button>
+
+  <div>
+    <!-- Sorting buttons -->
+    <div id="sorting-buttons"></div>
+    <!-- Search bar -->
+    <input type="text" class="search-bar" id="searchBar" placeholder="Search...">
+    <!-- Add more sorting buttons for other letters as needed -->
+    <!-- Dummy filter elements (replace with your generated elements) -->
+    <div id="filter-elements">
+    </div>
+    
+  </div>
+</div>
+
+
+                <div class="accordion-item mt-4">
                   <h2 class="accordion-header">
                     <button
                       class="accordion-button"
@@ -3724,12 +3788,12 @@
       jQuery(document).ready(function () {
         // Handle increment and decrement for each container
         $(".quantity-container").each(function () {
-          var container = $(this);
-          var qtyInput = container.find(".qty");
+          let container = $(this);
+          let qtyInput = container.find(".qty");
 
           container.find(".qtyplus").click(function (e) {
             e.preventDefault();
-            var currentVal = parseInt(qtyInput.val());
+            let currentVal = parseInt(qtyInput.val());
             if (!isNaN(currentVal)) {
               qtyInput.val(currentVal + 1);
             } else {
@@ -3739,7 +3803,7 @@
 
           container.find(".qtyminus").click(function (e) {
             e.preventDefault();
-            var currentVal = parseInt(qtyInput.val());
+            let currentVal = parseInt(qtyInput.val());
             if (!isNaN(currentVal) && currentVal > 200) {
               qtyInput.val(currentVal - 1);
             } else {
@@ -3774,8 +3838,8 @@
     <script>
       $(document).ready(function () {
         $(".top-dropdown-filters .btn").click(function () {
-          var target = $(this).attr("data-target");
-          var isExpanded = $(this).attr("aria-expanded") === "true";
+          let target = $(this).attr("data-target");
+          let isExpanded = $(this).attr("aria-expanded") === "true";
 
           // Remove "show" class from all other collapses and set icons to 'down'
           $(".top-dropdown-filters .collapse").not(target).removeClass("show");
@@ -3830,9 +3894,9 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        var showMoreButton = document.getElementById("showMoreButton");
+        let showMoreButton = document.getElementById("showMoreButton");
         showMoreButton.classList.add("showMoreButton");
-        var additionalOptions = document.querySelectorAll(".additional-option");
+        let additionalOptions = document.querySelectorAll(".additional-option");
 
         if (showMoreButton) {
           showMoreButton.addEventListener("click", function () {
@@ -3854,8 +3918,8 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        var stickyElement = document.querySelector(".sticky-add-to-cart");
-        var stickyElementOffset = stickyElement.offsetTop;
+        let stickyElement = document.querySelector(".sticky-add-to-cart");
+        let stickyElementOffset = stickyElement.offsetTop;
 
         function handleScroll() {
           if (window.pageYOffset > stickyElementOffset) {
@@ -3868,5 +3932,794 @@
         window.addEventListener("scroll", handleScroll);
       });
     </script>
+
+
+
+
+<script>
+
+
+let jsonData = [
+ {
+  "collection_name": "AANDAL"
+ },
+ {
+  "collection_name": "AMAR JAWAN JYOTI"
+ },
+ {
+  "collection_name": "AMBEMATHA"
+ },
+ {
+  "collection_name": "AMIRTHA KADESWARAR"
+ },
+ {
+  "collection_name": "AMMAN"
+ },
+ {
+  "collection_name": "ANNAMALAIYAR"
+ },
+ {
+  "collection_name": "ANNAPOORNESHWARI"
+ },
+ {
+  "collection_name": "ARDHANAREESWARAR"
+ },
+ {
+  "collection_name": "ASHTA GANESH"
+ },
+ {
+  "collection_name": "ATHIPARASAKTHI"
+ },
+ {
+  "collection_name": "ATTUKAL BHAKAVATHYAM"
+ },
+ {
+  "collection_name": "AYODHYA SRI RAM"
+ },
+ {
+  "collection_name": "AYYAPPA"
+ },
+ {
+  "collection_name": "BABA BALAK NATHJI"
+ },
+ {
+  "collection_name": "BAHUBALI GOMMATESH"
+ },
+ {
+  "collection_name": "BAL GANESH"
+ },
+ {
+  "collection_name": "BAL KRISHNA"
+ },
+ {
+  "collection_name": "BALAJI"
+ },
+ {
+  "collection_name": "BALAJI-LAKSHMI"
+ },
+ {
+  "collection_name": "BALAJI-PADMAVATHI"
+ },
+ {
+  "collection_name": "BAPA SITARAM"
+ },
+ {
+  "collection_name": "BHAGWAN ADINATH"
+ },
+ {
+  "collection_name": "BHAHUCHA RAJI MATHA"
+ },
+ {
+  "collection_name": "BHIKSHU SWAMI"
+ },
+ {
+  "collection_name": "BHUVAMESWARI"
+ },
+ {
+  "collection_name": "BRAHMA"
+ },
+ {
+  "collection_name": "BUDDHA"
+ },
+ {
+  "collection_name": "CHAMUNDA MATA"
+ },
+ {
+  "collection_name": "COW&THULASI"
+ },
+ {
+  "collection_name": "COW-THULASI"
+ },
+ {
+  "collection_name": "CROWN"
+ },
+ {
+  "collection_name": "DADA GURUDEV"
+ },
+ {
+  "collection_name": "DEVNARAYAN KATHA"
+ },
+ {
+  "collection_name": "DHAKSHINAMOORTHY"
+ },
+ {
+  "collection_name": "DHANVANTARI"
+ },
+ {
+  "collection_name": "DHASAVATHARAM"
+ },
+ {
+  "collection_name": "DHATHA JI"
+ },
+ {
+  "collection_name": "DIYA"
+ },
+ {
+  "collection_name": "DURGA MAA"
+ },
+ {
+  "collection_name": "DURGA MATHA"
+ },
+ {
+  "collection_name": "ELEPHANT"
+ },
+ {
+  "collection_name": "GAJALAKSHMI"
+ },
+ {
+  "collection_name": "GAJANAN GANESH"
+ },
+ {
+  "collection_name": "GAJANAN MAHARAJ"
+ },
+ {
+  "collection_name": "GANESH"
+ },
+ {
+  "collection_name": "GANESH WITH UMBRELLA"
+ },
+ {
+  "collection_name": "GANESH,MECCA,JESUS"
+ },
+ {
+  "collection_name": "GANESH-BALAJI-LAKSHM"
+ },
+ {
+  "collection_name": "GANESH-COW-THULASI"
+ },
+ {
+  "collection_name": "GANESH-KRISHNAN"
+ },
+ {
+  "collection_name": "GANESH-LAKSHMI"
+ },
+ {
+  "collection_name": "GANESH-LAXMI-SAIBABA"
+ },
+ {
+  "collection_name": "GANESH-LAXMI-SRSWATI"
+ },
+ {
+  "collection_name": "GANESH-MURUGAN"
+ },
+ {
+  "collection_name": "GAUTAMA SWAMI"
+ },
+ {
+  "collection_name": "GAYATHRIDEVI"
+ },
+ {
+  "collection_name": "GHANTAKARNA MAHAVIR"
+ },
+ {
+  "collection_name": "GOLDEN TEMPLE"
+ },
+ {
+  "collection_name": "GOMATHA"
+ },
+ {
+  "collection_name": "GOWRI MATHA"
+ },
+ {
+  "collection_name": "GURUNANAK"
+ },
+ {
+  "collection_name": "GURUVAYURAPPAN"
+ },
+ {
+  "collection_name": "HANUMAN"
+ },
+ {
+  "collection_name": "HARIHARAN"
+ },
+ {
+  "collection_name": "INFANT JESUS"
+ },
+ {
+  "collection_name": "JAGNATH-BLRAM-SUBDRA"
+ },
+ {
+  "collection_name": "JALARAM BAPA"
+ },
+ {
+  "collection_name": "JAY GOGA MAHARAJ"
+ },
+ {
+  "collection_name": "JESUS"
+ },
+ {
+  "collection_name": "JHULELAL"
+ },
+ {
+  "collection_name": "KAI BALNATH"
+ },
+ {
+  "collection_name": "KALASAMHARAMURTHY"
+ },
+ {
+  "collection_name": "KALIMATHA"
+ },
+ {
+  "collection_name": "KAMADHENU"
+ },
+ {
+  "collection_name": "KAMAKSHI"
+ },
+ {
+  "collection_name": "KANDA"
+ },
+ {
+  "collection_name": "KANIKA PARAMESHWARI"
+ },
+ {
+  "collection_name": "KARPAGA VIRUTCHAM"
+ },
+ {
+  "collection_name": "KASTABHANJAN DEV"
+ },
+ {
+  "collection_name": "KHATU SHYAM JI"
+ },
+ {
+  "collection_name": "KODIYAR MATA"
+ },
+ {
+  "collection_name": "KRISHNA"
+ },
+ {
+  "collection_name": "KRISHNA RASA LEELA"
+ },
+ {
+  "collection_name": "KRISHNA THULASI"
+ },
+ {
+  "collection_name": "KRISHNA-COW"
+ },
+ {
+  "collection_name": "KRISHNA-THULASI-COW"
+ },
+ {
+  "collection_name": "KUBERA LAKSHMI"
+ },
+ {
+  "collection_name": "KUBERA SET"
+ },
+ {
+  "collection_name": "KUBERAN"
+ },
+ {
+  "collection_name": "LADDU KRISHNA"
+ },
+ {
+  "collection_name": "LAKSHMI"
+ },
+ {
+  "collection_name": "LAKSHMI PATHAM"
+ },
+ {
+  "collection_name": "LAKSHMI UMBRELLA"
+ },
+ {
+  "collection_name": "LAKSHMI-NARASIMHA"
+ },
+ {
+  "collection_name": "LALITASANA GANESH"
+ },
+ {
+  "collection_name": "LAUGHING BUDDHA"
+ },
+ {
+  "collection_name": "LEAF GANESH"
+ },
+ {
+  "collection_name": "LOKENATH BABA"
+ },
+ {
+  "collection_name": "MAHA VISHNU"
+ },
+ {
+  "collection_name": "MAHARAJA AGRESH"
+ },
+ {
+  "collection_name": "MAHARAJSHRI"
+ },
+ {
+  "collection_name": "MAHAVEER"
+ },
+ {
+  "collection_name": "MAKHAN KRISHNA"
+ },
+ {
+  "collection_name": "MARY"
+ },
+ {
+  "collection_name": "MASANIAMMAN"
+ },
+ {
+  "collection_name": "MATA VAISHNO DEVI"
+ },
+ {
+  "collection_name": "MECCA"
+ },
+ {
+  "collection_name": "MEENACHI THIRUKALYAN"
+ },
+ {
+  "collection_name": "MEENAKSHI"
+ },
+ {
+  "collection_name": "MEENAKSI SUNDARESWAR"
+ },
+ {
+  "collection_name": "MEENKULATHU B.AMMAN"
+ },
+ {
+  "collection_name": "MELDI MADHA"
+ },
+ {
+  "collection_name": "MUGAN-VALLI-DEIVANAI"
+ },
+ {
+  "collection_name": "MUMBAI MATHA"
+ },
+ {
+  "collection_name": "MURUGAN"
+ },
+ {
+  "collection_name": "NAKODA"
+ },
+ {
+  "collection_name": "NAMAKKAL HANUMAN"
+ },
+ {
+  "collection_name": "NANDI"
+ },
+ {
+  "collection_name": "NARASIMHA"
+ },
+ {
+  "collection_name": "NARASIMHA PERUMAL"
+ },
+ {
+  "collection_name": "NARAYANA-LAKSHMI"
+ },
+ {
+  "collection_name": "NATARAJ MEENAKSHI"
+ },
+ {
+  "collection_name": "NATARAJAR"
+ },
+ {
+  "collection_name": "NEEL KANTH"
+ },
+ {
+  "collection_name": "OM-HINDI"
+ },
+ {
+  "collection_name": "PADMANABHA SWAMY"
+ },
+ {
+  "collection_name": "PADMAVATHI"
+ },
+ {
+  "collection_name": "PANCH MURTHI"
+ },
+ {
+  "collection_name": "PANCHA MUKHI HANUMAN"
+ },
+ {
+  "collection_name": "PANIMAYA MATHA"
+ },
+ {
+  "collection_name": "PARSHWANATH"
+ },
+ {
+  "collection_name": "PARSI"
+ },
+ {
+  "collection_name": "POORNATHRAYEESA"
+ },
+ {
+  "collection_name": "PRAMOD MAHARAJ"
+ },
+ {
+  "collection_name": "PRAMUKH SWAMI"
+ },
+ {
+  "collection_name": "RADHA GOBINDHA"
+ },
+ {
+  "collection_name": "RADHA-KRISHNA"
+ },
+ {
+  "collection_name": "RADHAI"
+ },
+ {
+  "collection_name": "RAGHAVENDRA"
+ },
+ {
+  "collection_name": "RAJA SHYAMALA DEVI"
+ },
+ {
+  "collection_name": "RAJARAJESWARI"
+ },
+ {
+  "collection_name": "RAM DARBAR"
+ },
+ {
+  "collection_name": "RAM-SEETHA"
+ },
+ {
+  "collection_name": "RAMANUJA"
+ },
+ {
+  "collection_name": "RAMAR"
+ },
+ {
+  "collection_name": "SAIBABA"
+ },
+ {
+  "collection_name": "SALASAR BALAJI"
+ },
+ {
+  "collection_name": "SAMAYA PURAM MARIAMM"
+ },
+ {
+  "collection_name": "SAMBHAJI MAHARAJ"
+ },
+ {
+  "collection_name": "SAMPRADAYA GANESH"
+ },
+ {
+  "collection_name": "SANGU"
+ },
+ {
+  "collection_name": "SANKARA CHARIYAR"
+ },
+ {
+  "collection_name": "SARASWATHY"
+ },
+ {
+  "collection_name": "SARDAR VALLABHBHAI"
+ },
+ {
+  "collection_name": "SATGURU TEOONRAM"
+ },
+ {
+  "collection_name": "SATYANARAYANA"
+ },
+ {
+  "collection_name": "SET OF 3 HINDU"
+ },
+ {
+  "collection_name": "SET OF 5 HINDU"
+ },
+ {
+  "collection_name": "SET OF 9 HINDU"
+ },
+ {
+  "collection_name": "SHANKU CHAKRA NAMAM"
+ },
+ {
+  "collection_name": "SHANKU NAMAM CHAKRA"
+ },
+ {
+  "collection_name": "SHERAWALI MAA"
+ },
+ {
+  "collection_name": "SHIVA"
+ },
+ {
+  "collection_name": "SHIVA-FAMILY"
+ },
+ {
+  "collection_name": "SHIVA-GANESH"
+ },
+ {
+  "collection_name": "SHIVA-KALIMATHA"
+ },
+ {
+  "collection_name": "SHIVA-LINGAM"
+ },
+ {
+  "collection_name": "SHIVA-NANDI"
+ },
+ {
+  "collection_name": "SHIVA-PARVATHI"
+ },
+ {
+  "collection_name": "SHIVAKUMARA SWAMIJI"
+ },
+ {
+  "collection_name": "SHRI ADINATH BHAGWAN"
+ },
+ {
+  "collection_name": "SHRI JIRAWALA"
+ },
+ {
+  "collection_name": "SIDDHI VINAYAKA"
+ },
+ {
+  "collection_name": "SIGNAPORE LION"
+ },
+ {
+  "collection_name": "SRI NATHJI"
+ },
+ {
+  "collection_name": "SRI RAM"
+ },
+ {
+  "collection_name": "SRI SATHYA SAI BABA"
+ },
+ {
+  "collection_name": "SULAM"
+ },
+ {
+  "collection_name": "SUN"
+ },
+ {
+  "collection_name": "SWAMI DATTATREYA"
+ },
+ {
+  "collection_name": "SWAMI NARAYANAN"
+ },
+ {
+  "collection_name": "SWAMI SAMARTH"
+ },
+ {
+  "collection_name": "SWASTHICK"
+ },
+ {
+  "collection_name": "THEERTHA SWAMIGAL"
+ },
+ {
+  "collection_name": "THIRUCHENDUR MURUGAN"
+ },
+ {
+  "collection_name": "THIRUKADIYUR ABIRAMI"
+ },
+ {
+  "collection_name": "THULASI MAADAM"
+ },
+ {
+  "collection_name": "TIRUPATI GOPURAM"
+ },
+ {
+  "collection_name": "TULJA BHAVANI"
+ },
+ {
+  "collection_name": "TULJA BHAWANI"
+ },
+ {
+  "collection_name": "UMIYA MATA"
+ },
+ {
+  "collection_name": "UMIYA MATHA"
+ },
+ {
+  "collection_name": "VAIKUNTHA NATHA"
+ },
+ {
+  "collection_name": "VALAMPURI GANESH"
+ },
+ {
+  "collection_name": "VALLALAR"
+ },
+ {
+  "collection_name": "VALLIMURUGANDEIVANAI"
+ },
+ {
+  "collection_name": "VARA LAKSHMI"
+ },
+ {
+  "collection_name": "VEDANDA DESIGER"
+ },
+ {
+  "collection_name": "VEL"
+ },
+ {
+  "collection_name": "VISHNU"
+ },
+ {
+  "collection_name": "VISHNU CHARAN PADUKA"
+ },
+ {
+  "collection_name": "VISHNU PADAM"
+ },
+ {
+  "collection_name": "VISHNU-LAKSHMI"
+ },
+ {
+  "collection_name": "VITTAL"
+ },
+ {
+  "collection_name": "VITTHAL RUKMINI"
+ },
+ {
+  "collection_name": "YASOTHA KRISHNA"
+ },
+ {
+  "collection_name": "YASOTHA-KRISHNA"
+ }
+];
+
+
+    // Function to filter elements based on search input
+    function filterBySideBarSearch() {
+      let searchInput = document.getElementById("sidebarSearch").value.toLowerCase();
+     
+    let filterContainer = document.getElementById("sidebarLabels");
+      filterContainer.innerHTML = ''; // Clear previous labels
+      let count = 0;
+      jsonData.forEach(function(item) {
+        if (count >= 10) return; // Max 10 items visible
+        if (item.collection_name.toLowerCase().includes(searchInput)) {
+          let div = document.createElement("div");
+          div.classList.add("form-check");
+          let input = document.createElement("input");
+          input.type = "checkbox";
+          input.classList.add("form-check-input");
+          input.id = item.collection_name.replace(/\s+/g, '').toLowerCase(); // Remove spaces and convert to lowercase for ID
+          input.value = item.collection_name;
+          let label = document.createElement("label");
+          label.classList.add("form-check-label");
+          label.setAttribute("for", input.id);
+          label.innerText = item.collection_name;
+          div.appendChild(input);
+          div.appendChild(label);
+          filterContainer.appendChild(div);
+          count++;
+        }
+      });
+    }
+
+    // Add event listener to the search input in sidebar
+    document.getElementById("sidebarSearch").addEventListener("input", function() {
+        filterBySideBarSearch();
+    });
+
+
+
+
+
+
+  // Function to toggle the visibility of all input elements
+  function toggleAllInputs() {
+    let elements = document.querySelectorAll("#filter-elements > div");
+    elements.forEach(function(element) {
+      element.style.display = "block";
+    });
+  }
+
+  // Function to toggle the popup visibility
+  function togglePopup() {
+    let popup = document.getElementById("popup");
+    if (popup.style.display === "none") {
+      popup.style.display = "block";
+    } else {
+      popup.style.display = "none";
+    }
+  }
+
+  // Function to filter and display elements based on the clicked letter
+  function filterByLetter(letter) {
+    // Get all filter elements
+    let elements = document.querySelectorAll("#filter-elements > div");
+    // Loop through each element
+    elements.forEach(function(element) {
+      // If the label of the element starts with the clicked letter, show it, otherwise hide it
+      if (element.querySelector("label").innerText.trim().charAt(0).toUpperCase() === letter) {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    });
+  }
+
+  // Function to filter elements based on search input
+  function filterBySearch() {
+    let searchInput = document.getElementById("searchBar").value.toLowerCase();
+    // Get all filter elements
+    let elements = document.querySelectorAll("#filter-elements > div");
+    // Loop through each element
+    elements.forEach(function(element) {
+      let label = element.querySelector("label").innerText.toLowerCase();
+      // If the label contains the search input, show it, otherwise hide it
+      if (label.includes(searchInput)) {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    });
+  }
+
+  // Function to generate input elements based on JSON data
+  function generateInputElements(data) {
+    let filterContainer = document.getElementById("filter-elements");
+    data.forEach(function(item) {
+      let div = document.createElement("div");
+      div.classList.add("form-check");
+      let input = document.createElement("input");
+      input.type = "checkbox";
+      input.classList.add("form-check-input");
+      input.id = item.collection_name.replace(/\s+/g, '').toLowerCase(); // Remove spaces and convert to lowercase for ID
+      input.value = item.collection_name;
+      let label = document.createElement("label");
+      label.setAttribute("for", input.id);
+      label.classList.add("form-check-label");
+      label.innerText = item.collection_name;
+      div.appendChild(input);
+      div.appendChild(label);
+      filterContainer.appendChild(div);
+    });
+  }
+
+  // Function to generate sorting buttons for each letter from A to Z
+  function generateSortingButtons() {
+    let sortingButtonsContainer = document.getElementById("sorting-buttons");
+    let button = document.createElement("button");
+    button.className = "sort-button";
+    button.setAttribute("data-sort", "#");
+    button.innerText = "#";
+    button.addEventListener("click", function() {
+      toggleAllInputs();
+    });
+    sortingButtonsContainer.appendChild(button);
+
+    for (let i = 65; i <= 90; i++) {
+      let letter = String.fromCharCode(i);
+      let button = document.createElement("button");
+      button.className = "sort-button";
+      button.setAttribute("data-sort", letter);
+      button.innerText = letter;
+      button.addEventListener("click", function() {
+        filterByLetter(this.getAttribute("data-sort"));
+      });
+      sortingButtonsContainer.appendChild(button);
+    }
+  }
+
+  // Add event listener to the open popup button
+  document.querySelector(".open-popup").addEventListener("click", function() {
+    togglePopup();
+  });
+
+  // Add event listener to the search input
+  document.getElementById("searchBar").addEventListener("input", function() {
+    filterBySearch();
+  });
+
+  // Generate sorting buttons and input elements when the page loads
+  window.onload = function() {
+    filterBySideBarSearch();
+    generateSortingButtons();
+   generateInputElements(jsonData);
+  };
+</script>
+
+
+
+
+
   </body>
 </html>

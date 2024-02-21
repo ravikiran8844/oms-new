@@ -19,10 +19,51 @@
   <link rel="stylesheet" href="assets/css/menu.css">
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 
 
+  <style>
+    .swiper {
+      --swiper-navigation-size: 14px;
+    }
 
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      background-color: #F78D1E;
+      color: #fff;
+      height: 32px;
+      width: 32px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper-button-next.swiper-button-disabled,
+    .swiper-button-prev.swiper-button-disabled {
+      border: 2px solid #C4C4C4;
+      color: #C4C4C4;
+      background-color: transparent;
+      opacity: 1;
+    }
+
+    .swiper-slide {}
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+  </style>
 
 
 </head>
@@ -34,8 +75,9 @@
     <section class="header">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu"
-            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-controls="navbarScroll"
+            aria-expanded="false" aria-label="Toggle navigation">
             <svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M26.6365 2.00024H2.00007" stroke="black" stroke-width="2.4977" stroke-linecap="round" />
               <path d="M26.6365 19.4841H2.00007" stroke="black" stroke-width="2.4977" stroke-linecap="round" />
@@ -53,7 +95,7 @@
           <div class="d-block d-lg-none">
             <ul class="d-flex align-items-center list-unstyled m-auto">
               <li class="nav-item me-3">
-                <a class="nav-link" aria-current="page" href="#"  data-bs-toggle="modal" data-bs-target="#searchModal">
+                <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M7.26029 5.71468C6.82903 5.28342 6.14608 5.28342 5.75063 5.71468C4.27685 7.18845 3.4502 9.16545 3.4502 11.2861C3.4502 13.3709 4.27685 15.3479 5.75063 16.8575C5.96625 17.0731 6.25383 17.181 6.50559 17.181C6.75732 17.181 7.04465 17.0731 7.26054 16.8575C7.6918 16.4263 7.6918 15.7433 7.26054 15.3479C6.18215 14.2695 5.57116 12.8318 5.57116 11.3222C5.57116 9.81251 6.18218 8.37461 7.26054 7.29648C7.65569 6.82887 7.65568 6.14594 7.26029 5.71468Z"
@@ -78,30 +120,34 @@
               </li>
 
               <li class="nav-item dropdown ms-3">
-                <a class="nav-link d-flex align-items-center dropdown-toggle profile-nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <div class="profile-pic">
-                        <img class="rounded-5" width="26" height="26" src="https://source.unsplash.com/250x250?boy" alt="Profile Picture">
-                    </div>
+                <a class="nav-link d-flex align-items-center dropdown-toggle profile-nav-link" href="#"
+                  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="profile-pic">
+                    <img class="rounded-5" width="26" height="26" src="https://source.unsplash.com/250x250?boy"
+                      alt="Profile Picture">
+                  </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li class="dropdown-item">
-                      <div>
-                        <div class="fw-bold">Vishnu prasath</div>
-                        <div><small>Admin</small></div>
-                      </div>
-                    </li>
-                                      <li class="dropdown-item"><a class="nav-link"  href="/dashboard.html"><i class="far fa-user"></i> View Profile</a></li>
+                  <li class="dropdown-item">
+                    <div>
+                      <div class="fw-bold">Vishnu prasath</div>
+                      <div><small>Admin</small></div>
+                    </div>
+                  </li>
+                  <li class="dropdown-item"><a class="nav-link" href="/dashboard.html"><i class="far fa-user"></i> View
+                      Profile</a></li>
 
-                    <li class="dropdown-item"><a class="nav-link"  href="#"><i class="fas fa-sign-out-alt fa-fw"></i> Log Out</a></li>
+                  <li class="dropdown-item"><a class="nav-link" href="#"><i class="fas fa-sign-out-alt fa-fw"></i> Log
+                      Out</a></li>
                 </ul>
-            </li>
+              </li>
             </ul>
-            
+
           </div>
 
 
 
- 
+
 
 
 
@@ -135,25 +181,16 @@
               </form>
             </div>
             <ul class="d-none d-lg-flex top-main-nav navbar-nav navbar-right align-items-center ms-auto my-2 my-lg-0">
-             
+
 
               <li>
                 <a class="nav-link" href="wish-list-new.html">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-heart"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-heart">
                     <path
-                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-                    ></path>
+                      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
                   </svg>
                   <div class="mt-1">WISH LIST</div>
                 </a>
@@ -191,11 +228,12 @@
 
               <li class="nav-item dropdown ps-3" style="border-left: 1px solid #D3D3D3;">
                 <a class="nav-link d-flex align-items-center dropdown-toggle" style=" color: #2D2D2D !important;"
-                href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <div class="profile-pic">
-                      <img class="rounded-5" width="40" height="40" src="https://source.unsplash.com/250x250?boy" alt="Profile Picture">
+                    <img class="rounded-5" width="40" height="40" src="https://source.unsplash.com/250x250?boy"
+                      alt="Profile Picture">
                   </div>
-              </a>
+                </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                   <li class="dropdown-item">
                     <div>
@@ -203,12 +241,14 @@
                       <div><small>Admin</small></div>
                     </div>
                   </li>
-                  <li class="dropdown-item"><a class="nav-link" style="color: #2D2D2D !important; text-align: left;padding-left: 0px;"
-                    href="/dashboard.html"><i class="far fa-user"></i> View Profile</a></li>
-                  <li class="dropdown-item"><a class="nav-link" style="color: #2D2D2D !important; text-align: left;padding-left: 0px;"
-                    href="#"><i class="fas fa-sign-out-alt fa-fw"></i> Log Out</a></li>
-              </ul>
-            </li>
+                  <li class="dropdown-item"><a class="nav-link"
+                      style="color: #2D2D2D !important; text-align: left;padding-left: 0px;" href="/dashboard.html"><i
+                        class="far fa-user"></i> View Profile</a></li>
+                  <li class="dropdown-item"><a class="nav-link"
+                      style="color: #2D2D2D !important; text-align: left;padding-left: 0px;" href="#"><i
+                        class="fas fa-sign-out-alt fa-fw"></i> Log Out</a></li>
+                </ul>
+              </li>
 
 
             </ul>
@@ -227,179 +267,264 @@
         <div class="offcanvas-body">
           <ul id="mobile-main-menu" class="sm sm-blue" data-smartmenus-id="17059991140671968">
             <li>
-              <a href="shop.html" class="has-submenu" id="sm-17059980231096348-1" aria-haspopup="true" aria-controls="sm-17059980231096348-2" aria-expanded="false">Silver Jewellery<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-              <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-1" aria-expanded="false" class="sm-nowrap" style="width: auto; top: auto; left: 0px; margin-left: 0px; margin-top: 5px; display: none; min-width: 15em; max-width: 30em;">
+              <a href="shop.html" class="has-submenu" id="sm-17059980231096348-1" aria-haspopup="true"
+                aria-controls="sm-17059980231096348-2" aria-expanded="false">Silver Jewellery<span
+                  class="sub-arrow"></span><span class="sub-arrow"></span></a>
+              <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-1"
+                aria-expanded="false" class="sm-nowrap"
+                style="width: auto; top: auto; left: 0px; margin-left: 0px; margin-top: 5px; display: none; min-width: 15em; max-width: 30em;">
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true" aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-4" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap" style="width: auto; top: auto; left: 0px; margin-left: 209px; margin-top: -49px; display: none; min-width: 15em; max-width: 30em;">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-4" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap"
+                    style="width: auto; top: auto; left: 0px; margin-left: 209px; margin-top: -49px; display: none; min-width: 15em; max-width: 30em;">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true" aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-6" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-6" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true" aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-8" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-8" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true" aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-10" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-10" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true" aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-12" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-12" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true" aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-14" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-14" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true" aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-16" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-16" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
-              </ul><span class="scroll-up" style="top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2; display: none;"><span class="scroll-up-arrow"></span></span><span class="scroll-down" style="display: none; top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2;"><span class="scroll-down-arrow"></span></span>
+              </ul><span class="scroll-up"
+                style="top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2; display: none;"><span
+                  class="scroll-up-arrow"></span></span><span class="scroll-down"
+                style="display: none; top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2;"><span
+                  class="scroll-down-arrow"></span></span>
             </li>
-            <li><a href="#" class="has-submenu" id="sm-17059991140671968-1" aria-haspopup="true" aria-controls="sm-17059980231096348-2" aria-expanded="false">Solid Idol<span class="sub-arrow"></span></a>
-              <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059991140671968-1" aria-expanded="false" class="sm-nowrap" style="width: auto; top: auto; left: 0px; margin-left: 0px; margin-top: 5px; display: none; min-width: 15em; max-width: 30em;">
+            <li><a href="#" class="has-submenu" id="sm-17059991140671968-1" aria-haspopup="true"
+                aria-controls="sm-17059980231096348-2" aria-expanded="false">Solid Idol<span
+                  class="sub-arrow"></span></a>
+              <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059991140671968-1"
+                aria-expanded="false" class="sm-nowrap"
+                style="width: auto; top: auto; left: 0px; margin-left: 0px; margin-top: 5px; display: none; min-width: 15em; max-width: 30em;">
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true" aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-4" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap" style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-4" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap"
+                    style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true" aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-6" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-6" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true" aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-8" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-8" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true" aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-10" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-10" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true" aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-12" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-12" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true" aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-14" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-14" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true" aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-16" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-16" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
-              </ul><span class="scroll-up" style="top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2; display: none;"><span class="scroll-up-arrow"></span></span><span class="scroll-down" style="display: none; top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2;"><span class="scroll-down-arrow"></span></span>
+              </ul><span class="scroll-up"
+                style="top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2; display: none;"><span
+                  class="scroll-up-arrow"></span></span><span class="scroll-down"
+                style="display: none; top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2;"><span
+                  class="scroll-down-arrow"></span></span>
             </li>
-            <li><a href="#" class="has-submenu" id="sm-17059991140671968-2" aria-haspopup="true" aria-controls="sm-17059980231096348-2" aria-expanded="false">Rumi<span class="sub-arrow"></span></a>
-              <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059991140671968-2" aria-expanded="false" class="sm-nowrap" style="width: auto; top: auto; left: 0px; margin-left: 0px; margin-top: 5px; min-width: 15em; display: none; max-width: 30em;">
+            <li><a href="#" class="has-submenu" id="sm-17059991140671968-2" aria-haspopup="true"
+                aria-controls="sm-17059980231096348-2" aria-expanded="false">Rumi<span class="sub-arrow"></span></a>
+              <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059991140671968-2"
+                aria-expanded="false" class="sm-nowrap"
+                style="width: auto; top: auto; left: 0px; margin-left: 0px; margin-top: 5px; min-width: 15em; display: none; max-width: 30em;">
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true" aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-4" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap" style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-4" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap"
+                    style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true" aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-6" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-6" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true" aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-8" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-8" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true" aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-10" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-10" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true" aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-12" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-12" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true" aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-14" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-14" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
                   </ul>
                 </li>
                 <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true" aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-16" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
+                  <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span
+                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-16" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
                     <li><a href="#">Ladies</a></li>
                     <li><a href="#">Gents</a></li>
                     <li><a href="#">Baby</a></li>
@@ -413,7 +538,7 @@
             <li><a href="#">Home Decor</a></li>
             <li><a href="#">Cladding</a></li>
           </ul>
-         
+
         </div>
       </div>
     </section>
@@ -425,59 +550,85 @@
             <nav id="main-nav" class="main-mega-nav my-3">
               <ul id="main-menu" class="sm sm-blue" data-smartmenus-id="17059980231096348">
                 <li>
-                  <a href="shop.html" class="has-submenu" id="sm-17059980231096348-1" aria-haspopup="true" aria-controls="sm-17059980231096348-2" aria-expanded="false">Silver Jewellery<span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-1" aria-expanded="false" class="sm-nowrap" style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 0px; margin-top: 0px;">
+                  <a href="shop.html" class="has-submenu" id="sm-17059980231096348-1" aria-haspopup="true"
+                    aria-controls="sm-17059980231096348-2" aria-expanded="false">Silver Jewellery<span
+                      class="sub-arrow"></span></a>
+                  <ul id="sm-17059980231096348-2" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-1" aria-expanded="false" class="sm-nowrap"
+                    style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 0px; margin-top: 0px;">
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true" aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-4" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap" style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-4" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap"
+                        style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true" aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-6" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-6" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true" aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-8" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-8" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true" aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-10" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-10" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true" aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-12" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-12" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true" aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-14" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-14" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true" aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-16" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-16" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
@@ -486,58 +637,82 @@
                   </ul>
                 </li>
                 <li><a href="#">Solid Idol</a>
-                  <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-1" aria-expanded="false" class="sm-nowrap" style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 0px; margin-top: 0px;">
+                  <ul id="sm-17059980231096348-2" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-1" aria-expanded="false" class="sm-nowrap"
+                    style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 0px; margin-top: 0px;">
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true" aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-4" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap" style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-4" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap"
+                        style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true" aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-6" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-6" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true" aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-8" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-8" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true" aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-10" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-10" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true" aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-12" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-12" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true" aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-14" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-14" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true" aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-16" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-16" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
@@ -546,58 +721,82 @@
                   </ul>
                 </li>
                 <li><a href="#">Rumi</a>
-                  <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-1" aria-expanded="false" class="sm-nowrap" style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 0px; margin-top: 0px;">
+                  <ul id="sm-17059980231096348-2" role="group" aria-hidden="true"
+                    aria-labelledby="sm-17059980231096348-1" aria-expanded="false" class="sm-nowrap"
+                    style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 0px; margin-top: 0px;">
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true" aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-4" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap" style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-4" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap"
+                        style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true" aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-6" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-6" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true" aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-8" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-8" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true" aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-10" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-10" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true" aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-12" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-12" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true" aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-14" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-14" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
                       </ul>
                     </li>
                     <li>
-                      <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true" aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span class="sub-arrow"></span></a>
-                      <ul id="sm-17059980231096348-16" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
+                      <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true"
+                        aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span
+                          class="sub-arrow"></span></a>
+                      <ul id="sm-17059980231096348-16" role="group" aria-hidden="true"
+                        aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
                         <li><a href="#">Ladies</a></li>
                         <li><a href="#">Gents</a></li>
                         <li><a href="#">Baby</a></li>
@@ -611,7 +810,7 @@
                 <li><a href="#">Home Decor</a></li>
                 <li><a href="#">Cladding</a></li>
               </ul>
-          </nav>
+            </nav>
           </div>
         </div>
       </div>
@@ -620,18 +819,297 @@
 
 
 
-  <script src="assets/lib/js/jquery.min.js"></script>
-  <script src="assets/lib/js/bootstrap.min.js"></script>
-  <script src="assets/lib/js/owlCarousel.min.js"></script>
-  <script src="assets/lib/js/splide.min.js"></script>
-  <script src="assets/lib/js/lightbox.min.js"></script>
-  <script src="assets/lib/js/dataTables.js"></script>
-  <script src="assets/lib/js/checkboxes.min.js"></script>
-  <script src="assets/lib/js/sumoselect.min.js"></script>
-  <script src="assets/lib/js/moment.min.js"></script>
-  <script src="assets/lib/js/daterangepicker.min.js"></script>
-  <script src="assets/js/smartmenu.js"></script>
-  <script src="assets/js/custom.js"></script>
+         
+  <div class="container">
+    <div class="swiper mySwiper categorySlider pt-5">
+
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card category-slider-card">
+            <div class="card-img-top">
+              <img width="220" height="220" class="img-fluid object-fit-cover" src="assets/img/home/cat-1.webp"
+                alt />
+            </div>
+            <div class="card-body text-center">
+              <div class="category-slider-card_title mb-1">Solid Idol</div>
+              <div class="category-slider-card_text">
+                <a class="custom-link" href="shop.html">Explore
+                  <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M22.4296 5.16834L18.2239 0.380669C18.1628 0.312557 18.09 0.258691 18.0097 0.221762C17.9294 0.184834 17.8432 0.165741 17.7561 0.165741C17.669 0.165741 17.5828 0.184834 17.5024 0.221762C17.4221 0.258691 17.3493 0.312557 17.2882 0.380669C17.1669 0.52492 17.0995 0.713943 17.0995 0.910178C17.0995 1.10641 17.1669 1.29544 17.2882 1.43969L20.377 4.94802H1.16983C0.988371 4.94802 0.814346 5.02712 0.686038 5.1678C0.55773 5.30848 0.485596 5.49943 0.485596 5.69839C0.485596 5.89734 0.55773 6.08775 0.686038 6.22844C0.814346 6.36912 0.988371 6.44821 1.16983 6.44821H20.377L17.2882 9.95655C17.1669 10.1008 17.0995 10.2898 17.0995 10.4861C17.0995 10.6823 17.1669 10.8713 17.2882 11.0156C17.3485 11.0852 17.421 11.1404 17.5015 11.1782C17.5819 11.2161 17.6685 11.2359 17.7561 11.2359C17.8436 11.2359 17.9302 11.2161 18.0107 11.1782C18.0911 11.1404 18.1636 11.0852 18.2239 11.0156L22.4296 6.2279C22.5555 6.08618 22.6259 5.8962 22.6259 5.69839C22.6259 5.50057 22.5555 5.31006 22.4296 5.16834Z"
+                      fill="#F78D1E" />
+                  </svg>
+                  </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card category-slider-card">
+            <div class="card-img-top">
+              <img width="220" height="220" class="img-fluid object-fit-cover" src="assets/img/home/cat-2.webp"
+                alt />
+            </div>
+            <div class="card-body text-center">
+              <div class="category-slider-card_title mb-1">Chains</div>
+              <div class="category-slider-card_text">
+                <a class="custom-link" href="shop.html">Explore <svg width="23" height="12" viewBox="0 0 23 12"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M22.4296 5.16834L18.2239 0.380669C18.1628 0.312557 18.09 0.258691 18.0097 0.221762C17.9294 0.184834 17.8432 0.165741 17.7561 0.165741C17.669 0.165741 17.5828 0.184834 17.5024 0.221762C17.4221 0.258691 17.3493 0.312557 17.2882 0.380669C17.1669 0.52492 17.0995 0.713943 17.0995 0.910178C17.0995 1.10641 17.1669 1.29544 17.2882 1.43969L20.377 4.94802H1.16983C0.988371 4.94802 0.814346 5.02712 0.686038 5.1678C0.55773 5.30848 0.485596 5.49943 0.485596 5.69839C0.485596 5.89734 0.55773 6.08775 0.686038 6.22844C0.814346 6.36912 0.988371 6.44821 1.16983 6.44821H20.377L17.2882 9.95655C17.1669 10.1008 17.0995 10.2898 17.0995 10.4861C17.0995 10.6823 17.1669 10.8713 17.2882 11.0156C17.3485 11.0852 17.421 11.1404 17.5015 11.1782C17.5819 11.2161 17.6685 11.2359 17.7561 11.2359C17.8436 11.2359 17.9302 11.2161 18.0107 11.1782C18.0911 11.1404 18.1636 11.0852 18.2239 11.0156L22.4296 6.2279C22.5555 6.08618 22.6259 5.8962 22.6259 5.69839C22.6259 5.50057 22.5555 5.31006 22.4296 5.16834Z"
+                      fill="#F78D1E" />
+                  </svg>
+                  </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card category-slider-card">
+            <div class="card-img-top">
+              <img width="220" height="220" class="img-fluid object-fit-cover" src="assets/img/home/cat-3.webp"
+                alt />
+            </div>
+            <div class="card-body text-center">
+              <div class="category-slider-card_title mb-1">Electro Forming</div>
+              <div class="category-slider-card_text">
+                <a class="custom-link" href="shop.html">Explore <svg width="23" height="12" viewBox="0 0 23 12"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M22.4296 5.16834L18.2239 0.380669C18.1628 0.312557 18.09 0.258691 18.0097 0.221762C17.9294 0.184834 17.8432 0.165741 17.7561 0.165741C17.669 0.165741 17.5828 0.184834 17.5024 0.221762C17.4221 0.258691 17.3493 0.312557 17.2882 0.380669C17.1669 0.52492 17.0995 0.713943 17.0995 0.910178C17.0995 1.10641 17.1669 1.29544 17.2882 1.43969L20.377 4.94802H1.16983C0.988371 4.94802 0.814346 5.02712 0.686038 5.1678C0.55773 5.30848 0.485596 5.49943 0.485596 5.69839C0.485596 5.89734 0.55773 6.08775 0.686038 6.22844C0.814346 6.36912 0.988371 6.44821 1.16983 6.44821H20.377L17.2882 9.95655C17.1669 10.1008 17.0995 10.2898 17.0995 10.4861C17.0995 10.6823 17.1669 10.8713 17.2882 11.0156C17.3485 11.0852 17.421 11.1404 17.5015 11.1782C17.5819 11.2161 17.6685 11.2359 17.7561 11.2359C17.8436 11.2359 17.9302 11.2161 18.0107 11.1782C18.0911 11.1404 18.1636 11.0852 18.2239 11.0156L22.4296 6.2279C22.5555 6.08618 22.6259 5.8962 22.6259 5.69839C22.6259 5.50057 22.5555 5.31006 22.4296 5.16834Z"
+                      fill="#F78D1E" />
+                  </svg>
+                  </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card category-slider-card">
+            <div class="card-img-top">
+              <img width="220" height="220" class="img-fluid object-fit-cover" src="assets/img/home/cat-4.webp"
+                alt />
+            </div>
+            <div class="card-body text-center">
+              <div class="category-slider-card_title mb-1">Bracelets</div>
+              <div class="category-slider-card_text">
+                <a class="custom-link" href="shop.html">Explore <svg width="23" height="12" viewBox="0 0 23 12"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M22.4296 5.16834L18.2239 0.380669C18.1628 0.312557 18.09 0.258691 18.0097 0.221762C17.9294 0.184834 17.8432 0.165741 17.7561 0.165741C17.669 0.165741 17.5828 0.184834 17.5024 0.221762C17.4221 0.258691 17.3493 0.312557 17.2882 0.380669C17.1669 0.52492 17.0995 0.713943 17.0995 0.910178C17.0995 1.10641 17.1669 1.29544 17.2882 1.43969L20.377 4.94802H1.16983C0.988371 4.94802 0.814346 5.02712 0.686038 5.1678C0.55773 5.30848 0.485596 5.49943 0.485596 5.69839C0.485596 5.89734 0.55773 6.08775 0.686038 6.22844C0.814346 6.36912 0.988371 6.44821 1.16983 6.44821H20.377L17.2882 9.95655C17.1669 10.1008 17.0995 10.2898 17.0995 10.4861C17.0995 10.6823 17.1669 10.8713 17.2882 11.0156C17.3485 11.0852 17.421 11.1404 17.5015 11.1782C17.5819 11.2161 17.6685 11.2359 17.7561 11.2359C17.8436 11.2359 17.9302 11.2161 18.0107 11.1782C18.0911 11.1404 18.1636 11.0852 18.2239 11.0156L22.4296 6.2279C22.5555 6.08618 22.6259 5.8962 22.6259 5.69839C22.6259 5.50057 22.5555 5.31006 22.4296 5.16834Z"
+                      fill="#F78D1E" />
+                  </svg>
+                  </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card category-slider-card">
+            <div class="card-img-top">
+              <img width="220" height="220" class="img-fluid object-fit-cover" src="assets/img/home/cat-5.webp"
+                alt />
+            </div>
+            <div class="card-body text-center">
+              <div class="category-slider-card_title mb-1">Payal</div>
+              <div class="category-slider-card_text">
+                <a class="custom-link" href="shop.html">Explore <svg width="23" height="12" viewBox="0 0 23 12"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M22.4296 5.16834L18.2239 0.380669C18.1628 0.312557 18.09 0.258691 18.0097 0.221762C17.9294 0.184834 17.8432 0.165741 17.7561 0.165741C17.669 0.165741 17.5828 0.184834 17.5024 0.221762C17.4221 0.258691 17.3493 0.312557 17.2882 0.380669C17.1669 0.52492 17.0995 0.713943 17.0995 0.910178C17.0995 1.10641 17.1669 1.29544 17.2882 1.43969L20.377 4.94802H1.16983C0.988371 4.94802 0.814346 5.02712 0.686038 5.1678C0.55773 5.30848 0.485596 5.49943 0.485596 5.69839C0.485596 5.89734 0.55773 6.08775 0.686038 6.22844C0.814346 6.36912 0.988371 6.44821 1.16983 6.44821H20.377L17.2882 9.95655C17.1669 10.1008 17.0995 10.2898 17.0995 10.4861C17.0995 10.6823 17.1669 10.8713 17.2882 11.0156C17.3485 11.0852 17.421 11.1404 17.5015 11.1782C17.5819 11.2161 17.6685 11.2359 17.7561 11.2359C17.8436 11.2359 17.9302 11.2161 18.0107 11.1782C18.0911 11.1404 18.1636 11.0852 18.2239 11.0156L22.4296 6.2279C22.5555 6.08618 22.6259 5.8962 22.6259 5.69839C22.6259 5.50057 22.5555 5.31006 22.4296 5.16834Z"
+                      fill="#F78D1E" />
+                  </svg>
+                  </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card category-slider-card">
+            <div class="card-img-top">
+              <img width="220" height="220" class="img-fluid object-fit-cover" src="assets/img/home/category-1.webp"
+                alt />
+            </div>
+            <div class="card-body text-center">
+              <div class="category-slider-card_title mb-1">Pendants</div>
+              <div class="category-slider-card_text">
+                <a class="custom-link" href="shop.html">Explore <svg width="23" height="12" viewBox="0 0 23 12"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M22.4296 5.16834L18.2239 0.380669C18.1628 0.312557 18.09 0.258691 18.0097 0.221762C17.9294 0.184834 17.8432 0.165741 17.7561 0.165741C17.669 0.165741 17.5828 0.184834 17.5024 0.221762C17.4221 0.258691 17.3493 0.312557 17.2882 0.380669C17.1669 0.52492 17.0995 0.713943 17.0995 0.910178C17.0995 1.10641 17.1669 1.29544 17.2882 1.43969L20.377 4.94802H1.16983C0.988371 4.94802 0.814346 5.02712 0.686038 5.1678C0.55773 5.30848 0.485596 5.49943 0.485596 5.69839C0.485596 5.89734 0.55773 6.08775 0.686038 6.22844C0.814346 6.36912 0.988371 6.44821 1.16983 6.44821H20.377L17.2882 9.95655C17.1669 10.1008 17.0995 10.2898 17.0995 10.4861C17.0995 10.6823 17.1669 10.8713 17.2882 11.0156C17.3485 11.0852 17.421 11.1404 17.5015 11.1782C17.5819 11.2161 17.6685 11.2359 17.7561 11.2359C17.8436 11.2359 17.9302 11.2161 18.0107 11.1782C18.0911 11.1404 18.1636 11.0852 18.2239 11.0156L22.4296 6.2279C22.5555 6.08618 22.6259 5.8962 22.6259 5.69839C22.6259 5.50057 22.5555 5.31006 22.4296 5.16834Z"
+                      fill="#F78D1E" />
+                  </svg>
+                  </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card category-slider-card">
+            <div class="card-img-top">
+              <img width="220" height="220" class="img-fluid object-fit-cover" src="assets/img/home/category-2.webp"
+                alt />
+            </div>
+            <div class="card-body text-center">
+              <div class="category-slider-card_title mb-1">Earrings</div>
+              <div class="category-slider-card_text">
+                <a class="custom-link" href="shop.html">Explore <svg width="23" height="12" viewBox="0 0 23 12"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M22.4296 5.16834L18.2239 0.380669C18.1628 0.312557 18.09 0.258691 18.0097 0.221762C17.9294 0.184834 17.8432 0.165741 17.7561 0.165741C17.669 0.165741 17.5828 0.184834 17.5024 0.221762C17.4221 0.258691 17.3493 0.312557 17.2882 0.380669C17.1669 0.52492 17.0995 0.713943 17.0995 0.910178C17.0995 1.10641 17.1669 1.29544 17.2882 1.43969L20.377 4.94802H1.16983C0.988371 4.94802 0.814346 5.02712 0.686038 5.1678C0.55773 5.30848 0.485596 5.49943 0.485596 5.69839C0.485596 5.89734 0.55773 6.08775 0.686038 6.22844C0.814346 6.36912 0.988371 6.44821 1.16983 6.44821H20.377L17.2882 9.95655C17.1669 10.1008 17.0995 10.2898 17.0995 10.4861C17.0995 10.6823 17.1669 10.8713 17.2882 11.0156C17.3485 11.0852 17.421 11.1404 17.5015 11.1782C17.5819 11.2161 17.6685 11.2359 17.7561 11.2359C17.8436 11.2359 17.9302 11.2161 18.0107 11.1782C18.0911 11.1404 18.1636 11.0852 18.2239 11.0156L22.4296 6.2279C22.5555 6.08618 22.6259 5.8962 22.6259 5.69839C22.6259 5.50057 22.5555 5.31006 22.4296 5.16834Z"
+                      fill="#F78D1E" />
+                  </svg>
+                  </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card category-slider-card">
+            <div class="card-img-top">
+              <img width="220" height="220" class="img-fluid object-fit-cover" src="assets/img/home/category-3.webp"
+                alt />
+            </div>
+            <div class="card-body text-center">
+              <div class="category-slider-card_title mb-1">Rings</div>
+              <div class="category-slider-card_text">
+                <a class="custom-link" href="shop.html">Explore <svg width="23" height="12" viewBox="0 0 23 12"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M22.4296 5.16834L18.2239 0.380669C18.1628 0.312557 18.09 0.258691 18.0097 0.221762C17.9294 0.184834 17.8432 0.165741 17.7561 0.165741C17.669 0.165741 17.5828 0.184834 17.5024 0.221762C17.4221 0.258691 17.3493 0.312557 17.2882 0.380669C17.1669 0.52492 17.0995 0.713943 17.0995 0.910178C17.0995 1.10641 17.1669 1.29544 17.2882 1.43969L20.377 4.94802H1.16983C0.988371 4.94802 0.814346 5.02712 0.686038 5.1678C0.55773 5.30848 0.485596 5.49943 0.485596 5.69839C0.485596 5.89734 0.55773 6.08775 0.686038 6.22844C0.814346 6.36912 0.988371 6.44821 1.16983 6.44821H20.377L17.2882 9.95655C17.1669 10.1008 17.0995 10.2898 17.0995 10.4861C17.0995 10.6823 17.1669 10.8713 17.2882 11.0156C17.3485 11.0852 17.421 11.1404 17.5015 11.1782C17.5819 11.2161 17.6685 11.2359 17.7561 11.2359C17.8436 11.2359 17.9302 11.2161 18.0107 11.1782C18.0911 11.1404 18.1636 11.0852 18.2239 11.0156L22.4296 6.2279C22.5555 6.08618 22.6259 5.8962 22.6259 5.69839C22.6259 5.50057 22.5555 5.31006 22.4296 5.16834Z"
+                      fill="#F78D1E" />
+                  </svg>
+                  </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card category-slider-card">
+            <div class="card-img-top">
+              <img width="220" height="220" class="img-fluid object-fit-cover" src="assets/img/home/category-4.webp"
+                alt />
+            </div>
+            <div class="card-body text-center">
+              <div class="category-slider-card_title mb-1">Bracelets</div>
+              <div class="category-slider-card_text">
+                <a class="custom-link" href="shop.html">Explore <svg width="23" height="12" viewBox="0 0 23 12"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M22.4296 5.16834L18.2239 0.380669C18.1628 0.312557 18.09 0.258691 18.0097 0.221762C17.9294 0.184834 17.8432 0.165741 17.7561 0.165741C17.669 0.165741 17.5828 0.184834 17.5024 0.221762C17.4221 0.258691 17.3493 0.312557 17.2882 0.380669C17.1669 0.52492 17.0995 0.713943 17.0995 0.910178C17.0995 1.10641 17.1669 1.29544 17.2882 1.43969L20.377 4.94802H1.16983C0.988371 4.94802 0.814346 5.02712 0.686038 5.1678C0.55773 5.30848 0.485596 5.49943 0.485596 5.69839C0.485596 5.89734 0.55773 6.08775 0.686038 6.22844C0.814346 6.36912 0.988371 6.44821 1.16983 6.44821H20.377L17.2882 9.95655C17.1669 10.1008 17.0995 10.2898 17.0995 10.4861C17.0995 10.6823 17.1669 10.8713 17.2882 11.0156C17.3485 11.0852 17.421 11.1404 17.5015 11.1782C17.5819 11.2161 17.6685 11.2359 17.7561 11.2359C17.8436 11.2359 17.9302 11.2161 18.0107 11.1782C18.0911 11.1404 18.1636 11.0852 18.2239 11.0156L22.4296 6.2279C22.5555 6.08618 22.6259 5.8962 22.6259 5.69839C22.6259 5.50057 22.5555 5.31006 22.4296 5.16834Z"
+                      fill="#F78D1E" />
+                  </svg>
+                  </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="card category-slider-card">
+            <div class="card-img-top">
+              <img width="220" height="220" class="img-fluid object-fit-cover" src="assets/img/home/category-5.webp"
+                alt />
+            </div>
+            <div class="card-body text-center">
+              <div class="category-slider-card_title mb-1">Anklets</div>
+              <div class="category-slider-card_text">
+                <a class="custom-link" href="shop.html">Explore <svg width="23" height="12" viewBox="0 0 23 12"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M22.4296 5.16834L18.2239 0.380669C18.1628 0.312557 18.09 0.258691 18.0097 0.221762C17.9294 0.184834 17.8432 0.165741 17.7561 0.165741C17.669 0.165741 17.5828 0.184834 17.5024 0.221762C17.4221 0.258691 17.3493 0.312557 17.2882 0.380669C17.1669 0.52492 17.0995 0.713943 17.0995 0.910178C17.0995 1.10641 17.1669 1.29544 17.2882 1.43969L20.377 4.94802H1.16983C0.988371 4.94802 0.814346 5.02712 0.686038 5.1678C0.55773 5.30848 0.485596 5.49943 0.485596 5.69839C0.485596 5.89734 0.55773 6.08775 0.686038 6.22844C0.814346 6.36912 0.988371 6.44821 1.16983 6.44821H20.377L17.2882 9.95655C17.1669 10.1008 17.0995 10.2898 17.0995 10.4861C17.0995 10.6823 17.1669 10.8713 17.2882 11.0156C17.3485 11.0852 17.421 11.1404 17.5015 11.1782C17.5819 11.2161 17.6685 11.2359 17.7561 11.2359C17.8436 11.2359 17.9302 11.2161 18.0107 11.1782C18.0911 11.1404 18.1636 11.0852 18.2239 11.0156L22.4296 6.2279C22.5555 6.08618 22.6259 5.8962 22.6259 5.69839C22.6259 5.50057 22.5555 5.31006 22.4296 5.16834Z"
+                      fill="#F78D1E" />
+                  </svg>
+                  </i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="swiper-pagination"></div>
+
+      <div class="d-flex align-items-center gap-2 mt-5">
+        <div class="swiper-scrollbar position-relative"></div>
+
+        <div class="position-relative d-flex gap-4">
+          <div class="swiper-button-prev position-relative"></div>
+          <div class="swiper-button-next position-relative"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+          <script src="assets/lib/js/jquery.min.js"></script>
+          <script src="assets/lib/js/bootstrap.min.js"></script>
+          <script src="assets/lib/js/owlCarousel.min.js"></script>
+          <script src="assets/lib/js/splide.min.js"></script>
+          <script src="assets/lib/js/lightbox.min.js"></script>
+          <script src="assets/lib/js/dataTables.js"></script>
+          <script src="assets/lib/js/checkboxes.min.js"></script>
+          <script src="assets/lib/js/sumoselect.min.js"></script>
+          <script src="assets/lib/js/moment.min.js"></script>
+          <script src="assets/lib/js/daterangepicker.min.js"></script>
+          <script src="assets/js/smartmenu.js"></script>
+          <script src="assets/js/custom.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+          <script>
+            new Swiper(".categorySlider", {
+                slidesPerView: 1.2,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                },
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    draggable: true,
+                    hide: false,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.8,
+                        spaceBetween: 10,
+                    },
+                    540: {
+                        slidesPerView: 2.3,
+                        spaceBetween: 10,
+                    },
+                    762: {
+                        slidesPerView: 3.3,
+                        spaceBetween: 20,
+                    },
+                    1240: {
+                        slidesPerView: 4.3,
+                        spaceBetween: 20,
+                    },
+
+                    1440: {
+                        slidesPerView: 5.3,
+                        spaceBetween: 20,
+                    },
+                },
+            });
+        </script>
+    
+    
+
+
 </body>
 
 
