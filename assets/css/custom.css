@@ -11,10 +11,11 @@
   font-family: BrittanySignature;
   src: url(/assets/fonts/BrittanySignature.ttf);
 }
-body{
+
+/* body{
   max-width: 1920px;
   margin: auto;
-}
+} */
 /* @media(max-width:1918px) {
 	.container{max-width:1560px;}
 } */
@@ -3867,25 +3868,20 @@ div.dataTables_processing div {
 
 
 
-
-
-  /* Styles for the popup */
- .rk-filter.popup {
-    position: fixed;
-    top: 10%;
-    left: 0;
-    /* transform: translate(-50%, -50%); */
-    background-color: white;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-    width: 80%;
-    height: 80%;
-    max-width: 1200px;
-    max-height: 800px;
-    overflow: auto;
-  }
-
+.rk-filter.popup {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 1px 8px rgba(0,0,0,.1);
+  z-index: 9999;
+  height: auto; /* Change height to auto */
+  border: 1px solid #eaeaec;
+  width: 95%;
+  max-width: 1450px;
+  max-height: 85vh; /* Change max-height to 85vh */
+  overflow-y: auto; /* Add overflow-y to enable vertical scrolling */
+}
   /* Styles for the button */
 .open-popup {
   color: #2D2D2D;
@@ -3908,7 +3904,7 @@ div.dataTables_processing div {
     color: #f78d1e;
   }
 
-  /* Styles for the search bar */
+  /* Styles for the search bar
   .rk-filter .search-bar {
     margin-top: 10px;
     max-width: 400px;
@@ -3916,11 +3912,23 @@ div.dataTables_processing div {
     padding: 8px;
     width: 100%;
     box-sizing: border-box;
-  }
+  } */
 
 
   .rk-filter #filter-elements{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
+    padding: 10px;
   }
+
+
+#sidebarLabels .form-check{
+  display: flex;
+  font-size: 14px;
+}
+  #filter-elements .form-check{
+    display: flex;
+    font-size: 14px;
+  }
+
