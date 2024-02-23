@@ -3875,11 +3875,11 @@ div.dataTables_processing div {
   background-color: white;
   box-shadow: 0 1px 8px rgba(0,0,0,.1);
   z-index: 9999;
-  height: auto; /* Change height to auto */
+  height: 100%; 
   border: 1px solid #eaeaec;
   width: 95%;
   max-width: 1450px;
-  max-height: 85vh; /* Change max-height to 85vh */
+  max-height: 85vh; 
   overflow-y: auto; /* Add overflow-y to enable vertical scrolling */
 }
   /* Styles for the button */
