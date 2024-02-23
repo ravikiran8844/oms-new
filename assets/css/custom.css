@@ -3900,8 +3900,9 @@ div.dataTables_processing div {
     margin-right: 2px;
     border: none;
     background-color: transparent;
-    font-size: 16px;
+    font-size: 14px;
     color: #f78d1e;
+    padding: 5px;
   }
 
   /* Styles for the search bar
