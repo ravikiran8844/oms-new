@@ -3933,3 +3933,36 @@ div.dataTables_processing div {
     font-size: 14px;
   }
 
+
+
+
+
+  .dashboard-cards_wrapper .card{
+    background: #fff;
+    border-radius: 12.092px;
+    border: 1px solid #ECECEC;
+    height: 100%;
+  }
+
+  .dashboard-cards_wrapper .dashboard__cards .card1{
+    background: #EBE0FF;
+  }
+  .dashboard-cards_wrapper .dashboard__cards .card2{
+    background: #FEF0E9;
+  }
+  .dashboard-cards_wrapper .dashboard__cards .card3{
+    background: #E8FAF5;
+  }
+
+  .dashboard-page .input-group {
+    border: 1.11px solid #929292;
+    border-radius: 3.34px;
+  }
+  .dashboard-page .input-group input{
+    border: none;
+    padding-left: 0px;
+  }
+  .dashboard-page .input-group-text{
+    border: none;
+    background-color: transparent;
+  }
