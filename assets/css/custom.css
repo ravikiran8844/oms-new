@@ -3935,7 +3935,9 @@ div.dataTables_processing div {
 
 
 
-
+.dashboard-page{
+  background: #F8F8FB;
+}
 
   .dashboard-cards_wrapper .card{
     background: #fff;
@@ -3955,14 +3957,17 @@ div.dataTables_processing div {
   }
 
   .dashboard-page .input-group {
-    border: 1.11px solid #929292;
+    border: none;
     border-radius: 3.34px;
+    background-color: #EEEEEE;
   }
   .dashboard-page .input-group input{
     border: none;
     padding-left: 0px;
+    background-color: #EEEEEE;
+
   }
   .dashboard-page .input-group-text{
     border: none;
-    background-color: transparent;
+    background-color: #EEEEEE;
   }
