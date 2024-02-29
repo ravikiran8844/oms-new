@@ -3918,7 +3918,7 @@ div.dataTables_processing div {
 
   .rk-filter #filter-elements{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
     padding: 10px;
   }
@@ -3971,3 +3971,14 @@ div.dataTables_processing div {
     border: none;
     background-color: #EEEEEE;
   }
+
+
+ /* CSS to style disabled buttons */
+.sort-button:disabled {
+  opacity: 0.5; /* Reduce opacity to visually indicate disabled state */
+  cursor: not-allowed; /* Change cursor to not-allowed to indicate non-interactivity */
+  /* Optionally, you can add additional styling such as color or background color */
+  /* Example styles */
+  color: #000; /* Change text color */
+  background-color: #f5f5f5; /* Change background color */
+}

@@ -3085,8 +3085,37 @@
       });
     }
 
-    // Function to generate sorting buttons for each letter from A to Z
-    function generateSortingButtons() {
+ 
+
+  //  // Function to generate sorting buttons for each letter from A to Z
+  //  function generateSortingButtons() {
+  //     let sortingButtonsContainer = document.getElementById("sorting-buttons");
+  //     let button = document.createElement("button");
+  //     button.className = "sort-button";
+  //     button.setAttribute("data-sort", "#");
+  //     button.innerText = "#";
+  //     button.addEventListener("click", function () {
+  //       toggleAllInputs();
+  //     });
+  //     sortingButtonsContainer.appendChild(button);
+
+  //     for (let i = 65; i <= 90; i++) {
+  //       let letter = String.fromCharCode(i);
+  //       let button = document.createElement("button");
+  //       button.className = "sort-button";
+  //       button.setAttribute("data-sort", letter);
+  //       button.innerText = letter;
+  //       button.addEventListener("click", function () {
+  //         filterByLetter(this.getAttribute("data-sort"));
+  //       });
+  //       sortingButtonsContainer.appendChild(button);
+  //     }
+  //   }  
+
+
+
+    // Function to generate sorting buttons for each letter from A to Z based on available data
+    function generateSortingButtons(data) {
       let sortingButtonsContainer = document.getElementById("sorting-buttons");
       let button = document.createElement("button");
       button.className = "sort-button";
@@ -3097,19 +3126,64 @@
       });
       sortingButtonsContainer.appendChild(button);
 
-      for (let i = 65; i <= 90; i++) {
-        let letter = String.fromCharCode(i);
+      let availableLetters = new Set(); // Using a Set to ensure uniqueness
+
+      // Extracting unique starting letters from the collection names
+      data.forEach(function(item) {
+        let firstLetter = item.collection_name.trim().charAt(0).toUpperCase();
+        availableLetters.add(firstLetter);
+      });
+
+      // Adding buttons for available letters
+      availableLetters.forEach(function(letter) {
         let button = document.createElement("button");
         button.className = "sort-button";
         button.setAttribute("data-sort", letter);
         button.innerText = letter;
-        button.addEventListener("click", function () {
+        button.addEventListener("click", function() {
           filterByLetter(this.getAttribute("data-sort"));
         });
         sortingButtonsContainer.appendChild(button);
-      }
+      });
     }
 
+        
+    
+
+//     // Function to generate sorting buttons for each letter from A to Z
+// function generateSortingButtons(data) {
+//   let sortingButtonsContainer = document.getElementById("sorting-buttons");
+//   let availableLetters = new Set(); // Using a Set to ensure uniqueness
+
+//   // Extracting unique starting letters from the collection names
+//   data.forEach(function(item) {
+//     let firstLetter = item.collection_name.trim().charAt(0).toUpperCase();
+//     availableLetters.add(firstLetter);
+//   });
+
+//   // Adding buttons for all letters A to Z
+//   for (let i = 65; i <= 90; i++) {
+//     let letter = String.fromCharCode(i);
+//     let button = document.createElement("button");
+//     button.className = "sort-button";
+//     button.setAttribute("data-sort", letter);
+//     button.innerText = letter;
+
+//     // Check if the letter has corresponding data, if not, disable the button
+//     if (!availableLetters.has(letter)) {
+//       button.disabled = true;
+//     } else {
+//       button.addEventListener("click", function() {
+//         filterByLetter(this.getAttribute("data-sort"));
+//       });
+//     }
+    
+//     sortingButtonsContainer.appendChild(button);
+//   }
+// }
+
+    
+    
     // Add event listener to the open popup button
     document.querySelector(".open-popup").addEventListener("click", function () {
       togglePopup();
@@ -3123,7 +3197,7 @@
     // Generate sorting buttons and input elements when the page loads
     window.onload = function () {
       filterBySideBarSearch();
-      generateSortingButtons();
+      generateSortingButtons(jsonData);
       generateInputElements(jsonData);
     };
   </script>
