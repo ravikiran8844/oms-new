@@ -114,7 +114,7 @@
                           d="M8.20147 19.11C11.3426 19.11 13.9027 16.5554 13.9027 13.4143V5.69572C13.9027 2.55455 11.3426 0 8.20147 0C5.06031 0 2.50024 2.5546 2.50024 5.69572V13.4143C2.50024 16.5555 5.06031 19.11 8.20147 19.11ZM4.36413 5.69572C4.36413 3.58518 6.09094 1.86384 8.20147 1.86384C10.312 1.86384 12.0388 3.58518 12.0388 5.69572V13.4143C12.0388 15.5248 10.312 17.2462 8.20147 17.2462C6.09094 17.2462 4.36413 15.5248 4.36413 13.4143V5.69572Z"
                           fill="#F78D1E" />
                         <path
-                          d="M13.9463 20.2773C15.5251 18.9068 16.3913 17.0704 16.3913 15.1078C16.3913 14.5926 15.9746 14.1759 15.4593 14.1759C14.944 14.1759 14.5274 14.5925 14.5274 15.1078C14.5274 18.0736 11.6877 20.4913 8.19564 20.4913C4.70353 20.4913 1.86389 18.0738 1.86389 15.1078C1.86389 14.5926 1.44726 14.1759 0.931944 14.1759C0.416628 14.1759 0 14.5925 0 15.1078C0 17.0704 0.871649 18.9068 2.44494 20.2773C3.76061 21.423 5.44356 22.1302 7.25808 22.3111V24.3668H5.70669C5.1914 24.3668 4.77475 24.7835 4.77475 25.2988C4.77475 25.8141 5.19138 26.2307 5.70669 26.2307H10.6734C11.1886 26.2307 11.6053 25.8141 11.6053 25.2988C11.6053 24.7835 11.1887 24.3668 10.6734 24.3668H9.13295V22.3056C10.9475 22.1247 12.6304 21.4231 13.9461 20.2773H13.9463Z"
+                          d="M13.9463 20.2773C15.5251 18.9068 16.3913 17.0704 16.3913 15.1078C16.3913 14.5926 15.9746 14.1759 15.4593 14.1759C14.944 14.1759 14.5274 14.5925 14.5274 15.1078C14.5274 18.0736 11.6877 20.4913 8.19564 20.4913C4.70353 20.4913 1.86389 18.0738 1.86389 15.1078C1.86389 14.5926 1.44726 14.1759 0.931944 14.1759C0.416628 14.1759 0 14.5925 0 15.1078C0 17.0704 0.871649 18.9068 2.44494 20.2773C3.76061 21.423 5.44356 22.1302 7.25808 22.3111V24.3668h6.70669C5.1914 24.3668 4.77475 24.7835 4.77475 25.2988C4.77475 25.8141 5.19138 26.2307 5.70669 26.2307H10.6734C11.1886 26.2307 11.6053 25.8141 11.6053 25.2988C11.6053 24.7835 11.1887 24.3668 10.6734 24.3668H9.13295V22.3056C10.9475 22.1247 12.6304 21.4231 13.9461 20.2773H13.9463Z"
                           fill="#F78D1E" />
                       </svg>
                     </button>
@@ -211,7 +211,7 @@
 
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+          <h6 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h6>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -891,7 +891,92 @@
   <!-- Main Content -->
   <div class="container-fluid">
     <div class="text-center d-block d-lg-none pt-2">
-      <div class="btn-group" role="group">
+
+
+      <div class="mobile-filters-offcanvas">
+        <div>
+          <button class="btn mobile-filters-trigger-btn" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMobileFilters" aria-controls="offcanvasMobileFilters">
+            Filter By
+          </button>
+        </div>
+      </div>
+
+
+
+      <div class="offcanvas offcanvas-start mobile-filters-offcanvas" tabindex="-1" id="offcanvasMobileFilters"
+        aria-labelledby="offcanvasMobileFiltersLabel">
+        <div class="offcanvas-body">
+          <div class="d-flex justify-content-between mobile-filters-offcanvas__header">
+            <div class="mobile-filters-offcanvas__header--filters-text">Filters</div>
+            <div>
+              <button class="mobile-filters-offcanvas__header--clear-btn">Clear all</button>
+            </div>
+          </div>
+
+
+          <div class="mobile-filters-offcanvas__body">
+
+
+            <div class="mobile-filters-offcanvas__body-items">
+              <div class="mobile-filters-offcanvas__body-item-filter-labels">
+                <div class="nav flex-column" id="mob-filters-tab" role="tablist" aria-orientation="vertical">
+                  <button class="nav-link active" id="mob-filters-Category-tab" data-bs-toggle="pill"
+                    data-bs-target="#mob-filters-Category" type="button" role="tab" aria-controls="mob-filters-Category"
+                    aria-selected="true">Category</button>
+                  <button class="nav-link" id="mob-filters-sub-category-tab" data-bs-toggle="pill"
+                    data-bs-target="#mob-filters-sub-category" type="button" role="tab"
+                    aria-controls="mob-filters-sub-category" aria-selected="false">Sub Category</button>
+                  <button class="nav-link" id="mob-filters-collection-tab" data-bs-toggle="pill"
+                    data-bs-target="#mob-filters-collection" type="button" role="tab"
+                    aria-controls="mob-filters-collection" aria-selected="false">Collection</button>
+                  <button class="nav-link" id="mob-filters-sub-collection-tab" data-bs-toggle="pill"
+                    data-bs-target="#mob-filters-sub-collection" type="button" role="tab"
+                    aria-controls="mob-filters-sub-collection" aria-selected="false">Sub Collection</button>
+                </div>
+              </div>
+              <div class="mobile-filters-offcanvas__body-item-filter-inputs">
+                <div class="tab-content" id="mob-filters-tabContent">
+                  <div class="tab-pane fade show active" id="mob-filters-Category" role="tabpanel"
+                    aria-labelledby="mob-filters-Category-tab" tabindex="0">
+                    <div>
+                      <div class="form-check d-flex justify-content-between">
+                        <div>
+                          <input type="checkbox" class="form-check-input" id=""
+                          value="AANDAL"><label for="aandal" class="form-check-label">AANDAL</label>
+                        </div>
+                        <div>
+                          12
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="mob-filters-sub-category" role="tabpanel"
+                    aria-labelledby="mob-filters-sub-category-tab" tabindex="0">Sub Category</div>
+                  <div class="tab-pane fade" id="mob-filters-collection" role="tabpanel"
+                    aria-labelledby="mob-filters-collection-tab" tabindex="0">Collection</div>
+                  <div class="tab-pane fade" id="mob-filters-sub-collection" role="tabpanel"
+                    aria-labelledby="mob-filters-sub-collection-tab" tabindex="0">Sub Collection</div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+
+          <div class="d-flex justify-content-between mobile-filters-offcanvas__footer">
+            <button type="button" class="mobile-filters-offcanvas__footer--close-btn" data-bs-dismiss="offcanvas"
+              aria-label="Close">CLOSE</button>
+            <button class="mobile-filters-offcanvas__footer--apply-btn">APPLY</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="btn-group" role="group">
         <button class="mobile-filter-btn" data-bs-toggle="modal" data-bs-target="#filterModal">
           Filter By
         </button>
@@ -899,7 +984,7 @@
         <button class="mobile-filter-btn" data-bs-toggle="modal" data-bs-target="#sortModal">
           Sort By
         </button>
-      </div>
+      </div> -->
     </div>
 
     <!-- Filter Options Modal -->
@@ -908,7 +993,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="filterModalLabel">Filter By</h5>
+            <h6 class="modal-title" id="filterModalLabel">Filter By</h6>
             <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -916,12 +1001,12 @@
           <div class="modal-body mobile-filters_wrapper">
             <div class="accordion" id="mobile-Filters">
               <div class="accordion-item mb-4">
-                <h2 class="accordion-header">
+                <h6 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#mobile-CategoryFilter" aria-expanded="false" aria-controls="mobile-CategoryFilter">
                     Category
                   </button>
-                </h2>
+                </h6>
                 <div id="mobile-CategoryFilter" class="accordion-collapse collapse">
                   <div class="accordion-body">
                     <div class="form-check">
@@ -977,13 +1062,13 @@
                 </div>
               </div>
               <div class="accordion-item mb-4">
-                <h2 class="accordion-header">
+                <h6 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#mobile-subCategoryFilter" aria-expanded="false"
                     aria-controls="mobile-subCategoryFilter">
                     Sub Category
                   </button>
-                </h2>
+                </h6>
                 <div id="mobile-subCategoryFilter" class="accordion-collapse collapse">
                   <div class="accordion-body">
                     <div class="form-check">
@@ -1012,13 +1097,13 @@
               </div>
 
               <div class="accordion-item mb-4">
-                <h2 class="accordion-header">
+                <h6 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#mobile-collectionFilter" aria-expanded="false"
                     aria-controls="mobile-collectionFilter">
                     Collection
                   </button>
-                </h2>
+                </h6>
                 <div id="mobile-collectionFilter" class="accordion-collapse collapse">
                   <div class="accordion-body">
                     <div class="form-check">
@@ -1063,13 +1148,13 @@
               </div>
 
               <div class="accordion-item mb-4">
-                <h2 class="accordion-header">
+                <h6 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#mobile-subCollectionFilter" aria-expanded="false"
                     aria-controls="mobile-subCollectionFilter">
                     Sub Collection
                   </button>
-                </h2>
+                </h6>
                 <div id="mobile-subCollectionFilter" class="accordion-collapse collapse">
                   <div class="accordion-body">
                     <div class="form-check">
@@ -1099,14 +1184,14 @@
                 </div>
               </div>
 
-              <div class="accordion-item mb-4">
-                <h2 class="accordion-header">
+              <di5 class="accordion-item mb-4">
+                <h6 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#mobile-jewelTypeFilter" aria-expanded="false"
                     aria-controls="mobile-jewelTypeFilter">
                     Jewel Type
                   </button>
-                </h2>
+                </h6>
                 <div id="mobile-jewelTypeFilter" class="accordion-collapse collapse">
                   <div class="accordion-body">
                     <div class="form-check">
@@ -1124,7 +1209,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </di5>
             </div>
           </div>
           <div class="modal-footer m-auto">
@@ -1147,7 +1232,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="sortModalLabel">Sort Options</h5>
+            <h6 class="modal-title" id="sortModalLabel">Sort Options</h6>
             <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -1182,7 +1267,7 @@
     </div>
 
     <div class="row g-0">
-      <section class="col-lg-3 d-none d-lg-block p-lg-2">
+      <section class="col-lg-2 col-xl-2 d-none d-lg-block p-0">
         <div class="row g-0">
           <div class="col-12 mb-4">
             <div class="filters-title">Filters</div>
@@ -1194,13 +1279,13 @@
 
 
               <div class="accordion-item">
-                <h2 class="accordion-header">
+                <h6 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse"
                     data-bs-target="#sidebarCollectionFilter" aria-expanded="true"
                     aria-controls="sidebarCollectionFilter">
                     Collection
                   </button>
-                </h2>
+                </h6>
                 <div id="sidebarCollectionFilter" class="accordion-collapse collapse show">
 
 
@@ -1229,40 +1314,41 @@
 
               <!-- Popup for filters -->
               <div class="popup rk-filter" id="popup" style="display: none;">
-                
 
-              
-                  <div class="d-flex align-items-center gap-3 mb-2" style="padding: 10px;border-bottom: 1px solid #eaeaec;position: sticky;background: #fff;top: 0px;">
-                    <div>
-                      <input type="text" class="form-control" id="searchBar" placeholder="Search...">
-                    </div>
-                    <div id="sorting-buttons"></div>
 
-                    <button class="btn" onclick="togglePopup()" style=" position: absolute; right: 0px; top: 0px; ">
-                      <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                        <title>close-circle-outline</title>
-                        <path
-                          d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z">
-                        </path>
-                      </svg>
-                    </button>
 
+                <div class="d-flex align-items-center gap-3 mb-2"
+                  style="padding: 10px;border-bottom: 1px solid #eaeaec;position: sticky;background: #fff;top: 0px;">
+                  <div>
+                    <input type="text" class="form-control" id="searchBar" placeholder="Search...">
                   </div>
+                  <div id="sorting-buttons"></div>
 
-                  <div id="filter-elements">
-                  </div>
+                  <button class="btn" onclick="togglePopup()" style=" position: absolute; right: 0px; top: 0px; ">
+                    <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <title>close-circle-outline</title>
+                      <path
+                        d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z">
+                      </path>
+                    </svg>
+                  </button>
 
-                
+                </div>
+
+                <div id="filter-elements">
+                </div>
+
+
               </div>
 
 
-              <div class="accordion-item mt-4">
-                <h2 class="accordion-header">
+              <div class="accordion-item mt-3">
+                <h6 class="accordion-header">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse"
                     data-bs-target="#weightRangeFilter" aria-expanded="true" aria-controls="weightRangeFilter">
                     Weight Range
                   </button>
-                </h2>
+                </h6>
                 <div id="weightRangeFilter" class="accordion-collapse collapse show">
                   <div class="accordion-body">
                     <div class="form-check">
@@ -1330,13 +1416,13 @@
                 </div>
               </div>
 
-              <div class="accordion-item mt-4">
-                <h2 class="accordion-header">
+              <div class="accordion-item mt-3">
+                <h6 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#colorFilter" aria-expanded="false" aria-controls="colorFilter">
                     Color
                   </button>
-                </h2>
+                </h6>
                 <div id="colorFilter" class="accordion-collapse collapse">
                   <div class="accordion-body">
                     <div class="form-check">
@@ -1377,13 +1463,13 @@
                 </div>
               </div>
 
-              <div class="accordion-item mt-4">
-                <h2 class="accordion-header">
+              <div class="accordion-item mt-3">
+                <h6 class="accordion-header">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#platingFilter" aria-expanded="false" aria-controls="platingFilter">
                     PLATING
                   </button>
-                </h2>
+                </h6>
                 <div id="platingFilter" class="accordion-collapse collapse">
                   <div class="accordion-body">
                     <div class="form-check">
@@ -1429,7 +1515,7 @@
         </div>
       </section>
 
-      <div class="col-12 col-lg-9 p-lg-2">
+      <div class="col-12 col-lg-10 col-xl-10 p-lg-2">
         <div class="d-flex justify-content-between">
           <div class="view-toggle mt-2 ms-auto">
             <button class="custom-icon-btn grid-view active">
@@ -3085,32 +3171,32 @@
       });
     }
 
- 
 
-  //  // Function to generate sorting buttons for each letter from A to Z
-  //  function generateSortingButtons() {
-  //     let sortingButtonsContainer = document.getElementById("sorting-buttons");
-  //     let button = document.createElement("button");
-  //     button.className = "sort-button";
-  //     button.setAttribute("data-sort", "#");
-  //     button.innerText = "#";
-  //     button.addEventListener("click", function () {
-  //       toggleAllInputs();
-  //     });
-  //     sortingButtonsContainer.appendChild(button);
 
-  //     for (let i = 65; i <= 90; i++) {
-  //       let letter = String.fromCharCode(i);
-  //       let button = document.createElement("button");
-  //       button.className = "sort-button";
-  //       button.setAttribute("data-sort", letter);
-  //       button.innerText = letter;
-  //       button.addEventListener("click", function () {
-  //         filterByLetter(this.getAttribute("data-sort"));
-  //       });
-  //       sortingButtonsContainer.appendChild(button);
-  //     }
-  //   }  
+    //  // Function to generate sorting buttons for each letter from A to Z
+    //  function generateSortingButtons() {
+    //     let sortingButtonsContainer = document.getElementById("sorting-buttons");
+    //     let button = document.createElement("button");
+    //     button.className = "sort-button";
+    //     button.setAttribute("data-sort", "#");
+    //     button.innerText = "#";
+    //     button.addEventListener("click", function () {
+    //       toggleAllInputs();
+    //     });
+    //     sortingButtonsContainer.appendChild(button);
+
+    //     for (let i = 65; i <= 90; i++) {
+    //       let letter = String.fromCharCode(i);
+    //       let button = document.createElement("button");
+    //       button.className = "sort-button";
+    //       button.setAttribute("data-sort", letter);
+    //       button.innerText = letter;
+    //       button.addEventListener("click", function () {
+    //         filterByLetter(this.getAttribute("data-sort"));
+    //       });
+    //       sortingButtonsContainer.appendChild(button);
+    //     }
+    //   }  
 
 
 
@@ -3129,61 +3215,61 @@
       let availableLetters = new Set(); // Using a Set to ensure uniqueness
 
       // Extracting unique starting letters from the collection names
-      data.forEach(function(item) {
+      data.forEach(function (item) {
         let firstLetter = item.collection_name.trim().charAt(0).toUpperCase();
         availableLetters.add(firstLetter);
       });
 
       // Adding buttons for available letters
-      availableLetters.forEach(function(letter) {
+      availableLetters.forEach(function (letter) {
         let button = document.createElement("button");
         button.className = "sort-button";
         button.setAttribute("data-sort", letter);
         button.innerText = letter;
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
           filterByLetter(this.getAttribute("data-sort"));
         });
         sortingButtonsContainer.appendChild(button);
       });
     }
 
-        
-    
 
-//     // Function to generate sorting buttons for each letter from A to Z
-// function generateSortingButtons(data) {
-//   let sortingButtonsContainer = document.getElementById("sorting-buttons");
-//   let availableLetters = new Set(); // Using a Set to ensure uniqueness
 
-//   // Extracting unique starting letters from the collection names
-//   data.forEach(function(item) {
-//     let firstLetter = item.collection_name.trim().charAt(0).toUpperCase();
-//     availableLetters.add(firstLetter);
-//   });
 
-//   // Adding buttons for all letters A to Z
-//   for (let i = 65; i <= 90; i++) {
-//     let letter = String.fromCharCode(i);
-//     let button = document.createElement("button");
-//     button.className = "sort-button";
-//     button.setAttribute("data-sort", letter);
-//     button.innerText = letter;
+    //     // Function to generate sorting buttons for each letter from A to Z
+    // function generateSortingButtons(data) {
+    //   let sortingButtonsContainer = document.getElementById("sorting-buttons");
+    //   let availableLetters = new Set(); // Using a Set to ensure uniqueness
 
-//     // Check if the letter has corresponding data, if not, disable the button
-//     if (!availableLetters.has(letter)) {
-//       button.disabled = true;
-//     } else {
-//       button.addEventListener("click", function() {
-//         filterByLetter(this.getAttribute("data-sort"));
-//       });
-//     }
-    
-//     sortingButtonsContainer.appendChild(button);
-//   }
-// }
+    //   // Extracting unique starting letters from the collection names
+    //   data.forEach(function(item) {
+    //     let firstLetter = item.collection_name.trim().charAt(0).toUpperCase();
+    //     availableLetters.add(firstLetter);
+    //   });
 
-    
-    
+    //   // Adding buttons for all letters A to Z
+    //   for (let i = 65; i <= 90; i++) {
+    //     let letter = String.fromCharCode(i);
+    //     let button = document.createElement("button");
+    //     button.className = "sort-button";
+    //     button.setAttribute("data-sort", letter);
+    //     button.innerText = letter;
+
+    //     // Check if the letter has corresponding data, if not, disable the button
+    //     if (!availableLetters.has(letter)) {
+    //       button.disabled = true;
+    //     } else {
+    //       button.addEventListener("click", function() {
+    //         filterByLetter(this.getAttribute("data-sort"));
+    //       });
+    //     }
+
+    //     sortingButtonsContainer.appendChild(button);
+    //   }
+    // }
+
+
+
     // Add event listener to the open popup button
     document.querySelector(".open-popup").addEventListener("click", function () {
       togglePopup();
