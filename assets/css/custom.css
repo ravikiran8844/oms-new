@@ -961,29 +961,27 @@ body {
   background: #555;
 }
 .quantity-input-group {
-  width: max-content;
+  width: 80px;
   border-radius: 17.641px;
   border: 0.961px solid #c5c5c5;
-  background: #f8f8f8;
+  background: #f8f8f8 !important;
 }
 .qty {
-  width: 40px;
+  width: 30px;
   height: 25px;
   text-align: center;
   background: #f8f8f8 !important;
   border: none;
   outline: none;
-  font-size: 14px;
+  font-size: 12px !important;
 }
 
 input.qtyplus {
-  width: 25px;
   height: 25px;
   background-color: transparent;
   border: none !important;
 }
 input.qtyminus {
-  width: 25px;
   height: 25px;
   background-color: transparent;
   border: none !important;
@@ -1541,27 +1539,27 @@ input[type="radio"]:checked + label button {
 }
 
 /* Responsive Grid for Small Devices */
-@media (min-width: 350px) {
+@media (min-width: 320px) {
   .col-12.shop-page_product-cards.grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
   }
 }
 
-@media (min-width: 560px) {
+/* @media (min-width: 560px) {
   .col-12.shop-page_product-cards.grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
+} */
 
-/* Responsive Grid for Medium Devices */
+/* Responsive Grid for Medium Devices
 @media (min-width: 768px) {
   .col-12.shop-page_product-cards.grid {
     grid-template-columns: repeat(5, minmax(150px, 1fr));
   }
-}
+} */
 
 /* Responsive Grid for Extra Large Devices */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .col-12.shop-page_product-cards.grid {
     grid-template-columns: repeat(5, minmax(160px, 1fr));
     grid-column-gap: 18px;
@@ -1569,12 +1567,12 @@ input[type="radio"]:checked + label button {
 }
 
 /* Responsive Grid for Extra Large Devices */
-@media (min-width: 1500px) {
+/* @media (min-width: 1500px) {
   .col-12.shop-page_product-cards.grid {
     grid-template-columns: repeat(6, minmax(160px, 1fr));
     grid-column-gap: 18px;
   }
-}
+} */
 
 /* Additional style for single item */
 .shop-page_product-cards.grid .shop-page_product-card {
@@ -1657,7 +1655,7 @@ input[type="radio"]:checked + label button {
 .shop-page_product-card .card-body .card-text {
   color: #818181;
   font-family: Inter;
-  font-size: 12px;
+  font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%; /* 23.4px */
@@ -1720,7 +1718,7 @@ input[type="radio"]:checked + label button {
   color: #f78d1e;
   text-align: center;
   font-family: Inter;
-  font-size: 14.16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   line-height: 100%;
@@ -4033,6 +4031,7 @@ div.dataTables_processing div {
   padding: 15px;
   background: #FFF;
   border-top: 1px solid #C2C2C2;
+  z-index: 9999;
 }
 .mobile-filters-offcanvas__footer button,.mobile-filters-offcanvas__header button{
   background-color: transparent;
@@ -4103,7 +4102,9 @@ div.dataTables_processing div {
 }
 
 
-
+.shop-page_product-card{
+  font-size: 12px;
+}
 
 
 .accordion-body {
