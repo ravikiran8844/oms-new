@@ -4011,11 +4011,13 @@ div.dataTables_processing div {
 
 .mobile-filters-offcanvas .offcanvas-body{
   padding: 0px !important;
+  display: flex;
+  flex-direction: column;
 }
 
 
 .mobile-filters-offcanvas__body{
-  height: calc(100vh - 100px);
+  /* height: calc(100vh - 100px); */
 }
 .mobile-filters-offcanvas__header{
   height: 50px;
@@ -4085,7 +4087,7 @@ div.dataTables_processing div {
 }
 
 .mobile-filters-offcanvas__body-item-filter-inputs{
-  height: calc(100vh - 100px);
+  /* height: calc(100vh - 100px); */
   overflow-y: auto;
   padding: 10px;
   text-align: start;
@@ -4117,6 +4119,7 @@ div.dataTables_processing div {
 }
 .form-control{
   font-size: 12px;
+  background-color: transparent;
 }
 .custom-accordian .accordion-item{
   line-height: unset;

@@ -940,15 +940,9 @@
                   <div class="tab-pane fade show active" id="mob-filters-Category" role="tabpanel"
                     aria-labelledby="mob-filters-Category-tab" tabindex="0">
                     <div>
-                      <div class="form-check d-flex justify-content-between">
-                        <div>
-                          <input type="checkbox" class="form-check-input" id=""
-                          value="AANDAL"><label for="aandal" class="form-check-label">AANDAL</label>
-                        </div>
-                        <div>
-                          12
-                        </div>
-                      
+
+                      <div id="mobile-collection-filters">
+
                       </div>
                     </div>
                   </div>
@@ -3286,6 +3280,28 @@
       generateSortingButtons(jsonData);
       generateInputElements(jsonData);
     };
+
+
+
+
+
+
+
+let mobileCollectionFiltersContainer= document.getElementById("mobile-collection-filters")
+    jsonData.forEach(each=>{
+      let filterItem=document.createElement('div');
+      filterItem.innerHTML=`<div class="form-check d-flex justify-content-between gap-2">
+                            <div>
+                              <input type="checkbox" class="form-check-input" id="${each.collection_name}"
+                              value="${each.collection_name}"><label for="${each.collection_name}" class="form-check-label">${each.collection_name}</label>
+                            </div>
+                            <div>
+                              12
+                            </div>
+                            </div>`
+      mobileCollectionFiltersContainer.appendChild(filterItem)
+
+    })
   </script>
 
 
