@@ -4106,6 +4106,7 @@ div.dataTables_processing div {
 .mobile-filters-offcanvas__body-item-filter-inputs .filter-inputs_wrapper{
   overflow-y: auto;
   height: calc(100vh - 120px); 
+  padding-bottom: 50px;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .mobile-filters-offcanvas__body-item-filter-inputs .filter-inputs_wrapper::-webkit-scrollbar {
