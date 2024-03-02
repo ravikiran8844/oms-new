@@ -4002,7 +4002,7 @@ div.dataTables_processing div {
   background: #FFF;
   color: #F78D1E !important;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 16px */
@@ -4027,13 +4027,15 @@ div.dataTables_processing div {
   border-bottom: 1px solid #C2C2C2;
 }
 .mobile-filters-offcanvas__footer{
-  position: relative;
+  position: fixed;
   height: 50px;
   width: 100%;
   padding: 15px;
   background: #FFF;
   border-top: 1px solid #C2C2C2;
-  z-index: 9999;
+  z-index: 999;
+  bottom: 0;
+  max-width: 399.2px;
 }
 .mobile-filters-offcanvas__footer button,.mobile-filters-offcanvas__header button{
   background-color: transparent;
@@ -4043,7 +4045,7 @@ div.dataTables_processing div {
 .mobile-filters-offcanvas__footer--close-btn,.mobile-filters-offcanvas__header--filters-text{
   color: #2D2D2D;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 16px */
@@ -4051,7 +4053,7 @@ div.dataTables_processing div {
 .mobile-filters-offcanvas__footer--apply-btn,.mobile-filters-offcanvas__header--clear-btn{
   color: #F78D1E;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 100%; /* 16px */
@@ -4083,7 +4085,7 @@ div.dataTables_processing div {
 
 .mobile-filters-offcanvas__body-item-filter-labels{
   background: #F5F5F5;
-
+  overflow-y: auto;
 }
 
 .mobile-filters-offcanvas__body-item-filter-inputs{
