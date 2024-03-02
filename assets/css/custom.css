@@ -4028,6 +4028,7 @@ div.dataTables_processing div {
   position: sticky;
   top: 0;
   z-index: 9999;
+  align-items: center;
 }
 .mobile-filters-offcanvas__footer{
   position: fixed;

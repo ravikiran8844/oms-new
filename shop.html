@@ -1034,7 +1034,7 @@
           <div class="d-flex justify-content-between mobile-filters-offcanvas__footer">
             <button type="button" class="mobile-filters-offcanvas__footer--close-btn" data-bs-dismiss="offcanvas"
               aria-label="Close">CLOSE</button>
-            <button class="mobile-filters-offcanvas__footer--apply-btn">APPLY</button>
+            <button class="mobile-filters-offcanvas__footer--apply-btn" id="apply-filters-btn">APPLY</button>
           </div>
         </div>
       </div>
@@ -3398,6 +3398,16 @@ generateDummyFilters("Weight", "mobile-weight-range-filters");
 generateDummyFilters("Color", "mobile-color-filters");
 generateDummyFilters("Planting", "mobile-planting-filters");
 
+
+function closeOffcanvas() {
+  let offcanvas = document.getElementById("offcanvasMobileFilters");
+  let bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvas);
+  bsOffcanvas.hide();
+}
+
+document.getElementById("apply-filters-btn").onclick = () => {
+  closeOffcanvas();
+};
 
   </script>
 
