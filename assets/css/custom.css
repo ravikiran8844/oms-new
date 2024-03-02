@@ -4085,6 +4085,7 @@ div.dataTables_processing div {
 
 .mobile-filters-offcanvas__body-item-filter-labels{
   background: #F5F5F5;
+  padding-bottom: 50px;
   overflow-y: auto;
 }
 
@@ -4098,7 +4099,7 @@ div.dataTables_processing div {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-
+  padding-bottom: 50px;
 }
 .mobile-filters-offcanvas__body-item-filter-inputs li{
   min-height: 40px;

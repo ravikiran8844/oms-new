@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="assets/lib/css/daterangepicker.css" />
   <link rel="stylesheet" href="assets/lib/css/fontawesome/css/all.min.css" />
   <link rel="stylesheet" href="assets/lib/css/fontawesome/css/fontawesome.min.css" />
-  <link rel="stylesheet" href="assets/lib/css/lightbox.min.css" />
   <link rel="stylesheet" href="assets/lib/css/owlCarousel.min.css" />
   <link rel="stylesheet" href="assets/lib/css/select.dataTables.min.css" />
   <link rel="stylesheet" href="assets/lib/css/splide.min.css" />
@@ -933,7 +932,20 @@
                   <button class="nav-link" id="mob-filters-sub-collection-tab" data-bs-toggle="pill"
                     data-bs-target="#mob-filters-sub-collection" type="button" role="tab"
                     aria-controls="mob-filters-sub-collection" aria-selected="false">Sub Collection</button>
-                </div>
+                    <button class="nav-link" id="mob-filters-jewel-type-tab" data-bs-toggle="pill"
+                    data-bs-target="#mob-filters-jewel-type" type="button" role="tab"
+                    aria-controls="mob-filters-jewel-type" aria-selected="false">Jewel Type</button>
+                    <button class="nav-link" id="mob-filters-weight-range-tab" data-bs-toggle="pill"
+                    data-bs-target="#mob-filters-weight-range" type="button" role="tab"
+                    aria-controls="mob-filters-weight-range" aria-selected="false">Weight Range</button>
+                    <button class="nav-link" id="mob-filters-color-tab" data-bs-toggle="pill"
+                    data-bs-target="#mob-filters-color" type="button" role="tab"
+                    aria-controls="mob-filters-color" aria-selected="false">Color</button>
+                    <button class="nav-link" id="mob-filters-planting-tab" data-bs-toggle="pill"
+                    data-bs-target="#mob-filters-planting" type="button" role="tab"
+                    aria-controls="mob-filters-planting" aria-selected="false">Planting</button>
+
+                  </div>
               </div>
               <div class="mobile-filters-offcanvas__body-item-filter-inputs">
                 <div class="tab-content" id="mob-filters-tabContent">
@@ -941,17 +953,54 @@
                     aria-labelledby="mob-filters-Category-tab" tabindex="0">
                     <div>
 
-                      <div id="mobile-collection-filters">
+                      <div id="mobile-Category-filters">
 
                       </div>
                     </div>
                   </div>
                   <div class="tab-pane fade" id="mob-filters-sub-category" role="tabpanel"
-                    aria-labelledby="mob-filters-sub-category-tab" tabindex="0">Sub Category</div>
+                    aria-labelledby="mob-filters-sub-category-tab" tabindex="0">
+                    <div id="mobile-sub-category-filters">
+
+                    </div>
+                  </div>
                   <div class="tab-pane fade" id="mob-filters-collection" role="tabpanel"
-                    aria-labelledby="mob-filters-collection-tab" tabindex="0">Collection</div>
+                    aria-labelledby="mob-filters-collection-tab" tabindex="0">
+                    <div id="mobile-collection-filters">
+
+                    </div></div>
                   <div class="tab-pane fade" id="mob-filters-sub-collection" role="tabpanel"
-                    aria-labelledby="mob-filters-sub-collection-tab" tabindex="0">Sub Collection</div>
+                    aria-labelledby="mob-filters-sub-collection-tab" tabindex="0">
+                    <div id="mobile-sub-collection-filters">
+
+                    </div></div>
+                    <div class="tab-pane fade" id="mob-filters-jewel-type" role="tabpanel"
+                    aria-labelledby="mob-filters-jewel-type-tab" tabindex="0">
+                    <div id="mobile-jewel-type-filters">
+
+                    </div>
+                  </div>
+                    <div class="tab-pane fade" id="mob-filters-weight-range" role="tabpanel"
+                    aria-labelledby="mob-filters-weight-range-tab" tabindex="0">
+                    <div id="mobile-weight-range-filters">
+
+                    </div>
+                  </div>
+
+                   
+                    <div class="tab-pane fade" id="mob-filters-color" role="tabpanel"
+                    aria-labelledby="mob-filters-color-tab" tabindex="0">
+                    <div id="mobile-color-filters">
+
+                    </div>
+                  </div>
+                    <div class="tab-pane fade" id="mob-filters-planting" role="tabpanel"
+                    aria-labelledby="mob-filters-planting-tab" tabindex="0">
+                    <div id="mobile-planting-filters">
+
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -2254,7 +2303,6 @@
   <script src="assets/lib/js/bootstrap.min.js"></script>
   <script src="assets/lib/js/owlCarousel.min.js"></script>
   <script src="assets/lib/js/splide.min.js"></script>
-  <script src="assets/lib/js/lightbox.min.js"></script>
   <script src="assets/lib/js/dataTables.js"></script>
   <script src="assets/lib/js/checkboxes.min.js"></script>
   <script src="assets/lib/js/sumoselect.min.js"></script>
@@ -3287,10 +3335,10 @@
 
 
 
-let mobileCollectionFiltersContainer= document.getElementById("mobile-collection-filters")
-    jsonData.forEach(each=>{
-      let filterItem=document.createElement('div');
-      filterItem.innerHTML=`<div class="form-check d-flex justify-content-between gap-2">
+    let mobileCollectionFiltersContainer = document.getElementById("mobile-Category-filters")
+    jsonData.forEach(each => {
+      let filterItem = document.createElement('div');
+      filterItem.innerHTML = `<div class="form-check d-flex justify-content-between gap-2">
                             <div>
                               <input type="checkbox" class="form-check-input" id="${each.collection_name}"
                               value="${each.collection_name}"><label for="${each.collection_name}" class="form-check-label">${each.collection_name}</label>
@@ -3302,6 +3350,35 @@ let mobileCollectionFiltersContainer= document.getElementById("mobile-collection
       mobileCollectionFiltersContainer.appendChild(filterItem)
 
     })
+
+
+    const generateDummyFilters = (FilterName, containerID) => {
+    let FiltersContainer = document.getElementById(containerID);
+
+    for (let i = 1; i <= 30; i++) {
+        let filterItem = document.createElement('div');
+        filterItem.innerHTML = `<div class="form-check d-flex justify-content-between gap-2">
+                                <div>
+                                    <input type="checkbox" class="form-check-input" id="${FilterName}-${i}"
+                                    value="${FilterName}"><label for="${FilterName}-${i}" class="form-check-label">${FilterName} ${i}</label>
+                                </div>
+                                <div>
+                                    12
+                                </div>
+                                </div>`;
+        FiltersContainer.appendChild(filterItem);
+    }
+};
+
+generateDummyFilters("Sub Category", "mobile-sub-category-filters");
+generateDummyFilters("Collection", "mobile-collection-filters");
+generateDummyFilters("Sub Collection", "mobile-sub-collection-filters");
+generateDummyFilters("Jewel Type", "mobile-jewel-type-filters");
+generateDummyFilters("Weight", "mobile-weight-range-filters");
+generateDummyFilters("Color", "mobile-color-filters");
+generateDummyFilters("Planting", "mobile-planting-filters");
+
+
   </script>
 
 
