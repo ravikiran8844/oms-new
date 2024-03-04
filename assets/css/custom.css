@@ -4159,3 +4159,19 @@ div.dataTables_processing div {
 .accordion-header .accordion-button{
   font-size: 12px;
 }
+
+
+
+
+
+
+.product-cart-qty-text{
+  font-size: 10px;
+  background: linear-gradient(45deg, #FAB07A, #F7CA6A);
+  padding: 3px 5px;
+  width: fit-content;
+  border-radius: 8px;
+  color: #000;
+  font-family: Inter;
+  font-weight: 500;
+}
