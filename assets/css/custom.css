@@ -4141,7 +4141,7 @@ div.dataTables_processing div {
   font-size: 12px;
   word-break: break-word;
 }
-.form-control{
+.accordion-body .form-control{
   font-size: 12px;
   background-color: transparent;
 }
