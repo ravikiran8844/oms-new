@@ -1541,7 +1541,7 @@ input[type="radio"]:checked + label button {
 /* Responsive Grid for Small Devices */
 @media (min-width: 320px) {
   .col-12.shop-page_product-cards.grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px,1fr));
   }
 }
 
