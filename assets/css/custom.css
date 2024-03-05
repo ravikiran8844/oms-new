@@ -4218,3 +4218,11 @@ div.dataTables_processing div {
 .recommended-products-slider .splide__slide{
   max-width: 200px;
 }
+
+
+.dashboard-sidebar{
+  border-radius: 12px;
+  border: 1px solid #E1E1E1;
+  background: #FFF;
+  height: 100%;
+}
