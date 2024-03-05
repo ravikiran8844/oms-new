@@ -4226,3 +4226,39 @@ div.dataTables_processing div {
   background: #FFF;
   height: 100%;
 }
+
+
+.dasboard-new__cards .card{
+  border-radius: 15.535px;
+  border: 1.342px solid #E1E1E1;
+  background: #FFF;
+}
+
+.dasboard-new__cards .card .card-icon_wrapper svg{
+  width: 40px;
+  height: 40px;
+}
+.dasboard-new__cards .card .badge{
+  min-width: unset;
+  border-radius: 5.358px;
+
+}
+
+.dasboard-new__cards .card .h6{
+  color: #595959 !important;
+  font-family: Inter;
+}
+.badge-blue{
+background: #EBE0FF;
+color: #8C6FC0;
+}
+.badge-orange{
+  color: #F78D1E;
+
+  background: #FEEAEA;
+
+}
+.badge-green{
+  background: #EBF8EF;
+  color: #18CE98;
+}
