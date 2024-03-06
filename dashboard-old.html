@@ -924,9 +924,8 @@
                                             </div>
                                         </div>
                                         <!-- End Title -->
-                                        <div class="chart">
-                                            <canvas id="Chart1"
-                                                style="width: 100%; height: 400px; margin-left: -35px;"></canvas>
+                                        <div class="chart mt-4">
+                                            <canvas id="Chart1" style="width: 100%; height: 400px;"></canvas>
                                         </div>
                                         <!-- End Chart -->
                                     </div>
@@ -939,7 +938,13 @@
                         </div>
                     </div>
 
+                    <div class="container mt-5">
+                        <h3>Select Date Range</h3>
+                        <div class="input-group mb-3">
+                            <input type="text" name="daterange" />
 
+                        </div>
+                    </div>
 
 
                 </div>
@@ -963,10 +968,100 @@
     <script src="assets//js/Chart.min.js"></script>
     <script src="assets/js/custom.js"></script>
 
-
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script>
+        $(function() {
+          $('input[name="daterange"]').daterangepicker({
+            opens: 'left'
+          }, function(start, end, label) {
+            console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+          });
+        });
+        </script>
 
     <script>
+        // Define initial chart data
+        let initialData = {
+            labels: [
+                "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+            ],
+            datasets: [{
+                label: "Total Weight",
+                backgroundColor: "#F78D1E",
+                borderColor: "#fff",
+                data: [
+                    226000, 289000, 389000, 189000, 289000, 389000, 726000, 189000, 289000, 389000, 189000, 289000
+                ],
+                pointBackgroundColor: "transparent",
+                pointHoverBackgroundColor: "#F78D1E",
+                pointBorderColor: "transparent",
+                pointHoverBorderColor: "#fff",
+                pointHoverBorderWidth: 5,
+                borderWidth: 5,
+                pointRadius: 8,
+                pointHoverRadius: 8,
+                cubicInterpolationMode: "monotone"
+            }]
+        };
+    
+        // Get chart canvas and context
+        const ctx1 = document.getElementById("Chart1").getContext("2d");
+    
+        const config = {
+            type: 'bar',
+            data: initialData,
+            options: {
+                plugins: {
+                    title: {
+                        display: false,
+                        text: 'Orders'
+                    },
+                    legend: {
+                        display: false,
+                        position: 'right'
+                    },
+                },
+                responsive: true,
+                interaction: {
+                    intersect: false,
+                },
+    
+                scales: {
+    
+                }
+            }
+        };
+    
+        // Initialize chart with initial data
+        const chart1 = new Chart(ctx1, config);
+    
+        // Function to update chart data
+        function updateChartData(newData, newLabels) {
+            chart1.data.datasets[0].data = newData;
+            chart1.data.labels = newLabels;
+            chart1.update();
+        }
+    
+        // Event listener for date range change
+        $('#daterange').on('change', function () {
+            const startDate = $(this).val().split(' - ')[0];
+            const endDate = $(this).val().split(' - ')[1];
+            // Example: Call a function to get data based on selected date range
+            // For demonstration, let's just update with random data
+            const newData = Array.from({ length: 7 }, () => Math.floor(Math.random() * 1000)); // Dummy data for 7 days
+            const newLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']; // Dummy labels for days of week
+            updateChartData(newData, newLabels);
+        });
+    </script>
+    
+
+
+    <!-- <script>
 
         // Define initial chart data
         let initialData = {
@@ -975,8 +1070,8 @@
             ],
             datasets: [{
                 label: "Total Weight",
-                backgroundColor: "transparent",
-                borderColor: "#F78D1E",
+                backgroundColor: "#F78D1E",
+                borderColor: "#fff",
                 data: [
                     226000, 289000, 389000, 189000, 289000, 389000, 726000, 189000, 289000, 389000, 189000, 289000
                 ],
@@ -995,85 +1090,34 @@
         // Get chart canvas and context
         const ctx1 = document.getElementById("Chart1").getContext("2d");
 
-        // Initialize chart with initial data
-        const chart1 = new Chart(ctx1, {
-            type: "line",
+        const config = {
+            type: 'bar',
             data: initialData,
             options: {
                 plugins: {
-                    tooltip: {
-                        callbacks: {
-                            labelColor: function (context) {
-                                return {
-                                    backgroundColor: "#ffffff",
-                                    color: "#171717"
-                                };
-                            },
-                        },
-                        intersect: false,
-                        backgroundColor: "#F78D1E",
-                        title: {
-                            fontFamily: "Poppins",
-                            color: "#8F92A1",
-                            fontSize: 14,
-                        },
-                        body: {
-                            fontFamily: "Poppins",
-                            color: "#171717",
-                            fontStyle: "600",
-                            fontSize: 16,
-                        },
-                        multiKeyBackground: "transparent",
-                        displayColors: false,
-                        padding: {
-                            x: 30,
-                            y: 10,
-                        },
-                        bodyAlign: "center",
-                        titleAlign: "center",
-                        titleColor: "#ffffff",
-                        bodyColor: "#ffffff",
-                        bodyFont: {
-                            family: "Inter",
-                            size: "16",
-                            weight: "600",
-                        },
+                    title: {
+                        display: false,
+                        text: 'Orders'
                     },
                     legend: {
                         display: false,
+                        position: 'right'
                     },
                 },
                 responsive: true,
-                maintainAspectRatio: false,
-                title: {
-                    display: false,
+                interaction: {
+                    intersect: false,
                 },
+
                 scales: {
-                    y: {
-                        grid: {
-                            display: false,
-                            drawTicks: false,
-                            drawBorder: false,
-                        },
-                        ticks: {
-                            padding: 35,
-                            max: 1200,
-                            min: 500,
-                        },
-                    },
-                    x: {
-                        grid: {
-                            drawBorder: false,
-                            color: "rgba(143, 146, 161, .1)",
-                            zeroLineColor: "rgba(143, 146, 161, .1)",
-                        },
-                        ticks: {
-                            padding: 20,
-                        },
-                    },
-                },
-            },
-        });
+
+                }
+            }
+        };
+
+
+        // Initialize chart with initial data
+        const chart1 = new Chart(ctx1, config);
 
         // Function to update chart data
         function updateChartData(newData, newLabels) {
@@ -1101,20 +1145,42 @@
                 // Sample data for different button types
                 switch (btnType) {
                     case 'daily':
-                        newData = [1200, 1300, 1400, 1500, 1600, 1700, 1800, 1400, 2000, 2100, 2200, 1400];
-                        newLabels = ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 8', 'Day 9', 'Day 10', 'Day 11', 'Day 12'];
+                        const currentHour = new Date().getHours();
+                        newData = Array.from({ length: currentHour + 1 }, () => Math.floor(Math.random() * 100)); // Dummy data for current hours
+                        newLabels = Array.from({ length: currentHour + 1 }, (_, i) => i.toString()); // Labels from 0 to current hour
                         break;
                     case 'weekly':
+                        const today = new Date();
+                        const weekLabels = [];
+                        for (let i = 6; i >= 0; i--) {
+                            const day = new Date(today);
+                            day.setDate(today.getDate() - i);
+                            weekLabels.push(day.toLocaleDateString('en-US', { weekday }));
+                        }
                         newData = [8000, 8500, 8000, 9500, 10000, 8000, 11000];
-                        newLabels = ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7'];
+                        newLabels = weekLabels;
                         break;
                     case 'monthly':
-                        newData = [226000, 289000, 389000, 189000, 289000, 389000, 726000, 189000, 289000, 389000, 189000, 289000];
-                        newLabels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                        const last30DaysLabels = [];
+                        const currentDate = new Date();
+                        for (let i = 29; i >= 0; i--) {
+                            const day = new Date(currentDate);
+                            day.setDate(currentDate.getDate() - i);
+                            last30DaysLabels.push(day.getDate().toString());
+                        }
+                        newData = Array.from({ length: 30 }, () => Math.floor(Math.random() * 1000)); // Dummy data for the last 30 days
+                        newLabels = last30DaysLabels;
                         break;
                     case 'yearly':
-                        newData = [200000, 220000, 240000, 260000, 280000, 300000, 320000, 220000, 360000, 220000, 400000, 220000];
-                        newLabels = ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6', 'Year 7', 'Year 8', 'Year 9', 'Year 10', 'Year 11', 'Year 12'];
+                        const last12MonthsLabels = [];
+                        const currentMonth = (new Date()).getMonth();
+                        const currentYear = (new Date()).getFullYear();
+                        for (let i = 11; i >= 0; i--) {
+                            const month = (currentMonth - i + 12) % 12;
+                            last12MonthsLabels.push(new Date(currentYear, month, 1).toLocaleString('default', { month: 'short' }));
+                        }
+                        newData = Array.from({ length: 12 }, () => Math.floor(Math.random() * 10000)); // Dummy data for the last 12 months
+                        newLabels = last12MonthsLabels;
                         break;
                     default:
                         newData = initialData.datasets[0].data; // Use initial data as default
@@ -1129,7 +1195,7 @@
         });
 
 
-    </script>
+    </script> -->
 
 </body>
 

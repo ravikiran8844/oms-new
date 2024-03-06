@@ -4136,10 +4136,19 @@ div.dataTables_processing div {
 .accordion-body {
   padding: 5px;
 }
+/* .form-check{
+  min-height: unset;
+}
+.form-check-input{
+  margin-top: 0px !important;
 
+} */
 .form-check-label{
   font-size: 12px;
   word-break: break-word;
+  margin:auto 0px;
+  line-height: normal;
+
 }
 .accordion-body .form-control{
   font-size: 12px;
@@ -4261,4 +4270,15 @@ color: #8C6FC0;
 .badge-green{
   background: #EBF8EF;
   color: #18CE98;
+}
+
+
+
+.filter-inputs_wrapper .form-control{
+  height: 30px !important;
+  font-size: 12px !important;
+  border: 1px solid #E1E1E1 !important;
+}
+.filter-inputs_wrapper .form-control:focus{
+  border: 1px solid #E1E1E1 !important;
 }
