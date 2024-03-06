@@ -4282,3 +4282,36 @@ color: #8C6FC0;
 .filter-inputs_wrapper .form-control:focus{
   border: 1px solid #E1E1E1 !important;
 }
+
+
+
+
+
+.spinner{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.recommended-products-slider .swiper-slide{
+  width: 160px;
+}
+
+
+.custom-buttons {
+  position: relative;
+  padding-top: 40px;
+  font-weight: 600;
+  --swiper-navigation-size:14px;
+  --swiper-theme-color:#fff;
+
+}
+
+.custom-buttons .swiper-button-next,
+.custom-buttons .swiper-button-prev {
+  background-color: #f78d1e;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: static !important;
+}

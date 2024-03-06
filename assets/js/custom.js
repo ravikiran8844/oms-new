@@ -81,34 +81,33 @@ $(function() {
 
 
 
+   // Get all buttons with the class 'spinner-button'
+   const buttons = document.querySelectorAll('.spinner-button');
 
-    // Get all buttons with the class 'spinner-button'
-    const buttons = document.querySelectorAll('.spinner-button');
+   // Iterate over each button and attach the event listener
+   buttons.forEach(button => {
+       button.addEventListener('click', function () {
+           const submitText = button.querySelector('span'); // Get the submit text element
+           const spinner = button.querySelector('.spinner');
 
-    // Iterate over each button and attach the event listener
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            const submitText = button.querySelector('span'); // Get the submit text element
-            const spinner = button.querySelector('.spinner');
+           // Get the initial height of the button
+           const initialHeight = button.offsetHeight;
 
-            // Get the initial height of the button
-            const initialHeight = button.offsetHeight;
+           // Set a fixed height for the button to prevent changing size
+           button.style.height = `${initialHeight}px`;
 
-            // Set a fixed height for the button to prevent changing size
-            button.style.height = `${initialHeight}px`;
+           // Hide submit text and show spinner
+           submitText.style.display = 'none';
+           spinner.classList.remove('d-none');
 
-            // Hide submit text and show spinner
-            submitText.style.display = 'none';
-            spinner.classList.remove('d-none');
+           // Simulate loading process - replace with your actual task
+           setTimeout(() => {
+               // Hide spinner and show submit text again
+               spinner.classList.add('d-none');
+               submitText.style.display = '';
 
-            // Simulate loading process - replace with your actual task
-            setTimeout(() => {
-                // Hide spinner and show submit text again
-                spinner.classList.add('d-none');
-                submitText.style.display = '';
-
-                // Reset the height of the button to its initial value
-                button.style.height = '';
-            }, 2000);
-        });
-    });
+               // Reset the height of the button to its initial value
+               button.style.height = '';
+           }, 2000);
+       });
+   });

@@ -960,6 +960,7 @@
                       </div>
                     </div>
                   </div>
+                  
                   <div class="tab-pane fade" id="mob-filters-sub-category" role="tabpanel"
                     aria-labelledby="mob-filters-sub-category-tab" tabindex="0">
                     <div class="filter-inputs_wrapper">
@@ -1375,16 +1376,16 @@
 
                     <div>
                       <div>
-                        <input class="form-control mb-3" type="search" id="sidebarSearch"
+                        <input class="form-control mb-3" type="search" id="sidebarCollectionSearch"
                           placeholder="Search Collection...">
                       </div>
 
-                      <div id="sidebarLabels"></div>
+                      <div id="sidebarCollectionLabels"></div>
 
                     </div>
 
                     <div>
-                      <button class="btn open-popup">Show All</button>
+                      <button class="btn open-popup" id="openCollectionPopup">Show All</button>
                     </div>
 
                   </div>
@@ -1395,16 +1396,16 @@
 
 
               <!-- Popup for filters -->
-              <div class="popup rk-filter" id="popup" style="display: none;">
+              <div class="popup rk-filter" id="collectionPopup" style="display: none;">
 
 
 
                 <div class="d-flex align-items-center gap-3 mb-2"
                   style="padding: 10px;border-bottom: 1px solid #eaeaec;position: sticky;background: #fff;top: 0px;">
                   <div>
-                    <input type="text" class="form-control" id="searchBar" placeholder="Search...">
+                    <input type="text" class="form-control" id="collectionSearchBar" placeholder="Search...">
                   </div>
-                  <div id="sorting-buttons"></div>
+                  <div id="collectionSortingButtons"></div>
 
                   <button class="btn" onclick="togglePopup()" style=" position: absolute; right: 0px; top: 0px; ">
                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -7637,9 +7638,9 @@
 
 
     // Function to filter elements based on search input
-    function filterBySideBarSearch() {
-      let searchInput = document.getElementById("sidebarSearch").value.toLowerCase();
-      let filterContainer = document.getElementById("sidebarLabels");
+    function filterBySideBarCollectionSearch() {
+      let searchInput = document.getElementById("sidebarCollectionSearch").value.toLowerCase();
+      let filterContainer = document.getElementById("sidebarCollectionLabels");
       filterContainer.innerHTML = ''; // Clear previous labels
       let count = 0;
       jsonData.forEach(function (item) {
@@ -7665,17 +7666,12 @@
     }
 
     // Add event listener to the search input in sidebar
-    document.getElementById("sidebarSearch").addEventListener("input", function () {
-      filterBySideBarSearch();
+    document.getElementById("sidebarCollectionSearch").addEventListener("input", function () {
+      filterBySideBarCollectionSearch();
     });
 
-
-
-
-
-
     // Function to toggle the visibility of all input elements
-    function toggleAllInputs() {
+    function toggleAllCollectionInputs() {
       let elements = document.querySelectorAll("#filter-elements > div");
       elements.forEach(function (element) {
         element.style.display = "block";
@@ -7684,7 +7680,7 @@
 
     // Function to toggle the popup visibility
     function togglePopup() {
-      let popup = document.getElementById("popup");
+      let popup = document.getElementById("collectionPopup");
       if (popup.style.display === "none") {
         popup.style.display = "block";
       } else {
@@ -7709,7 +7705,7 @@
 
     // Function to filter elements based on search input
     function filterBySearch() {
-      let searchInput = document.getElementById("searchBar").value.toLowerCase();
+      let searchInput = document.getElementById("collectionSearchBar").value.toLowerCase();
       // Get all filter elements
       let elements = document.querySelectorAll("#filter-elements > div");
       // Loop through each element
@@ -7725,7 +7721,7 @@
     }
 
     // Function to generate input elements based on JSON data
-    function generateInputElements(data) {
+    function generateCollectionInputElements(data) {
       let filterContainer = document.getElementById("filter-elements");
       data.forEach(function (item) {
         let div = document.createElement("div");
@@ -7746,14 +7742,14 @@
     }
 
     // Function to generate sorting buttons for each letter from A to Z based on available data
-    function generateSortingButtons(data) {
-      let sortingButtonsContainer = document.getElementById("sorting-buttons");
+    function generateCollectionSortingButtons(data) {
+      let sortingButtonsContainer = document.getElementById("collectionSortingButtons");
       let button = document.createElement("button");
       button.className = "sort-button";
       button.setAttribute("data-sort", "#");
       button.innerText = "#";
       button.addEventListener("click", function () {
-        toggleAllInputs();
+        toggleAllCollectionInputs();
       });
       sortingButtonsContainer.appendChild(button);
 
@@ -7778,27 +7774,21 @@
       });
     }
 
-
-
     // Add event listener to the open popup button
-    document.querySelector(".open-popup").addEventListener("click", function () {
+    document.querySelector("#openCollectionPopup").addEventListener("click", function () {
       togglePopup();
     });
 
     // Add event listener to the search input
-    document.getElementById("searchBar").addEventListener("input", function () {
+    document.getElementById("collectionSearchBar").addEventListener("input", function () {
       filterBySearch();
     });
 
-
-
-    
-
     // Generate sorting buttons and input elements when the page loads
     window.onload = function () {
-      filterBySideBarSearch();
-      generateSortingButtons(jsonData);
-      generateInputElements(jsonData);
+      filterBySideBarCollectionSearch();
+      generateCollectionSortingButtons(jsonData);
+      generateCollectionInputElements(jsonData);
     };
 
 
@@ -7866,16 +7856,11 @@
       let searchInput = FiltersContainer.querySelector('.form-control');
       searchInput.addEventListener('input', () => {
         let searchText = searchInput.value.toLowerCase(); // Convert search input to lowercase for case-insensitive search
-        console.log(filterItems)
         filterItems.forEach(item => {
           let label = item.querySelector('.form-check-label');
           if (label.textContent.toLowerCase().includes(searchText)) {
-            item.classList.remove("d-none");
-            item.classList.add("d-block");
             item.style.display = 'block'; // Show the item if it matches the search
           } else {
-            item.classList.remove("d-block");
-            item.classList.add("d-none");
             item.style.display = 'none'; // Hide the item if it doesn't match the search
           }
         });
@@ -7903,74 +7888,6 @@
     };
 
   </script>
-
-
-
-
-  <!-- <script>
-    const productsContainer = document.getElementById("products-container")
-
-    for (let i = 1; i <= 100; i++) {
-      let ProductItem = document.createElement('div');
-      ProductItem.classList.add("card", "shop-page_product-card");
-      ProductItem.innerHTML = `
-                <div class="card-checkbox_wrapper">
-                  <input class="card-checkbox" type="checkbox" name id />
-                </div>
-                <div class="card-img-top d-flex align-items-center justify-content-center">
-                  <a href="product.html">
-                    <img class="img-fluid prouduct_card-image" width="154" height="160"
-                      src="assets/img/product/CSIDOL004-003-L 1.png" alt />
-                  </a>
-                </div>
-
-                <div class="card-body d-flex flex-column justify-content-between">
-                  <div class="d-flex justify-content-between align-items-center card-title_wrapper">
-                    <div class="card-title fw-semibold">Product ${i}</div>
-
-                    <div class="card-text">24.3g</div>
-
-                    <button class="ml-2 custom-icon-btn wishlist-svg">
-                      <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M21.5109 13.0016L12.7523 21.8976L4.0016 13.0016C-3.73173 5.15359 5.0336 -3.73174 12.7603 4.11626C20.6003 -3.84641 29.3589 5.03893 21.5189 13.0123L21.5109 13.0016Z"
-                          stroke="#F78D1E" stroke-width="1.5" stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                  </div>
-
-                  <div>
-                    <div class="product-cart-qty-text mt-2">QTY AVAILABLE: <span class="fw-semibold" style="font-size:10px;">320 PCS</span></div>
-
-                    <div>
-                      <div class="mt-3">
-                        <div class="d-flex align-items-center ">
-                          <label class="me-2">Qty</label>
-                          <div class="input-group quantity-input-group quantity-container">
-                            <input type="button" value="-" class="qtyminus" field="quantity" />
-                            <input type="text" name="quantity" value="200" class="qty" />
-                            <input type="button" value="+" class="qtyplus" field="quantity" />
-                          </div>
-                        </div>
-
-                        <div class="mt-3">
-                          <button class="btn add-to-cart-btn mr-2 spinner-button">
-                            <span>ADD TO CART</span>
-                            <span class="d-none spinner">
-                              <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
-                              <span role="status">Adding...</span>
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                      <div></div>
-                    </div>
-                  </div>
-                </div>
-              `;
-      productsContainer.appendChild(ProductItem);
-    }
-  </script> -->
 
 
 
