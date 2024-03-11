@@ -7940,47 +7940,9 @@ function generatePopupInputElements(filterName, data) {
 
 
 
-  <script>
-
-
-
-
-    // mobile filters
-
-    // let mobileCollectionFiltersContainer = document.getElementById("mobile-Category-filters");
-
-    // let filterItems = []; // Array to store filter items
-
-    // collectionData.forEach(each => {
-    //   let filterItem = document.createElement('div');
-    //   filterItem.innerHTML = `<div class="form-check d-flex justify-content-between gap-2">
-    //                             <div>
-    //                                 <input type="checkbox" class="form-check-input" id="mobile-${each.item_name}"
-    //                                 value="${each.item_name}"><label for="mobile-${each.item_name}" class="form-check-label">${each.item_name}</label>
-    //                             </div>
-    //                             <div>
-    //                                 12
-    //                             </div>
-    //                         </div>`;
-    //   mobileCollectionFiltersContainer.appendChild(filterItem);
-    //   filterItems.push(filterItem); // Push filter items to the array
-    // });
-
-    // // Add event listener to the search input
-    // let searchInput = mobileCollectionFiltersContainer.querySelector('.form-control');
-    // searchInput.addEventListener('input', () => {
-    //   let searchText = searchInput.value.toLowerCase(); // Convert search input to lowercase for case-insensitive search
-    //   filterItems.forEach(item => {
-    //     let label = item.querySelector('.form-check-label');
-    //     if (label.textContent.toLowerCase().includes(searchText)) {
-    //       item.style.display = 'block'; // Show the item if it matches the search
-    //     } else {
-    //       item.style.display = 'none'; // Hide the item if it doesn't match the search
-    //     }
-    //   });
-    // });
-
-
+<script>
+  // Add event listener for DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', function() {
 
     const generateDummyFilters = (FilterName, containerID) => {
       let FiltersContainer = document.getElementById(containerID);
@@ -7989,23 +7951,24 @@ function generatePopupInputElements(filterName, data) {
       for (let i = 1; i <= 30; i++) {
         let filterItem = document.createElement('div');
         filterItem.innerHTML = `<div class="form-check d-flex justify-content-between gap-2">
-                                <div>
-                                    <input type="checkbox" class="form-check-input" id="mobile-${FilterName}-${i}"
-                                    value="${FilterName}"><label for="mobile-${FilterName}-${i}" class="form-check-label">${FilterName} ${i}</label>
-                                </div>
-                                <div>
-                                    12
-                                </div>
-                                </div>`;
+                                  <div>
+                                      <input type="checkbox" class="form-check-input" id="mobile-${FilterName}-${i}"
+                                      value="${FilterName}"><label for="mobile-${FilterName}-${i}" class="form-check-label">${FilterName} ${i}</label>
+                                  </div>
+                                  <div>
+                                      12
+                                  </div>
+                                  </div>`;
         FiltersContainer.appendChild(filterItem);
         filterItems.push(filterItem); // Push filter items to the array
       }
 
       // Add event listener to the search input
       let searchInput = FiltersContainer.querySelector('.form-control');
+
       searchInput.addEventListener('input', () => {
         let searchText = searchInput.value.toLowerCase(); // Convert search input to lowercase for case-insensitive search
-        console.log(filterItems)
+        console.log(filterItems);
         filterItems.forEach(item => {
           let label = item.querySelector('.form-check-label');
           if (label.textContent.toLowerCase().includes(searchText)) {
@@ -8019,9 +7982,11 @@ function generatePopupInputElements(filterName, data) {
           }
         });
       });
+
+
     };
 
-    generateDummyFilters("Category","mobile-Category-filters")
+    generateDummyFilters("Category","mobile-Category-filters");
     generateDummyFilters("Sub Category", "mobile-sub-category-filters");
     generateDummyFilters("Collection", "mobile-collection-filters");
     generateDummyFilters("Sub Collection", "mobile-sub-collection-filters");
@@ -8029,8 +7994,6 @@ function generatePopupInputElements(filterName, data) {
     generateDummyFilters("Weight", "mobile-weight-range-filters");
     generateDummyFilters("Color", "mobile-color-filters");
     generateDummyFilters("Planting", "mobile-planting-filters");
-
-
 
     function closeOffcanvas() {
       let offcanvas = document.getElementById("offcanvasMobileFilters");
@@ -8041,7 +8004,17 @@ function generatePopupInputElements(filterName, data) {
     document.getElementById("apply-filters-btn").onclick = () => {
       closeOffcanvas();
     };
-  </script>
+
+    // Add event listener to the search input
+    // document.querySelectorAll('.form-control').forEach(function(element) {
+    //   element.addEventListener('input', function() {
+    //     console.log('Search input changed');
+    //   });
+    // });
+
+  });
+</script>
+
 
 
 </body>
