@@ -1349,10 +1349,23 @@
     </div>
 
     <div class="row g-0">
+      <div class="mt-3 mt-lg-0 d-none d-lg-block">
+          <div class="shop-page-breadcrumbs">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb px-0">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="shop.html">Electro Forming</a></li>
+                <li class="breadcrumb-item">Idol</li>
+              </ol>
+            </nav>
+          </div>
+      </div>
+
       <section class="col-lg-2 col-xl-2 d-none d-lg-block p-0">
         <div class="row g-0">
-          <div class="col-12 mb-4">
+          <div class="col-12 mt-3 mb-2 d-flex  justify-content-between gap-1 flex-wrap">
             <div class="filters-title">Filters</div>
+            <div><button id="clear-all-btn" class="clear-all-btn">CLEAR ALL</button></div>
           </div>
 
           <div class="col-12 custom-accordian">
@@ -1538,6 +1551,21 @@
       </section>
 
       <div class="col-12 col-lg-10 col-xl-10 p-lg-2">
+       <div class="d-flex gap-2 flex-wrap  flex-lg-nowrap justify-content-between mt-3 mt-lg-0 mb-3">
+        <div class="shop-page-breadcrumbs d-lg-none">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb px-0">
+              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="shop.html">Electro Forming</a></li>
+              <li class="breadcrumb-item">Idol</li>
+            </ol>
+          </nav>
+        </div>
+
+        <div>
+          <div id="selected-filters-wrapper"></div>
+        </div>
+
         <div class="d-flex justify-content-between">
           <div class="view-toggle mt-2 ms-auto">
             <button class="custom-icon-btn grid-view active">
@@ -1549,6 +1577,7 @@
             </button>
           </div>
         </div>
+       </div>
 
         <div class="product-cards_wrapper">
           <div class="row mb-3">
@@ -7460,97 +7489,628 @@
 
  
   let collectionData = [
-    {"item_name": "Kragu"},
-    {"item_name": "Zneb"},
-    {"item_name": "Crok"},
-    {"item_name": "Yufi"},
-    {"item_name": "Blia"},
-    {"item_name": "Gneb"},
-    {"item_name": "Flub"},
-    {"item_name": "Vift"},
-    {"item_name": "Znee"},
-    {"item_name": "Vrum"},
-    {"item_name": "Drub"},
-    {"item_name": "Fleb"},
-    {"item_name": "Snex"},
-    {"item_name": "Vrun"},
-    {"item_name": "Trif"},
-    {"item_name": "Freg"},
-    {"item_name": "Zrob"},
-    {"item_name": "Xlaf"},
-    {"item_name": "Wreg"},
-    {"item_name": "Flob"},
-    {"item_name": "Zrop"},
-    {"item_name": "Zlik"},
-    {"item_name": "Wruk"},
-    {"item_name": "Flik"},
-    {"item_name": "Grib"},
-    {"item_name": "Kren"},
-    {"item_name": "Truk"},
-    {"item_name": "Zluk"},
-    {"item_name": "Xlep"},
-    {"item_name": "Drox"},
-    {"item_name": "Crel"},
-    {"item_name": "Brif"},
-    {"item_name": "Znaf"},
-    {"item_name": "Gnip"},
-    {"item_name": "Krip"},
-    {"item_name": "Yabu"},
-    {"item_name": "Plib"},
-    {"item_name": "Grif"},
-    {"item_name": "Vruk"},
-    {"item_name": "Blib"},
-    {"item_name": "Nlef"},
-    {"item_name": "Drub"},
-    {"item_name": "Znif"},
-    {"item_name": "Trum"},
-    {"item_name": "Frok"},
-    {"item_name": "Xrip"},
-    {"item_name": "Zlak"},
-    {"item_name": "Trub"},
-    {"item_name": "Wreg"},
-    {"item_name": "Wlib"},
-    {"item_name": "Yrub"},
-    {"item_name": "Zram"},
-    {"item_name": "Vruk"},
-    {"item_name": "Nlap"},
-    {"item_name": "Bluk"},
-    {"item_name": "Xluf"},
-    {"item_name": "Zlep"},
-    {"item_name": "Grob"},
-    {"item_name": "Xrub"},
-    {"item_name": "Znif"},
-    {"item_name": "Frel"},
-    {"item_name": "Zlif"},
-    {"item_name": "Ynif"},
-    {"item_name": "Znip"},
-    {"item_name": "Vlib"},
-    {"item_name": "Trif"},
-    {"item_name": "Zlab"},
-    {"item_name": "Xlub"},
-    {"item_name": "Nlig"},
-    {"item_name": "Xnip"},
-    {"item_name": "Blab"},
-    {"item_name": "Zlin"},
-    {"item_name": "Ylap"},
-    {"item_name": "Klap"},
-    {"item_name": "Znip"},
-    {"item_name": "Wrik"},
-    {"item_name": "Klaf"},
-    {"item_name": "Ynup"},
-    {"item_name": "Nlep"},
-    {"item_name": "Xlub"},
-    {"item_name": "Xrub"},
-    {"item_name": "Wrik"},
-    {"item_name": "Vnob"},
-    {"item_name": "Zlup"},
-    {"item_name": "Clib"},
-    {"item_name": "Vluf"},
-    {"item_name": "Frik"},
-    {"item_name": "Cruk"},
-    {"item_name": "Gnup"},
-    {"item_name": "Zlub"}
-]
+      {
+        "collection_name": "AANDAL"
+      },
+      {
+        "collection_name": "AMAR JAWAN JYOTI"
+      },
+      {
+        "collection_name": "AMBEMATHA"
+      },
+      {
+        "collection_name": "AMIRTHA KADESWARAR"
+      },
+      {
+        "collection_name": "AMMAN"
+      },
+      {
+        "collection_name": "ANNAMALAIYAR"
+      },
+      {
+        "collection_name": "ANNAPOORNESHWARI"
+      },
+      {
+        "collection_name": "ARDHANAREESWARAR"
+      },
+      {
+        "collection_name": "ASHTA GANESH"
+      },
+      {
+        "collection_name": "ATHIPARASAKTHI"
+      },
+      {
+        "collection_name": "ATTUKAL BHAKAVATHYAM"
+      },
+      {
+        "collection_name": "AYODHYA SRI RAM"
+      },
+      {
+        "collection_name": "AYYAPPA"
+      },
+      {
+        "collection_name": "BABA BALAK NATHJI"
+      },
+      {
+        "collection_name": "BAHUBALI GOMMATESH"
+      },
+      {
+        "collection_name": "BAL GANESH"
+      },
+      {
+        "collection_name": "BAL KRISHNA"
+      },
+      {
+        "collection_name": "BALAJI"
+      },
+      {
+        "collection_name": "BALAJI-LAKSHMI"
+      },
+      {
+        "collection_name": "BALAJI-PADMAVATHI"
+      },
+      {
+        "collection_name": "BAPA SITARAM"
+      },
+      {
+        "collection_name": "BHAGWAN ADINATH"
+      },
+      {
+        "collection_name": "BHAHUCHA RAJI MATHA"
+      },
+      {
+        "collection_name": "BHIKSHU SWAMI"
+      },
+      {
+        "collection_name": "BHUVAMESWARI"
+      },
+      {
+        "collection_name": "BRAHMA"
+      },
+      {
+        "collection_name": "BUDDHA"
+      },
+      {
+        "collection_name": "CHAMUNDA MATA"
+      },
+      {
+        "collection_name": "COW&THULASI"
+      },
+      {
+        "collection_name": "COW-THULASI"
+      },
+      {
+        "collection_name": "CROWN"
+      },
+      {
+        "collection_name": "DADA GURUDEV"
+      },
+      {
+        "collection_name": "DEVNARAYAN KATHA"
+      },
+      {
+        "collection_name": "DHAKSHINAMOORTHY"
+      },
+      {
+        "collection_name": "DHANVANTARI"
+      },
+      {
+        "collection_name": "DHASAVATHARAM"
+      },
+      {
+        "collection_name": "DHATHA JI"
+      },
+      {
+        "collection_name": "DIYA"
+      },
+      {
+        "collection_name": "DURGA MAA"
+      },
+      {
+        "collection_name": "DURGA MATHA"
+      },
+      {
+        "collection_name": "ELEPHANT"
+      },
+      {
+        "collection_name": "GAJALAKSHMI"
+      },
+      {
+        "collection_name": "GAJANAN GANESH"
+      },
+      {
+        "collection_name": "GAJANAN MAHARAJ"
+      },
+      {
+        "collection_name": "GANESH"
+      },
+      {
+        "collection_name": "GANESH WITH UMBRELLA"
+      },
+      {
+        "collection_name": "GANESH,MECCA,JESUS"
+      },
+      {
+        "collection_name": "GANESH-BALAJI-LAKSHM"
+      },
+      {
+        "collection_name": "GANESH-COW-THULASI"
+      },
+      {
+        "collection_name": "GANESH-KRISHNAN"
+      },
+      {
+        "collection_name": "GANESH-LAKSHMI"
+      },
+      {
+        "collection_name": "GANESH-LAXMI-SAIBABA"
+      },
+      {
+        "collection_name": "GANESH-LAXMI-SRSWATI"
+      },
+      {
+        "collection_name": "GANESH-MURUGAN"
+      },
+      {
+        "collection_name": "GAUTAMA SWAMI"
+      },
+      {
+        "collection_name": "GAYATHRIDEVI"
+      },
+      {
+        "collection_name": "GHANTAKARNA MAHAVIR"
+      },
+      {
+        "collection_name": "GOLDEN TEMPLE"
+      },
+      {
+        "collection_name": "GOMATHA"
+      },
+      {
+        "collection_name": "GOWRI MATHA"
+      },
+      {
+        "collection_name": "GURUNANAK"
+      },
+      {
+        "collection_name": "GURUVAYURAPPAN"
+      },
+      {
+        "collection_name": "HANUMAN"
+      },
+      {
+        "collection_name": "HARIHARAN"
+      },
+      {
+        "collection_name": "INFANT JESUS"
+      },
+      {
+        "collection_name": "JAGNATH-BLRAM-SUBDRA"
+      },
+      {
+        "collection_name": "JALARAM BAPA"
+      },
+      {
+        "collection_name": "JAY GOGA MAHARAJ"
+      },
+      {
+        "collection_name": "JESUS"
+      },
+      {
+        "collection_name": "JHULELAL"
+      },
+      {
+        "collection_name": "KAI BALNATH"
+      },
+      {
+        "collection_name": "KALASAMHARAMURTHY"
+      },
+      {
+        "collection_name": "KALIMATHA"
+      },
+      {
+        "collection_name": "KAMADHENU"
+      },
+      {
+        "collection_name": "KAMAKSHI"
+      },
+      {
+        "collection_name": "KANDA"
+      },
+      {
+        "collection_name": "KANIKA PARAMESHWARI"
+      },
+      {
+        "collection_name": "KARPAGA VIRUTCHAM"
+      },
+      {
+        "collection_name": "KASTABHANJAN DEV"
+      },
+      {
+        "collection_name": "KHATU SHYAM JI"
+      },
+      {
+        "collection_name": "KODIYAR MATA"
+      },
+      {
+        "collection_name": "KRISHNA"
+      },
+      {
+        "collection_name": "KRISHNA RASA LEELA"
+      },
+      {
+        "collection_name": "KRISHNA THULASI"
+      },
+      {
+        "collection_name": "KRISHNA-COW"
+      },
+      {
+        "collection_name": "KRISHNA-THULASI-COW"
+      },
+      {
+        "collection_name": "KUBERA LAKSHMI"
+      },
+      {
+        "collection_name": "KUBERA SET"
+      },
+      {
+        "collection_name": "KUBERAN"
+      },
+      {
+        "collection_name": "LADDU KRISHNA"
+      },
+      {
+        "collection_name": "LAKSHMI"
+      },
+      {
+        "collection_name": "LAKSHMI PATHAM"
+      },
+      {
+        "collection_name": "LAKSHMI UMBRELLA"
+      },
+      {
+        "collection_name": "LAKSHMI-NARASIMHA"
+      },
+      {
+        "collection_name": "LALITASANA GANESH"
+      },
+      {
+        "collection_name": "LAUGHING BUDDHA"
+      },
+      {
+        "collection_name": "LEAF GANESH"
+      },
+      {
+        "collection_name": "LOKENATH BABA"
+      },
+      {
+        "collection_name": "MAHA VISHNU"
+      },
+      {
+        "collection_name": "MAHARAJA AGRESH"
+      },
+      {
+        "collection_name": "MAHARAJSHRI"
+      },
+      {
+        "collection_name": "MAHAVEER"
+      },
+      {
+        "collection_name": "MAKHAN KRISHNA"
+      },
+      {
+        "collection_name": "MARY"
+      },
+      {
+        "collection_name": "MASANIAMMAN"
+      },
+      {
+        "collection_name": "MATA VAISHNO DEVI"
+      },
+      {
+        "collection_name": "MECCA"
+      },
+      {
+        "collection_name": "MEENACHI THIRUKALYAN"
+      },
+      {
+        "collection_name": "MEENAKSHI"
+      },
+      {
+        "collection_name": "MEENAKSI SUNDARESWAR"
+      },
+      {
+        "collection_name": "MEENKULATHU B.AMMAN"
+      },
+      {
+        "collection_name": "MELDI MADHA"
+      },
+      {
+        "collection_name": "MUGAN-VALLI-DEIVANAI"
+      },
+      {
+        "collection_name": "MUMBAI MATHA"
+      },
+      {
+        "collection_name": "MURUGAN"
+      },
+      {
+        "collection_name": "NAKODA"
+      },
+      {
+        "collection_name": "NAMAKKAL HANUMAN"
+      },
+      {
+        "collection_name": "NANDI"
+      },
+      {
+        "collection_name": "NARASIMHA"
+      },
+      {
+        "collection_name": "NARASIMHA PERUMAL"
+      },
+      {
+        "collection_name": "NARAYANA-LAKSHMI"
+      },
+      {
+        "collection_name": "NATARAJ MEENAKSHI"
+      },
+      {
+        "collection_name": "NATARAJAR"
+      },
+      {
+        "collection_name": "NEEL KANTH"
+      },
+      {
+        "collection_name": "OM-HINDI"
+      },
+      {
+        "collection_name": "PADMANABHA SWAMY"
+      },
+      {
+        "collection_name": "PADMAVATHI"
+      },
+      {
+        "collection_name": "PANCH MURTHI"
+      },
+      {
+        "collection_name": "PANCHA MUKHI HANUMAN"
+      },
+      {
+        "collection_name": "PANIMAYA MATHA"
+      },
+      {
+        "collection_name": "PARSHWANATH"
+      },
+      {
+        "collection_name": "PARSI"
+      },
+      {
+        "collection_name": "POORNATHRAYEESA"
+      },
+      {
+        "collection_name": "PRAMOD MAHARAJ"
+      },
+      {
+        "collection_name": "PRAMUKH SWAMI"
+      },
+      {
+        "collection_name": "RADHA GOBINDHA"
+      },
+      {
+        "collection_name": "RADHA-KRISHNA"
+      },
+      {
+        "collection_name": "RADHAI"
+      },
+      {
+        "collection_name": "RAGHAVENDRA"
+      },
+      {
+        "collection_name": "RAJA SHYAMALA DEVI"
+      },
+      {
+        "collection_name": "RAJARAJESWARI"
+      },
+      {
+        "collection_name": "RAM DARBAR"
+      },
+      {
+        "collection_name": "RAM-SEETHA"
+      },
+      {
+        "collection_name": "RAMANUJA"
+      },
+      {
+        "collection_name": "RAMAR"
+      },
+      {
+        "collection_name": "SAIBABA"
+      },
+      {
+        "collection_name": "SALASAR BALAJI"
+      },
+      {
+        "collection_name": "SAMAYA PURAM MARIAMM"
+      },
+      {
+        "collection_name": "SAMBHAJI MAHARAJ"
+      },
+      {
+        "collection_name": "SAMPRADAYA GANESH"
+      },
+      {
+        "collection_name": "SANGU"
+      },
+      {
+        "collection_name": "SANKARA CHARIYAR"
+      },
+      {
+        "collection_name": "SARASWATHY"
+      },
+      {
+        "collection_name": "SARDAR VALLABHBHAI"
+      },
+      {
+        "collection_name": "SATGURU TEOONRAM"
+      },
+      {
+        "collection_name": "SATYANARAYANA"
+      },
+      {
+        "collection_name": "SET OF 3 HINDU"
+      },
+      {
+        "collection_name": "SET OF 5 HINDU"
+      },
+      {
+        "collection_name": "SET OF 9 HINDU"
+      },
+      {
+        "collection_name": "SHANKU CHAKRA NAMAM"
+      },
+      {
+        "collection_name": "SHANKU NAMAM CHAKRA"
+      },
+      {
+        "collection_name": "SHERAWALI MAA"
+      },
+      {
+        "collection_name": "SHIVA"
+      },
+      {
+        "collection_name": "SHIVA-FAMILY"
+      },
+      {
+        "collection_name": "SHIVA-GANESH"
+      },
+      {
+        "collection_name": "SHIVA-KALIMATHA"
+      },
+      {
+        "collection_name": "SHIVA-LINGAM"
+      },
+      {
+        "collection_name": "SHIVA-NANDI"
+      },
+      {
+        "collection_name": "SHIVA-PARVATHI"
+      },
+      {
+        "collection_name": "SHIVAKUMARA SWAMIJI"
+      },
+      {
+        "collection_name": "SHRI ADINATH BHAGWAN"
+      },
+      {
+        "collection_name": "SHRI JIRAWALA"
+      },
+      {
+        "collection_name": "SIDDHI VINAYAKA"
+      },
+      {
+        "collection_name": "SIGNAPORE LION"
+      },
+      {
+        "collection_name": "SRI NATHJI"
+      },
+      {
+        "collection_name": "SRI RAM"
+      },
+      {
+        "collection_name": "SRI SATHYA SAI BABA"
+      },
+      {
+        "collection_name": "SULAM"
+      },
+      {
+        "collection_name": "SUN"
+      },
+      {
+        "collection_name": "SWAMI DATTATREYA"
+      },
+      {
+        "collection_name": "SWAMI NARAYANAN"
+      },
+      {
+        "collection_name": "SWAMI SAMARTH"
+      },
+      {
+        "collection_name": "SWASTHICK"
+      },
+      {
+        "collection_name": "THEERTHA SWAMIGAL"
+      },
+      {
+        "collection_name": "THIRUCHENDUR MURUGAN"
+      },
+      {
+        "collection_name": "THIRUKADIYUR ABIRAMI"
+      },
+      {
+        "collection_name": "THULASI MAADAM"
+      },
+      {
+        "collection_name": "TIRUPATI GOPURAM"
+      },
+      {
+        "collection_name": "TULJA BHAVANI"
+      },
+      {
+        "collection_name": "TULJA BHAWANI"
+      },
+      {
+        "collection_name": "UMIYA MATA"
+      },
+      {
+        "collection_name": "UMIYA MATHA"
+      },
+      {
+        "collection_name": "VAIKUNTHA NATHA"
+      },
+      {
+        "collection_name": "VALAMPURI GANESH"
+      },
+      {
+        "collection_name": "VALLALAR"
+      },
+      {
+        "collection_name": "VALLIMURUGANDEIVANAI"
+      },
+      {
+        "collection_name": "VARA LAKSHMI"
+      },
+      {
+        "collection_name": "VEDANDA DESIGER"
+      },
+      {
+        "collection_name": "VEL"
+      },
+      {
+        "collection_name": "VISHNU"
+      },
+      {
+        "collection_name": "VISHNU CHARAN PADUKA"
+      },
+      {
+        "collection_name": "VISHNU PADAM"
+      },
+      {
+        "collection_name": "VISHNU-LAKSHMI"
+      },
+      {
+        "collection_name": "VITTAL"
+      },
+      {
+        "collection_name": "VITTHAL RUKMINI"
+      },
+      {
+        "collection_name": "YASOTHA KRISHNA"
+      },
+      {
+        "collection_name": "YASOTHA-KRISHNA"
+      }
+    ];
 ;
   let subCollectionData = [
     {"item_name": "Klip"},
@@ -7657,15 +8217,33 @@ function sortByItemName(a, b) {
     return 0;
 }
 
+
+function replaceKeyNames(array, newKeyName) {
+    return array.map(item => {
+        let newItem = {};
+        for (let key in item) {
+            newItem[newKeyName] = item[key];
+        }
+        return newItem;
+    });
+}
+
+let newCollectionData = replaceKeyNames(collectionData, "item_name");
+console.log(newCollectionData)
+
+
+
 // Sorting each collection
-collectionData.sort(sortByItemName);
+newCollectionData.sort(sortByItemName);
 subCollectionData.sort(sortByItemName);
 categoryData.sort(sortByItemName);
 subcategoryData.sort(sortByItemName);
 
 
+
+
   let filtersData = [
-    { "name": "Collection", "data": collectionData ,"filterName":"collection"},
+    { "name": "Collection", "data": newCollectionData ,"filterName":"collection"},
     { "name": "Sub Collection", "data": subCollectionData,"filterName":"subcollection" },
     { "name": "Category", "data": categoryData ,"filterName":"category"},
     { "name": "Sub Category", "data": subcategoryData ,"filterName":"subcategory"}
@@ -7935,6 +8513,72 @@ function generatePopupInputElements(filterName, data) {
         element.style.display = "block";
       });
     }
+
+    
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+  // Add event listeners to checkboxes in the sidebar and popup if they don't already have one
+  document.querySelectorAll("[id$='-sidebar'], [id$='-popup']").forEach(input => {
+    if (!input.hasAttribute("data-event-listener")) {
+      input.addEventListener("change", handleCheckboxChange);
+      input.setAttribute("data-event-listener", "true");
+    }
+  });
+});
+
+// Event handler for checkbox change
+function handleCheckboxChange() {
+  const filterName = this.id.split("-")[1];
+  const label = this.nextElementSibling.innerText;
+  const selectedFiltersWrapper = document.getElementById("selected-filters-wrapper");
+
+  if (this.checked) {
+    // Create a new element for the selected filter
+    const selectedFilter = document.createElement("div");
+    selectedFilter.classList.add("selected-filter");
+    selectedFilter.innerHTML = `
+      <span>${label}</span>
+      <button class="close-selected-filter" data-label="${label}" data-filter="${filterName}">&times;</button>
+    `;
+    selectedFiltersWrapper.appendChild(selectedFilter);
+
+    // Add event listener to the close button of the selected filter
+    selectedFilter.querySelector(".close-selected-filter").addEventListener("click", function() {
+      const label = this.getAttribute("data-label");
+      const filterName = this.getAttribute("data-filter");
+      const checkbox = document.getElementById(`${label.replace(/\s+/g, '_').toLowerCase()}-${filterName}-sidebar`);
+      if (checkbox) {
+        checkbox.checked = false; // Uncheck the corresponding checkbox
+      }
+      selectedFiltersWrapper.removeChild(this.parentNode); // Remove the selected filter from the list
+    });
+  } else {
+    // If unchecked, remove the corresponding selected filter
+    const selectedFilter = document.querySelector(`.selected-filter button[data-label="${label}"][data-filter="${filterName}"]`);
+    if (selectedFilter) {
+      selectedFiltersWrapper.removeChild(selectedFilter.parentNode);
+    }
+  }
+}
+
+
+
+// Function to clear all selected inputs
+function clearAllSelectedInputs() {
+  // Uncheck all checkboxes
+  document.querySelectorAll("[id$='-sidebar'], [id$='-popup']").forEach(input => {
+    input.checked = false;
+  });
+
+  // Remove all selected filter elements
+  const selectedFiltersWrapper = document.getElementById("selected-filters-wrapper");
+  selectedFiltersWrapper.innerHTML = "";
+}
+
+// Add event listener to the clear all button
+document.getElementById("clear-all-btn").addEventListener("click", clearAllSelectedInputs);
 
 
   </script>

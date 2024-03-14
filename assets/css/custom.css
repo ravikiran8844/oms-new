@@ -2496,9 +2496,11 @@ button:active {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 192.5%; /* 38.5px */
+  line-height: normal;
   text-transform: capitalize;
 }
+
+
 .custom-accordian .accordion-button:not(.collapsed) {
   background-color: #f8f8fb !important;
 }
@@ -2551,7 +2553,7 @@ button:active {
 .filters-title {
   color: #2d2d2d;
   font-family: Inter;
-  font-size: 22px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 100%; /* 30px */
@@ -4325,3 +4327,93 @@ color: #8C6FC0;
 /* .text-success{
   color: #2D8653 !important;
 } */
+
+.custom-accordian .accordion-item {
+  line-height: normal;
+}
+#sidebarFilters .form-check-input {
+  margin: 0px;
+}
+.custom-accordian .form-check {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.form-check-label{
+  line-height: inherit;
+}
+
+#sidebarFilters .form-check-input{
+border-radius: 4.967px !important;
+border: 1.656px solid #D1D1D1;
+background: #FFF;
+}
+
+.form-check{
+  min-height: unset;
+  margin-bottom: 10px;
+}
+
+#filter-elements .form-check{
+  margin-bottom: 0px !important;
+}
+
+
+
+
+
+.clear-all-btn{
+  color: #F78D1E;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0px;
+}
+.shop-page-breadcrumbs{
+  margin: 10px 0px;
+}
+.shop-page-breadcrumbs,.shop-page-breadcrumbs a{
+  color: #494949;
+}
+
+.shop-page-breadcrumbs ol{
+  margin-bottom: 0px;
+}
+.shop-page-breadcrumbs .breadcrumb-item + .breadcrumb-item::before{
+  content: "-";
+}
+.shop-page-breadcrumbs .border-botton{
+  border-bottom: 1px solid #A4A4A4;
+  padding-bottom: 2px;
+  
+}
+
+#selected-filters-wrapper{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+.selected-filter{
+  position: relative;
+  background-color: #fff;
+  text-transform: capitalize;
+  color: #3e4152;
+  cursor: default;
+  font-size: 12px;
+  padding: 5px;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  border-radius: 20px;
+  border: 1px solid #d4d5d9;
+}
+
+.selected-filter button{
+  border: none;
+  padding: 0px;
+  background: transparent;
+}
