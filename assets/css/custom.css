@@ -3157,12 +3157,12 @@ header {
 
 
 
-#sidebarFilters .form-check-input:checked {
+.sidebarFilters .form-check-input:checked {
   background: #f78d1e;
   border-color: #f78d1e;
 }
 
-#sidebarFilters .form-check-input{
+.sidebarFilters .form-check-input{
   border-radius: 0px !important;
   margin-left:0px;
   margin-right: 10px;
@@ -4331,7 +4331,7 @@ color: #8C6FC0;
 .custom-accordian .accordion-item {
   line-height: normal;
 }
-#sidebarFilters .form-check-input {
+.sidebarFilters .form-check-input {
   margin: 0px;
 }
 .custom-accordian .form-check {
@@ -4344,7 +4344,7 @@ color: #8C6FC0;
   line-height: inherit;
 }
 
-#sidebarFilters .form-check-input{
+.sidebarFilters .form-check-input{
 border-radius: 4.967px !important;
 border: 1.656px solid #D1D1D1;
 background: #FFF;
@@ -4416,4 +4416,53 @@ background: #FFF;
   border: none;
   padding: 0px;
   background: transparent;
+}
+
+
+
+.search-bar_wrapper{
+  position: relative !important;
+  max-width: 360px;
+  margin: auto;
+}
+
+
+#suggestions {
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 99;
+  width: 100%;
+  max-width: 300px;
+  display: none;
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background-color: #ddd;
+}
+
+
+
+
+
+.order-details-page__remarks .input-group{
+  border-radius: 0px;
+  border-color: #EBEBEB;
+  color: #000;
+}
+.order-details-page__remarks .input-group span{
+  border-radius: 0px;
+  background-color: transparent;
+  width: 80px;
+}
+.order-details-page__remarks input{
+  border-radius: 0px;
+  border-color: #EBEBEB;
 }

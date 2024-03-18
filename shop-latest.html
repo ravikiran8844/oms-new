@@ -10568,394 +10568,320 @@
       { "item_name": "Crip" }
     ];
 
-    // Sorting function to sort the arrays based on the "item_name" property
-    function sortByItemName(a, b) {
-      if (a.item_name < b.item_name) return -1;
-      if (a.item_name > b.item_name) return 1;
-      return 0;
-    }
+// Sorting function to sort the arrays based on the "item_name" property
+function sortByItemName(a, b) {
+  if (a.item_name < b.item_name) return -1;
+  if (a.item_name > b.item_name) return 1;
+  return 0;
+}
 
+function addKeyValueToObjects(data, newKey, item) {
+  return data.map(obj => ({
+    ...obj,
+    [newKey]: obj[item]
+  }));
+}
 
-    function addKeyValueToObjects(data, newKey, item) {
-      return data.map(obj => ({
-        ...obj,
-        [newKey]: obj[item]
-      }));
-    }
+let newCollectionData = addKeyValueToObjects(collectionData, 'item_name', 'collection_name');
+let newSubCollectionData = addKeyValueToObjects(subCollectionData, 'item_name', 'sub_collection_name');
 
+console.log(newSubCollectionData);
 
-    let newCollectionData = addKeyValueToObjects(collectionData, 'item_name', 'collection_name');
-    let newSubCollectionData = addKeyValueToObjects(subCollectionData, 'item_name', 'sub_collection_name');
+// // Sorting each collection
+// newCollectionData.sort(sortByItemName);
+subCollectionData.sort(sortByItemName);
+categoryData.sort(sortByItemName);
+subcategoryData.sort(sortByItemName);
 
-    console.log(newSubCollectionData)
+let filtersData = [
+  { "name": "Collection", "data": newCollectionData, "filterName": "collection" },
+  { "name": "Sub Collection", "data": newSubCollectionData, "filterName": "subcollection" },
+  { "name": "Category", "data": categoryData, "filterName": "category" },
+  { "name": "Sub Category", "data": subcategoryData, "filterName": "subcategory" }
+];
+let MainFiltersContainer = document.getElementById("sidebarFilters");
 
-
-
-    // // Sorting each collection
-    // newCollectionData.sort(sortByItemName);
-    subCollectionData.sort(sortByItemName);
-    categoryData.sort(sortByItemName);
-    subcategoryData.sort(sortByItemName);
-
-
-
-
-    let filtersData = [
-      { "name": "Collection", "data": newCollectionData, "filterName": "collection" },
-      { "name": "Sub Collection", "data": newSubCollectionData, "filterName": "subcollection" },
-      { "name": "Category", "data": categoryData, "filterName": "category" },
-      { "name": "Sub Category", "data": subcategoryData, "filterName": "subcategory" }
-    ];
-    let MainFiltersContainer = document.getElementById("sidebarFilters");
-
-    filtersData.forEach(each => {
-      let mainFilterItem = document.createElement("div");
-      let mainFilterPopUp = document.createElement("div");
-      mainFilterItem.innerHTML = `
-      <div class="accordion-item my-3">
-        <h6 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-            data-bs-target="#sidebarMainFilter-${each.filterName}" aria-expanded="true"
-            aria-controls="sidebarMainFilter-${each.filterName}">
-            ${each.name}
-          </button>
-        </h6>
-        <div id="sidebarMainFilter-${each.filterName}" class="accordion-collapse collapse show">
-          <div class="accordion-body">
-            <div>
-              <div>
-                <input class="form-control mb-3" type="search" id="sidebarSearch-${each.filterName}"
-                  placeholder="Search ${each.name}...">
-              </div>
-              <div id="sidebarLabels-${each.filterName}"></div>
-            </div>
-            <div>
-              <button class="btn open-popup" data-popup="${each.filterName}">Show All</button>
-            </div>
-          </div>
-        </div>
-      </div>`;
-
-      mainFilterPopUp.innerHTML = `
-      <div class="popup rk-filter" id="popup-${each.filterName}" style="display: none;">
-        <div class="d-flex align-items-center gap-3 mb-2"
-          style="padding: 10px;border-bottom: 1px solid #eaeaec;position: sticky;background: #fff;top: 0px;">
+filtersData.forEach(each => {
+  let mainFilterItem = document.createElement("div");
+  let mainFilterPopUp = document.createElement("div");
+  const filterId = each.filterName; // Using filter name as ID
+  mainFilterItem.innerHTML = `
+  <div class="accordion-item my-3">
+    <h6 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+        data-bs-target="#sidebarMainFilter-${filterId}" aria-expanded="true"
+        aria-controls="sidebarMainFilter-${filterId}">
+        ${each.name}
+      </button>
+    </h6>
+    <div id="sidebarMainFilter-${filterId}" class="accordion-collapse collapse show">
+      <div class="accordion-body">
+        <div>
           <div>
-            <input type="text" class="form-control" id="search-popup-${each.filterName}" placeholder="Search...">
+            <input class="form-control mb-3" type="search" id="sidebarSearch-${filterId}"
+              placeholder="Search ${each.name}...">
           </div>
-          <div id="sorting-buttons-${each.filterName}"></div>
-          <button class="btn close-popup" style=" position: absolute; right: 0px; top: 0px; ">
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>close-circle-outline</title>
-              <path
-                d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z">
-              </path>
-            </svg>
-          </button>
+          <div id="sidebarLabels-${filterId}"></div>
         </div>
-        <div class="filter-elements" id="filter-elements-${each.filterName}"></div>
-      </div>`;
+        <div>
+          <button class="btn open-popup" data-popup="${filterId}">Show All</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
 
-      MainFiltersContainer.appendChild(mainFilterItem);
-      MainFiltersContainer.appendChild(mainFilterPopUp);
+  mainFilterPopUp.innerHTML = `
+  <div class="popup rk-filter" id="popup-${filterId}" style="display: none;">
+    <div class="d-flex align-items-center gap-3 mb-2"
+      style="padding: 10px;border-bottom: 1px solid #eaeaec;position: sticky;background: #fff;top: 0px;">
+      <div>
+        <input type="text" class="form-control" id="search-popup-${filterId}" placeholder="Search...">
+      </div>
+      <div id="sorting-buttons-${filterId}"></div>
+      <button class="btn close-popup" style=" position: absolute; right: 0px; top: 0px; ">
+        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <title>close-circle-outline</title>
+          <path
+            d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div class="filter-elements" id="filter-elements-${filterId}"></div>
+  </div>`;
 
-      // Generate input elements for each filter
-      generateInputElements(each.filterName, each.data);
-      generatePopupInputElements(each.filterName, each.data);
-      generatePopupSortingButtons(each.filterName, each.data);
+  MainFiltersContainer.appendChild(mainFilterItem);
+  MainFiltersContainer.appendChild(mainFilterPopUp);
 
-    });
+  // Generate input elements for each filter
+  generateInputElements(filterId, each.data);
+  generatePopupInputElements(filterId, each.data);
+  generatePopupSortingButtons(filterId, each.data);
 
+});
 
-    // Function to generate input elements for all items and initially hide them
-    function generateInputElements(filterName, data) {
-      let filterContainer = document.getElementById(`sidebarLabels-${filterName}`);
-      data.forEach((item, index) => {
-        let div = document.createElement("div");
-        div.classList.add("form-check");
-        let input = document.createElement("input");
-        input.type = "checkbox";
-        input.classList.add("form-check-input");
-        input.id = `${item.item_name.replace(/\s+/g, '_').toLowerCase()}-${filterName}-sidebar`; // Replace spaces with underscores
-        input.value = item.item_name;
-        let label = document.createElement("label");
-        label.classList.add("form-check-label");
-        label.setAttribute("for", input.id);
-        label.innerText = item.item_name;
-        div.appendChild(input);
-        div.appendChild(label);
-        filterContainer.appendChild(div);
+// Function to generate input elements for all items and initially hide them
+function generateInputElements(filterId, data) {
+  let filterContainer = document.getElementById(`sidebarLabels-${filterId}`);
+  data.forEach((item, index) => {
+    let div = document.createElement("div");
+    div.classList.add("form-check");
+    let label = document.createElement("label");
+    label.classList.add("form-check-label");
+    label.innerText = item.item_name;
+    div.appendChild(label);
+    filterContainer.appendChild(div);
 
-        // Initially hide input elements beyond the first 10
-        if (index >= 10) {
-          div.style.display = "none";
-        }
-
-        // Add event listener to sync with popup input
-        input.addEventListener("change", function () {
-          let popupInput = document.getElementById(`${item.item_name.replace(/\s+/g, '_').toLowerCase()}-${filterName}-popup`);
-          if (popupInput) {
-            popupInput.checked = this.checked;
-          }
-        });
-      });
+    // Initially hide input elements beyond the first 10
+    if (index >= 10) {
+      div.style.display = "none";
     }
 
-
-    
-
-
-
-
-
-    // Add event listeners for popup close buttons
-
-
-    document.querySelectorAll(".close-popup").forEach(button => {
-      button.addEventListener("click", function () {
-        let popupId = this.parentNode.parentNode.id;
-        document.getElementById(popupId).style.display = "none";
-      });
-    });
-
-    // Add event listener to the open popup buttons
-    document.querySelectorAll(".open-popup").forEach(button => {
-      button.addEventListener("click", function () {
-        let popupId = `popup-${this.getAttribute("data-popup")}`;
-        document.getElementById(popupId).style.display = "block";
-      });
-    });
-
-    // Add event listeners for search input in the popup
-    document.querySelectorAll("[id^='sidebarSearch']").forEach(input => {
-      input.addEventListener("input", function () {
-        let filterName = this.id.split("-")[1];
-        filterBySearch(filterName);
-      });
-    });
-
-
-    // Function to filter elements based on search input in the sidebar
-    function filterBySearch(filterName) {
-      let searchInput = document.getElementById(`sidebarSearch-${filterName}`).value.toLowerCase();
-      let elements = document.querySelectorAll(`#sidebarLabels-${filterName} > div`);
-      let displayedCount = 0; // Counter for displayed elements
-
-      elements.forEach(function (element) {
-        let label = element.querySelector("label").innerText.toLowerCase();
-        if (label.includes(searchInput)) {
-          if (displayedCount < 10) {
-            element.style.display = "flex";
-            displayedCount++;
-          } else {
-            element.style.display = "none";
-          }
-        } else {
-          element.style.display = "none";
-        }
-      });
-    }
-
-
-
-
-
-    // Function to generate popup input elements based on data for each filter
-    function generatePopupInputElements(filterName, data) {
-      let filterContainer = document.getElementById(`filter-elements-${filterName}`);
-      data.forEach(function (item) {
-        let div = document.createElement("div");
-        div.classList.add("form-check");
-        let input = document.createElement("input");
-        input.type = "checkbox";
-        input.classList.add("form-check-input");
-        input.id = `${item.item_name.replace(/\s+/g, '_').toLowerCase()}-${filterName}-popup`; // Replace spaces with underscores
-        input.value = item.item_name;
-        let label = document.createElement("label");
-        label.setAttribute("for", input.id);
-        label.classList.add("form-check-label");
-        label.innerText = item.item_name;
-        div.appendChild(input);
-        div.appendChild(label);
-        filterContainer.appendChild(div);
-
-        // Add event listener to sync with sidebar input
-        input.addEventListener("change", function () {
-          let sidebarInput = document.getElementById(`${item.item_name.replace(/\s+/g, '_').toLowerCase()}-${filterName}-sidebar`);
-          if (sidebarInput) {
-            sidebarInput.checked = this.checked;
-          }
-        });
-      });
-    }
-
-
-    // Function to generate sorting buttons for each letter from A to Z based on available data
-    function generatePopupSortingButtons(filterName, data) {
-      let sortingButtonsContainer = document.getElementById(`sorting-buttons-${filterName}`);
-      let button = document.createElement("button");
-      button.className = "sort-button";
-      button.setAttribute("data-sort", "#");
-      button.innerText = "#";
-      button.addEventListener("click", function () {
-        toggleAllInputs(filterName);
-      });
-      sortingButtonsContainer.appendChild(button);
-
-      let availableLetters = new Set(); // Using a Set to ensure uniqueness
-      data.forEach(function (item) {
-        let firstLetter = item.item_name.trim().charAt(0).toUpperCase();
-        availableLetters.add(firstLetter);
-      });
-
-      availableLetters.forEach(function (letter) {
-        let button = document.createElement("button");
-        button.className = "sort-button";
-        button.setAttribute("data-sort", letter);
-        button.innerText = letter;
-        button.addEventListener("click", function () {
-          filterByLetter(filterName, this.getAttribute("data-sort"));
-        });
-        sortingButtonsContainer.appendChild(button);
-      });
-
-    }
-
-
-
-    // Function to filter and display elements based on the clicked letter
-    function filterByLetter(filterName, letter) {
-      console.log(letter)
-
-      let elements = document.querySelectorAll(`#filter-elements-${filterName} > div`);
-      console.log(elements)
-
-      elements.forEach(function (element) {
-        let label = element.querySelector("label").innerText.trim();
-        if (label.charAt(0).toUpperCase() === letter) {
-          element.style.display = "block";
-        } else {
-          element.style.display = "none";
-        }
-      });
-    }
-
-    // Function to filter elements based on search input in the popup
-    function filterByPopUpSearch(filterName) {
-      let searchInput = document.getElementById(`search-popup-${filterName}`).value.toLowerCase();
-      let elements = document.querySelectorAll(`#filter-elements-${filterName} > div`);
-      elements.forEach(function (element) {
-        let label = element.querySelector("label").innerText.toLowerCase();
-        if (label.includes(searchInput)) {
-          element.style.display = "flex";
-        } else {
-          element.style.display = "none";
-        }
-      });
-    }
-
-    // Add event listeners for search input in the popup
-    document.querySelectorAll("[id^='search-popup']").forEach(input => {
-      input.addEventListener("input", function () {
-        let filterName = this.id.split("-")[2];
-        filterByPopUpSearch(filterName);
-      });
-    });
-
-    // Add event listeners for sorting buttons
-    document.querySelectorAll(".sort-button").forEach(button => {
-      button.addEventListener("click", function () {
-        let filterName = this.parentNode.id.split("-")[2];
-        let letter = this.getAttribute("data-sort");
-        if (letter === "#") {
-          toggleAllInputs(filterName);
-        } else {
-          filterByLetter(filterName, letter);
-        }
-      });
-    });
-
-    // Function to toggle the visibility of all input elements
-    function toggleAllInputs(filterName) {
-      let elements = document.querySelectorAll(`#filter-elements-${filterName} > div`);
-      elements.forEach(function (element) {
-        element.style.display = "block";
-      });
-    }
-
-
-
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-      // Add event listeners to checkboxes in the sidebar and popup if they don't already have one
-      document.querySelectorAll("[id$='-sidebar'], [id$='-popup']").forEach(input => {
-        if (!input.hasAttribute("data-event-listener")) {
-          input.addEventListener("change", handleCheckboxChange);
-          input.setAttribute("data-event-listener", "true");
-        }
-      });
-    });
-
-
-  // Function to handle checkbox change
-  function handleCheckboxChange() {
-      const filterName = this.id.split("from")[1]; // Extract the filter name
-      const label = this.parentNode.querySelector('label').textContent.trim(); // Extract the label text
-      const selectedFiltersWrapper = document.getElementById("selected-filters-wrapper"); // Container for selected filters
-
-      if (this.checked) {
-          // Create a new element for the selected filter
-          const selectedFilter = document.createElement("div");
-          selectedFilter.classList.add("selected-filter");
-          selectedFilter.innerHTML = `
-              <span>${label}</span>
-              <button class="close-selected-filter" data-label="${label}" data-filter="${filterName}">&times;</button>
-          `;
-          selectedFiltersWrapper.appendChild(selectedFilter); // Append the selected filter
-
-          // Add event listener to the close button of the selected filter
-          selectedFilter.querySelector(".close-selected-filter").addEventListener("click", function () {
-              const label = this.getAttribute("data-label"); // Get the label from data attribute
-              const filterName = this.getAttribute("data-filter"); // Get the filter name from data attribute
-              const checkbox = document.getElementById(`weightfrom${filterName}`); // Find the corresponding checkbox
-              if (checkbox) {
-                  checkbox.checked = false; // Uncheck the corresponding checkbox
-              }
-              selectedFiltersWrapper.removeChild(selectedFilter); // Remove the selected filter from the list
-          });
-      } else {
-          // If unchecked, remove the corresponding selected filter
-          const selectedFilter = document.querySelector(`.selected-filter button[data-label="${label}"][data-filter="${filterName}"]`);
-          if (selectedFilter) {
-              selectedFiltersWrapper.removeChild(selectedFilter.parentNode); // Remove the selected filter from the list
-          }
+    // Add event listener to sync with popup input
+    label.addEventListener("click", function () {
+      let popupInput = document.getElementById(`popup-${filterId}`).querySelector(`[for="${filterId}-${item.item_name.replace(/\s+/g, '_').toLowerCase()}"]`);
+      if (popupInput) {
+        popupInput.checked = !popupInput.checked;
       }
-  }
+    });
+  });
+}
 
-      // Get all checkboxes with class 'weight_filter'
-      const checkboxes = document.querySelectorAll('.weight_filter');
-      // Attach event listener to each checkbox
-      checkboxes.forEach(checkbox => {
-          checkbox.addEventListener('change', handleCheckboxChange);
-      });
+// Add event listeners for popup close buttons
+document.querySelectorAll(".close-popup").forEach(button => {
+  button.addEventListener("click", function () {
+    let popupId = this.parentNode.parentNode.id;
+    document.getElementById(popupId).style.display = "none";
+  });
+});
 
+// Add event listener to the open popup buttons
+document.querySelectorAll(".open-popup").forEach(button => {
+  button.addEventListener("click", function () {
+    let popupId = `popup-${this.getAttribute("data-popup")}`;
+    document.getElementById(popupId).style.display = "block";
+  });
+});
 
-    // Function to clear all selected inputs
-    function clearAllSelectedInputs() {
-      // Uncheck all checkboxes
-      document.querySelectorAll("[id$='-sidebar'], [id$='-popup']").forEach(input => {
-        input.checked = false;
-      });
+// Add event listeners for search input in the popup
+document.querySelectorAll("[id^='search-popup']").forEach(input => {
+  input.addEventListener("input", function () {
+    let filterId = this.id.split("-")[2];
+    filterByPopUpSearch(filterId);
+  });
+});
 
-      // Remove all selected filter elements
-      const selectedFiltersWrapper = document.getElementById("selected-filters-wrapper");
-      selectedFiltersWrapper.innerHTML = "";
+// Add event listeners for sorting buttons
+document.querySelectorAll(".sort-button").forEach(button => {
+  button.addEventListener("click", function () {
+    let filterId = this.parentNode.id.split("-")[2];
+    let letter = this.getAttribute("data-sort");
+    if (letter === "#") {
+      toggleAllInputs(filterId);
+    } else {
+      filterByLetter(filterId, letter);
     }
+  });
+});
 
-    // Add event listener to the clear all button
-    document.getElementById("clear-all-btn").addEventListener("click", clearAllSelectedInputs);
+document.addEventListener("DOMContentLoaded", function () {
+  // Add event listeners to checkboxes in the sidebar and popup if they don't already have one
+  document.querySelectorAll("[id$='-sidebar'], [id$='-popup']").forEach(input => {
+    if (!input.hasAttribute("data-event-listener")) {
+      input.addEventListener("change", handleCheckboxChange);
+      input.setAttribute("data-event-listener", "true");
+    }
+  });
+});
 
+// Function to handle checkbox change
+function handleCheckboxChange() {
+  const filterId = this.id.split("-")[0]; // Extract the filter ID
+  const label = this.parentNode.querySelector('label').textContent.trim(); // Extract the label text
+  const selectedFiltersWrapper = document.getElementById("selected-filters-wrapper"); // Container for selected filters
+
+  if (this.checked) {
+    // Create a new element for the selected filter
+    const selectedFilter = document.createElement("div");
+    selectedFilter.classList.add("selected-filter");
+    selectedFilter.innerHTML = `
+      <span>${label}</span>
+      <button class="close-selected-filter" data-label="${label}" data-filter="${filterId}">&times;</button>
+    `;
+    selectedFiltersWrapper.appendChild(selectedFilter); // Append the selected filter
+
+    // Add event listener to the close button of the selected filter
+    selectedFilter.querySelector(".close-selected-filter").addEventListener("click", function () {
+      const label = this.getAttribute("data-label"); // Get the label from data attribute
+      const filterId = this.getAttribute("data-filter"); // Get the filter ID from data attribute
+      const checkbox = document.getElementById(`${filterId}-${label.replace(/\s+/g, '_').toLowerCase()}`); // Find the corresponding checkbox
+      if (checkbox) {
+        checkbox.checked = false; // Uncheck the corresponding checkbox
+      }
+      selectedFiltersWrapper.removeChild(selectedFilter); // Remove the selected filter from the list
+    });
+  } else {
+    // If unchecked, remove the corresponding selected filter
+    const selectedFilter = document.querySelector(`.selected-filter button[data-label="${label}"][data-filter="${filterId}"]`);
+    if (selectedFilter) {
+      selectedFiltersWrapper.removeChild(selectedFilter.parentNode); // Remove the selected filter from the list
+    }
+  }
+}
+
+// Get all checkboxes with class 'form-check-input'
+const checkboxes = document.querySelectorAll('.form-check-input');
+// Attach event listener to each checkbox
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', handleCheckboxChange);
+});
+
+// Function to clear all selected inputs
+function clearAllSelectedInputs() {
+  // Uncheck all checkboxes
+  document.querySelectorAll("[id$='-sidebar'], [id$='-popup']").forEach(input => {
+    input.checked = false;
+  });
+
+  // Remove all selected filter elements
+  const selectedFiltersWrapper = document.getElementById("selected-filters-wrapper");
+  selectedFiltersWrapper.innerHTML = "";
+}
+
+// Add event listener to the clear all button
+document.getElementById("clear-all-btn").addEventListener("click", clearAllSelectedInputs);
+
+// Function to generate popup input elements based on data for each filter
+function generatePopupInputElements(filterId, data) {
+  let filterContainer = document.getElementById(`filter-elements-${filterId}`);
+  data.forEach(function (item) {
+    let div = document.createElement("div");
+    div.classList.add("form-check");
+    let input = document.createElement("input");
+    input.type = "checkbox";
+    input.classList.add("form-check-input");
+    input.style.display = "none"; // Hide the input
+    input.id = `${filterId}-${item.item_name.replace(/\s+/g, '_').toLowerCase()}`; // Use single ID for both sidebar and popup
+    input.value = item.item_name;
+    let label = document.createElement("label");
+    label.classList.add("form-check-label");
+    label.setAttribute("for", input.id);
+    label.innerText = item.item_name;
+    div.appendChild(input);
+    div.appendChild(label);
+    filterContainer.appendChild(div);
+
+    // Add event listener to toggle checkbox style
+    label.addEventListener("click", function () {
+      input.checked = !input.checked;
+    });
+  });
+}
+
+// Function to generate sorting buttons for each letter from A to Z based on available data
+function generatePopupSortingButtons(filterId, data) {
+  let sortingButtonsContainer = document.getElementById(`sorting-buttons-${filterId}`);
+  let button = document.createElement("button");
+  button.className = "sort-button";
+  button.setAttribute("data-sort", "#");
+  button.innerText = "#";
+  button.addEventListener("click", function () {
+    toggleAllInputs(filterId);
+  });
+  sortingButtonsContainer.appendChild(button);
+
+  let availableLetters = new Set(); // Using a Set to ensure uniqueness
+  data.forEach(function (item) {
+    let firstLetter = item.item_name.trim().charAt(0).toUpperCase();
+    availableLetters.add(firstLetter);
+  });
+
+  availableLetters.forEach(function (letter) {
+    let button = document.createElement("button");
+    button.className = "sort-button";
+    button.setAttribute("data-sort", letter);
+    button.innerText = letter;
+    button.addEventListener("click", function () {
+      filterByLetter(filterId, this.getAttribute("data-sort"));
+    });
+    sortingButtonsContainer.appendChild(button);
+  });
+}
+
+// Function to filter elements based on search input in the popup
+function filterByPopUpSearch(filterId) {
+  let searchInput = document.getElementById(`search-popup-${filterId}`).value.toLowerCase();
+  let elements = document.querySelectorAll(`#filter-elements-${filterId} > div`);
+  elements.forEach(function (element) {
+    let label = element.querySelector("label").innerText.toLowerCase();
+    if (label.includes(searchInput)) {
+      element.style.display = "flex";
+    } else {
+      element.style.display = "none";
+    }
+  });
+}
+
+// Function to filter and display elements based on the clicked letter
+function filterByLetter(filterId, letter) {
+  let elements = document.querySelectorAll(`#filter-elements-${filterId} > div`);
+  elements.forEach(function (element) {
+    let label = element.querySelector("label").innerText.trim();
+    if (label.charAt(0).toUpperCase() === letter) {
+      element.style.display = "block";
+    } else {
+      element.style.display = "none";
+    }
+  });
+}
+
+// Function to toggle the visibility of all input elements
+function toggleAllInputs(filterId) {
+  let elements = document.querySelectorAll(`#filter-elements-${filterId} > div`);
+  elements.forEach(function (element) {
+    element.style.display = "block";
+  });
+}
 
   </script>
 
