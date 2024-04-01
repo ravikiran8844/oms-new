@@ -1,0 +1,17 @@
+.main-menu-links_wrapper .sm li{
+    padding: 0px !important;
+}
+
+
+.new-arrivals-btn{
+    border-radius: 17.556px;
+    border: 1px solid #F78D1E !important;
+    color: #F78D1E;
+    font-size: 12px;
+}
+.ready-stock-btn{
+    border-radius: 17.556px;
+    background: #F78D1E;
+    color: #FFF;
+    font-size: 12px;
+}
