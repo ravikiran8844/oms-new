@@ -924,6 +924,14 @@
             <div class="mobile-filters-offcanvas__body-items">
               <div class="mobile-filters-offcanvas__body-item-filter-labels">
                 <div class="nav flex-column" id="mob-filters-tab" role="tablist" aria-orientation="vertical">
+                  
+                  <button class="nav-link" id="mob-filters-classification-tab" data-bs-toggle="pill"
+                  data-bs-target="#mob-filters-classification" type="button" role="tab" aria-controls="mob-filters-classification"
+                  aria-selected="true">classification</button>
+
+
+
+
                   <button class="nav-link active" id="mob-filters-Category-tab" data-bs-toggle="pill"
                     data-bs-target="#mob-filters-Category" type="button" role="tab" aria-controls="mob-filters-Category"
                     aria-selected="true">Category</button>
@@ -953,6 +961,66 @@
               </div>
               <div class="mobile-filters-offcanvas__body-item-filter-inputs">
                 <div class="tab-content" id="mob-filters-tabContent">
+
+
+                <div class="tab-pane fade" id="mob-filters-classification" role="tabpanel"
+                  aria-labelledby="mob-filters-classification-tab" tabindex="0">
+                  <div class="filter-inputs_wrapper">
+                    <div id="mobile-classification-filters">
+
+
+                      <div>
+                        <div class="form-check d-flex justify-content-between gap-2">
+                          <div>
+                              <input name="mob-classification" type="radio" class="form-check-input" id="mobile-classification-1" value="2d"><label for="mobile-classification-1" class="form-check-label">2D</label>
+                          </div>
+                          <div>
+                              2
+                          </div>                  
+                        </div>
+                      </div>
+
+
+                      <div>
+                        <div class="form-check d-flex justify-content-between gap-2">
+                          <div>
+                              <input name="mob-classification" type="radio" class="form-check-input" id="mobile-classification-2" value="3D Value"><label for="mobile-classification-2" class="form-check-label">3D Value</label>
+                          </div>
+                          <div>
+                              1
+                          </div>                  
+                        </div>
+                      </div>
+
+                      <div>
+                        <div class="form-check d-flex justify-content-between gap-2">
+                          <div>
+                              <input name="mob-classification" type="radio" class="form-check-input" id="mobile-classification-3" value="4d val"><label for="mobile-classification-3" class="form-check-label">4D val</label>
+                          </div>
+                          <div>
+                              1
+                          </div>                  
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   <div class="tab-pane fade show active" id="mob-filters-Category" role="tabpanel"
                     aria-labelledby="mob-filters-Category-tab" tabindex="0">
                     <div class="filter-inputs_wrapper">
@@ -1383,28 +1451,28 @@
                 <div id="classficationFilter" class="accordion-collapse collapse show">
                   <div class="accordion-body">
                     <div class="form-check " style>
-                      <input class="form-check-input classfication_filter" type="checkbox" id="2D-sidebar"
+                      <input class="form-check-input classfication_filter" type="radio" id="2D"
                         name="classification" value="2D">
-                      <label class="form-check-label" for="2D-sidebar">
+                      <label class="form-check-label" for="2D">
                         2D
                       </label>
                     </div>
 
 
                     <div class="form-check " style>
-                      <input class="form-check-input classfication_filter" type="checkbox" id="3D-sidebar"
-                        name="classification" value="3D">
-                      <label class="form-check-label" for="3D-sidebar">
-                        3D
+                      <input class="form-check-input classfication_filter" type="radio" id="3D"
+                        name="classification" value="3D val">
+                      <label class="form-check-label" for="3D">
+                        3D val
                       </label>
                     </div>
 
 
                     <div class="form-check" style>
-                      <input class="form-check-input classfication_filter" type="checkbox" id="4D-sidebar"
-                        name="classification" value="4D">
-                      <label class="form-check-label" for="4D-sidebar">
-                        4D
+                      <input class="form-check-input classfication_filter" type="radio" id="4D"
+                        name="classification" value="4D item">
+                      <label class="form-check-label" for="4D">
+                        4D item
                       </label>
                     </div>
                   </div>
@@ -11075,6 +11143,50 @@
       const selectedFiltersWrapper = document.getElementById("selected-filters-wrapper");
       selectedFiltersWrapper.innerHTML = "";
     }
+
+
+
+
+
+    // Function to handle radio input change
+function handleRadioChange() {
+  const filterName = this.name; // Get the filter name
+  const label = this.parentNode.querySelector('label').textContent.trim(); // Extract the label text
+  const selectedFiltersWrapper = document.getElementById("selected-filters-wrapper"); // Container for selected filters
+
+  // Remove any previously selected filter for this group
+  const prevSelectedFilter = document.querySelector(`.selected-filter[data-filter="${filterName}"]`);
+  if (prevSelectedFilter) {
+    prevSelectedFilter.parentNode.removeChild(prevSelectedFilter); // Remove the selected filter from the list
+  }
+
+  // Create a new element for the selected filter
+  const selectedFilter = document.createElement("div");
+  selectedFilter.classList.add("selected-filter");
+  selectedFilter.dataset.filter = filterName;
+  selectedFilter.innerHTML = `
+        <span>${label}</span>
+        <button class="close-selected-filter">&times;</button>
+    `;
+  selectedFiltersWrapper.appendChild(selectedFilter); // Append the selected filter
+
+  // Add event listener to the close button of the selected filter
+  selectedFilter.querySelector(".close-selected-filter").addEventListener("click", function () {
+    const input = document.querySelector(`input[name="${filterName}"][value="${label}"]`); // Find the corresponding input
+    if (input) {
+      input.checked = false; // Uncheck the corresponding input
+    }
+    selectedFiltersWrapper.removeChild(selectedFilter); // Remove the selected filter from the list
+  });
+}
+
+// Add event listener to all radio inputs with class 'classfication_filter'
+document.querySelectorAll('.classfication_filter').forEach(input => {
+  input.addEventListener('change', handleRadioChange);
+});
+
+
+
 
     // Add event listener to the clear all button
     document.getElementById("clear-all-btn").addEventListener("click", clearAllSelectedInputs);

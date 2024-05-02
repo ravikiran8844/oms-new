@@ -1744,25 +1744,25 @@
                             <div id="classificationFilter" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
                                     <div class="form-check">
-                                        <input class="form-check-input classification" type="radio" id="2D-sidebar" name="classification" value="2D" onclick="getclassificationproduct()">
-                                        <label class="form-check-label" for="2D-sidebar">
+                                        <input class="form-check-input classification classfication_filter" type="radio" id="2D" name="classification" value="2D" onclick="getclassificationproduct()">
+                                        <label class="form-check-label" for="2D">
                                             2D
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input classification" type="radio" id="3D-sidebar" name="classification" value="3D" onclick="getclassificationproduct()">
-                                        <label class="form-check-label" for="3D-sidebar">
+                                        <input class="form-check-input classification classfication_filter" type="radio" id="3D" name="classification" value="3D" onclick="getclassificationproduct()">
+                                        <label class="form-check-label" for="3D">
                                             3D Solid
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input classification" type="radio" id="SE" name="classification" value="SE" onclick="getclassificationproduct()">
+                                        <input class="form-check-input classification classfication_filter" type="radio" id="SE" name="classification" value="SE" onclick="getclassificationproduct()">
                                         <label class="form-check-label" for="SE">
                                             3D Semi Solid
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input classification" type="radio" id="SC" name="classification" value="SC" onclick="getclassificationproduct()">
+                                        <input class="form-check-input classification classfication_filter" type="radio" id="SC" name="classification" value="SC" onclick="getclassificationproduct()">
                                         <label class="form-check-label" for="SC">
                                             3D Scooping
                                         </label>
@@ -12497,6 +12497,50 @@
       });
 
 
+// Function to handle radio input change
+function handleRadioChange() {
+  const filterName = this.name; // Get the filter name
+  const label = this.parentNode.querySelector('label').textContent.trim(); // Extract the label text
+  const selectedFiltersWrapper = document.getElementById("selected-filters-wrapper"); // Container for selected filters
+
+  // Remove any previously selected filter for this group
+  const prevSelectedFilter = document.querySelector(`.selected-filter[data-filter="${filterName}"]`);
+  if (prevSelectedFilter) {
+    prevSelectedFilter.parentNode.removeChild(prevSelectedFilter); // Remove the selected filter from the list
+  }
+
+  // Create a new element for the selected filter
+  const selectedFilter = document.createElement("div");
+  selectedFilter.classList.add("selected-filter");
+  selectedFilter.dataset.filter = filterName;
+  selectedFilter.innerHTML = `
+        <span data-id="${this.id}">${label}</span>
+        <button class="close-selected-filter">&times;</button>
+    `;
+  selectedFiltersWrapper.appendChild(selectedFilter); // Append the selected filter
+
+  // Add event listener to the close button of the selected filter
+  selectedFilter.querySelector(".close-selected-filter").addEventListener("click", function () {
+    const inputId = selectedFilter.querySelector('span').getAttribute('data-id');
+    const input = document.querySelector(`input[name="${filterName}"][id="${inputId}"]`); // Find the corresponding input
+    if (input) {
+      input.checked = false; // Uncheck the corresponding input
+      const selectedFilters = document.querySelectorAll(`.selected-filter[data-filter="${filterName}"]`);
+      selectedFilters.forEach(selected => {
+        selected.parentNode.removeChild(selected); // Remove all selected filters with the same name
+      });
+    }
+  });
+}
+
+// Add event listener to all radio inputs with class 'classification'
+document.querySelectorAll('.classfication_filter').forEach(input => {
+  input.addEventListener('change', handleRadioChange);
+});
+
+
+
+
 
 
     // Function to clear all selected inputs
@@ -12631,6 +12675,11 @@
   // Show suggestions when input is focused
   input.addEventListener('focus', showSuggestions);
   
+
+
+  const getclassificationproduct=()=>{
+    console.log("hi")
+  }
   </script>
 
   </body>

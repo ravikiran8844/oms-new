@@ -4551,6 +4551,17 @@ background: #FFF;
 
 
 
+  .form-check-input[type=radio]{
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: 0px;
+    height: 14px;
+    width: 14px;
+  }
+  .form-check-input[type=radio]:checked{
+    background: #f78d1e;
+    border-color: #f78d1e;
+    border-radius: 0px;
+  }
 
 
 
