@@ -208,11 +208,7 @@ align-items: center;
 }
 
 .custom-btn {
-    height: 40px;
     border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -227,6 +223,7 @@ align-items: center;
 /* 15 */
 .ready-stock-btn {
     background: #f78d1e !important;
+    color: #fff !important;
     border: none;
     z-index: 1;
   }
