@@ -77,15 +77,31 @@ align-items: center;
 .home-products-grid .btn-outline-warning {
     border-radius: 4px;
     border: 1px solid #CFCFCF;
-    color: #F78D1E !important;
-    background-color: #fff !important;
+    color: #F78D1E;
+    background-color: #fff;
     font-family: Inter;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    padding: 8px;
 }
 
+.home-products-grid .btn-outline-warning:hover {
+    border-radius: 4px;
+    border: 1px solid #CFCFCF;
+    color: #fff;
+    background-color: #F78D1E;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    transform: scale(1.10);
+}
+.home-products-grid .btn-outline-warning:hover svg{
+    fill: #fff;
+}
 .accreditations-slider .splide__slide{
     margin: auto;
 }
@@ -276,3 +292,11 @@ align-items: center;
     top: 2px;
   }
   
+  .view-all-btn.btn-warning{
+    padding: 8px;
+  }
+
+  .view-all-btn.btn-warning:hover{
+    
+    transform: scale(1.05);
+  }
