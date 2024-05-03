@@ -8,12 +8,33 @@ main{
 .main-title{
     color: #2D2D2D;
 }
+.home-main-img-slider-section .splide__pagination{
+    position: relative;
+    bottom: 0;
+    background: #F6F6F6;
+    padding-top: 2px;
+    padding-bottom: 6px;
+}
+.home-main-img-slider-section .splide__pagination__page{
+    width: 20px;
+    border-radius: 2px;
+    height: 5px;
+}
+.home-main-img-slider-section .splide__pagination__page.is-active{
+background-color: #F78D1E;
+transform: scale(1.1);
+}
 .home-products-grid{
     display: grid;
     grid-template-columns: 1fr;
     column-gap:10px;
     row-gap: 20px;
 
+}
+
+.top-main-nav li .nav-link, .mobile-navbar li .nav-link{
+    color: #2D2D2D !important;
+    font-weight: 500 !important;
 }
 @media (min-width:280px) {
     .home-products-grid{
