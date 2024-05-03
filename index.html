@@ -7,18 +7,9 @@
   <title>Home - Emerald OMS</title>
   <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
   <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/lib/css/dataTables.css">
-  <link rel="stylesheet" href="assets/lib/css/daterangepicker.css">
-  <link rel="stylesheet" href="assets/lib/css/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="assets/lib/css/fontawesome/css/fontawesome.min.css">
-  <link rel="stylesheet" href="assets/lib/css/lightbox.min.css">
-  <link rel="stylesheet" href="assets/lib/css/owlCarousel.min.css">
-  <link rel="stylesheet" href="assets/lib/css/select.dataTables.min.css">
   <link rel="stylesheet" href="assets/lib/css/splide.min.css">
-  <link rel="stylesheet" href="assets/lib/css/sumoselect.min.css">
   <link rel="stylesheet" href="assets/css/menu.css">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/home-new-styles.css">
 </head>
 
@@ -1097,17 +1088,9 @@
 
   <script src="assets/lib/js/jquery.min.js"></script>
   <script src="assets/lib/js/bootstrap.min.js"></script>
-  <script src="assets/lib/js/owlCarousel.min.js"></script>
   <script src="assets/lib/js/splide.min.js"></script>
-  <script src="assets/lib/js/lightbox.min.js"></script>
-  <script src="assets/lib/js/dataTables.js"></script>
-  <script src="assets/lib/js/checkboxes.min.js"></script>
-  <script src="assets/lib/js/sumoselect.min.js"></script>
-  <script src="assets/lib/js/moment.min.js"></script>
-  <script src="assets/lib/js/daterangepicker.min.js"></script>
   <script src="assets/js/smartmenu.js"></script>
   <script src="assets/js/custom.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
 
@@ -1135,11 +1118,13 @@
 
     var splide2 = new Splide('.accreditations-slider', {
       type: 'slide',
-      autoplay: 'pause',
       gap: '1rem',
       pagination: false,
       arrows: false,
       perPage: 6,
+      perMove: 1,
+      drag   : 'free',
+      
       breakpoints: {
         1640: {
           perPage: 6,
@@ -1151,13 +1136,13 @@
           perPage: 5,
         },
         640: {
-          perPage: 4.2,
+          perPage: 4,
         },
         340: {
-          perPage: 3.2,
+          perPage: 3,
         },
         250: {
-          perPage: 2.2,
+          perPage: 2,
         },
       }
 
