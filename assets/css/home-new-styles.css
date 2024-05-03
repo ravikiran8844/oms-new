@@ -113,8 +113,19 @@ align-items: center;
         font-size: 14px;
     }
 }
+.footer .footer-links_link{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 .footer-links_link span{
-    margin-right: 3px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 .footer-links_link svg{
     width: 14px;
