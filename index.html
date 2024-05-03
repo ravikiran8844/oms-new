@@ -116,11 +116,11 @@
           <ul class="d-none d-xl-flex top-main-nav navbar-nav navbar-right align-items-center ms-auto my-2 my-lg-0">
 
             <li class="nav-item me-2">
-              <a class="btn new-arrivals-btn px-4" href="">New Arrivals</a>
+              <a href="#ef-ready-stock" class="btn custom-btn new-arrivals-btn px-4">EF Idol Ready Stock </a>
             </li>
 
             <li  class="nav-item me-2">
-              <a class="btn btn-warning px-4 ready-stock-btn" href="">Ready Stock</a>
+              <a href="#solid-ready-stock" class="btn custom-btn btn-warning px-4 ready-stock-btn">Solid Idol Ready Stock</a>
             </li>
 
 
@@ -493,10 +493,10 @@
     <section class="container py-2 d-block d-xl-none">
       <div class="d-flex flex-wrap justify-content-center align-items-center gap-2">
         <div>
-          <a class="btn new-arrivals-btn px-4" href="">New Arrivals</a>
+          <a class="btn custom-btn new-arrivals-btn px-4" href="#ef-ready-stock">EF Idol Ready Stock </a>
         </div>
         <div>
-          <a class="btn btn-warning px-4 ready-stock-btn" href="">Ready Stock</a>
+          <a class="btn custom-btn -warning px-4 ready-stock-btn" href="#solid-ready-stock">Solid Idol Ready Stock</a>
         </div>
       </div>
     </section>
@@ -542,11 +542,11 @@
 
 
 
-    <section class="container">
+    <section class="container" id="ef-ready-stock">
       <div class="row  py-4 py-lg-5">
         <div class="col-12">
           <div class="fs-3 text-center main-title mb-4 mb-lg-5  fw-bold">
-            Electro Forming - Ready Stock
+            Electro Forming - Solid Idol Ready Stock
           </div>
         </div>
 
@@ -670,11 +670,11 @@
 
 
 
-    <section class="container">
+    <section class="container" id="solid-ready-stock" >
       <div class="row  py-4 py-lg-5">
         <div class="col-12">
           <div class="fs-3 text-center main-title mb-4 mb-lg-5 fw-bold">
-            Solid Idols - Ready Stock
+            Solid Idols - Solid Idol Ready Stock
           </div>
         </div>
 
@@ -1138,7 +1138,17 @@
 
 
 
-
+<script>
+  
+  function animate(element) {
+    console.log("hi")
+    element.classList.add("bounce");
+    setTimeout(function() {
+      element.classList.remove("bounce");
+    }, 500); // Adjust this timing to match the animation duration
+  }
+  
+</script>
 
   <script>
     let year = new Date().getFullYear()
