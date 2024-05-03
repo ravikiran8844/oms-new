@@ -4565,9 +4565,16 @@ background: #FFF;
 
 
 
+  .nav-search-input{
+    overflow: hidden;
+}
 
-
-
+.nav-search-input input.form-control{
+  padding-left: 10px !important;
+}
+.nav-search-input input::placeholder{
+  padding-left: 10px !important;
+}
 
 
 
