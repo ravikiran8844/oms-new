@@ -8,6 +8,7 @@
     <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
     <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/login.css">
+
 </head>
 
 <body>
@@ -16,8 +17,7 @@
         <div class="container-fluid ">
             <div class="row">
                 <div class="col-12 col-md-6 p-0 position-relative ">
-                    <img class="img-fluid h-100 w-100 login-page-banner"
-                        src="assets/img/login-page-banner.webp" alt>
+                    <img class="img-fluid h-100 w-100 login-page-banner" src="assets/img/login-page-banner.webp" alt>
 
                     <div class="text-center text-white position-absolute bottom-0 w-100 p-2 pb-4">
                         <div class="fs-5 fw-bold">Welcome to your new dashboard</div>
@@ -67,19 +67,24 @@
     </section>
 
 
-
+    <script src="assets/lib/js/jquery.min.js"></script>
 
     <script>
         // JavaScript to handle OTP input and enable button when 4 digits are filled
         document.addEventListener('DOMContentLoaded', function () {
             var otpInput = document.getElementById('otp-input');
             var loginVerifyBtn = document.getElementById('loginVerifyBtn');
-            otpInput.focus()
+    
+            // Initially disable the button
+            loginVerifyBtn.disabled = true;
+    
+            otpInput.focus();
+    
             // Listen for input event on OTP input field
             otpInput.addEventListener('input', function () {
-                 // Remove any non-numeric characters from the input
+                // Remove any non-numeric characters from the input
                 this.value = this.value.replace(/\D/g, '');
-                 // Enable the button only when 4 digits are filled
+                // Enable the button only when 4 digits are filled
                 loginVerifyBtn.disabled = this.value.length !== 4;
             });
     
@@ -101,18 +106,15 @@
                     buttonText.style.display = "inline"; // Show the text again
                 }, 2000);
             });
-
-
-                    // Prevent form submission
-        const form = document.getElementById("loginVerifyForm");
-        form.addEventListener("submit", function (event) {
-        event.preventDefault();
-    });
-
-
-
+    
+            // Prevent form submission
+            const form = document.getElementById("loginVerifyForm");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+            });
         });
     </script>
+    
 </body>
 
 </html>

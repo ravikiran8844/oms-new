@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Emerald OMS</title>
+    <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+    <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets/lib/css/sumoselect.min.css"> -->
+    <link rel="stylesheet" href="assets/css/login.css">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link href="https://raw.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.css" rel="stylesheet"> 
+
+
+</head>
+
+<body>
+
+   <section class="sign-up-page-form_wrapper">
+        <form action="">
+            <div class="container py-5">
+                <div class="col-12 text-center">
+                    <div>
+                        <img width="120" height="120" class="img-fluid" src="assets/img/emerald-logo.png" alt>
+                    </div>
+                </div>
+    
+                <div class="row gy-4 gy-lg-5 mt-5">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label fw-semibold" for="">Retailer Name<span class="text-danger">*</span></label>
+                        <input required placeholder="Retailer Name" class="form-control" type="text" name="" id="">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label fw-semibold" for="">Retailer Email<span class="text-danger">*</span></label>
+                        <input required placeholder="Enter your email" class="form-control" type="email" name="" id="">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label fw-semibold" for="">Address<span class="text-danger">*</span></label>
+                        <input required placeholder="Enter your Address" class="form-control" type="text" name="" id="">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label fw-semibold" for="">Retailer Phone Number<span class="text-danger">*</span></label>
+                        <input required placeholder="Enter your phone number" class="form-control" type="text" name="" id="">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label fw-semibold" for="">Company Name<span class="text-danger">*</span></label>
+                        <input required placeholder="company Name" class="form-control" type="text" name="" id="">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label fw-semibold" for="">GST<span class="text-danger">*</span></label>
+                        <input required placeholder="Enter your GST" class="form-control" type="text" name="" id="">
+                    </div>
+
+
+                    <div class="col-12 col-md-8">
+                            <select placeholder="Select Dealer" name="" id="selectRetailer" multiple>
+                                <option value="1">option 1</option>
+                                <option value="2">option 2</option>
+                                <option value="3">option 3</option>
+                                <option value="4">option 4</option>
+                                <option value="5">option 5</option>
+                                <option value="6">option 6</option>
+                            </select>
+                    </div>
+                    <div class="col-12 col-md-4 d-flex  align-items-center">
+                        <button class="btn sign-up-page_btn">Save</button>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </form>
+   </section>
+
+<script src="assets/lib/js/jquery.min.js"></script>
+<!-- <script src="assets/lib/js/sumoselect.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+<!-- <script>
+    $(document).ready(function () {
+        // Initialize SumoSelect after the document is ready
+        $('#selectRetailer').SumoSelect({placeholder: 'Select Dealer'});
+    });</script> -->
+    
+
+    <script>
+        $(function () {
+  $('#selectRetailer').each(function () {
+    $(this).select2({
+      theme: 'bootstrap4',
+      width: 'style',
+      placeholder: $(this).attr('placeholder'),
+      allowClear: Boolean($(this).data('allow-clear')),
+    });
+  });
+});
+    </script>
+</body>
+
+</html>
