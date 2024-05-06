@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Emerald OMS</title>
+    <title>Login OTP Verify - Emerald OMS</title>
     <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
     <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/login.css">
@@ -38,13 +38,10 @@
                         <div style="max-width: 350px;">
 
                             <form id="loginVerifyForm">
-                                <div class="mb-5">
+                                <div class="mb-4">
 
-                                    <div class="otp-field mb-4">
-                                        <input minlength="1" maxlength="1" type="number" />
-                                        <input minlength="1" maxlength="1" type="number" disabled />
-                                        <input minlength="1" maxlength="1" type="number" disabled />
-                                        <input minlength="1" maxlength="1" type="number" disabled />
+                                    <div class="otp-input_wrapper">
+                                        <input id="otp-input" minlength="4" maxlength="4" type="text" />
                                     </div>
 
                                 </div>
@@ -71,106 +68,49 @@
 
 
 
+
     <script>
-        const inputs = document.querySelectorAll(".otp-field > input");
-        const button = document.querySelector("#loginVerifyBtn");
-
-        window.addEventListener("load", () => inputs[0].focus());
-        button.setAttribute("disabled", "disabled");
-
-        inputs[0].addEventListener("paste", function (event) {
-            event.preventDefault();
-
-            const pastedValue = (event.clipboardData || window.clipboardData).getData(
-                "text"
-            );
-            const otpLength = inputs.length;
-
-            for (let i = 0; i < otpLength; i++) {
-                if (i < pastedValue.length) {
-                    inputs[i].value = pastedValue[i];
-                    inputs[i].removeAttribute("disabled");
-                    inputs[i].focus;
-                } else {
-                    inputs[i].value = ""; // Clear any remaining inputs
-                    inputs[i].focus;
-                }
-            }
-        });
-
-        inputs.forEach((input, index1) => {
-            input.addEventListener("keyup", (e) => {
-                const currentInput = input;
-                const nextInput = input.nextElementSibling;
-                const prevInput = input.previousElementSibling;
-
-                if (currentInput.value.length > 1) {
-                    currentInput.value = "";
-                    return;
-                }
-
-                if (
-                    nextInput &&
-                    nextInput.hasAttribute("disabled") &&
-                    currentInput.value !== ""
-                ) {
-                    nextInput.removeAttribute("disabled");
-                    nextInput.focus();
-                }
-
-                if (e.key === "Backspace") {
-                    inputs.forEach((input, index2) => {
-                        if (index1 <= index2 && prevInput) {
-                            input.setAttribute("disabled", true);
-                            input.value = "";
-                            prevInput.focus();
-                        }
-                    });
-                }
-
-                button.classList.remove("active");
-                button.setAttribute("disabled", "disabled");
-
-                const inputsNo = inputs.length;
-                if (!inputs[inputsNo - 1].disabled && inputs[inputsNo - 1].value !== "") {
-                    button.classList.add("active");
-                    button.removeAttribute("disabled");
-
-                    if (inputs[inputsNo - 1].value.length === 1) {
-                        // Log user input values after 4 digits
-                        console.log("User input values:", Array.from(inputs).map(input => input.value).join(""));
-                    }
-
-                    return;
-                }
+        // JavaScript to handle OTP input and enable button when 4 digits are filled
+        document.addEventListener('DOMContentLoaded', function () {
+            var otpInput = document.getElementById('otp-input');
+            var loginVerifyBtn = document.getElementById('loginVerifyBtn');
+    
+            // Listen for input event on OTP input field
+            otpInput.addEventListener('input', function () {
+                 // Remove any non-numeric characters from the input
+                this.value = this.value.replace(/\D/g, '');
+                 // Enable the button only when 4 digits are filled
+                loginVerifyBtn.disabled = this.value.length !== 4;
             });
-        });
-        
-
-       // Add event listener to the button for click
-       button.addEventListener("click", function () {
-            // Hide text when button is clicked
-            const buttonText = this.querySelector(".loginBtn_text");
-            buttonText.style.display = "none";
-
-            // Show loader when button is clicked
-            const loader = this.querySelector(".spinner-border");
-            loader.style.display = "inline-block";
-
-            // Simulate loading process for 2 seconds (replace with actual logic)
-            setTimeout(() => {
-                // After 2 seconds, you can redirect or perform other actions
-                // For demonstration purposes, we're just hiding the loader and showing the text again
-                loader.style.display = "none";
-                buttonText.style.display = "inline"; // Show the text again
-            }, 2000);
-        });
+    
+            // Handle button click event
+            loginVerifyBtn.addEventListener("click", function () {
+                // Hide text when button is clicked
+                const buttonText = this.querySelector(".loginBtn_text");
+                buttonText.style.display = "none";
+    
+                // Show loader when button is clicked
+                const loader = this.querySelector(".spinner-border");
+                loader.style.display = "inline-block";
+    
+                // Simulate loading process for 2 seconds (replace with actual logic)
+                setTimeout(() => {
+                    // After 2 seconds, you can redirect or perform other actions
+                    // For demonstration purposes, we're just hiding the loader and showing the text again
+                    loader.style.display = "none";
+                    buttonText.style.display = "inline"; // Show the text again
+                }, 2000);
+            });
 
 
-            // Prevent form submission
-            const form = document.getElementById("loginVerifyForm");
-            form.addEventListener("submit", function (event) {
-            event.preventDefault();
+                    // Prevent form submission
+        const form = document.getElementById("loginVerifyForm");
+        form.addEventListener("submit", function (event) {
+        event.preventDefault();
+    });
+
+
+
         });
     </script>
 </body>
