@@ -74,7 +74,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             var otpInput = document.getElementById('otp-input');
             var loginVerifyBtn = document.getElementById('loginVerifyBtn');
-    
+            otpInput.focus()
             // Listen for input event on OTP input field
             otpInput.addEventListener('input', function () {
                  // Remove any non-numeric characters from the input
