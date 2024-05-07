@@ -100,11 +100,40 @@
                     </div>
 
 
-                    <div class="col-12">
+                    <div class="col-12 col-lg-4">
                    
-                        <label class="form-label fw-semibold" for="">Select your preferred Dealers:<span class="text-danger">*</span></label>
+                        <label class="form-label fw-semibold" for="">Select Preferred Dealer 1<span class="text-danger">*</span></label>
 
-                            <select placeholder="Select preferred Dealers" name="" id="selectRetailer" multiple>
+                            <select class="form-select" placeholder="Select preferred dealer 1" name="" id="preferredDealer1">
+                                <option value=""></option>
+                                <option value="1">Dealer  1</option>
+                                <option value="2">Dealer  2</option>
+                                <option value="3">Dealer  3</option>
+                                <option value="4">Dealer  4</option>
+                                <option value="5">Dealer  5</option>
+                                <option value="6">Dealer  6</option>
+                            </select>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                   
+                        <label class="form-label fw-semibold" for="">Select Preferred Dealer 2<span class="text-danger">*</span></label>
+
+                            <select class="form-select" placeholder="Select preferred dealer 2" name="" id="preferredDealer2">
+                                <option value=""></option>
+                                <option value="1">Dealer  1</option>
+                                <option value="2">Dealer  2</option>
+                                <option value="3">Dealer  3</option>
+                                <option value="4">Dealer  4</option>
+                                <option value="5">Dealer  5</option>
+                                <option value="6">Dealer  6</option>
+                            </select>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                   
+                        <label class="form-label fw-semibold" for="">Select Preferred Dealer 3<span class="text-danger">*</span></label>
+
+                            <select class="form-select" placeholder="Select preferred dealer 3" name="" id="preferredDealer3">
+                                <option value=""></option>
                                 <option value="1">Dealer  1</option>
                                 <option value="2">Dealer  2</option>
                                 <option value="3">Dealer  3</option>
@@ -155,6 +184,33 @@ $(function () {
     });
   });
 
+  $(function () {
+    $("#preferredDealer1").select2({
+      theme: 'bootstrap4',
+      width: 'style',
+      placeholder: $("#preferredDealer1").attr('placeholder'),
+      allowClear: Boolean($("#preferredDealer1").data('allow-clear')),
+    });
+  });
+
+  $(function () {
+    $("#preferredDealer2").select2({
+      theme: 'bootstrap4',
+      width: 'style',
+      placeholder: $("#preferredDealer2").attr('placeholder'),
+      allowClear: Boolean($("#preferredDealer2").data('allow-clear')),
+    });
+  });
+  $(function () {
+    $("#preferredDealer3").select2({
+      theme: 'bootstrap4',
+      width: 'style',
+      placeholder: $("#preferredDealer3").attr('placeholder'),
+      allowClear: Boolean($("#preferredDealer3").data('allow-clear')),
+    });
+  });
+
+  
 
 
     </script>
