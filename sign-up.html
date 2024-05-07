@@ -8,11 +8,11 @@
     <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
     <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="assets/lib/css/sumoselect.min.css"> -->
-    <link rel="stylesheet" href="assets/css/login.css">
 
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <link href="https://raw.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/login.css">
 
 
 </head>
@@ -30,42 +30,89 @@
     
                 <div class="row gy-4 gy-lg-5 mt-5">
                     <div class="col-12 col-md-6 col-lg-4">
-                        <label class="form-label fw-semibold" for="">Retailer Name<span class="text-danger">*</span></label>
-                        <input required placeholder="Retailer Name" class="form-control" type="text" name="" id="">
+                        <label class="form-label fw-semibold" for="">Name<span class="text-danger">*</span></label>
+                        <input required placeholder="Enter your name" class="form-control" type="text" name="" id="">
                     </div>
                     <div class="col-12 col-md-6 col-lg-4">
-                        <label class="form-label fw-semibold" for="">Retailer Email<span class="text-danger">*</span></label>
+                        <label class="form-label fw-semibold" for="">Shop Name<span class="text-danger">*</span></label>
+                        <input required placeholder="Enter your shop name" class="form-control" type="text" name="" id="">
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label fw-semibold" for="">Phone Number<span class="text-danger">*</span></label>
+                        <input required placeholder="Enter your phone number" class="form-control" type="text" name="" id="">
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <label class="form-label fw-semibold" for="">Email<span class="text-danger">*</span></label>
                         <input required placeholder="Enter your email" class="form-control" type="email" name="" id="">
                     </div>
+
+
                     <div class="col-12 col-md-6 col-lg-4">
                         <label class="form-label fw-semibold" for="">Address<span class="text-danger">*</span></label>
                         <input required placeholder="Enter your Address" class="form-control" type="text" name="" id="">
                     </div>
+                   
                     <div class="col-12 col-md-6 col-lg-4">
-                        <label class="form-label fw-semibold" for="">Retailer Phone Number<span class="text-danger">*</span></label>
-                        <input required placeholder="Enter your phone number" class="form-control" type="text" name="" id="">
+                        <label class="form-label fw-semibold" for="">City<span class="text-danger">*</span></label>
+                        <input required placeholder="Enter your city" class="form-control" type="text" name="" id="">
                     </div>
+
                     <div class="col-12 col-md-6 col-lg-4">
-                        <label class="form-label fw-semibold" for="">Company Name<span class="text-danger">*</span></label>
-                        <input required placeholder="company Name" class="form-control" type="text" name="" id="">
+                        <label class="form-label fw-semibold" for="">State<span class="text-danger">*</span></label>
+                        <select placeholder="Select your State" class="form-select" id="select-state-name">
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                        </select>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="col-12 col-lg-8">
                         <label class="form-label fw-semibold" for="">GST<span class="text-danger">*</span></label>
                         <input required placeholder="Enter your GST" class="form-control" type="text" name="" id="">
                     </div>
 
 
-                    <div class="col-12 col-md-8">
-                            <select placeholder="Select Dealer" name="" id="selectRetailer" multiple>
-                                <option value="1">option 1</option>
-                                <option value="2">option 2</option>
-                                <option value="3">option 3</option>
-                                <option value="4">option 4</option>
-                                <option value="5">option 5</option>
-                                <option value="6">option 6</option>
+                    <div class="col-12">
+                   
+                        <label class="form-label fw-semibold" for="">Select your preferred Dealers:<span class="text-danger">*</span></label>
+
+                            <select placeholder="Select preferred Dealers" name="" id="selectRetailer" multiple>
+                                <option value="1">Dealer  1</option>
+                                <option value="2">Dealer  2</option>
+                                <option value="3">Dealer  3</option>
+                                <option value="4">Dealer  4</option>
+                                <option value="5">Dealer  5</option>
+                                <option value="6">Dealer  6</option>
                             </select>
                     </div>
-                    <div class="col-12 col-md-4 d-flex  align-items-center">
+                    <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mx-auto">
                         <button class="btn sign-up-page_btn">Save</button>
                     </div>
     
@@ -97,6 +144,20 @@
     });
   });
 });
+
+$(function () {
+  $('#select-state-name').each(function () {
+    $(this).select2({
+      theme: 'bootstrap4',
+      width: 'style',
+      placeholder: $(this).attr('placeholder'),
+      allowClear: Boolean($(this).data('allow-clear')),
+    });
+  });
+});
+
+
+
     </script>
 </body>
 
