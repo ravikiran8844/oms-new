@@ -62,6 +62,7 @@
                     <div class="col-12 col-md-6 col-lg-4">
                         <label class="form-label fw-semibold" for="">State<span class="text-danger">*</span></label>
                         <select placeholder="Select your State" class="form-select" id="select-state-name">
+                            <option></option>
                             <option value="Andhra Pradesh">Andhra Pradesh</option>
                             <option value="Arunachal Pradesh">Arunachal Pradesh</option>
                             <option value="Assam">Assam</option>
@@ -135,26 +136,24 @@
 
     <script>
         $(function () {
-  $('#selectRetailer').each(function () {
-    $(this).select2({
+   $('#selectRetailer').select2({
       theme: 'bootstrap4',
       width: 'style',
-      placeholder: $(this).attr('placeholder'),
-      allowClear: Boolean($(this).data('allow-clear')),
+      placeholder: $('#selectRetailer').attr('placeholder'),
+      allowClear: Boolean($('#selectRetailer').data('allow-clear')),
     });
   });
-});
+
+
 
 $(function () {
-  $('#select-state-name').each(function () {
-    $(this).select2({
+    $("#select-state-name").select2({
       theme: 'bootstrap4',
       width: 'style',
-      placeholder: $(this).attr('placeholder'),
-      allowClear: Boolean($(this).data('allow-clear')),
+      placeholder: $("#select-state-name").attr('placeholder'),
+      allowClear: Boolean($("#select-state-name").data('allow-clear')),
     });
   });
-});
 
 
 
