@@ -29,15 +29,7 @@
     <section class="header">
       <nav class="navbar navbar-expand-xl bg-body-light">
         <div class="container">
-          <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-controls="navbarScroll"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M26.6365 2.00024H2.00007" stroke="black" stroke-width="2.4977" stroke-linecap="round" />
-              <path d="M26.6365 19.4841H2.00007" stroke="black" stroke-width="2.4977" stroke-linecap="round" />
-              <path d="M18.6658 10.7422H1.99997" stroke="black" stroke-width="2.4977" stroke-linecap="round" />
-            </svg>
-          </button>
+
           <a class="navbar-brand" href="/">
             <picture>
               <source media="(min-width:650px)" srcset="assets/img/logo.png" />
@@ -48,7 +40,24 @@
 
           <div class="d-block d-xl-none">
             <ul class="d-flex align-items-center list-unstyled m-auto">
-              <li class="nav-item me-3">
+              <li  class="nav-item me-2">
+                <a class="nav-link" href="wish-list-new.html">
+                  <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_7373_10539)">
+                      <path
+                        d="M21.4515 16.3377L13.8719 24.0361L6.2992 16.3377C-0.393109 9.54612 7.19228 1.85688 13.8788 8.64842C20.6634 1.75765 28.243 9.44688 21.4584 16.3469L21.4515 16.3377Z"
+                        stroke="#2D2D2D" stroke-width="1.29808" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_7373_10539">
+                        <rect width="27.6923" height="27.6923" fill="white" transform="translate(0.0384521 0.730713)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+
+              <li  class="nav-item me-2">
                 <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
                   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -104,32 +113,24 @@
 
 
 
-
-
-          <div class="collapse navbar-collapse" id="navbarScroll">
-
-
-
-
-
-
-
-          </div>
           <ul class="d-none d-xl-flex top-main-nav navbar-nav navbar-right align-items-center ms-auto my-2 my-lg-0">
 
             <li class="nav-item me-2">
               <a href="#ef-ready-stock" class="btn custom-btn new-arrivals-btn px-4">EF Idol Ready Stock </a>
             </li>
 
-            <li  class="nav-item me-2">
-              <a href="#solid-ready-stock" class="btn custom-btn btn-warning px-4 ready-stock-btn">Solid Idol Ready Stock</a>
+            <li class="nav-item me-2">
+              <a href="#solid-ready-stock" class="btn custom-btn btn-warning px-4 ready-stock-btn">Solid Idol Ready
+                Stock</a>
             </li>
 
 
             <li>
               <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23" fill="none">
-                  <path d="M17.9856 16.1391L17.7998 16.3825L18.0163 16.599L22.4156 20.9983C22.6315 21.2566 22.7041 21.6057 22.6087 21.9288C22.5119 22.2559 22.256 22.5118 21.9288 22.6087C21.6055 22.7042 21.2562 22.6316 20.9981 22.4159L16.5987 18.0165L16.3822 17.8L16.1389 17.9858C13.472 20.0218 9.95104 20.5564 6.80032 19.4038C3.6496 18.2513 1.30487 15.5709 0.58137 12.2949L0.239889 12.3703L0.581369 12.2949C-0.142111 9.01921 0.855969 5.60033 3.22797 3.22801C5.59994 0.85573 9.01882 -0.142096 12.2947 0.581409L12.3698 0.241357L12.2947 0.581409C15.5706 1.3049 18.2511 3.64967 19.4036 6.80042C20.5561 9.95135 20.0215 13.4723 17.9856 16.1391ZM4.65977 15.7089L4.65978 15.7089C6.12492 17.174 8.11196 17.9971 10.1839 17.9971C12.256 17.9971 14.2429 17.1741 15.7081 15.7089L15.7081 15.7089C17.1731 14.2437 17.9962 12.2568 17.9962 10.1847C17.9962 8.11264 17.1732 6.12565 15.7081 4.66049L15.7081 4.66048C14.2429 3.19541 12.256 2.37228 10.1839 2.37228C8.11189 2.37228 6.12492 3.19533 4.65977 4.66049L4.65977 4.66049C3.19471 6.12565 2.3716 8.11263 2.3716 10.1847C2.3716 12.2567 3.19463 14.2437 4.65977 15.7089Z" fill="#2D2D2D" stroke="#F8F8FB" stroke-width="0.7"/>
+                  <path
+                    d="M17.9856 16.1391L17.7998 16.3825L18.0163 16.599L22.4156 20.9983C22.6315 21.2566 22.7041 21.6057 22.6087 21.9288C22.5119 22.2559 22.256 22.5118 21.9288 22.6087C21.6055 22.7042 21.2562 22.6316 20.9981 22.4159L16.5987 18.0165L16.3822 17.8L16.1389 17.9858C13.472 20.0218 9.95104 20.5564 6.80032 19.4038C3.6496 18.2513 1.30487 15.5709 0.58137 12.2949L0.239889 12.3703L0.581369 12.2949C-0.142111 9.01921 0.855969 5.60033 3.22797 3.22801C5.59994 0.85573 9.01882 -0.142096 12.2947 0.581409L12.3698 0.241357L12.2947 0.581409C15.5706 1.3049 18.2511 3.64967 19.4036 6.80042C20.5561 9.95135 20.0215 13.4723 17.9856 16.1391ZM4.65977 15.7089L4.65978 15.7089C6.12492 17.174 8.11196 17.9971 10.1839 17.9971C12.256 17.9971 14.2429 17.1741 15.7081 15.7089L15.7081 15.7089C17.1731 14.2437 17.9962 12.2568 17.9962 10.1847C17.9962 8.11264 17.1732 6.12565 15.7081 4.66049L15.7081 4.66048C14.2429 3.19541 12.256 2.37228 10.1839 2.37228C8.11189 2.37228 6.12492 3.19533 4.65977 4.66049L4.65977 4.66049C3.19471 6.12565 2.3716 8.11263 2.3716 10.1847C2.3716 12.2567 3.19463 14.2437 4.65977 15.7089Z"
+                    fill="#2D2D2D" stroke="#F8F8FB" stroke-width="0.7" />
                 </svg>
                 <div class="mt-1">Search</div>
               </a>
@@ -140,15 +141,17 @@
               <a class="nav-link" href="wish-list-new.html">
                 <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_7373_10539)">
-                  <path d="M21.4515 16.3377L13.8719 24.0361L6.2992 16.3377C-0.393109 9.54612 7.19228 1.85688 13.8788 8.64842C20.6634 1.75765 28.243 9.44688 21.4584 16.3469L21.4515 16.3377Z" stroke="#2D2D2D" stroke-width="1.29808" stroke-linejoin="round"/>
+                    <path
+                      d="M21.4515 16.3377L13.8719 24.0361L6.2992 16.3377C-0.393109 9.54612 7.19228 1.85688 13.8788 8.64842C20.6634 1.75765 28.243 9.44688 21.4584 16.3469L21.4515 16.3377Z"
+                      stroke="#2D2D2D" stroke-width="1.29808" stroke-linejoin="round" />
                   </g>
                   <defs>
-                  <clipPath id="clip0_7373_10539">
-                  <rect width="27.6923" height="27.6923" fill="white" transform="translate(0.0384521 0.730713)"/>
-                  </clipPath>
+                    <clipPath id="clip0_7373_10539">
+                      <rect width="27.6923" height="27.6923" fill="white" transform="translate(0.0384521 0.730713)" />
+                    </clipPath>
                   </defs>
-                  </svg>
-                  
+                </svg>
+
                 <div class="mt-1">WISH LIST</div>
               </a>
             </li>
@@ -158,14 +161,22 @@
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
                     <g clip-path="url(#clip0_7373_10545)">
-                      <path d="M7.9601 17.853H24.6188C24.7196 17.8528 24.8173 17.8186 24.8964 17.756C24.9754 17.6934 25.031 17.606 25.0543 17.5079L27.083 8.88708H6.21094" stroke="#2D2D2D" stroke-width="1.29808"/>
-                      <path d="M10.735 25.898C11.2292 25.898 11.6298 25.4974 11.6298 25.0032C11.6298 24.509 11.2292 24.1084 10.735 24.1084C10.2408 24.1084 9.84021 24.509 9.84021 25.0032C9.84021 25.4974 10.2408 25.898 10.735 25.898Z" stroke="#2D2D2D" stroke-width="1.29808"/>
-                      <path d="M21.7285 25.898C22.2227 25.898 22.6234 25.4974 22.6234 25.0032C22.6234 24.509 22.2227 24.1084 21.7285 24.1084C21.2344 24.1084 20.8337 24.509 20.8337 25.0032C20.8337 25.4974 21.2344 25.898 21.7285 25.898Z" stroke="#2D2D2D" stroke-width="1.29808"/>
-                      <path d="M23.9204 22.3176H9.24411C9.142 22.3175 9.04314 22.2817 8.96452 22.2166C8.88591 22.1514 8.83245 22.0609 8.81336 21.9606L5.7446 6.65726C5.72405 6.55658 5.66937 6.46607 5.58981 6.40103C5.51024 6.33599 5.41067 6.30041 5.3079 6.30029H2.13562" stroke="#2D2D2D" stroke-width="1.29808"/>
+                      <path
+                        d="M7.9601 17.853H24.6188C24.7196 17.8528 24.8173 17.8186 24.8964 17.756C24.9754 17.6934 25.031 17.606 25.0543 17.5079L27.083 8.88708H6.21094"
+                        stroke="#2D2D2D" stroke-width="1.29808" />
+                      <path
+                        d="M10.735 25.898C11.2292 25.898 11.6298 25.4974 11.6298 25.0032C11.6298 24.509 11.2292 24.1084 10.735 24.1084C10.2408 24.1084 9.84021 24.509 9.84021 25.0032C9.84021 25.4974 10.2408 25.898 10.735 25.898Z"
+                        stroke="#2D2D2D" stroke-width="1.29808" />
+                      <path
+                        d="M21.7285 25.898C22.2227 25.898 22.6234 25.4974 22.6234 25.0032C22.6234 24.509 22.2227 24.1084 21.7285 24.1084C21.2344 24.1084 20.8337 24.509 20.8337 25.0032C20.8337 25.4974 21.2344 25.898 21.7285 25.898Z"
+                        stroke="#2D2D2D" stroke-width="1.29808" />
+                      <path
+                        d="M23.9204 22.3176H9.24411C9.142 22.3175 9.04314 22.2817 8.96452 22.2166C8.88591 22.1514 8.83245 22.0609 8.81336 21.9606L5.7446 6.65726C5.72405 6.55658 5.66937 6.46607 5.58981 6.40103C5.51024 6.33599 5.41067 6.30041 5.3079 6.30029H2.13562"
+                        stroke="#2D2D2D" stroke-width="1.29808" />
                     </g>
                     <defs>
                       <clipPath id="clip0_7373_10545">
-                        <rect width="28.5577" height="28.5577" fill="white" transform="translate(0.327026 0.923096)"/>
+                        <rect width="28.5577" height="28.5577" fill="white" transform="translate(0.327026 0.923096)" />
                       </clipPath>
                     </defs>
                   </svg>
@@ -207,292 +218,11 @@
       </nav>
 
 
-
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul id="mobile-main-menu" class="sm sm-blue" data-smartmenus-id="17059991140671968">
-            <li>
-              <a href="shop.html" class="has-submenu" id="sm-17059980231096348-1" aria-haspopup="true"
-                aria-controls="sm-17059980231096348-2" aria-expanded="false">Silver Jewellery<span
-                  class="sub-arrow"></span><span class="sub-arrow"></span></a>
-              <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059980231096348-1"
-                aria-expanded="false" class="sm-nowrap"
-                style="width: auto; top: auto; left: 0px; margin-left: 0px; margin-top: 5px; display: none; min-width: 15em; max-width: 30em;">
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-4" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap"
-                    style="width: auto; top: auto; left: 0px; margin-left: 209px; margin-top: -49px; display: none; min-width: 15em; max-width: 30em;">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-6" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-8" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-10" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-12" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-14" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-16" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-              </ul><span class="scroll-up"
-                style="top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2; display: none;"><span
-                  class="scroll-up-arrow"></span></span><span class="scroll-down"
-                style="display: none; top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2;"><span
-                  class="scroll-down-arrow"></span></span>
-            </li>
-            <li><a href="#" class="has-submenu" id="sm-17059991140671968-1" aria-haspopup="true"
-                aria-controls="sm-17059980231096348-2" aria-expanded="false">Solid Idol<span
-                  class="sub-arrow"></span></a>
-              <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059991140671968-1"
-                aria-expanded="false" class="sm-nowrap"
-                style="width: auto; top: auto; left: 0px; margin-left: 0px; margin-top: 5px; display: none; min-width: 15em; max-width: 30em;">
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-4" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap"
-                    style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-6" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-8" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-10" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-12" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-14" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-16" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-              </ul><span class="scroll-up"
-                style="top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2; display: none;"><span
-                  class="scroll-up-arrow"></span></span><span class="scroll-down"
-                style="display: none; top: auto; left: 0px; margin-left: 0px; width: 210px; z-index: 2;"><span
-                  class="scroll-down-arrow"></span></span>
-            </li>
-            <li><a href="#" class="has-submenu" id="sm-17059991140671968-2" aria-haspopup="true"
-                aria-controls="sm-17059980231096348-2" aria-expanded="false">Rumi<span class="sub-arrow"></span></a>
-              <ul id="sm-17059980231096348-2" role="group" aria-hidden="true" aria-labelledby="sm-17059991140671968-2"
-                aria-expanded="false" class="sm-nowrap"
-                style="width: auto; top: auto; left: 0px; margin-left: 0px; margin-top: 5px; min-width: 15em; display: none; max-width: 30em;">
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-3" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-4" aria-expanded="false">Rings<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-4" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-3" aria-expanded="false" class="sm-nowrap"
-                    style="width: auto; min-width: 10em; display: none; max-width: 20em; top: auto; left: 0px; margin-left: 139px; margin-top: -49px;">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-5" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-6" aria-expanded="false">Earrings<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-6" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-5" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-7" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-8" aria-expanded="false">Pendants<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-8" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-7" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-9" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-10" aria-expanded="false">Bracelates<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-10" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-9" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-11" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-12" aria-expanded="false">Necklace<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-12" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-11" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-13" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-14" aria-expanded="false">Anklets<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-14" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-13" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#" class="has-submenu" id="sm-17059980231096348-15" aria-haspopup="true"
-                    aria-controls="sm-17059980231096348-16" aria-expanded="false">Toe Rings<span
-                      class="sub-arrow"></span><span class="sub-arrow"></span></a>
-                  <ul id="sm-17059980231096348-16" role="group" aria-hidden="true"
-                    aria-labelledby="sm-17059980231096348-15" aria-expanded="false">
-                    <li><a href="#">Ladies</a></li>
-                    <li><a href="#">Gents</a></li>
-                    <li><a href="#">Baby</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#">EF Project</a></li>
-            <li><a href="#">Chain</a></li>
-            <li><a href="#">Utensil</a></li>
-            <li><a href="#">Home Decor</a></li>
-            <li><a href="#">Cladding</a></li>
-          </ul>
-
-        </div>
-      </div>
     </section>
 
-    <section class="container py-2 d-block d-xl-none">
+
+
+    <!-- <section class="container py-2 d-block d-xl-none">
       <div class="d-flex flex-wrap justify-content-center align-items-center gap-2">
         <div>
           <a class="btn custom-btn new-arrivals-btn px-4" href="#ef-ready-stock">EF Idol Ready Stock </a>
@@ -501,7 +231,11 @@
           <a class="btn custom-btn -warning px-4 ready-stock-btn" href="#solid-ready-stock">Solid Idol Ready Stock</a>
         </div>
       </div>
-    </section>
+    </section> -->
+
+
+
+
   </header>
 
   <main>
@@ -548,10 +282,11 @@
       <div class="row  py-4 py-lg-5">
         <div class="col-12 mb-4 mb-lg-5 d-flex flex-wrap justify-content-center align-items-center gap-4">
           <div class="fs-4 text-center main-title fw-bold">
-            ELECTROFORMING IDOLS - READY STOCK 
+            ELECTROFORMING IDOLS - READY STOCK
           </div>
           <div>
-            <a href="" class="btn view-all-btn btn-warning px-4">View All <span><i class="fas fa-long-arrow-alt-right"></i></a>
+            <a href="" class="btn view-all-btn btn-warning px-4">View All <span><i
+                  class="fas fa-long-arrow-alt-right"></i></a>
           </div>
         </div>
 
@@ -567,7 +302,8 @@
                   Ganesha
                 </div>
                 <div>
-                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
               </div>
 
@@ -582,7 +318,8 @@
                   Hanuman
                 </div>
                 <div>
-                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
               </div>
 
@@ -597,7 +334,8 @@
                   Krishna
                 </div>
                 <div>
-                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
               </div>
 
@@ -612,7 +350,8 @@
                   Lakshmi
                 </div>
                 <div>
-                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
               </div>
 
@@ -627,7 +366,8 @@
                   Buddha
                 </div>
                 <div>
-                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
               </div>
 
@@ -641,9 +381,9 @@
 
 
 
-    <section class="container" id="solid-ready-stock" >
+    <section class="container" id="solid-ready-stock">
       <div class="row  py-4 py-lg-5">
-      
+
 
 
         <div class="col-12 mb-4 mb-lg-5 d-flex flex-wrap justify-content-center align-items-center gap-4">
@@ -651,7 +391,8 @@
             SOLID IDOLS - READY STOCK
           </div>
           <div>
-            <a href="" class="btn view-all-btn btn-warning px-4">View All <span><i class="fas fa-long-arrow-alt-right"></i></a>
+            <a href="" class="btn view-all-btn btn-warning px-4">View All <span><i
+                  class="fas fa-long-arrow-alt-right"></i></a>
           </div>
         </div>
 
@@ -667,7 +408,8 @@
                   Ganesha
                 </div>
                 <div>
-                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
               </div>
 
@@ -682,7 +424,8 @@
                   Hanuman
                 </div>
                 <div>
-                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
               </div>
 
@@ -697,7 +440,8 @@
                   Krishna
                 </div>
                 <div>
-                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
               </div>
 
@@ -712,7 +456,8 @@
                   Lakshmi
                 </div>
                 <div>
-                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
               </div>
 
@@ -727,7 +472,8 @@
                   Buddha
                 </div>
                 <div>
-                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i class="fas fa-long-arrow-alt-right"></i></span></a>
+                  <a href="" class="btn btn-outline-warning px-4">Explore <span><i
+                        class="fas fa-long-arrow-alt-right"></i></span></a>
                 </div>
               </div>
 
@@ -749,8 +495,8 @@
       <div class="container py-5">
         <div class="row gx-lg-5">
           <div class="col-12 col-md-4 col-lg-6">
-            <img class="img-fluid h-100 object-fit-cover rounded-4" width="850" height="688" src="assets/img/new-home/emerald-jewel-industry.webp"
-              alt="">
+            <img class="img-fluid h-100 object-fit-cover rounded-4" width="850" height="688"
+              src="assets/img/new-home/emerald-jewel-industry.webp" alt="">
           </div>
           <div class="col-12 col-md-8  col-lg-6 mt-5 mt-md-0">
             <div class="d-flex flex-column justify-content-between h-100">
@@ -765,13 +511,15 @@
 
               <div class="row mt-4">
                 <div class="col-12 col-md-3 col-lg-4">
-                  <img class="img-fluid h-100 object-fit-cover rounded-4" width="246" card-header 265 src="assets/img/new-home/SRINIVASAN.png" alt="" srcset="">
+                  <img class="img-fluid h-100 object-fit-cover rounded-4" width="246" card-header 265
+                    src="assets/img/new-home/SRINIVASAN.png" alt="" srcset="">
                 </div>
-                <div  class="col-12 col-md-9 col-lg-8 mt-4 mt-md-0">
+                <div class="col-12 col-md-9 col-lg-8 mt-4 mt-md-0">
                   <div class="d-flex flex-column justify-content-between h-100">
-                    <div class="fs-6 order-1 order-md-0">"With our complete business under control, our productivity is up by 80% in the last year that we
+                    <div class="fs-6 order-1 order-md-0">"With our complete business under control, our productivity is
+                      up by 80% in the last year that we
                       have been using Emerald."</div>
-  
+
                     <div class="mb-4 mt-md-4 mb-md-0 order-0 order-md-1 ">
                       <div class="fw-semibold">K. SRINIVASAN</div>
                       <div>Chairman & Managing Director</div>
@@ -1034,36 +782,36 @@
 
 
 
-    <!-- Search Bar Modal -->
-    <div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content" style="background-color: #F8F9FA;">
-          <div class="modal-body d-flex align-items-center">
-            <div class="flex-grow-1">
-              <form action="">
-                <div class="input-group nav-search-input p-0">
-                  <input placeholder="Search for Emerald Products" class="form-control" type="search" name="" id="">
-                  <div class="input-group-append">
-                    <button class="btn" type="submit">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 23" fill="none">
-                        <path
-                          d="M18.1048 16.2301L17.9986 16.3692L18.1224 16.4929L22.5262 20.8968C22.7777 21.1941 22.8629 21.5978 22.7526 21.9713C22.6413 22.3472 22.3472 22.6413 21.9712 22.7526C21.5975 22.8629 21.1937 22.7779 20.8966 22.5265L16.4927 18.1226L16.369 17.9989L16.2299 18.1051C13.5223 20.1721 9.94761 20.7149 6.74879 19.5447C3.54997 18.3746 1.16944 15.6532 0.4349 12.3273L0.239685 12.3704L0.434899 12.3273C-0.299628 9.00155 0.713692 5.53048 3.1219 3.12195C5.53009 0.713444 9.00116 -0.29961 12.3271 0.434938L12.3702 0.239892L12.3271 0.434938C15.653 1.16948 18.3743 3.55004 19.5445 6.74889C20.7146 9.94791 20.1718 13.5226 18.1048 16.2301ZM4.76584 4.76655L4.76584 4.76656C3.32891 6.20358 2.5216 8.15242 2.5216 10.1847C2.5216 12.217 3.32883 14.1658 4.76584 15.6028L4.90726 15.4614L4.76584 15.6028C6.20285 17.0398 8.15175 17.8471 10.1839 17.8471C12.2162 17.8471 14.165 17.0399 15.602 15.6028L15.4606 15.4614L15.602 15.6028C17.0389 14.1658 17.8462 12.217 17.8462 10.1847C17.8462 8.15242 17.039 6.20358 15.602 4.76655L15.4606 4.90797L15.602 4.76655C14.165 3.3296 12.2162 2.52228 10.1839 2.52228C8.15168 2.52228 6.20285 3.32952 4.76584 4.76655Z"
-                          fill="#F78D1E" stroke="#F8EDE3" stroke-width="0.4"></path>
-                      </svg>
-                    </button>
-                  </div>
+  <!-- Search Bar Modal -->
+  <div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background-color: #F8F9FA;">
+        <div class="modal-body d-flex align-items-center">
+          <div class="flex-grow-1">
+            <form action="">
+              <div class="input-group nav-search-input p-0">
+                <input placeholder="Search for Emerald Products" class="form-control" type="search" name="" id="">
+                <div class="input-group-append">
+                  <button class="btn" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 23" fill="none">
+                      <path
+                        d="M18.1048 16.2301L17.9986 16.3692L18.1224 16.4929L22.5262 20.8968C22.7777 21.1941 22.8629 21.5978 22.7526 21.9713C22.6413 22.3472 22.3472 22.6413 21.9712 22.7526C21.5975 22.8629 21.1937 22.7779 20.8966 22.5265L16.4927 18.1226L16.369 17.9989L16.2299 18.1051C13.5223 20.1721 9.94761 20.7149 6.74879 19.5447C3.54997 18.3746 1.16944 15.6532 0.4349 12.3273L0.239685 12.3704L0.434899 12.3273C-0.299628 9.00155 0.713692 5.53048 3.1219 3.12195C5.53009 0.713444 9.00116 -0.29961 12.3271 0.434938L12.3702 0.239892L12.3271 0.434938C15.653 1.16948 18.3743 3.55004 19.5445 6.74889C20.7146 9.94791 20.1718 13.5226 18.1048 16.2301ZM4.76584 4.76655L4.76584 4.76656C3.32891 6.20358 2.5216 8.15242 2.5216 10.1847C2.5216 12.217 3.32883 14.1658 4.76584 15.6028L4.90726 15.4614L4.76584 15.6028C6.20285 17.0398 8.15175 17.8471 10.1839 17.8471C12.2162 17.8471 14.165 17.0399 15.602 15.6028L15.4606 15.4614L15.602 15.6028C17.0389 14.1658 17.8462 12.217 17.8462 10.1847C17.8462 8.15242 17.039 6.20358 15.602 4.76655L15.4606 4.90797L15.602 4.76655C14.165 3.3296 12.2162 2.52228 10.1839 2.52228C8.15168 2.52228 6.20285 3.32952 4.76584 4.76655Z"
+                        fill="#F78D1E" stroke="#F8EDE3" stroke-width="0.4"></path>
+                    </svg>
+                  </button>
                 </div>
-              </form>
-            </div>
-            <!-- Add other search bar elements as needed -->
-            <div>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+              </div>
+            </form>
           </div>
-          <!-- Add additional modal content or buttons if necessary -->
+          <!-- Add other search bar elements as needed -->
+          <div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
         </div>
+        <!-- Add additional modal content or buttons if necessary -->
       </div>
     </div>
+  </div>
 
 
 
@@ -1085,17 +833,17 @@
 
 
 
-<script>
-  
-  function animate(element) {
-    console.log("hi")
-    element.classList.add("bounce");
-    setTimeout(function() {
-      element.classList.remove("bounce");
-    }, 500); // Adjust this timing to match the animation duration
-  }
-  
-</script>
+  <script>
+
+    function animate(element) {
+      console.log("hi")
+      element.classList.add("bounce");
+      setTimeout(function () {
+        element.classList.remove("bounce");
+      }, 500); // Adjust this timing to match the animation duration
+    }
+
+  </script>
 
   <script>
     let year = new Date().getFullYear()
@@ -1106,12 +854,12 @@
 
   <script>
     var splide1 = new Splide('.home-main-img-slider-section',
-    {
-      type: 'slide',
-      pagination: true,
-      arrows: false,
-      perPage: 1,
-    }
+      {
+        type: 'slide',
+        pagination: true,
+        arrows: false,
+        perPage: 1,
+      }
     ).mount();
 
 
@@ -1122,8 +870,8 @@
       arrows: false,
       perPage: 6,
       perMove: 1,
-      drag   : 'free',
-      
+      drag: 'free',
+
       breakpoints: {
         1640: {
           perPage: 6,

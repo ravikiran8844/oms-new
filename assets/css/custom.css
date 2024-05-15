@@ -1363,18 +1363,18 @@ input.qtyminus {
 
 .mobile-cart-badge {
   vertical-align: middle;
-  padding: 4px 7px;
+  padding: 2px 4px;
   font-weight: 500;
   letter-spacing: 0.3px;
   border-radius: 50%;
   font-size: 8px;
   background: #f78d1e;
   color: #fff;
-  top: -10px;
+  top: -6px;
   right: -10px;
   position: absolute;
-  min-width: 14px;
-  min-height: 14px;
+  min-width: 16px;
+  min-height: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2163,8 +2163,8 @@ button:active {
   }
 
   .header .navbar .nav-link svg {
-    height: 18px;
-    width: 18px;
+    height: 16px;
+    width: 16px;
   }
   .header .navbar-toggler svg {
     height: 18px;
