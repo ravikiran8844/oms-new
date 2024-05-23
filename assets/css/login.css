@@ -161,3 +161,13 @@ color: #fff !important;
   .select2-container--bootstrap4 .select2-search {
     padding-left: 10px;
 }
+
+
+
+
+
+.sign-up-page-form_wrapper .form-control{
+    height: 48px;
+    display: flex;
+    align-items: center;
+    }
