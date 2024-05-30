@@ -168,7 +168,7 @@ align-items: center;
 }
 
 .lds-hourglass {
-    color: #e15b64
+    color: #f78d1e;
   }
 
 .lds-hourglass,
@@ -226,8 +226,8 @@ align-items: center;
     color: #fff !important;
     border: none;
     z-index: 1;
-  }
-  .ready-stock-btn:after {
+}
+.ready-stock-btn:after {
     position: absolute;
     content: "";
     width: 0;
@@ -258,12 +258,12 @@ align-items: center;
 
 
 
-  .new-arrivals-btn {
+.new-arrivals-btn {
     background: #fff !important;
     border: none;
     z-index: 1;
   }
-  .new-arrivals-btn:after {
+.new-arrivals-btn:after {
     position: absolute;
     content: "";
     width: 0;
@@ -288,6 +288,51 @@ align-items: center;
   .new-arrivals-btn:active {
     top: 2px;
   }
+
+
+
+
+.rk-custom-btn {
+    background: #fff !important;
+    border: none;
+    z-index: 1;
+  }
+.rk-custom-btn:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #fff !important;
+    border-radius: 5px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1) !important;
+    transition: all 0.3s ease !important;
+  }
+  .rk-custom-btn:hover {
+    color: #000;
+  }
+  .rk-custom-btn:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .rk-custom-btn:active {
+    top: 2px;
+  }
+
+
+
+
+
+
+
+
+
+
+
   
   .view-all-btn.btn-warning{
     padding: 8px;
