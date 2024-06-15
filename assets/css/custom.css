@@ -3349,11 +3349,20 @@ box-shadow: 0px 0px 15px 0px rgba(101, 101, 101, 0.25);
   animation: spinner 0.9s linear infinite;
 }
 
+
 @media (max-width:768px) {
   #preloader .spinner {
     width: 32px;
-  height: 32px;
+    height: 32px;
   }
+}
+
+
+
+
+
+#preloader .spinner-image{
+  animation: spinner 0.9s linear infinite;
 }
 
 @keyframes spinner {
