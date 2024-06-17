@@ -64,7 +64,7 @@ transform: scale(1.1);
 .home-products-grid-item__img-wrapper{
     aspect-ratio: 1;
     border-radius: 8px;
-background: #F6F6F6;
+background: #fff;
 padding: 15px;
 display: flex;
 justify-content: center;
@@ -154,7 +154,7 @@ align-items: center;
 }
 
 .home-multicolumn-section{
-    background: #F6F6F6;
+    background: #fff;
 }
 
 @media (max-width:992px) {
@@ -335,10 +335,18 @@ align-items: center;
 
   
   .view-all-btn.btn-warning{
-    padding: 8px;
+    width: 120px !important;
   }
 
   .view-all-btn.btn-warning:hover{
     
     transform: scale(1.05);
+  }
+
+  @media (min-width:992px) {
+    .view-all-btn.btn-warning{
+      position: absolute;
+      right: 10px;
+      top: 0;
+    }
   }
