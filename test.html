@@ -1,84 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-
 <body>
 
 
-  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iste ut error. Eum optio veniam est labore
-    incidunt? A itaque ab optio quia, totam consectetur sit cum, libero cupiditate, eum repudiandae ut neque. Nobis
-    explicabo velit fugiat architecto aliquam itaque saepe quasi quidem commodi. Non veniam porro voluptas culpa maxime?
-  </p>
-  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iste ut error. Eum optio veniam est labore
-    incidunt? A itaque ab optio quia, totam consectetur sit cum, libero cupiditate, eum repudiandae ut neque. Nobis
-    explicabo velit fugiat architecto aliquam itaque saepe quasi quidem commodi. Non veniam porro voluptas culpa maxime?
-  </p>
-  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iste ut error. Eum optio veniam est labore
-    incidunt? A itaque ab optio quia, totam consectetur sit cum, libero cupiditate, eum repudiandae ut neque. Nobis
-    explicabo velit fugiat architecto aliquam itaque saepe quasi quidem commodi. Non veniam porro voluptas culpa maxime?
-  </p>
-  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iste ut error. Eum optio veniam est labore
-    incidunt? A itaque ab optio quia, totam consectetur sit cum, libero cupiditate, eum repudiandae ut neque. Nobis
-    explicabo velit fugiat architecto aliquam itaque saepe quasi quidem commodi. Non veniam porro voluptas culpa maxime?
-  </p>
-  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti iste ut error. Eum optio veniam est labore
-    incidunt? A itaque ab optio quia, totam consectetur sit cum, libero cupiditate, eum repudiandae ut neque. Nobis
-    explicabo velit fugiat architecto aliquam itaque saepe quasi quidem commodi. Non veniam porro voluptas culpa maxime?
-  </p>
-
-  <input type="text" name="" value="ravi" id="name">
-
-  <h1>h1</h1>
-
-  <h2>h2</h2>
-
-  <h5>h5</h5>
-
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-
-  <script>
-    $(function () {
-      console.log("after load")
-      $('p').click(function () {
-        $(this).hide()
-      })
-      $('h1').click(function () {
-        $(this).text("Clicked").css("color", "red")
-        setTimeout(() => {
-          $(this).text("timed out")
-        }, 2000);
-      })
-
-      const name = $("#name").val()
-      console.log(name)
-
-      $("#name").keyup(function (e) {
-        console.log(e.target.value)
-      })
-
-
-    })
-
-    console.log("before load")
-
-
-    const fetchData=async()=>{
-      const res=await fetch("https://survey-aol7o6mvqa-el.a.run.app/problem/8198fba8-789a-437b-a302-cefe4553886e/questions");
-      const data=await res.json()
-      console.log(data)
-    }
-
-    fetchData()
-  </script>
-
-
+  <picture>
+    <source srcset="assets/img/home/banner1.webp" media="(min-width:1400px)" />
+      
+   
+    <img style="width: 100%; height: auto;" alt="">
+  </picture>
+  
 </body>
-
 </html>
