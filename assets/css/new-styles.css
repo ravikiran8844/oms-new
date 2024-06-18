@@ -392,3 +392,31 @@ background: #E5E9EB !important;
   .dropdown-toggle.show::after{
     transform: rotate(0deg);
   }
+
+
+
+  /* product page */
+  .product-specs-accordian .accordion-icon{
+    float: inline-end;
+  }
+
+  .product-page-qty.quantity-input-group,  .product-page-qty.quantity-input-group .qty{
+    background-color: #fff !important;
+  }
+
+
+  @media (max-width:768px) {
+    .product-add-to_cart-btn{
+    position: fixed;
+    bottom: 68px;
+    z-index: 999;
+    width: 100%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0);
+    }
+  }
+
+  .text-warning{
+    color: #F78D1E !important;
+  }
