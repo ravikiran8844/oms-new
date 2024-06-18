@@ -299,6 +299,9 @@ align-items: center;
     border-radius: 4.487px;
     border: 1.122px solid #F78D1E;
     background: #FFF;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #2D2D2D;
   }
 .rk-custom-btn:after {
     position: absolute;
@@ -316,7 +319,7 @@ align-items: center;
     transition: all 0.3s ease !important;
   }
   .rk-custom-btn:hover {
-    color: #000;
+    color: #2D2D2D;
     border: 1.122px solid #F78D1E;
 
   }
