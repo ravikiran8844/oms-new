@@ -291,6 +291,13 @@ align-items: center;
 
 
 
+  .new-arrivals-btn.active {
+    background: #f78d1e !important;
+    border: none;
+    z-index: 1;
+  }
+
+
 
 .rk-custom-btn {
     background: #fff !important;
@@ -298,37 +305,22 @@ align-items: center;
     z-index: 1;
     border-radius: 4.487px;
     border: 1.122px solid #F78D1E;
-    background: #FFF;
     text-transform: uppercase;
     font-weight: 500;
     color: #2D2D2D;
   }
-.rk-custom-btn:after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    background-color: #fff !important;
-    border-radius: 5px;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1) !important;
-    transition: all 0.3s ease !important;
-  }
+
   .rk-custom-btn:hover {
-    color: #2D2D2D;
     border: 1.122px solid #F78D1E;
+    background: #F78D1E !important;
+    color: #fff !important;
 
   }
-  .rk-custom-btn:hover:after {
-    left: 0;
-    width: 100%;
-  }
-  .rk-custom-btn:active {
-    top: 2px;
+
+
+  .rk-custom-btn.active{
+    background: #F78D1E !important;
+    color: #fff !important;
   }
 
 
