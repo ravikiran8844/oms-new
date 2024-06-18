@@ -4614,8 +4614,8 @@ body {
     z-index: 99999;
   }
   .mobile-fixed-menu svg{
-    max-height: 24px;
-    max-width: 24px;
+    max-height: 20px;
+    max-width: 20px;
     margin-bottom: 5px;
   }
   .mobile-fixed-menu a{
