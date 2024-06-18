@@ -296,6 +296,9 @@ align-items: center;
     background: #fff !important;
     border: none;
     z-index: 1;
+    border-radius: 4.487px;
+    border: 1.122px solid #F78D1E;
+    background: #FFF;
   }
 .rk-custom-btn:after {
     position: absolute;
@@ -314,6 +317,8 @@ align-items: center;
   }
   .rk-custom-btn:hover {
     color: #000;
+    border: 1.122px solid #F78D1E;
+
   }
   .rk-custom-btn:hover:after {
     left: 0;
