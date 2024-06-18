@@ -121,7 +121,7 @@ align-items: center;
 
 .footer .footer-links_link{
     color: #000 !important;
-    font-size: 10px;
+    font-size: 12px;
 }
 @media (min-width:440px) {
     .footer .footer-links_link{
@@ -147,9 +147,10 @@ align-items: center;
     width: 14px;
     height: 14px;
 }
-@media (min-width: 300px) and (max-width:380px) {
+@media (min-width: 320px) and (max-width:380px) {
     .footer-links_wrapper {
         grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
 }
 
