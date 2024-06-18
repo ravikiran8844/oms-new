@@ -4640,6 +4640,8 @@ background-color: transparent;
 
 }
 
+
+
 .explore-btn svg{
   fill: #2D2D2D;
 }
@@ -4647,13 +4649,25 @@ background-color: transparent;
   fill: #fff;
 }
 
+.explore-btn:active svg{
+  fill: #2D2D2D;
+  
+}
 .view-all-btn svg{
   fill: #fff;
 }
 
+
+
 .view-all-btn:hover svg{
   fill: #F78D1E;
 }
+
+.view-all-btn:active svg{
+  fill: #2D2D2D;
+}
+
+
 
 
 @media (min-width:600px) {

@@ -38,7 +38,7 @@
   <div id="overlay">
     <div class="cv-spinner">
       <span class="spinner"></span>
-      <div class="loading-text">Processing...</div>
+      <div class="loading-text">Order is Processing...</div>
     </div>
   </div>
 
@@ -1013,17 +1013,17 @@
     });
   </script>
 
-  <script>
+<script>
+  $('#place-order').click(function () {
+    $("#overlay").fadeIn(300);
 
+    setTimeout(function () {
+      $("#overlay").fadeOut(300);
+      window.location.href = "/thankyou.html";
+    }, 4000);
+  });
+</script>
 
-    $('#place-order').click(function () {
-      $("#overlay").fadeIn(300);
-
-      setTimeout(function () {
-        $("#overlay").fadeOut(300);
-      }, 4000);
-    });
-  </script>
 
 </body>
 
