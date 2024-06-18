@@ -309,6 +309,7 @@ align-items: center;
     text-transform: uppercase;
     font-weight: 500;
     color: #2D2D2D;
+    font-size: 14px;
   }
 
   .rk-custom-btn:hover {

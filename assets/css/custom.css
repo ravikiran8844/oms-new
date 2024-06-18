@@ -4636,9 +4636,25 @@ background-color: transparent;
 .explore-btn:hover{
   border-radius: 4px;
   background-color: #F78D1E;
-color: #FFF;
+  color: #FFF;
 
 }
+
+.explore-btn svg{
+  fill: #2D2D2D;
+}
+.explore-btn:hover svg{
+  fill: #fff;
+}
+
+.view-all-btn svg{
+  fill: #fff;
+}
+
+.view-all-btn:hover svg{
+  fill: #F78D1E;
+}
+
 
 @media (min-width:600px) {
   .shop-page_products-wrapper{
