@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
+    <link href="https://fonts.cdnfonts.com/css/britania-ligatura" rel="stylesheet">
+
+    <style>
+        @font-face {
+            font-family: 'Britania Ligatura';
+            src: url(/assets/fonts/Britania_Ligatura.ttf);
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Bellarosta';
+            src: url(/assets/fonts/Bellarosta.ttf);
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Metropolis';
+            src: url(/assets/fonts/Metropolis-Regular.otf);
+            font-display: swap;
+        }
+        .font-Britania{
+            font-family: 'Britania Ligatura';                               
+        }
+        .font-Bellarosta{
+            font-family: 'Bellarosta';                               
+        }
+        .font-Metropolis{
+            font-family: 'Metropolis';                               
+        }
+
+        @media (max-width:768px) {
+            .banner-section .fs-6{
+                font-size: 14px !important;
+            }
+            .banner-section .btn{
+                font-size: 12px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div>
+        <div class="col-12 banner-section">
+            <div class="d-none d-md-block">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="assets/img/zillara/main-banner.webp" alt="">
+                    <div class="position-absolute top-0 end-0 w-50 d-flex justify-content-center align-items-center h-100 flex-column">
+                        <div class="display-3 fw-medium font-Britania">Shine Brighter</div>
+                        <div class="fs-1 font-Bellarosta">with Silver</div>
+                        <div class="fs-6 font-Metropolis">Timeless Elegance, Modern Style</div>
+                        <div class="mt-3">
+                            <a class="btn btn-outline-dark font-Metropolis" href="">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-block d-md-none">
+                <div class="position-relative">
+                    <img class="img-fluid w-100" src="assets/img/zillara/mob-banner.webp" alt="">
+                    <div class="position-absolute top-0 d-flex text-center justify-content-start pt-3 align-items-center end-0 h-100 flex-column" style="max-width: 180px;">
+                        <div class="display-4 fw-medium font-Britania">Shine Brighter</div>
+                        <div class="fs-1 font-Bellarosta">with Silver</div>
+                        <div class="fs-6 font-Metropolis">Timeless Elegance, Modern Style</div>
+                        <div class="mt-3">
+                            <a class="btn btn-outline-dark font-Metropolis" href="">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+</body>
+</html>

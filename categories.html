@@ -1,11 +1,923 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>categories - Emerald OMS</title>
+  <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+  <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/lib/css/dataTables.css">
+  <link rel="stylesheet" href="assets/lib/css/daterangepicker.css">
+  <link rel="stylesheet" href="assets/lib/css/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/lib/css/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/lib/css/lightbox.min.css">
+  <link rel="stylesheet" href="assets/lib/css/owlCarousel.min.css">
+  <link rel="stylesheet" href="assets/lib/css/select.dataTables.min.css">
+  <link rel="stylesheet" href="assets/lib/css/splide.min.css">
+  <link rel="stylesheet" href="assets/lib/css/sumoselect.min.css">
+  <link rel="stylesheet" href="assets/css/menu.css">
+  <link rel="stylesheet" href="assets/css/new-styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+  <link href="https://raw.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.css"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <link rel="stylesheet" href="assets/css/new-styles.css">
 </head>
+
 <body>
+
+  <!-- ======== Preloader =========== -->
+  <div id="preloader">
+    <div>
+      <img class="spinner-image" width="60" height="60" src="assets/img/loader.png" alt="">
+    </div>
+  </div>
+  <!-- ======== Preloader =========== -->
+
+
+
+
+
+
+  <header class="mb-0">
+    <section class="header">
+      <nav class="navbar navbar-expand-xl bg-body-light">
+        <div class="container">
+         
+          <a class="navbar-brand" href="/">
+            <picture>
+              <source media="(min-width:650px)" srcset="assets/img/logo.svg" />
+              <source media="(max-width:650px)" srcset="assets/img/logo.svg" />
+              <img class="img-fluid" height="50" width="160" src="assets/img/logo.svg" alt="Emerald Logo" />
+            </picture>
+          </a>
+
+          <div class="d-block d-xl-none">
+            <ul class="d-flex align-items-center list-unstyled m-auto">
+              <li class="nav-item me-3">
+                <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.26029 5.71468C6.82903 5.28342 6.14608 5.28342 5.75063 5.71468C4.27685 7.18845 3.4502 9.16545 3.4502 11.2861C3.4502 13.3709 4.27685 15.3479 5.75063 16.8575C5.96625 17.0731 6.25383 17.181 6.50559 17.181C6.75732 17.181 7.04465 17.0731 7.26054 16.8575C7.6918 16.4263 7.6918 15.7433 7.26054 15.3479C6.18215 14.2695 5.57116 12.8318 5.57116 11.3222C5.57116 9.81251 6.18218 8.37461 7.26054 7.29648C7.65569 6.82887 7.65568 6.14594 7.26029 5.71468Z"
+                      fill="#EB752C" />
+                    <path
+                      d="M27.6766 26.167L19.9845 18.439C20.7033 17.5403 21.3144 16.5698 21.7458 15.5275C22.2849 14.1616 22.5725 12.7598 22.5725 11.2862C22.5725 9.81246 22.2849 8.41063 21.7458 7.04495C21.1707 5.64312 20.344 4.38501 19.2656 3.30687C18.1872 2.22848 16.9294 1.40183 15.5275 0.826654C14.1616 0.287593 12.7598 0 11.2862 0C9.81246 0 8.41063 0.287586 7.04494 0.826654C5.64312 1.40182 4.38501 2.22848 3.30687 3.30687C2.22848 4.38526 1.40183 5.64312 0.826653 7.04495C0.287592 8.41089 0 9.81272 0 11.2862C0 12.76 0.287586 14.1618 0.826653 15.5275C1.40182 16.9294 2.22848 18.1875 3.30687 19.2656C4.38526 20.344 5.64312 21.1707 7.04494 21.7458C8.41089 22.2849 9.81272 22.5725 11.2862 22.5725C12.76 22.5725 14.1618 22.2849 15.5275 21.7458C16.6059 21.3146 17.5765 20.7394 18.439 19.9845L26.167 27.6766C26.3826 27.8922 26.6702 28 26.9219 28C27.2095 28 27.461 27.8922 27.6769 27.6766C28.1079 27.2812 28.1079 26.5982 27.6766 26.1669L27.6766 26.167ZM11.286 20.3799C8.8419 20.3799 6.57735 19.4455 4.85196 17.72C1.29341 14.1615 1.29341 8.41044 4.85196 4.85196C6.61329 3.09063 8.9496 2.19202 11.286 2.19202C13.6222 2.19202 15.9588 3.09063 17.72 4.85196C21.2785 8.41051 21.2785 14.1615 17.72 17.72C15.9947 19.4453 13.7302 20.3799 11.286 20.3799Z"
+                      fill="#3F3F3F" />
+                  </svg>
+                </a>
+              </li>
+              <li class="position-relative me-2">
+                <a class="nav-link" href="cart.html">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" fill="none">
+                      <path
+                        d="M23.994 25.7391L22.7879 10.3393C22.7032 9.25208 21.767 8.40009 20.6568 8.40009H17.701V5.60006C17.701 2.51247 15.1437 0 12.0003 0C8.85717 0 6.29952 2.51216 6.29952 5.60006V8.40009H3.34377C2.23361 8.40009 1.29714 9.2519 1.21239 10.339L0.00628876 25.7388C-0.0394404 26.3201 0.165843 26.8988 0.569208 27.3267C0.972821 27.7549 1.54417 28 2.1379 28H21.8624C22.4559 28 23.0277 27.7546 23.4308 27.3269C23.8334 26.8992 24.0395 26.3203 23.9937 25.739L23.994 25.7391ZM7.72493 5.60056C7.72493 3.28465 9.64285 1.40067 12.0003 1.40067C14.3578 1.40067 16.2758 3.28471 16.2758 5.60056V8.40059L7.7248 8.40035L7.72493 5.60056ZM22.3856 26.376C22.2494 26.5205 22.0635 26.6003 21.8627 26.6003H2.13825C1.93769 26.6003 1.75179 26.5205 1.6151 26.376C1.47866 26.2314 1.41205 26.0434 1.42771 25.8467L1.58801 23.8003H14.1383C14.3349 23.8003 14.4947 23.6436 14.4947 23.4502C14.4947 23.2571 14.3352 23.1001 14.1383 23.1001L1.64272 23.1004L2.63359 10.4468C2.66192 10.084 2.97408 9.80026 3.34388 9.80026H6.29962V13.3002C6.29962 13.6867 6.61898 14.0001 7.01214 14.0001C7.40556 14.0001 7.72466 13.6864 7.72466 13.3002L7.7249 9.80026H16.2759V13.3002C16.2759 13.6867 16.5952 14.0001 16.9884 14.0001C17.3818 14.0001 17.7009 13.6864 17.7009 13.3002L17.7011 9.80026H20.6569C21.0272 9.80026 21.3391 10.0842 21.3674 10.4468L22.358 23.1004H16.9884C16.7918 23.1004 16.632 23.2571 16.632 23.4505C16.632 23.6436 16.7915 23.8006 16.9884 23.8006H22.413L22.5733 25.8469C22.5887 26.0434 22.5221 26.2309 22.3856 26.376ZM15.9196 23.4502C15.9196 23.6433 15.76 23.8003 15.5632 23.8003C15.3666 23.8003 15.2068 23.6436 15.2068 23.4502C15.2068 23.2571 15.3664 23.1001 15.5632 23.1001C15.7598 23.1004 15.9196 23.2571 15.9196 23.4502Z"
+                        fill="#3F3F3F"></path>
+                    </svg>
+                  </span>
+                  <span class="mobile-cart-badge"> 6 </span>
+                </a>
+              </li>
+
+              <!-- <li class="nav-item dropdown ms-3">
+                <a class="nav-link d-flex align-items-center dropdown-toggle profile-nav-link" href="#"
+                  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="profile-pic">
+                    <img class="rounded-5" width="26" height="26" src="assets/img/user.png" alt="Profile Picture">
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <li class="dropdown-item">
+                    <div>
+                      <div class="fw-bold">Vishnu prasath</div>
+                      <div><small>Admin</small></div>
+                    </div>
+                  </li>
+                  <li class="dropdown-item"><a class="nav-link" href="/dashboard.html"><i class="far fa-user"></i> View
+                      Profile</a></li>
+
+                  <li class="dropdown-item"><a class="nav-link" href="#"><i class="fas fa-sign-out-alt fa-fw"></i> Log
+                      Out</a></li>
+                </ul>
+              </li> -->
+            </ul>
+
+          </div>
+
+
+
+
+
+
+
+
+          <div class="collapse navbar-collapse" id="navbarScroll">
+
+
+
+
+
+
+
+          </div>
+          <ul class="d-none d-xl-flex top-main-nav navbar-nav navbar-right align-items-center ms-auto my-2 my-lg-0">
+
+            <li class="nav-item me-4">
+              <a href="shop.html" class="btn rk-custom-btn px-4">EF Idol Ready Stock </a>
+            </li>
+
+            <li class="nav-item me-5">
+              <a href="shop.html" class="btn rk-custom-btn px-4">Solid Idol Ready Stock</a>
+            </li>
+
+
+            <li>
+              <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 23 23" fill="none">
+                  <path
+                    d="M17.9856 16.1391L17.7998 16.3825L18.0163 16.599L22.4156 20.9983C22.6315 21.2566 22.7041 21.6057 22.6087 21.9288C22.5119 22.2559 22.256 22.5118 21.9288 22.6087C21.6055 22.7042 21.2562 22.6316 20.9981 22.4159L16.5987 18.0165L16.3822 17.8L16.1389 17.9858C13.472 20.0218 9.95104 20.5564 6.80032 19.4038C3.6496 18.2513 1.30487 15.5709 0.58137 12.2949L0.239889 12.3703L0.581369 12.2949C-0.142111 9.01921 0.855969 5.60033 3.22797 3.22801C5.59994 0.85573 9.01882 -0.142096 12.2947 0.581409L12.3698 0.241357L12.2947 0.581409C15.5706 1.3049 18.2511 3.64967 19.4036 6.80042C20.5561 9.95135 20.0215 13.4723 17.9856 16.1391ZM4.65977 15.7089L4.65978 15.7089C6.12492 17.174 8.11196 17.9971 10.1839 17.9971C12.256 17.9971 14.2429 17.1741 15.7081 15.7089L15.7081 15.7089C17.1731 14.2437 17.9962 12.2568 17.9962 10.1847C17.9962 8.11264 17.1732 6.12565 15.7081 4.66049L15.7081 4.66048C14.2429 3.19541 12.256 2.37228 10.1839 2.37228C8.11189 2.37228 6.12492 3.19533 4.65977 4.66049L4.65977 4.66049C3.19471 6.12565 2.3716 8.11263 2.3716 10.1847C2.3716 12.2567 3.19463 14.2437 4.65977 15.7089Z"
+                    fill="#2D2D2D" stroke="#F8F8FB" stroke-width="0.7" />
+                </svg>
+                <div class="mt-1">Search</div>
+              </a>
+            </li>
+
+
+            <li>
+              <a class="nav-link" href="wish-list-new.html">
+                <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_7373_10539)">
+                    <path
+                      d="M21.4515 16.3377L13.8719 24.0361L6.2992 16.3377C-0.393109 9.54612 7.19228 1.85688 13.8788 8.64842C20.6634 1.75765 28.243 9.44688 21.4584 16.3469L21.4515 16.3377Z"
+                      stroke="#2D2D2D" stroke-width="1.29808" stroke-linejoin="round" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_7373_10539">
+                      <rect width="27.6923" height="27.6923" fill="white" transform="translate(0.0384521 0.730713)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <div class="mt-1">WISH LIST</div>
+              </a>
+            </li>
+
+            <li class="position-relative me-3">
+              <a class="nav-link" href="cart.html">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
+                    <g clip-path="url(#clip0_7373_10545)">
+                      <path
+                        d="M7.9601 17.853H24.6188C24.7196 17.8528 24.8173 17.8186 24.8964 17.756C24.9754 17.6934 25.031 17.606 25.0543 17.5079L27.083 8.88708H6.21094"
+                        stroke="#2D2D2D" stroke-width="1.29808" />
+                      <path
+                        d="M10.735 25.898C11.2292 25.898 11.6298 25.4974 11.6298 25.0032C11.6298 24.509 11.2292 24.1084 10.735 24.1084C10.2408 24.1084 9.84021 24.509 9.84021 25.0032C9.84021 25.4974 10.2408 25.898 10.735 25.898Z"
+                        stroke="#2D2D2D" stroke-width="1.29808" />
+                      <path
+                        d="M21.7285 25.898C22.2227 25.898 22.6234 25.4974 22.6234 25.0032C22.6234 24.509 22.2227 24.1084 21.7285 24.1084C21.2344 24.1084 20.8337 24.509 20.8337 25.0032C20.8337 25.4974 21.2344 25.898 21.7285 25.898Z"
+                        stroke="#2D2D2D" stroke-width="1.29808" />
+                      <path
+                        d="M23.9204 22.3176H9.24411C9.142 22.3175 9.04314 22.2817 8.96452 22.2166C8.88591 22.1514 8.83245 22.0609 8.81336 21.9606L5.7446 6.65726C5.72405 6.55658 5.66937 6.46607 5.58981 6.40103C5.51024 6.33599 5.41067 6.30041 5.3079 6.30029H2.13562"
+                        stroke="#2D2D2D" stroke-width="1.29808" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_7373_10545">
+                        <rect width="28.5577" height="28.5577" fill="white" transform="translate(0.327026 0.923096)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <div class="mt-1">Cart</div>
+                <span class="cart-badge"> 6 </span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown ps-2" style="border-left: 1px solid #D3D3D3;">
+              <a class="nav-link d-flex align-items-center dropdown-toggle" style=" color: #2D2D2D !important;" href="#"
+                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="profile-pic">
+                  <img class="rounded-5" width="40" height="40" src="assets/img/user.png" alt="Profile Picture">
+                </div>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li class="dropdown-item">
+                  <div>
+                    <div class="fw-bold">Vishnu prasath</div>
+                    <div><small>Admin</small></div>
+                  </div>
+                </li>
+                <li class="dropdown-item"><a class="nav-link"
+                    style="color: #2D2D2D !important; text-align: left;padding-left: 0px;" href="/dashboard.html"><i
+                      class="far fa-user"></i> View Profile</a></li>
+                <li class="dropdown-item"><a class="nav-link"
+                    style="color: #2D2D2D !important; text-align: left;padding-left: 0px;" href="#"><i
+                      class="fas fa-sign-out-alt fa-fw"></i> Log Out</a></li>
+              </ul>
+            </li>
+
+
+          </ul>
+
+        </div>
+        </div>
+      </nav>
+
+
+
     
+    </section>
+    <!-- 
+    <section class="container py-2 d-block d-xl-none">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-2">
+        <div>
+          <a class="btn custom-btn new-arrivals-btn px-4" href="#">EF Idol Ready Stock </a>
+        </div>
+        <div>
+          <a class="btn custom-btn -warning px-4 ready-stock-btn" href="#">Solid Idol Ready Stock</a>
+        </div>
+      </div>
+    </section> -->
+  </header>
+
+ <main>
+  <section class="container py-4">
+   
+    <div class="col-12 mb-4">
+      <div class="fs-3 fw-bold">Categories</div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-12 mb-3">
+
+          <a href="" class="text-decoration-none">
+            <div class="card category-page-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between  align-items-center">
+                  <div class="d-flex gap-2 align-items-center">
+      
+                    <div class="category-page-card__img-wrapper">
+                      <img width="50" height="50" class="img-fluid" src="assets/img/category-page/img1.png" alt="">     
+                    </div>
+                    <div class="item-title">
+                      Electro Forming - Ready Stock
+                    </div>
+        
+                  </div>
+      
+                  <div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="#F78D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </a>
+
+
+
+        </div>
+        <div class="col-12 mb-3">
+          <a href="" class="text-decoration-none">
+            <div class="card category-page-card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between  align-items-center">
+                  <div class="d-flex gap-2 align-items-center">
+      
+                    <div class="category-page-card__img-wrapper">
+                      <img width="50" height="50" class="img-fluid" src="assets/img/category-page/img2.png" alt="">     
+                    </div>
+                    <div class="item-title">
+                      Solid Idols - Ready stock
+                    </div>
+        
+                  </div>
+      
+                  <div>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9 18L15 12L9 6" stroke="#F78D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </a>
+        </div>
+
+    </div>
+
+
+  </section>
+ </main>
+
+
+
+
+
+
+
+
+
+  <div class="mobile-fixed-menu">
+    <div class="d-flex justify-content-center align-items-center h-100 gap-4">
+     <a href="wishlist.html">
+      <div class="text-center">
+        <div>
+          <svg width="28" height="28" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5284 27.8046L13.5754 26.0267C6.63896 19.7368 2.05957 15.5884 2.05957 10.4972C2.05957 6.3488 5.31902 3.08936 9.4674 3.08936C11.811 3.08936 14.0603 4.18033 15.5284 5.90433C16.9965 4.18033 19.2457 3.08936 21.5893 3.08936C25.7377 3.08936 28.9972 6.3488 28.9972 10.4972C28.9972 15.5884 24.4178 19.7368 17.4813 26.0402L15.5284 27.8046Z" stroke="#838383" stroke-width="1.80878"/>
+            </svg>            
+        </div>
+        <div class="mobile-fixed-menu__link-title">
+          WishList
+        </div>
+      </div>
+     </a>
+      <a href="shop.html">
+        <div class="text-center">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.98777C1 1.88997 1.88997 1 2.98777 1H10.4236C11.5215 1 12.4114 1.88997 12.4114 2.98777V10.4236C12.4114 11.5215 11.5215 12.4114 10.4236 12.4114H2.98777C1.88997 12.4114 1 11.5215 1 10.4236V2.98777ZM2.98777 2.19266H10.4236C10.8628 2.19266 11.2188 2.54868 11.2188 2.98777V10.4236C11.2188 10.8628 10.8628 11.2188 10.4236 11.2188H2.98777C2.54868 11.2188 2.19266 10.8628 2.19266 10.4236V2.98777C2.19266 2.54868 2.54868 2.19266 2.98777 2.19266Z" fill="#838383" stroke="#838383" stroke-width="0.5"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1 17.7121C1 16.6143 1.88997 15.7244 2.98777 15.7244H10.4236C11.5215 15.7244 12.4114 16.6143 12.4114 17.7121V25.148C12.4114 26.2458 11.5215 27.1358 10.4236 27.1358H2.98777C1.88997 27.1358 1 26.2458 1 25.148V17.7121ZM2.98777 16.917H10.4236C10.8628 16.917 11.2188 17.273 11.2188 17.7121V25.148C11.2188 25.5871 10.8628 25.9431 10.4236 25.9431H2.98777C2.54868 25.9431 2.19266 25.5871 2.19266 25.148V17.7121C2.19266 17.273 2.54868 16.917 2.98777 16.917Z" fill="#838383" stroke="#838383" stroke-width="0.5"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1308 1C17.033 1 16.1431 1.88997 16.1431 2.98777V10.4236C16.1431 11.5215 17.033 12.4114 18.1308 12.4114H25.5667C26.6645 12.4114 27.5545 11.5215 27.5545 10.4236V2.98777C27.5545 1.88997 26.6645 1 25.5667 1H18.1308ZM25.5667 2.19266H18.1308C17.6917 2.19266 17.3357 2.54868 17.3357 2.98777V10.4236C17.3357 10.8628 17.6917 11.2188 18.1308 11.2188H25.5667C26.0058 11.2188 26.3618 10.8628 26.3618 10.4236V2.98777C26.3618 2.54868 26.0058 2.19266 25.5667 2.19266Z" fill="#838383" stroke="#838383" stroke-width="0.5"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M27.5543 21.6141C27.5543 24.7652 24.9998 27.3197 21.8487 27.3197C18.6976 27.3197 16.1431 24.7652 16.1431 21.6141C16.1431 18.4629 18.6976 15.9084 21.8487 15.9084C24.9998 15.9084 27.5543 18.4629 27.5543 21.6141ZM26.3617 21.6141C26.3617 24.1065 24.3411 26.127 21.8487 26.127C19.3563 26.127 17.3357 24.1065 17.3357 21.6141C17.3357 19.1216 19.3563 17.1011 21.8487 17.1011C24.3411 17.1011 26.3617 19.1216 26.3617 21.6141Z" fill="#838383" stroke="#838383" stroke-width="0.5"/>
+            </svg>
+                         
+          </div>
+          <div class="mobile-fixed-menu__link-title">
+            Categories
+          </div>
+        </div>
+      </a>
+      <a href="my-profile.html">
+        <div class="text-center">
+          <div>
+            <svg width="28" height="28" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.592 27.2619L15.592 26.747H15.592L15.592 27.2619ZM5.7003 22.0473L5.18768 21.9988L5.17015 22.1844L5.27546 22.3382L5.7003 22.0473ZM25.4836 22.0473L25.9085 22.3382L26.0138 22.1844L25.9963 21.9987L25.4836 22.0473ZM24.4977 20.2975L24.8494 19.9215H24.8494L24.4977 20.2975ZM21.8836 18.7215L21.6851 19.1966L21.8836 18.7215ZM9.29404 18.7215L9.49272 19.1965L9.29404 18.7215ZM6.68422 20.2972L6.33213 19.9215L6.33213 19.9215L6.68422 20.2972ZM5.14893 22.2001L4.63408 22.1923L4.63168 22.3518L4.71984 22.4847L5.14893 22.2001ZM26.035 22.2001L26.4641 22.4847L26.5523 22.3518L26.5499 22.1923L26.035 22.2001ZM15.592 27.8045L15.592 27.2896H15.592L15.592 27.8045ZM15.5919 4.14689C17.8971 4.14689 19.7559 6.0057 19.7559 8.31088H20.7857C20.7857 5.43696 18.4658 3.11709 15.5919 3.11709V4.14689ZM11.4279 8.31088C11.4279 6.0057 13.2867 4.14689 15.5919 4.14689V3.11709C12.7179 3.11709 10.3981 5.43696 10.3981 8.31088H11.4279ZM15.5919 12.4749C13.2867 12.4749 11.4279 10.6161 11.4279 8.31088H10.3981C10.3981 11.1848 12.7179 13.5047 15.5919 13.5047V12.4749ZM19.7559 8.31088C19.7559 10.6161 17.8971 12.4749 15.5919 12.4749V13.5047C18.4658 13.5047 20.7857 11.1848 20.7857 8.31088H19.7559ZM15.5919 3.60426C18.1967 3.60426 20.2985 5.70601 20.2985 8.31088H21.3283C21.3283 5.13727 18.7655 2.57445 15.5919 2.57445V3.60426ZM10.8852 8.31088C10.8852 5.70601 12.987 3.60426 15.5919 3.60426V2.57445C12.4183 2.57445 9.85544 5.13727 9.85544 8.31088H10.8852ZM15.5919 13.0175C12.987 13.0175 10.8852 10.9158 10.8852 8.31088H9.85544C9.85544 11.4845 12.4183 14.0473 15.5919 14.0473V13.0175ZM20.2985 8.31088C20.2985 10.9158 18.1967 13.0175 15.5919 13.0175V14.0473C18.7655 14.0473 21.3283 11.4845 21.3283 8.31088H20.2985ZM15.592 26.747C11.8028 26.747 8.26193 24.8767 6.12513 21.7563L5.27546 22.3382C7.60407 25.7386 11.4627 27.7768 15.592 27.7768L15.592 26.747ZM25.0588 21.7564C22.922 24.8767 19.3811 26.747 15.592 26.747L15.592 27.7768C19.7212 27.7768 23.5799 25.7386 25.9085 22.3382L25.0588 21.7564ZM24.1459 20.6736C24.6805 21.1736 24.9287 21.6488 24.971 22.0958L25.9963 21.9987C25.9227 21.2223 25.4999 20.5299 24.8494 19.9215L24.1459 20.6736ZM21.6851 19.1966C22.7062 19.6233 23.5605 20.126 24.1459 20.6736L24.8494 19.9215C24.1418 19.2596 23.166 18.6993 22.0821 18.2464L21.6851 19.1966ZM15.592 17.8968C17.1791 17.8968 19.6385 18.3415 21.6851 19.1966L22.0821 18.2464C19.9141 17.3406 17.32 16.867 15.592 16.867V17.8968ZM9.49272 19.1965C11.5366 18.3416 13.9959 17.8968 15.592 17.8968V16.867C13.8553 16.867 11.2612 17.3406 9.09535 18.2464L9.49272 19.1965ZM7.03631 20.6729C7.62034 20.1256 8.47293 19.623 9.49272 19.1965L9.09535 18.2464C8.01251 18.6993 7.03837 19.2596 6.33213 19.9215L7.03631 20.6729ZM6.21292 22.0957C6.25523 21.6479 6.50309 21.1726 7.03631 20.6729L6.33213 19.9215C5.68289 20.5299 5.26104 21.2223 5.18768 21.9988L6.21292 22.0957ZM5.66377 22.2078C5.67403 21.5269 6.019 20.8826 6.66525 20.277C7.31368 19.6693 8.23032 19.1363 9.28333 18.6959C11.3915 17.8141 13.9218 17.3542 15.592 17.3542V16.3244C13.7812 16.3244 11.1161 16.8131 8.88597 17.7458C7.76987 18.2126 6.7317 18.8034 5.96107 19.5255C5.18827 20.2498 4.64993 21.1415 4.63408 22.1923L5.66377 22.2078ZM15.592 17.3542C17.2533 17.3542 19.7837 17.8141 21.8943 18.6959C22.9485 19.1364 23.8668 19.6695 24.5166 20.2773C25.1643 20.8831 25.5099 21.5273 25.5202 22.2078L26.5499 22.1923C26.534 21.141 25.9942 20.2492 25.2201 19.5252C24.4481 18.8031 23.4084 18.2125 22.2913 17.7457C20.0593 16.8131 17.3942 16.3244 15.592 16.3244V17.3542ZM25.606 21.9155C23.3795 25.2718 19.6197 27.2896 15.592 27.2896L15.592 28.3194C19.9648 28.3194 24.0469 26.1287 26.4641 22.4847L25.606 21.9155ZM15.592 27.2896C11.5643 27.2896 7.80443 25.2718 5.57801 21.9155L4.71984 22.4847C7.13706 26.1287 11.2191 28.3194 15.592 28.3194L15.592 27.2896Z" fill="#838383"/>
+              </svg>
+                          
+          </div>
+          <div class="mobile-fixed-menu__link-title">
+            Profile
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <section>
+      <div class="container py-5">
+        <div class="row">
+
+          <div class="col-12 footer-links_wrapper">
+            <div class="footer-links">
+              <div class="mb-3 fs-5 fw-semibold">North Zone</div>
+
+              <ul class="list-unstyled">
+                <li class="footer-links_link">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                      <path
+                        d="M19.8625 13.432C19.8625 14.576 18.9 15.544 17.7625 15.544H5.33745L1.13745 19.768V3.04803C1.13745 1.90404 2.09995 0.936035 3.23745 0.936035H17.85C18.9875 0.936035 19.95 1.90404 19.95 3.04803V13.432H19.8625Z"
+                        stroke="#F78D1E" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></span>
+                  Mr. Rakesh
+                </li>
+                <li class="footer-links_link">
+                  <span><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.2857 16.9555V20.1555C21.2857 21.3111 20.3429 22.2889 19.2286 22.2889C19.1429 22.2889 19.0571 22.2889 19.0571 22.2889C15.8857 21.9333 12.8 20.7778 10.1429 19C7.65714 17.4 5.51428 15.1778 3.97143 12.6C2.17143 9.84443 1.05714 6.64443 0.714284 3.35554C0.62857 2.1111 1.48571 1.13332 2.6 1.04443C2.68571 1.04443 2.68571 1.04443 2.77143 1.04443H5.85714C6.88571 1.04443 7.74286 1.84443 7.91428 2.9111C8.08571 3.97777 8.25714 4.95554 8.6 5.93332C8.85714 6.73332 8.68571 7.62221 8.17143 8.15554L6.88571 9.48888C8.34286 12.1555 10.4857 14.3778 13.0571 15.8889L14.3429 14.5555C14.9429 13.9333 15.8 13.7555 16.4857 14.1111C17.4286 14.4667 18.3714 14.7333 19.4 14.8222C20.5143 14.9111 21.2857 15.8889 21.2857 16.9555Z"
+                        stroke="#F78D1E" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  +91 98564 32654
+                </li>
+                <li class="footer-links_link">
+                  <span><svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22.2857 1.28662H1.7135C1.4768 1.28662 1.28491 1.47851 1.28491 1.71521V16.2872C1.28491 16.5239 1.4768 16.7157 1.7135 16.7157H22.2857C22.5224 16.7157 22.7142 16.5239 22.7142 16.2872V1.71521C22.7142 1.47851 22.5224 1.28662 22.2857 1.28662Z"
+                        stroke="#F78D1E" />
+                      <path
+                        d="M22.4974 1.49927L12.2867 12.4548C12.2517 12.4925 12.2092 12.5226 12.162 12.5431C12.1148 12.5637 12.0639 12.5743 12.0124 12.5743C11.961 12.5743 11.91 12.5637 11.8628 12.5431C11.8156 12.5226 11.7732 12.4925 11.7381 12.4548L1.50092 1.49927"
+                        stroke="#F78D1E" />
+                    </svg>
+                  </span>
+                  Rakesh@emerald.in
+                </li>
+              </ul>
+            </div>
+
+
+            <div class="footer-links">
+              <div class="mb-3 fs-5 fw-semibold">South Zone</div>
+
+              <ul class="list-unstyled">
+                <li class="footer-links_link">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                      <path
+                        d="M19.8625 13.432C19.8625 14.576 18.9 15.544 17.7625 15.544H5.33745L1.13745 19.768V3.04803C1.13745 1.90404 2.09995 0.936035 3.23745 0.936035H17.85C18.9875 0.936035 19.95 1.90404 19.95 3.04803V13.432H19.8625Z"
+                        stroke="#F78D1E" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></span>
+                  Mr. Arun
+                </li>
+                <li class="footer-links_link">
+                  <span><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.2857 16.9555V20.1555C21.2857 21.3111 20.3429 22.2889 19.2286 22.2889C19.1429 22.2889 19.0571 22.2889 19.0571 22.2889C15.8857 21.9333 12.8 20.7778 10.1429 19C7.65714 17.4 5.51428 15.1778 3.97143 12.6C2.17143 9.84443 1.05714 6.64443 0.714284 3.35554C0.62857 2.1111 1.48571 1.13332 2.6 1.04443C2.68571 1.04443 2.68571 1.04443 2.77143 1.04443H5.85714C6.88571 1.04443 7.74286 1.84443 7.91428 2.9111C8.08571 3.97777 8.25714 4.95554 8.6 5.93332C8.85714 6.73332 8.68571 7.62221 8.17143 8.15554L6.88571 9.48888C8.34286 12.1555 10.4857 14.3778 13.0571 15.8889L14.3429 14.5555C14.9429 13.9333 15.8 13.7555 16.4857 14.1111C17.4286 14.4667 18.3714 14.7333 19.4 14.8222C20.5143 14.9111 21.2857 15.8889 21.2857 16.9555Z"
+                        stroke="#F78D1E" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  +91 98564 32620
+                </li>
+                <li class="footer-links_link">
+                  <span><svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22.2857 1.28662H1.7135C1.4768 1.28662 1.28491 1.47851 1.28491 1.71521V16.2872C1.28491 16.5239 1.4768 16.7157 1.7135 16.7157H22.2857C22.5224 16.7157 22.7142 16.5239 22.7142 16.2872V1.71521C22.7142 1.47851 22.5224 1.28662 22.2857 1.28662Z"
+                        stroke="#F78D1E" />
+                      <path
+                        d="M22.4974 1.49927L12.2867 12.4548C12.2517 12.4925 12.2092 12.5226 12.162 12.5431C12.1148 12.5637 12.0639 12.5743 12.0124 12.5743C11.961 12.5743 11.91 12.5637 11.8628 12.5431C11.8156 12.5226 11.7732 12.4925 11.7381 12.4548L1.50092 1.49927"
+                        stroke="#F78D1E" />
+                    </svg>
+                  </span>
+                  arun@emerald.in
+                </li>
+              </ul>
+            </div>
+
+
+            <div class="footer-links">
+              <div class="mb-3 fs-5 fw-semibold">East Zone</div>
+
+              <ul class="list-unstyled">
+                <li class="footer-links_link">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                      <path
+                        d="M19.8625 13.432C19.8625 14.576 18.9 15.544 17.7625 15.544H5.33745L1.13745 19.768V3.04803C1.13745 1.90404 2.09995 0.936035 3.23745 0.936035H17.85C18.9875 0.936035 19.95 1.90404 19.95 3.04803V13.432H19.8625Z"
+                        stroke="#F78D1E" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></span>
+                  Mr. Mrinal
+                </li>
+                <li class="footer-links_link">
+                  <span><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.2857 16.9555V20.1555C21.2857 21.3111 20.3429 22.2889 19.2286 22.2889C19.1429 22.2889 19.0571 22.2889 19.0571 22.2889C15.8857 21.9333 12.8 20.7778 10.1429 19C7.65714 17.4 5.51428 15.1778 3.97143 12.6C2.17143 9.84443 1.05714 6.64443 0.714284 3.35554C0.62857 2.1111 1.48571 1.13332 2.6 1.04443C2.68571 1.04443 2.68571 1.04443 2.77143 1.04443H5.85714C6.88571 1.04443 7.74286 1.84443 7.91428 2.9111C8.08571 3.97777 8.25714 4.95554 8.6 5.93332C8.85714 6.73332 8.68571 7.62221 8.17143 8.15554L6.88571 9.48888C8.34286 12.1555 10.4857 14.3778 13.0571 15.8889L14.3429 14.5555C14.9429 13.9333 15.8 13.7555 16.4857 14.1111C17.4286 14.4667 18.3714 14.7333 19.4 14.8222C20.5143 14.9111 21.2857 15.8889 21.2857 16.9555Z"
+                        stroke="#F78D1E" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  +91 98564 32321
+                </li>
+                <li class="footer-links_link">
+                  <span><svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22.2857 1.28662H1.7135C1.4768 1.28662 1.28491 1.47851 1.28491 1.71521V16.2872C1.28491 16.5239 1.4768 16.7157 1.7135 16.7157H22.2857C22.5224 16.7157 22.7142 16.5239 22.7142 16.2872V1.71521C22.7142 1.47851 22.5224 1.28662 22.2857 1.28662Z"
+                        stroke="#F78D1E" />
+                      <path
+                        d="M22.4974 1.49927L12.2867 12.4548C12.2517 12.4925 12.2092 12.5226 12.162 12.5431C12.1148 12.5637 12.0639 12.5743 12.0124 12.5743C11.961 12.5743 11.91 12.5637 11.8628 12.5431C11.8156 12.5226 11.7732 12.4925 11.7381 12.4548L1.50092 1.49927"
+                        stroke="#F78D1E" />
+                    </svg>
+                  </span>
+                  mrinal@emerald.in
+                </li>
+              </ul>
+            </div>
+
+
+            <div class="footer-links">
+              <div class="mb-3 fs-5 fw-semibold">West Zone</div>
+
+              <ul class="list-unstyled">
+                <li class="footer-links_link">
+                  <span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                      <path
+                        d="M19.8625 13.432C19.8625 14.576 18.9 15.544 17.7625 15.544H5.33745L1.13745 19.768V3.04803C1.13745 1.90404 2.09995 0.936035 3.23745 0.936035H17.85C18.9875 0.936035 19.95 1.90404 19.95 3.04803V13.432H19.8625Z"
+                        stroke="#F78D1E" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></span>
+                  Mr. Hardik
+                </li>
+                <li class="footer-links_link">
+                  <span><svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21.2857 16.9555V20.1555C21.2857 21.3111 20.3429 22.2889 19.2286 22.2889C19.1429 22.2889 19.0571 22.2889 19.0571 22.2889C15.8857 21.9333 12.8 20.7778 10.1429 19C7.65714 17.4 5.51428 15.1778 3.97143 12.6C2.17143 9.84443 1.05714 6.64443 0.714284 3.35554C0.62857 2.1111 1.48571 1.13332 2.6 1.04443C2.68571 1.04443 2.68571 1.04443 2.77143 1.04443H5.85714C6.88571 1.04443 7.74286 1.84443 7.91428 2.9111C8.08571 3.97777 8.25714 4.95554 8.6 5.93332C8.85714 6.73332 8.68571 7.62221 8.17143 8.15554L6.88571 9.48888C8.34286 12.1555 10.4857 14.3778 13.0571 15.8889L14.3429 14.5555C14.9429 13.9333 15.8 13.7555 16.4857 14.1111C17.4286 14.4667 18.3714 14.7333 19.4 14.8222C20.5143 14.9111 21.2857 15.8889 21.2857 16.9555Z"
+                        stroke="#F78D1E" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  +91 98564 32430
+                </li>
+                <li class="footer-links_link">
+                  <span><svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22.2857 1.28662H1.7135C1.4768 1.28662 1.28491 1.47851 1.28491 1.71521V16.2872C1.28491 16.5239 1.4768 16.7157 1.7135 16.7157H22.2857C22.5224 16.7157 22.7142 16.5239 22.7142 16.2872V1.71521C22.7142 1.47851 22.5224 1.28662 22.2857 1.28662Z"
+                        stroke="#F78D1E" />
+                      <path
+                        d="M22.4974 1.49927L12.2867 12.4548C12.2517 12.4925 12.2092 12.5226 12.162 12.5431C12.1148 12.5637 12.0639 12.5743 12.0124 12.5743C11.961 12.5743 11.91 12.5637 11.8628 12.5431C11.8156 12.5226 11.7732 12.4925 11.7381 12.4548L1.50092 1.49927"
+                        stroke="#F78D1E" />
+                    </svg>
+                  </span>
+                  hardik@emerald.in
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <div class="col-12 px-2 py-3 text-center copyright-text">
+      <div>
+        Emerald © <span id="current-year">2023</span> All Rights Reserved.
+        Developed By BBIT
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Add the Bootstrap modal structure -->
+  <div class="modal" tabindex="-1" role="dialog" id="remarksModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add Remarks</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+
+          <div class="mb-3 row">
+            <label for="Finish" class="col-2 col-form-label fw-semibold">Finish</label>
+            <div class="col-10">
+              <input type="text" class="form-control" id="Finish">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="Box" class="col-2 col-form-label fw-semibold">Box</label>
+            <div class="col-10">
+              <input type="text" class="form-control" id="Box">
+            </div>
+          </div>
+
+
+          <div>
+            <div>
+              <label for="Others" class="col-sm-2 col-form-label fw-semibold">Others</label>
+            </div>
+            <div>
+              <textarea style="height: 150px;" id="remarksInput" class="form-control"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" onclick="saveRemarks()">Submit</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Search Bar Modal -->
+  <div class="modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background-color: #F8F9FA;">
+        <div class="modal-body d-flex align-items-center">
+          <div class="flex-grow-1">
+            <form action="">
+              <div class="input-group nav-search-input p-0">
+                <input placeholder="Search for Emerald Products" class="form-control" type="search" name="" id="">
+                <div class="input-group-append">
+                  <button class="btn" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 23" fill="none">
+                      <path
+                        d="M18.1048 16.2301L17.9986 16.3692L18.1224 16.4929L22.5262 20.8968C22.7777 21.1941 22.8629 21.5978 22.7526 21.9713C22.6413 22.3472 22.3472 22.6413 21.9712 22.7526C21.5975 22.8629 21.1937 22.7779 20.8966 22.5265L16.4927 18.1226L16.369 17.9989L16.2299 18.1051C13.5223 20.1721 9.94761 20.7149 6.74879 19.5447C3.54997 18.3746 1.16944 15.6532 0.4349 12.3273L0.239685 12.3704L0.434899 12.3273C-0.299628 9.00155 0.713692 5.53048 3.1219 3.12195C5.53009 0.713444 9.00116 -0.29961 12.3271 0.434938L12.3702 0.239892L12.3271 0.434938C15.653 1.16948 18.3743 3.55004 19.5445 6.74889C20.7146 9.94791 20.1718 13.5226 18.1048 16.2301ZM4.76584 4.76655L4.76584 4.76656C3.32891 6.20358 2.5216 8.15242 2.5216 10.1847C2.5216 12.217 3.32883 14.1658 4.76584 15.6028L4.90726 15.4614L4.76584 15.6028C6.20285 17.0398 8.15175 17.8471 10.1839 17.8471C12.2162 17.8471 14.165 17.0399 15.602 15.6028L15.4606 15.4614L15.602 15.6028C17.0389 14.1658 17.8462 12.217 17.8462 10.1847C17.8462 8.15242 17.039 6.20358 15.602 4.76655L15.4606 4.90797L15.602 4.76655C14.165 3.3296 12.2162 2.52228 10.1839 2.52228C8.15168 2.52228 6.20285 3.32952 4.76584 4.76655Z"
+                        fill="#F78D1E" stroke="#F8EDE3" stroke-width="0.4"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <!-- Add other search bar elements as needed -->
+          <div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+        <!-- Add additional modal content or buttons if necessary -->
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="assets/lib/js/jquery.min.js"></script>
+  <script src="assets/lib/js/bootstrap.min.js"></script>
+  <script src="assets/lib/js/owlCarousel.min.js"></script>
+  <script src="assets/lib/js/splide.min.js"></script>
+  <script src="assets/lib/js/lightbox.min.js"></script>
+  <script src="assets/lib/js/dataTables.js"></script>
+  <script src="assets/lib/js/checkboxes.min.js"></script>
+  <script src="assets/lib/js/sumoselect.min.js"></script>
+  <script src="assets/lib/js/moment.min.js"></script>
+  <script src="assets/lib/js/daterangepicker.min.js"></script>
+  <script src="assets/js/smartmenu.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+
+  <script>
+    // Function to open the remarks modal
+    function openRemarksModal() {
+      $('#remarksModal').modal('show');
+    }
+
+
+  </script>
+
+
+
+
+
+  <script>
+    // Sample JSON object representing cart items
+    const cartItems = [
+    
+    ];
+
+    // Function to dynamically populate the table with cart items
+    function populateCart() {
+      const cartItemsContainer = document.getElementById("cart-items");
+      cartItemsContainer.innerHTML = ""; // Clear existing items
+
+      let count = 1;
+      if (cartItems.length === 0) {
+        $('#cart-page-wrapper').hide();
+        $('#cart-no-items').show();
+      } else {
+        $('#cart-page-wrapper').show();
+        $('#cart-no-items').hide();
+        for (let item of cartItems) {
+          const row = document.createElement("tr");
+          count += 1;
+          row.innerHTML = `
+                        <td class="text-center">
+                            <a href="${item.image}" data-lightbox="image-DCRB2341-${count}" data-title="DCRB2341-${count}">
+                                <img class="square bg-white p-2" src="${item.image}" width="60" height="60" alt="">
+                            </a>
+                        </td>
+                        <td class="text-center">${item.productSKU}</td>
+                        <td>
+                            <div class="input-group quantity-input-group quantity-container m-auto">
+                                <input type='button' onclick="decrementQuantity(this)" value='-' class='qtyminus' field='quantity' />
+                                <input type='text' name='quantity' value='${item.quantity}' class='qty' />
+                                <input type='button' onclick="incrementQuantity(this)" value='+' class='qtyplus' field='quantity' />
+                            </div>
+                        </td>
+                        <td class="text-center">${item.weight}</td>
+                        <td class="text-center">${item.totalWeight}</td>
+                        <td class="text-center ${item.remarks ? 'text-dark' : 'text-green text-decoration-underline'}" onclick='openRemarksModal(this)'>
+                                ${item.size}
+                        </td>
+                        <td class="text-center">
+                           ${item.box}
+                        </td>
+                        <td class="text-center">
+                            <button class="border-0 bg-transparent" onclick="removeItem(this)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 26" fill="none">
+                            <path d="M2.51943 23.6254C2.56618 24.278 2.86077 24.8881 3.34255 25.3306C3.82456 25.7734 4.45726 26.015 5.11157 26.0062H16.2631C16.9174 26.015 17.5501 25.7733 18.0321 25.3306C18.5139 24.8881 18.8085 24.278 18.8553 23.6254L19.7305 8.53482C20.1045 8.3888 20.4258 8.13349 20.6523 7.80198C20.879 7.47068 21.0002 7.07855 21.0004 6.67721V5.26936C20.9998 4.74038 20.7893 4.23339 20.4151 3.85938C20.0411 3.48537 19.5341 3.27491 19.0051 3.27404H15.1859L14.9716 1.76842C14.9109 1.28149 14.6755 0.833004 14.309 0.506589C13.9426 0.180191 13.47 -0.00211063 12.9795 -0.0065918H8.38901C7.89931 -0.000828032 7.4284 0.182328 7.06313 0.508513C6.69809 0.834911 6.46347 1.28255 6.40287 1.76843L6.18555 3.27405H2.36934C1.84036 3.2749 1.33338 3.48538 0.959362 3.85939C0.585146 4.23339 0.374679 4.74037 0.374023 5.26937V6.67722C0.374237 7.07855 0.49549 7.47072 0.722193 7.80199C0.948684 8.13351 1.26993 8.38881 1.64395 8.53483L2.51943 23.6254ZM17.328 23.5366C17.3033 23.7992 17.1795 24.0425 16.9816 24.2172C16.7837 24.3916 16.5267 24.4842 16.2631 24.4761H5.11152C4.84789 24.4842 4.59087 24.3916 4.39301 24.2172C4.19512 24.0425 4.07131 23.7992 4.04655 23.5366L3.18649 8.67281H18.182L17.328 23.5366ZM7.9329 1.98275C7.9551 1.73107 8.1579 1.53339 8.41022 1.5176H13.0007C13.2387 1.55005 13.4221 1.74345 13.4413 1.98275L13.6279 3.26808L7.73403 3.26829L7.9329 1.98275ZM1.90409 5.26958C1.90558 5.01341 2.11308 4.80613 2.36924 4.80443H19.0048C19.2609 4.80614 19.4684 5.01341 19.4699 5.26958V6.67743C19.4699 6.93423 19.2618 7.14258 19.0048 7.14258H2.36924C2.11222 7.14258 1.90409 6.93423 1.90409 6.67743V5.26958Z" fill="#F78D1E"/>
+                            <path d="M10.6867 22.4871C10.8897 22.4871 11.0842 22.4065 11.2277 22.263C11.3711 22.1196 11.4518 21.9249 11.4518 21.7221V10.5519C11.4518 10.1295 11.1092 9.78687 10.6867 9.78687C10.2643 9.78687 9.92166 10.1295 9.92166 10.5519V21.7161C9.91995 21.9199 10 22.1161 10.1437 22.2611C10.2871 22.4058 10.4827 22.4873 10.6867 22.4873V22.4871Z" fill="#F78D1E"/>
+                            <path d="M7.16331 21.6762H7.20622C7.40987 21.6657 7.60093 21.5748 7.73691 21.423C7.8731 21.2715 7.94312 21.0717 7.93159 20.8682L7.41115 11.2988C7.38853 10.8763 7.02734 10.5523 6.60487 10.5751C6.18241 10.598 5.85837 10.9589 5.881 11.3814L6.40144 20.9574C6.42556 21.3607 6.75921 21.6756 7.16329 21.6766L7.16331 21.6762Z" fill="#F78D1E"/>
+                            <path d="M14.1669 21.6727H14.2098C14.6126 21.672 14.9461 21.3587 14.9716 20.9567L15.4889 11.3872C15.5117 10.9647 15.1877 10.6036 14.7652 10.5807C14.3426 10.5581 13.9816 10.8819 13.9587 11.3046L13.4415 20.868C13.4308 21.0711 13.501 21.27 13.6372 21.4209C13.7732 21.5718 13.9639 21.6626 14.1669 21.6728L14.1669 21.6727Z" fill="#F78D1E"/>
+                          </svg></button>
+                        </td>
+                    `;
+          cartItemsContainer.appendChild(row);
+        }
+      }
+    }
+
+    // Function to remove an item from the cart
+    function removeItem(button) {
+      const row = button.closest("tr");
+      row.remove();
+      // Update cartItems array to reflect the removal
+      const index = Array.from(document.getElementById("cart-items").children).indexOf(row);
+      cartItems.splice(index, 1);
+      // Check if the cart is empty and update the view accordingly
+      if (cartItems.length === 0) {
+        $('#cart-page-wrapper').hide();
+        $('#cart-no-items').show();
+      }
+    }
+
+    // Function to truncate remarks
+    function truncateRemarks(remarks, length) {
+      const words = remarks.split(' ');
+      if (words.length > length) {
+        return words.slice(0, length).join(' ') + '...';
+      }
+      return remarks;
+    }
+
+    // Function to decrement quantity (placeholder)
+    function decrementQuantity(button) {
+      const input = button.nextElementSibling;
+      let quantity = parseInt(input.value);
+      if (quantity > 1) {
+        input.value = quantity - 1;
+      }
+    }
+
+    // Function to increment quantity (placeholder)
+    function incrementQuantity(button) {
+      const input = button.previousElementSibling;
+      let quantity = parseInt(input.value);
+      input.value = quantity + 1;
+    }
+
+    // Function to open remarks modal (placeholder)
+    function openRemarksModal(cell) {
+      alert('Open remarks modal');
+    }
+
+    // Call the function to populate the cart on page load
+    populateCart();
+
+
+
+    const itemsContainer = document.getElementById('mobile-cart-items');
+
+    // Function to display items from the JSON object
+    function displayItems() {
+      itemsContainer.innerHTML = ''; // Clear the items container
+
+      if (cartItems.length === 0) {
+        $('#cart-page-wrapper').hide();
+        $('#cart-no-items').show();
+      } else {
+        const table = document.createElement('table');
+        table.classList.add('table');
+        const tbody = document.createElement('tbody');
+
+        cartItems.forEach((item, index) => {
+          const tr = document.createElement('tr');
+          let number = Math.random()
+
+          // Column 1: Image
+          const tdImage = document.createElement('td');
+          tdImage.classList.add("mobile-cart-image-container");
+          tdImage.innerHTML = `<td  class="text-center">
+                      <a href="${item.image}" data-lightbox="image-DCRB2341-${number}" data-title="DCRB2341-${number}">
+                          <img class="square bg-white p-2" src="${item.image}" width="60" height="60" alt="">
+                      </a>
+                  </td>`;
+          tr.appendChild(tdImage);
+
+          // Column 2: Item details
+          const tdDetails = document.createElement('td');
+          tdDetails.innerHTML = `<div>
+                        <div class="d-flex justify-content-between">
+                          
+                            <div class="cart-page_card-bold-title mb-2">${item.productSKU}</div>
+                            <div class="cart-page_card-bold-title mb-2">${item.weight}</div>
+                        
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                          
+                            <div class="cart-page_card-bold-title mb-2 text-success">Box :${item.box}</div>
+                            <div class="cart-page_card-light-text mb-2">Size(cm) :<b>${item.size}</b></div>
+                        
+                        </div>
+
+                        <div class="mb-2">
+                          <div class="available-qty">Qty Available : ${item.quantity} Pcs</div>
+                        </div>
+
+                        
+
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div
+                            class="input-group quantity-input-group quantity-container">
+                            <input type="button" onclick="decrementQuantity(this)"
+                              value="-" class="qtyminus"
+                              field="quantity">
+                            <input type="text" name="quantity" value="${item.quantity}"
+                              class="qty">
+                            <input type="button" onclick="incrementQuantity(this)"
+                              value="+" class="qtyplus"
+                              field="quantity">
+                          </div>
+
+
+                           <div>
+                            <button class="border-0 bg-transparent" onclick="removeCartItem(this)">
+                                  <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M1.83337 20.1949C1.87332 20.7525 2.12506 21.2739 2.53677 21.652C2.94867 22.0304 3.48935 22.2369 4.04849 22.2294H13.5781C14.1372 22.2369 14.6779 22.0304 15.0898 21.652C15.5016 21.2739 15.7533 20.7525 15.7932 20.1949L16.5412 7.29911C16.8608 7.17433 17.1353 6.95615 17.3289 6.67286C17.5226 6.38974 17.6262 6.05464 17.6264 5.71168V4.50859C17.6259 4.05655 17.446 3.6233 17.1262 3.30368C16.8066 2.98408 16.3733 2.80423 15.9213 2.80348H12.6576L12.4744 1.51685C12.4226 1.10074 12.2214 0.717481 11.9082 0.438542C11.5951 0.159616 11.1912 0.0038294 10.7721 0H6.84925C6.43077 0.00492546 6.02835 0.161442 5.71621 0.440185C5.40427 0.719111 5.20377 1.10164 5.15198 1.51686L4.96627 2.80349H1.70511C1.25307 2.80422 0.81982 2.98409 0.500204 3.30369C0.180416 3.6233 0.000560401 4.05654 0 4.5086V5.71169C0.00018241 6.05464 0.1038 6.38977 0.29753 6.67287C0.491079 6.95617 0.765605 7.17433 1.08522 7.29912L1.83337 20.1949ZM14.4882 20.119C14.467 20.3434 14.3612 20.5513 14.1921 20.7005C14.023 20.8496 13.8033 20.9287 13.5781 20.9218H4.04846C3.82317 20.9287 3.60353 20.8496 3.43444 20.7005C3.26534 20.5513 3.15953 20.3433 3.13838 20.119L2.40341 7.41703H15.2179L14.4882 20.119ZM6.45948 1.7C6.47845 1.48493 6.65175 1.316 6.86738 1.30251H10.7902C10.9936 1.33023 11.1503 1.49551 11.1667 1.7L11.3261 2.79839L6.28954 2.79857L6.45948 1.7ZM1.30753 4.50878C1.3088 4.28987 1.48612 4.11274 1.70502 4.11128H15.921C16.1399 4.11274 16.3172 4.28987 16.3185 4.50878V5.71187C16.3185 5.93132 16.1406 6.10936 15.921 6.10936H1.70502C1.48539 6.10936 1.30753 5.93132 1.30753 5.71187V4.50878Z" fill="#A9A9A9"/>
+                                  <path d="M8.813 19.2222C8.98648 19.2222 9.15267 19.1533 9.27526 19.0307C9.39785 18.9081 9.4668 18.7417 9.4668 18.5684V9.02294C9.4668 8.66193 9.17402 8.36914 8.813 8.36914C8.45199 8.36914 8.1592 8.66193 8.1592 9.02294V18.5633C8.15774 18.7375 8.22615 18.9052 8.34892 19.029C8.47151 19.1527 8.63861 19.2224 8.813 19.2224V19.2222Z" fill="#A9A9A9"/>
+                                  <path d="M5.80184 18.5292H5.83851C6.01254 18.5203 6.17581 18.4426 6.29201 18.3129C6.40839 18.1834 6.46823 18.0126 6.45838 17.8388L6.01363 9.66112C5.9943 9.30011 5.68564 9.0232 5.32462 9.04272C4.96361 9.06224 4.6867 9.37071 4.70603 9.73173L5.15078 17.915C5.17139 18.2596 5.45652 18.5287 5.80182 18.5296L5.80184 18.5292Z" fill="#A9A9A9"/>
+                                  <path d="M11.7868 18.5263H11.8235C12.1677 18.5258 12.4527 18.258 12.4745 17.9144L12.9165 9.73679C12.9361 9.37577 12.6591 9.06711 12.2981 9.04759C11.9369 9.02825 11.6284 9.30498 11.6089 9.66617L11.1669 17.8387C11.1578 18.0122 11.2178 18.1822 11.3342 18.3111C11.4504 18.4401 11.6133 18.5177 11.7868 18.5264L11.7868 18.5263Z" fill="#A9A9A9"/>
+                                  </svg>
+                            </button>
+                          </div>
+
+                   
+                          
+
+                        </div>
+
+                      </div>`;
+          tr.appendChild(tdDetails);
+
+          tbody.appendChild(tr);
+        });
+
+        table.appendChild(tbody);
+        itemsContainer.appendChild(table);
+      }
+    }
+
+    // Function to remove an item
+    function removeCartItem(index) {
+      cartItems.splice(index, 1);
+      displayItems(); // Update the display after removing the item
+    }
+
+    // Initial display of items
+    displayItems();
+
+
+
+
+    function truncateRemarks(remarks, words) {
+      if (!remarks) {
+        return '';
+      }
+
+      // Split the string into an array of words
+      const remarkWords = remarks.split(' ');
+
+      // Truncate the array to the specified number of words
+      const truncatedWords = remarkWords.slice(0, words);
+
+      // Join the truncated words back into a string
+      const truncatedRemarks = truncatedWords.join(' ');
+
+      return `${truncatedRemarks}...`;
+    }
+
+
+
+
+
+
+    // Increment and decrement functions
+    function incrementQuantity(button) {
+      var quantityInput = button.parentNode.querySelector(".qty");
+      quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decrementQuantity(button) {
+      var quantityInput = button.parentNode.querySelector(".qty");
+      if (parseInt(quantityInput.value) > 1) {
+        quantityInput.value = parseInt(quantityInput.value) - 1;
+      }
+    }
+
+
+  </script>
+
+
+
+  <script>
+    $(function () {
+      $("#preferredDealer").select2({
+        theme: 'bootstrap4',
+        width: 'style',
+        placeholder: $("#preferredDealer").attr('placeholder'),
+        allowClear: Boolean($("#preferredDealer").data('allow-clear')),
+      });
+    });
+  </script>
+
+  <script>
+
+
+    $('#place-order').click(function () {
+      $("#overlay").fadeIn(300);
+
+      setTimeout(function () {
+        $("#overlay").fadeOut(300);
+      }, 4000);
+    });
+  </script>
+
 </body>
+
 </html>

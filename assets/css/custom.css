@@ -1723,8 +1723,7 @@ input[type="radio"]:checked + label button {
   visibility: visible;
 }
 
-.add-to-cart-btn,
-.add-to-cart-btn:hover {
+.add-to-cart-btn{
   border-radius: 4.29px;
 border: 0.536px solid #2D2D2D;
 color: #2D2D2D;
@@ -1738,6 +1737,10 @@ color: #2D2D2D;
   text-transform: uppercase;
   padding: 10px;
   max-width: 300px;
+}
+.add-to-cart-btn:hover {
+  color: #fff;
+  background: #F78D1E;
 }
 
 .moq-inputs_wrapper input[type="checkbox"]:after,
