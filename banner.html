@@ -32,15 +32,26 @@
         .font-Metropolis{
             font-family: 'Metropolis';                               
         }
+     
         .banner-section__mobile-overlay{
-            max-width: 160px;
-            padding-right: 20px;
+            width: 100%;
+            padding-right: 0px;
+            position: relative;
+            padding: 20px;
         }
 
         @media (min-width:420px) {
             .banner-section__mobile-overlay{
             max-width: 50%;
+            position: absolute;
+            
         }
+        }
+
+        @media (max-width:420px)  {
+            .banner-section__mobile-overlay{
+                background: #FEF1F4;
+            }
         }
 
         @media (max-width:768px) {
@@ -76,7 +87,7 @@
             <div class="d-block d-md-none">
                 <div class="position-relative">
                     <img class="img-fluid w-100" src="assets/img/zillara/mob-banner.webp" alt="">
-                    <div class="position-absolute top-0 d-flex text-center justify-content-start pt-3 pt-sm-5 pe-sm-5 align-items-center end-0 h-100 flex-column banner-section__mobile-overlay">
+                    <div class="top-0 d-flex text-center justify-content-start pt-3 pt-sm-5 pe-sm-5 align-items-center end-0 h-100 flex-column banner-section__mobile-overlay">
                         <div class="display-4 fw-medium font-Britania">Shine Brighter</div>
                         <div class="fs-1 font-Bellarosta">with Silver</div>
                         <div class="fs-6 font-Metropolis">Timeless Elegance, Modern Style</div>
