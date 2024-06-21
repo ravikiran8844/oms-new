@@ -4,44 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Scanner</title>
-    <script src="https://unpkg.com/html5-qrcode" ></script>
-
-        <style>
-        #reader {
-            width: 300px;
-            margin: auto;
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
         #scan-button {
             display: block;
             margin: 20px auto;
             padding: 10px 20px;
             font-size: 16px;
+            cursor: pointer;
+        }
+        #scanner-wrapper {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
+            align-items: center;
+            justify-content: center;
+        }
+        #scanner-container {
+            position: relative;
+            width: 100%;
+            max-width: 250px;
+            height:190px;
+            background: #fff;
+            padding:30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        #close-button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: #fff;
+        }
+        #reader {
+            width: 100%;
+            margin: auto;
         }
     </style>
 </head>
 <body>
     <button id="scan-button">Scan QR Code</button>
-    <div id="reader"></div>
+    
+    <div id="scanner-wrapper">
+        <div id="scanner-container">
+            <button id="close-button">
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close-circle-outline</title><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z" /></svg>
+            </button>
+            <div id="reader"></div>
+        </div>
+    </div>
 
     <script>
-        document.getElementById('scan-button').addEventListener('click', function() {
-            const html5QrCode = new Html5Qrcode("reader");
+        const scanButton = document.getElementById('scan-button');
+        const scannerWrapper = document.getElementById('scanner-wrapper');
+        const closeButton = document.getElementById('close-button');
+        const html5QrCode = new Html5Qrcode("reader");
 
-            const qrCodeSuccessCallback = (decodedText, decodedResult) => {
-                // Handle the decoded text here.
-                console.log(`Decoded text: ${decodedText}`);
-                alert(`Decoded text: ${decodedText}`);
-                // Stop the scanner after success
-                html5QrCode.stop().then(ignore => {
-                    // QR Code scanning is stopped.
-                }).catch(err => {
-                    // Stop failed, handle it.
-                    console.error(`Stop failed: ${err}`);
-                });
-            };
+        const qrCodeSuccessCallback = (decodedText, decodedResult) => {
+            // Handle the decoded text here.
+            console.log(`Decoded text: ${decodedText}`);
+            alert(`Decoded text: ${decodedText}`);
+            // Stop the scanner after success
+            html5QrCode.stop().then(ignore => {
+                // QR Code scanning is stopped.
+            }).catch(err => {
+                // Stop failed, handle it.
+                console.error(`Stop failed: ${err}`);
+            });
+            scannerWrapper.style.display = 'none';
+        };
 
-            const config = { fps: 10, qrbox: 250 };
+        const config = { fps: 10, qrbox: 250 };
 
+        scanButton.addEventListener('click', function() {
+            scannerWrapper.style.display = 'flex';
             html5QrCode.start(
                 { facingMode: "environment" }, // Use rear camera
                 config,
@@ -50,6 +98,28 @@
                 // Start failed, handle it.
                 console.error(`Unable to start scanning: ${err}`);
             });
+        });
+
+        closeButton.addEventListener('click', function() {
+            html5QrCode.stop().then(ignore => {
+                // QR Code scanning is stopped.
+            }).catch(err => {
+                // Stop failed, handle it.
+                console.error(`Stop failed: ${err}`);
+            });
+            scannerWrapper.style.display = 'none';
+        });
+
+        scannerWrapper.addEventListener('click', function(event) {
+            if (event.target === scannerWrapper) {
+                html5QrCode.stop().then(ignore => {
+                    // QR Code scanning is stopped.
+                }).catch(err => {
+                    // Stop failed, handle it.
+                    console.error(`Stop failed: ${err}`);
+                });
+                scannerWrapper.style.display = 'none';
+            }
         });
     </script>
 </body>
