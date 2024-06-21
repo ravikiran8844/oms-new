@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <script src="https://unpkg.com/html5-qrcode" ></script>
+
+        <style>
+        #reader {
+            width: 300px;
+            margin: auto;
+        }
+        #scan-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button id="scan-button">Scan QR Code</button>
+    <div id="reader"></div>
+
+    <script>
+        document.getElementById('scan-button').addEventListener('click', function() {
+            const html5QrCode = new Html5Qrcode("reader");
+
+            const qrCodeSuccessCallback = (decodedText, decodedResult) => {
+                // Handle the decoded text here.
+                console.log(`Decoded text: ${decodedText}`);
+                alert(`Decoded text: ${decodedText}`);
+                // Stop the scanner after success
+                html5QrCode.stop().then(ignore => {
+                    // QR Code scanning is stopped.
+                }).catch(err => {
+                    // Stop failed, handle it.
+                    console.error(`Stop failed: ${err}`);
+                });
+            };
+
+            const config = { fps: 10, qrbox: 250 };
+
+            html5QrCode.start(
+                { facingMode: "environment" }, // Use rear camera
+                config,
+                qrCodeSuccessCallback
+            ).catch(err => {
+                // Start failed, handle it.
+                console.error(`Unable to start scanning: ${err}`);
+            });
+        });
+    </script>
+</body>
+</html>

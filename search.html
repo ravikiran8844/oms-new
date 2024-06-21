@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Searches</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        #searchBlock {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-width: 500px;
+            width: 100%;
+
+        }
+
+
+        #searchBar {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 7.547px;
+            color: #9D9D9D;
+            border: 0.943px solid #D0D5DD !important;
+            background: #FFF;
+            box-shadow: 0px 0.943px 1.887px 0px rgba(16, 24, 40, 0.05);
+            padding: 9.434px 13.208px;
+
+        }
+
+        .search-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .search-item label {
+            margin-left: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #triggerButton {
+            border-radius: 8px;
+            max-width: 500px;
+            width: 100%;
+            height: 40px;
+            color: #9D9D9D;
+            text-align: start;
+            border: 1px solid #DADADA;
+            background: #FFF;
+        }
+
+        #triggerButton svg {
+            float: inline-end;
+        }
+
+        #applyButton {
+            border-radius: 41.004px;
+            background: #F78D1E;
+            border: none;
+            height: 40px;
+            width: 100%;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        #searchOptions {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .search-item input[type="checkbox"] 
+        {
+            accent-color: black;
+        }
+
+        .search-item label{
+            color: #090A0A;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 17.085px; /* 108% */
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        #searchOptions::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        #searchOptions {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+
+        .active {
+            border-radius: 8px;
+            border: 1.47px solid #F78D1E !important;
+            color: #2D2D2D;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="triggerButton">
+            Popular Searches
+            <svg id="arrowIcon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="#9D9D9D" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+        <div id="searchBlock" class="hidden">
+            <input type="text" id="searchBar" placeholder="Search...">
+            <div id="searchOptions">
+                <!-- Search options will be generated here -->
+            </div>
+            <button id="applyButton">Apply</button>
+        </div>
+    </div>
+    <script>
+        const triggerButton = document.getElementById('triggerButton');
+        const searchBlock = document.getElementById('searchBlock');
+        const searchOptionsContainer = document.getElementById('searchOptions');
+        const arrowIcon = document.getElementById('arrowIcon');
+
+        triggerButton.addEventListener('click', function (event) {
+            searchBlock.classList.toggle('hidden');
+            triggerButton.classList.toggle('active');
+            searchBlock.classList.toggle('active');
+
+            if (searchBlock.classList.contains('hidden')) {
+                arrowIcon.innerHTML = '<path d="M9 18L15 12L9 6" stroke="#9D9D9D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+            } else {
+                arrowIcon.innerHTML = '<path d="M6 9L12 15L18 9" stroke="#F78D1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+            }
+
+            event.stopPropagation();
+        });
+
+        const searchOptionsData = [
+            'Ganesha', 'Hanuman', 'Krishna', 'Lakshmi', 'Buddha',
+            'Shiva', 'Vishnu', 'Durga', 'Saraswati', 'Rama',
+            'Parvati', 'Kali', 'Indra', 'Agni', 'Surya',
+            'Chandra', 'Varuna', 'Vayu', 'Yama', 'Kubera',
+            'Mitra', 'Savitr', 'Rudra', 'Vishvakarman', 'Aditi'
+        ];
+
+        searchOptionsData.forEach(option => {
+            const searchItem = document.createElement('div');
+            searchItem.className = 'search-item';
+            searchItem.innerHTML = `
+                <div style="flex-grow: 1;"><label for="${option}">${option}</label></div>
+                <div><input type="checkbox" id="${option}" name="${option}"></div>
+            `;
+            searchOptionsContainer.appendChild(searchItem);
+        });
+
+        document.getElementById('searchBar').addEventListener('input', function () {
+            const filter = this.value.toLowerCase();
+            const searchItems = document.getElementsByClassName('search-item');
+
+            for (let i = 0; i < searchItems.length; i++) {
+                const label = searchItems[i].getElementsByTagName('label')[0];
+                if (label.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                    searchItems[i].style.display = '';
+                } else {
+                    searchItems[i].style.display = 'none';
+                }
+            }
+        });
+
+        document.getElementById('applyButton').addEventListener('click', function () {
+            const selectedOptions = [];
+            const checkboxes = document.querySelectorAll('#searchOptions input[type="checkbox"]:checked');
+
+            checkboxes.forEach(checkbox => {
+                selectedOptions.push(checkbox.name);
+            });
+
+            console.log('Selected options:', selectedOptions);
+
+            if (selectedOptions.length === 1) {
+                triggerButton.childNodes[0].nodeValue = selectedOptions[0] + " ";
+            } else if (selectedOptions.length > 1) {
+                triggerButton.childNodes[0].nodeValue = `${selectedOptions.length} items selected `;
+            } else {
+                triggerButton.childNodes[0].nodeValue = 'Popular Searches ';
+            }
+
+            // Hide the search block
+            searchBlock.classList.add('hidden');
+            triggerButton.classList.remove('active');
+            searchBlock.classList.remove('active');
+            arrowIcon.innerHTML = '<path d="M9 18L15 12L9 6" stroke="#9D9D9D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+        });
+
+        // Close the search block when clicking outside of it
+        document.addEventListener('click', function (event) {
+            if (!searchBlock.contains(event.target) && !triggerButton.contains(event.target)) {
+                searchBlock.classList.add('hidden');
+                triggerButton.classList.remove('active');
+                searchBlock.classList.remove('active');
+                arrowIcon.innerHTML = '<path d="M9 18L15 12L9 6" stroke="#9D9D9D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+            }
+        });
+
+        // Prevent closing when clicking inside the search block
+        searchBlock.addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+    </script>
+</body>
+
+</html>
