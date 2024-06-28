@@ -4700,3 +4700,44 @@ background-color: transparent;
 .card-title {
 margin-bottom: unset;
 }
+
+
+
+
+
+
+
+
+
+/* new main menu */
+
+.new-main-menu{
+  background: #B5DCBF;
+  padding: 5px;
+}
+
+.new-main-menu .nav-link{
+  color: #2D2D2D;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 14px */
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+}
+.new-main-menu .dropdown-menu{
+  border-radius: 0px 12px 12px 12px;
+background: #2D2D2D;
+}
+.new-main-menu .dropdown-menu .dropdown-item{
+  color: #fff;
+  font-size: 14px;
+
+}
+.new-main-menu .dropdown-menu.show{
+  top: 10px !important;
+}
+.new-main-menu .dropdown-menu .dropdown-item:hover{
+  background: #474747;
+  color: #B5DCBF;
+}

@@ -352,14 +352,14 @@ input.qtyplus {
   background: #f6f8f9;
 }
 
-.dropdown-toggle::after {
+.profile-nav-link.dropdown-toggle::after {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 14 7' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.9487 6.54991L6.69835 1.91176L1.41273 6.54991C0.707977 7.18652 -0.490099 6.15582 0.214652 5.51921L6.20503 0.244455C6.45169 0.0322525 6.90978 0.00193775 7.15644 0.21414L13.1468 5.51921C13.8516 6.15582 12.6535 7.18651 11.9487 6.54991Z' fill='%232D2D2D'/%3E%3C/svg%3E");
   display: block;
   border: none !important;
   transform: rotate(180deg);
 }
 
-.dropdown-toggle.show::after {
+.profile-nav-link.show::after {
   transform: rotate(0deg);
 }
 
