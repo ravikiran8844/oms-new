@@ -4713,9 +4713,11 @@ margin-bottom: unset;
 
 .new-main-menu{
   background: #B5DCBF;
-  padding: 5px;
+  height: 50px;
 }
-
+.new-main-menu ul.nav{
+  height: 100%;
+}
 .new-main-menu .nav-link{
   color: #2D2D2D;
   font-size: 14px;
@@ -4728,11 +4730,13 @@ margin-bottom: unset;
 .new-main-menu .dropdown-menu{
   border-radius: 0px 12px 12px 12px;
   background: #2D2D2D;
+  
 }
 .new-main-menu .dropdown-menu .dropdown-item{
   color: #fff;
   font-size: 14px;
   background: #2D2D2D;
+
 }
 .dropdown-menu.show {
   display: block;
