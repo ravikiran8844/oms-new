@@ -112,30 +112,3 @@ $(function() {
        });
    });
 
-
-
-    document.addEventListener("DOMContentLoaded", function() {
-        // Get the current URL path
-        var path = window.location.pathname;
-
-        // Remove leading slash if present
-        if (path.charAt(0) === '/') {
-            path = path.substr(1);
-        }
-
-        console.log("first",path)
-
-        // Define a mapping of paths to nav item IDs
-        var navItems = {
-            '': 'nav-home', // Home route, adjust as necessary
-            'about': 'nav-about',
-            'services': 'nav-services',
-            'contact': 'nav-contact'
-        };
-
-        // Find the corresponding nav item ID
-        var navItemId = navItems[path];
-        if (navItemId) {
-            document.getElementById(navItemId).classList.add('active');
-        }
-    });

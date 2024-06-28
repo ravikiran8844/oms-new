@@ -1135,6 +1135,23 @@ document.onkeydown = (e) => {
   });
   </script>
 
+<script>
+  $(function(){
+    $(".new-main-menu .nav-item.dropdown").hover(
+      function() {
+        $(this).find(".dropdown-menu").addClass("show");
+        $(this).find(".dropdown-toggle").attr("aria-expanded", "true");
+      },
+      function() {
+        $(this).find(".dropdown-menu").removeClass("show");
+        $(this).find(".dropdown-toggle").attr("aria-expanded", "false");
+      }
+    );
+  });
+</script>
+
+
+
 </body>
 
 </html>

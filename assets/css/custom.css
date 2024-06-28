@@ -4727,15 +4727,15 @@ margin-bottom: unset;
 }
 .new-main-menu .dropdown-menu{
   border-radius: 0px 12px 12px 12px;
-background: #2D2D2D;
+  background: #2D2D2D;
 }
 .new-main-menu .dropdown-menu .dropdown-item{
   color: #fff;
   font-size: 14px;
-
+  background: #2D2D2D;
 }
-.new-main-menu .dropdown-menu.show{
-  top: 10px !important;
+.dropdown-menu.show {
+  display: block;
 }
 .new-main-menu .dropdown-menu .dropdown-item:hover{
   background: #474747;
