@@ -171,3 +171,22 @@ color: #fff !important;
     display: flex;
     align-items: center;
     }
+
+
+
+
+
+    .screen {
+        display: none;
+      }
+      .screen.active {
+        display: block;
+      }
+      .error-message {
+        color: red;
+        display: none;
+      }
+      .info-message {
+        color: blue;
+        display: none;
+      }
