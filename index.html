@@ -1218,20 +1218,22 @@
 
         <!-- OTP Verify Screen -->
         <div id="otpScreen" class="screen">
-          <h5>Verify OTP</h5>
-          <form id="otpForm">
-            <div class="form-group">
-              <label for="otp">OTP</label>
-              <input type="text" class="form-control" id="otp" required />
-            </div>
-            <button
-              type="button"
-              class="btn btn-primary"
-              onclick="handleOTP()"
-            >
-              Verify
-            </button>
-          </form>
+          <div class="col-lg-6 py-5 m-auto">
+            <h5 class="mb-4">Verify OTP</h5>
+            <form id="otpForm">
+              <div class="form-group">
+                <label for="otp" class="form-label fw-semibold mb-2"> Enter OTP</label>
+                <input minlength="4" maxlength="4" type="text" class="form-control" id="otp" required />
+              </div>
+              <button
+                type="button"
+                class="btn login-page_card-btn my-4"
+                onclick="handleOTP()"
+              >
+                Verify
+              </button>
+            </form>
+          </div>
         </div>
 
         <!-- Signup Screen -->
@@ -1564,7 +1566,7 @@
 
 <script>
   const dummyData = {
-    "999999999": "1111"
+    "9999999999": "1111"
       };
   let isLoggedIn = false; // Change this based on actual login status
 
