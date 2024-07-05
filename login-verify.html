@@ -32,8 +32,8 @@
                         <div class="fs-4 fw-bold mb-3">
                             Enter OTP
                         </div>
-                        <p class="mb-4">Code is sent to <span>+91 99*** **643</span>
-                        </p>
+                        <div class="mb-4">Code is sent to <span>+91 99*** **643</span>
+                        </div>
 
                         <div style="max-width: 350px;">
 
@@ -74,12 +74,12 @@
         document.addEventListener('DOMContentLoaded', function () {
             var otpInput = document.getElementById('otp-input');
             var loginVerifyBtn = document.getElementById('loginVerifyBtn');
-    
+
             // Initially disable the button
             loginVerifyBtn.disabled = true;
-    
+
             otpInput.focus();
-    
+
             // Listen for input event on OTP input field
             otpInput.addEventListener('input', function () {
                 // Remove any non-numeric characters from the input
@@ -87,17 +87,17 @@
                 // Enable the button only when 4 digits are filled
                 loginVerifyBtn.disabled = this.value.length !== 4;
             });
-    
+
             // Handle button click event
             loginVerifyBtn.addEventListener("click", function () {
                 // Hide text when button is clicked
                 const buttonText = this.querySelector(".loginBtn_text");
                 buttonText.style.display = "none";
-    
+
                 // Show loader when button is clicked
                 const loader = this.querySelector(".spinner-border");
                 loader.style.display = "inline-block";
-    
+
                 // Simulate loading process for 2 seconds (replace with actual logic)
                 setTimeout(() => {
                     // After 2 seconds, you can redirect or perform other actions
@@ -106,7 +106,7 @@
                     buttonText.style.display = "inline"; // Show the text again
                 }, 2000);
             });
-    
+
             // Prevent form submission
             const form = document.getElementById("loginVerifyForm");
             form.addEventListener("submit", function (event) {
@@ -114,7 +114,7 @@
             });
         });
     </script>
-    
+
 </body>
 
 </html>

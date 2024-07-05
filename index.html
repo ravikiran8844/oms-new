@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="stylesheet" href="assets/css/new-styles.css">
   <link rel="stylesheet" href="assets/css/new-styles.css">
-      <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/login.css">
 
 </head>
 
@@ -1156,290 +1156,237 @@
 
 
 
-  <div
-  class="modal fade"
-  id="authModal"
-  tabindex="-1"
-  aria-labelledby="authModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-body position-relative">
-       <div class="position-absolute end-0 top-0 p-2">
-        <button
-        type="button"
-        class="btn btn-icon"
-        data-bs-dismiss="modal"
-        aria-label="Close"
-      > <span aria-hidden="true">&times;</span>
-    </button>
-       </div>
+  <div class="modal fade login-page_card" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="card border-0">
+              <div class="card-body  position-relative p-4">
+                <div class="position-absolute end-0 top-0">
+                  <button type="button" class="btn btn-icon" data-bs-dismiss="modal" aria-label="Close"> <span
+                      aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+      
+                <div class="position-absolute start-0 top-0">
+                  <img width="75"  class="img-fluid" src="assets/img/emerald-logo.png" alt>
+                </div>
+      
+      
+                
+      
+                <!-- Login Screen -->
+                <div id="loginScreen" class="screen active">
+
+                  <div class="col-12 d-flex flex-row gap-4 justify-content-center pb-3">
+                    <div class="text-center mt-4">
+                      <div class="fs-6">WELCOME TO </div>
+                      <div class="fs-5 fw-bold mt-2">EMERALD JEWEL INDUSTRY</div>
+                      <div class="fs-4 brittany-font mt-3">Retailer Program</div>
+                    </div>
+                  </div>
+
+                  <div class="text-center">
+                    <div>Type your Phone number, we will send your verification code via Phone number</div>
+                  </div>
+
+                  <hr>
+      
+                  <div class="col-12">
+                    <form id="loginForm">
+                      <div class="form-group mt-4">
+                    
 
 
-       <div class="col-12 d-flex flex-column gap-4 flex-lg-row justify-content-between align-items-center border-1 border-bottom pb-5">
-        <div class="text-center">
-            <div class="fs-5">WELCOME TO </div>
-            <div class="fs-4 fw-bold mt-2">EMERALD JEWEL INDUSTRY</div>
-            <div class="fs-3 brittany-font mt-3">Retailer Program</div>
-        </div>
-        <div class="text-center ms-lg-auto">
-            <img width="120" height="120" class="img-fluid" src="assets/img/emerald-logo.png" alt>
-        </div>
-    </div>
-       
-        <!-- Login Screen -->
-        <div id="loginScreen" class="screen active">
-          
-          <div class="col-12 col-lg-8 mb-4 m-auto">
-            <h5 class="my-4">Login</h5>
-            <form id="loginForm">
-                <div class="form-group">
-                  <label class="form-label fw-semibold" for="phoneNumber">Enter Your Phone Number</label>
-                  <input type="tel" pattern="[0-9]{10}" maxlength="10" class="form-control" id="phoneNumber" placeholder="Enter 10-digit Indian number" required>
+                          <label class="form-label fw-medium" for="phoneNumber">Phone
+                            Number</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-transparent border-0">
+                                <svg width="10" height="17" viewBox="0 0 10 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.66012 1.1217C9.65985 0.824351 9.54153 0.53926 9.33127 0.328986C9.12087 0.118591 8.83577 0.000403181 8.53841 0H1.45276C1.15541 0.000403836 0.870318 0.118591 0.659906 0.328986C0.449645 0.539247 0.331323 0.824347 0.331055 1.1217V12.979H9.66005L9.66012 1.1217Z"
+                                        fill="#ADADAD" />
+                                    <path
+                                        d="M1.45269 16.4601H8.53835C8.8357 16.4597 9.12079 16.3415 9.3312 16.1311C9.54146 15.9209 9.65978 15.6358 9.66005 15.3384V13.6443H0.331055V15.3384C0.331324 15.6358 0.449645 15.9208 0.659906 16.1311C0.870301 16.3415 1.15541 16.4597 1.45276 16.4601H1.45269ZM4.19601 14.5544H5.79489C5.97863 14.5544 6.1275 14.7033 6.1275 14.887C6.1275 15.0708 5.97863 15.2198 5.79489 15.2198H4.19601C4.01227 15.2198 3.8634 15.0708 3.8634 14.887C3.8634 14.7033 4.01227 14.5544 4.19601 14.5544Z"
+                                        fill="#ADADAD" />
+                                </svg>
+                            </span>
+                            <input required type="tel" pattern="[0-9]{10}" minlength="10" maxlength="10" id="phoneNumber"
+                                class="form-control border-0 shadow-none" placeholder="Enter phone number"
+                                aria-label="Phone Number" aria-describedby="login page">
+                        </div>
 
-                  <div id="phoneError" class="error-message mt-3">
-                    Please enter a valid 10-digit phone number.
+
+      
+                        <div id="phoneError" class="error-message mt-3">
+                          Please enter a valid 10-digit phone number.
+                        </div>
+                      </div>
+
+
+
+                      <button type="button" class="btn login-page_card-btn mt-4 mb-2" onclick="handleLogin()">
+                        Login
+                      </button>
+                    </form>
+                    <div>Don’t have an account? <a href="#" class="sign-up-text text-decoration-none fw-medium" onclick="showSignupScreenFromLogin()">Sign
+                      Up Now</a></div>
                   </div>
                 </div>
-                <button
-                  type="button"
-                  class="btn login-page_card-btn mt-4 mb-2"
-                  onclick="handleLogin()"
-                >
-                  Sign In
-                </button>
-              </form>
-              <a href="#" class="sign-up-text text-decoration-none fw-medium" onclick="showSignupScreenFromLogin()"
-                >Not Registered? Sign up here.</a
-              >
-          </div>
-        </div>
+      
+                <!-- OTP Verify Screen -->
+                <div id="otpScreen" class="screen">
+                  <div class="col-12 text-center mt-5">
+                    <div class="fs-4 fw-bold mb-3">
+                      Enter OTP
+                  </div>
+                  <div class="mb-4">Code is sent to <span>+91 99*** **643</span></div>
 
-        <!-- OTP Verify Screen -->
-        <div id="otpScreen" class="screen">
-          <div class="col-lg-6 py-5 m-auto">
-            <h5 class="mb-4">Verify OTP</h5>
-            <form id="otpForm">
-              <div class="form-group">
-                <label for="otp" class="form-label fw-semibold mb-2"> Enter OTP</label>
-                <input minlength="4" maxlength="4" type="text" class="form-control" id="otp" required />
-              </div>
-              <button
-                type="button"
-                class="btn login-page_card-btn my-4"
-                onclick="handleOTP()"
-              >
-                Verify
-              </button>
-            </form>
-          </div>
-        </div>
 
-        <!-- Signup Screen -->
-        <div id="signupScreen" class="screen">
-         
+                    <form id="otpForm">
 
-          <form id="signupForm">
-            <div class="container py-4">
-              <h5 class="mb-4">Sign Up</h5>
-              <div class="row gy-3">
-                <div class="col-12 col-lg-6">
-                  <label class="form-label fw-semibold" for="name"
-                    >Name<span class="text-danger">*</span></label
-                  >
-                  <input
-                    required
-                    placeholder="Enter your name"
-                    class="form-control"
-                    type="text"
-                    name="name"
-                    id="name"
-                  />
+                      <div class="mb-4">
+
+                        <div class="otp-input_wrapper">
+                            <input minlength="4" maxlength="4" type="text" class="form-control" id="otp" required/>
+                        </div>
+
+                      </div>
+
+                      <div class="mb-4">Didn’t receive the OTP? <br> <a href="#"
+                        class="resend-text text-decoration-none fw-medium">Resend in 04:58</a></div>
+
+                    <div class="mb-4">
+                        <button id="loginVerifyBtn" class="btn login-page_card-btn"  onclick="handleOTP()">
+                            <span class="spinner-border spinner-border-sm" style="display: none;"
+                                aria-hidden="true"></span>
+                            <span class="loginBtn_text">Submit</span>
+                        </button>
+                    </div>
+
+  
+                    </form>
+
+                    
+
+                  </div>
                 </div>
+      
+                <!-- Signup Screen -->
+                <div id="signupScreen" class="screen">
+      
+                  <div class="col-12 d-flex flex-row gap-4 justify-content-center pb-3">
+                    <div class="text-center mt-4">
+                      <div class="fs-6">WELCOME TO </div>
+                      <div class="fs-5 fw-bold mt-2">EMERALD JEWEL INDUSTRY</div>
+                      <div class="fs-4 brittany-font mt-3">Retailer Program</div>
+                    </div>
+                  </div>
 
-                <div class="col-12 col-lg-6">
-                  <label class="form-label fw-semibold" for="shopName"
-                    >Shop Name<span class="text-danger">*</span></label
-                  >
-                  <input
-                    required
-                    placeholder="Enter your shop name"
-                    class="form-control"
-                    type="text"
-                    name="shopName"
-                    id="shopName"
-                  />
+                  <form id="signupForm">
+                    <div class="col-12 mt-4">
+                      <div class="row gy-3">
+                        <div class="col-12 col-lg-6">
+                          <label class="form-label fw-medium" for="name">Name<span class="text-danger">*</span></label>
+                          <input required placeholder="Enter your name" class="form-control" type="text" name="name"
+                            id="name" />
+                        </div>
+      
+                        <div class="col-12 col-lg-6">
+                          <label class="form-label fw-medium" for="shopName">Shop Name<span
+                              class="text-danger">*</span></label>
+                          <input required placeholder="Enter your shop name" class="form-control" type="text" name="shopName"
+                            id="shopName" />
+                        </div>
+      
+                        <div class="col-12 col-lg-6">
+                          <label class="form-label fw-medium" for="signupPhoneNumber">Phone Number<span
+                              class="text-danger">*</span></label>
+                          <input required placeholder="Enter your phone number" class="form-control" type="tel"
+                            pattern="[0-9]{10}" maxlength="10" name="signupPhoneNumber" id="signupPhoneNumber" />
+                        </div>
+      
+                        <div class="col-12 col-lg-6">
+                          <label class="form-label fw-medium" for="email">Email<span class="text-danger">*</span></label>
+                          <input required placeholder="Enter your email" class="form-control" type="email" name="email"
+                            id="email" />
+                        </div>
+      
+                        <div class="col-12 col-lg-6">
+                          <label class="form-label fw-medium" for="address">Address<span
+                              class="text-danger">*</span></label>
+                          <input required placeholder="Enter your address" class="form-control" type="text" name="address"
+                            id="address" />
+                        </div>
+      
+                        <div class="col-12 col-lg-6">
+                          <label class="form-label fw-medium" for="pincode">Pincode<span
+                              class="text-danger">*</span></label>
+                          <input required placeholder="Enter your pincode" class="form-control" type="number" name="pincode"
+                            id="pincode" />
+                        </div>
+      
+                        <div class="col-12 col-lg-6">
+                          <label class="form-label fw-medium" for="city">City<span class="text-danger">*</span></label>
+                          <input required placeholder="Enter your city" class="form-control" type="text" name="city"
+                            id="city" />
+                        </div>
+      
+                        <div class="col-12 col-lg-6">
+                          <label class="form-label fw-medium" for="state">State<span class="text-danger">*</span></label>
+                          <input required placeholder="Enter your state" class="form-control" type="text" name="state"
+                            id="state" />
+                        </div>
+      
+                        <div class="col-12">
+                          <label class="form-label fw-medium" for="gst">GST<span class="text-danger">*</span></label>
+                          <input required placeholder="Enter your GST" class="form-control" type="text" name="gst" id="gst" />
+                        </div>
+      
+                        <div class="col-12">
+                          <label class="form-label fw-medium" for="dealerName">If you are currently purchasing from any existing <span class="fw-semibold">AUTHORISED EMERALD DEALERS</span>, Please enter their name<span
+                              class="text-danger">*</span></label>
+                          <textarea required class="form-control" style="height: 100px"
+                            type="text" name="dealerName" id="dealerName"></textarea>
+                        </div>
+                      </div>
+                      <!-- End of form fields -->
+      
+                      <!-- Error message for all inputs -->
+                      <div id="signupErrorMessage" class="error-message mt-3" style="display: none">
+                        Please fill out all required fields.
+                      </div>
+      
+                      <div class="col-12 text-center">
+                        <div class="mt-4 mb-3">
+                          <button type="button" class="btn sign-up-page_btn mt-4" onclick="handleSignup()">
+                            Save
+                          </button>
+                        </div>
+                        <div>Already Registered?
+                          <a href="#" class="sign-up-text text-decoration-none fw-medium" onclick="showLoginScreen()"> Sign In.</a>
+                        </div>
+      
+      
+                      </div>
+                    </div>
+                  </form>
                 </div>
-
-                <div class="col-12 col-lg-6">
-                  <label
-                    class="form-label fw-semibold"
-                    for="signupPhoneNumber"
-                    >Phone Number<span class="text-danger">*</span></label
-                  >
-                  <input
-                    required
-                    placeholder="Enter your phone number"
-                    class="form-control"
-                    type="tel" pattern="[0-9]{10}" maxlength="10"
-                    name="signupPhoneNumber"
-                    id="signupPhoneNumber"
-                  />
+      
+                <!-- Thank You Screen -->
+                <div id="thankYouScreen" class="screen">
+                  <div class="col-12 py-5 text-center">
+                    <h5 class="mb-3">Thank You!</h5>
+                    <div>Your account has been created.</div>
+                  </div>
                 </div>
-
-                <div class="col-12 col-lg-6">
-                  <label class="form-label fw-semibold" for="email"
-                    >Email<span class="text-danger">*</span></label
-                  >
-                  <input
-                    required
-                    placeholder="Enter your email"
-                    class="form-control"
-                    type="email"
-                    name="email"
-                    id="email"
-                  />
-                </div>
-
-                <div class="col-12 col-lg-6">
-                  <label class="form-label fw-semibold" for="address"
-                    >Address<span class="text-danger">*</span></label
-                  >
-                  <input
-                    required
-                    placeholder="Enter your address"
-                    class="form-control"
-                    type="text"
-                    name="address"
-                    id="address"
-                  />
-                </div>
-
-                <div class="col-12 col-lg-6">
-                  <label class="form-label fw-semibold" for="pincode"
-                    >Pincode<span class="text-danger">*</span></label
-                  >
-                  <input
-                    required
-                    placeholder="Enter your pincode"
-                    class="form-control"
-                    type="number"
-                    name="pincode"
-                    id="pincode"
-                  />
-                </div>
-
-                <div class="col-12 col-lg-6">
-                  <label class="form-label fw-semibold" for="city"
-                    >City<span class="text-danger">*</span></label
-                  >
-                  <input
-                    required
-                    placeholder="Enter your city"
-                    class="form-control"
-                    type="text"
-                    name="city"
-                    id="city"
-                  />
-                </div>
-
-                <div class="col-12 col-lg-6">
-                  <label class="form-label fw-semibold" for="state"
-                    >State<span class="text-danger">*</span></label
-                  >
-                  <input
-                    required
-                    placeholder="Enter your state"
-                    class="form-control"
-                    type="text"
-                    name="state"
-                    id="state"
-                  />
-                </div>
-
-                <div class="col-12">
-                  <label class="form-label fw-semibold" for="gst"
-                    >GST<span class="text-danger">*</span></label
-                  >
-                  <input
-                    required
-                    placeholder="Enter your GST"
-                    class="form-control"
-                    type="text"
-                    name="gst"
-                    id="gst"
-                  />
-                </div>
-
-                <div class="col-12">
-                  <label class="form-label fw-semibold" for="dealerName"
-                    >Dealer Name<span class="text-danger">*</span></label
-                  >
-                  <textarea
-                    required
-                    placeholder="Enter dealer name"
-                    class="form-control"
-                    style="height: 100px"
-                    type="text"
-                    name="dealerName"
-                    id="dealerName"
-                  ></textarea>
-                </div>
-              </div>
-              <!-- End of form fields -->
-
-              <!-- Error message for all inputs -->
-              <div
-                id="signupErrorMessage"
-                class="error-message mt-3"
-                style="display: none"
-              >
-                Please fill out all required fields.
-              </div>
-
-              <div
-                class="col-12 col-md-4 d-flex flex-column gap-2"
-              >
-                <div>
-                    <button
-                  type="button"
-                  class="btn sign-up-page_btn mt-4"
-                  onclick="handleSignup()"
-                >
-                  Sign Up
-                </button>
-                </div>
-                <div>
-                    <a href="#" class="sign-up-text text-decoration-none fw-medium" onclick="showLoginScreen()"
-                >Already Registered? Sign In.</a
-              >
-                </div>
-
-                
               </div>
             </div>
-          </form>
-        </div>
-
-        <!-- Thank You Screen -->
-        <div id="thankYouScreen" class="screen">
-          <div class="col-12 py-5">
-            <h5>Thank You!</h5>
-            <p>Your account has been created.</p>
-            <button
-              type="button"
-              class="btn btn-primary"
-              onclick="showLoginScreen()"
-            >
-              Back to Login
-            </button>
-          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
@@ -1567,146 +1514,146 @@
   </script>
 
 
-<script>
-  const dummyData = {
-    "9999999999": "1111"
-      };
-  let isLoggedIn = false; // Change this based on actual login status
+  <script>
+    const dummyData = {
+      "9999999999": "1111"
+    };
+    let isLoggedIn = false; // Change this based on actual login status
 
-  function isValidPhoneNumber(phoneNumber) {
-    const phonePattern = /^[0-9]{10}$/;
-    return phonePattern.test(phoneNumber);
-  }
-
-  function handleLogin() {
-    const phoneNumber = document.getElementById("phoneNumber").value;
-    const phoneError = document.getElementById("phoneError");
-
-    if (!isValidPhoneNumber(phoneNumber)) {
-      phoneError.style.display = "block";
-      return;
-    } else {
-      phoneError.style.display = "none";
+    function isValidPhoneNumber(phoneNumber) {
+      const phonePattern = /^[0-9]{10}$/;
+      return phonePattern.test(phoneNumber);
     }
 
-    if (dummyData[phoneNumber]) {
-      showScreen("otpScreen");
-    } else {
-      document.getElementById("signupPhoneNumber").value = phoneNumber;
+    function handleLogin() {
+      const phoneNumber = document.getElementById("phoneNumber").value;
+      const phoneError = document.getElementById("phoneError");
+
+      if (!isValidPhoneNumber(phoneNumber)) {
+        phoneError.style.display = "block";
+        return;
+      } else {
+        phoneError.style.display = "none";
+      }
+
+      if (dummyData[phoneNumber]) {
+        showScreen("otpScreen");
+      } else {
+        document.getElementById("signupPhoneNumber").value = phoneNumber;
+        showScreen("signupScreen");
+      }
+    }
+
+    function handleOTP() {
+      const phoneNumber = document.getElementById("phoneNumber").value;
+      const otp = document.getElementById("otp").value;
+      if (dummyData[phoneNumber] === otp) {
+        alert("Login successful");
+        isLoggedIn = true;
+        $("#authModal").modal("hide");
+      } else {
+        alert("Invalid OTP");
+      }
+    }
+
+    // Handle signup form submission
+    function handleSignup() {
+      const name = document.getElementById("name").value;
+      const shopName = document.getElementById("shopName").value;
+      const signupPhoneNumber =
+        document.getElementById("signupPhoneNumber").value;
+      const email = document.getElementById("email").value;
+      const address = document.getElementById("address").value;
+      const pincode = document.getElementById("pincode").value;
+      const city = document.getElementById("city").value;
+      const state = document.getElementById("state").value;
+      const gst = document.getElementById("gst").value;
+      const dealerName = document.getElementById("dealerName").value;
+
+      // Check if any field is empty
+      if (
+        name.trim() === "" ||
+        shopName.trim() === "" ||
+        signupPhoneNumber.trim() === "" ||
+        email.trim() === "" ||
+        address.trim() === "" ||
+        pincode.trim() === "" ||
+        city.trim() === "" ||
+        state.trim() === "" ||
+        gst.trim() === "" ||
+        dealerName.trim() === ""
+      ) {
+        document.getElementById("signupErrorMessage").style.display = "block";
+        return;
+      }
+
+      // Assuming all fields are filled, continue with signup process
+      const newPhoneNumber = signupPhoneNumber;
+      dummyData[newPhoneNumber] = "0000"; // Assign a default OTP for the new user
+      showScreen("thankYouScreen");
+    }
+
+    // Function to display error message
+    function displayErrorMessage(fieldId, message) {
+      const errorElement = document.querySelector(
+        `#${fieldId} + .error-message`
+      );
+      if (errorElement) {
+        errorElement.textContent = message;
+        errorElement.style.display = "block";
+      }
+    }
+
+    // Function to hide error message
+    function hideErrorMessage(fieldId) {
+      const errorElement = document.querySelector(
+        `#${fieldId} + .error-message`
+      );
+      if (errorElement) {
+        errorElement.style.display = "none";
+      }
+    }
+
+    function showLoginScreen() {
+      showScreen("loginScreen");
+    }
+
+    function showSignupScreenFromLogin() {
+      const phoneNumber = document.getElementById("phoneNumber").value;
+      if (phoneNumber) {
+        document.getElementById("signupPhoneNumber").value = phoneNumber;
+      }
       showScreen("signupScreen");
     }
-  }
 
-  function handleOTP() {
-    const phoneNumber = document.getElementById("phoneNumber").value;
-    const otp = document.getElementById("otp").value;
-    if (dummyData[phoneNumber] === otp) {
-      alert("Login successful");
-      isLoggedIn = true;
-      $("#authModal").modal("hide");
-    } else {
-      alert("Invalid OTP");
-    }
-  }
-  
-  // Handle signup form submission
-  function handleSignup() {
-    const name = document.getElementById("name").value;
-    const shopName = document.getElementById("shopName").value;
-    const signupPhoneNumber =
-      document.getElementById("signupPhoneNumber").value;
-    const email = document.getElementById("email").value;
-    const address = document.getElementById("address").value;
-    const pincode = document.getElementById("pincode").value;
-    const city = document.getElementById("city").value;
-    const state = document.getElementById("state").value;
-    const gst = document.getElementById("gst").value;
-    const dealerName = document.getElementById("dealerName").value;
-
-    // Check if any field is empty
-    if (
-      name.trim() === "" ||
-      shopName.trim() === "" ||
-      signupPhoneNumber.trim() === "" ||
-      email.trim() === "" ||
-      address.trim() === "" ||
-      pincode.trim() === "" ||
-      city.trim() === "" ||
-      state.trim() === "" ||
-      gst.trim() === "" ||
-      dealerName.trim() === ""
-    ) {
-      document.getElementById("signupErrorMessage").style.display = "block";
-      return;
+    function showScreen(screenId) {
+      const screens = document.querySelectorAll(".screen");
+      screens.forEach((screen) => screen.classList.remove("active"));
+      document.getElementById(screenId).classList.add("active");
     }
 
-    // Assuming all fields are filled, continue with signup process
-    const newPhoneNumber = signupPhoneNumber;
-    dummyData[newPhoneNumber] = "0000"; // Assign a default OTP for the new user
-    showScreen("thankYouScreen");
-  }
+    // Show modal if user is not logged in
+    document.addEventListener("click", function () {
+      if (!isLoggedIn) {
+        $("#authModal").modal("show");
+      }
+    });
 
-  // Function to display error message
-  function displayErrorMessage(fieldId, message) {
-    const errorElement = document.querySelector(
-      `#${fieldId} + .error-message`
-    );
-    if (errorElement) {
-      errorElement.textContent = message;
-      errorElement.style.display = "block";
-    }
-  }
-
-  // Function to hide error message
-  function hideErrorMessage(fieldId) {
-    const errorElement = document.querySelector(
-      `#${fieldId} + .error-message`
-    );
-    if (errorElement) {
-      errorElement.style.display = "none";
-    }
-  }
-
-  function showLoginScreen() {
-    showScreen("loginScreen");
-  }
-
-  function showSignupScreenFromLogin() {
-    const phoneNumber = document.getElementById("phoneNumber").value;
-    if (phoneNumber) {
-      document.getElementById("signupPhoneNumber").value = phoneNumber;
-    }
-    showScreen("signupScreen");
-  }
-
-  function showScreen(screenId) {
-    const screens = document.querySelectorAll(".screen");
-    screens.forEach((screen) => screen.classList.remove("active"));
-    document.getElementById(screenId).classList.add("active");
-  }
-
-  // Show modal if user is not logged in
-  document.addEventListener("click", function () {
-    if (!isLoggedIn) {
-      $("#authModal").modal("show");
-    }
-  });
-
-  // Reopen modal if user closes it without logging in
-  $("#authModal").on("hidden.bs.modal", function () {
-    if (!isLoggedIn) {
-      document.addEventListener(
-        "click",
-        function () {
-          if (!isLoggedIn) {
-            $("#authModal").modal("show");
-          }
-        },
-        { once: true }
-      );
-    }
-  });
-</script>
+    // Reopen modal if user closes it without logging in
+    $("#authModal").on("hidden.bs.modal", function () {
+      if (!isLoggedIn) {
+        document.addEventListener(
+          "click",
+          function () {
+            if (!isLoggedIn) {
+              $("#authModal").modal("show");
+            }
+          },
+          { once: true }
+        );
+      }
+    });
+  </script>
 
 
 

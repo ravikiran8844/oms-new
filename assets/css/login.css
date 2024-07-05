@@ -191,3 +191,10 @@ color: #fff !important;
         color: blue;
         display: none;
       }
+
+      .login-page_card input::placeholder{
+        font-size: 14px;
+        color: #ADADAD;
+
+
+      }
