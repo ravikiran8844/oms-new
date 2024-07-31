@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/menu.css">
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="stylesheet" href="assets/css/new-styles.css">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/js-image-zoom@0.4.1/js-image-zoom.js" type="application/javascript"></script>
 
 </head>
 
@@ -248,22 +249,22 @@
   <section class="main-product container">
    
 
-    <div class="col-12 col-lg-11 m-auto">
-      <div class="row g-3">
+   
+     <div class="col-12">
+      <div class="row">
 
-        <div class="col-12 col-lg-5 mb-lg-0 mx-auto" id="imageBlockContainer">
+        <div class="col-12 col-lg-6 mb-lg-0">
+
   
-  
-  
-          <div class="single-images-block bg-white p-3 d-flex justify-content-center align-items-center">
-            <img class="img-fluid" width="440" height="458" src="./assets/img/product/product.png" alt>
+          <div class="single-images-block bg-white d-flex justify-content-center align-items-center">
+            <img id="product-main-image" class="img-fluid" src="./assets/img/product/product.png" alt>
           </div>
   
   
   
         </div>
   
-        <div class="col-12 col-lg-7">
+        <div class="col-12 col-lg-6">
           <div class="product-page_content_wrapper">
             <div class="d-flex align-items-center">
               <div class="product-design_title">Design
@@ -993,7 +994,8 @@
           
         </div>
       </div>
-    </div>
+     </div>
+  
 
 
   </section>
@@ -1313,6 +1315,14 @@
   <script src="assets/js/custom.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <!-- <script src="https://unpkg.com/js-image-zoom@0.4.1/js-image-zoom.js" type="application/javascript"></script> -->
+<script src="test/jquery.ez-plus.js"></script>
+   
+
+
+  <script>
+    $('#product-main-image').ezPlus();
+</script>
 
 
 

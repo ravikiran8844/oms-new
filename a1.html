@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link rel="stylesheet" type="text/css" href="test/magnifier.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="product-wrapper">
+            <img src="/assets/img/product/product.png" class="product-image-preview" alt='' />
+            <img src="/assets/img/product/product.png" class="product-image-original" alt='' />
+        </div>
+    </div>
+
+    <div>
+        <a class="magnifier-thumb-wrapper" href="/assets/img/product/product.png">
+            <img id="thumb" src="/assets/img/product/product.png">
+        </a>
+        <div class="magnifier-preview" id="preview" style="width: 200px; height: 133px"></div>
+    </div>
+
+
+
+    <script type="text/javascript" src="test/Event.js"></script>
+    <script type="text/javascript" src="test/Magnifier.js"></script>
+    <script type="text/javascript">
+    var evt = new Event(),
+    m = new Magnifier(evt, {
+    zoom: 3,
+    zoomable: true
+});
+
+       
+    </script>
+</body>
+</html>

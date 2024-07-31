@@ -10,17 +10,16 @@ body {
 .brittany-font {
   font-family: "Brittany Signature";
 }
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .login-page_card {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
   }
 }
 .login-page-banner {
   max-height: 100vh;
-}
+} */
 .login-page_card p {
   color: #8a8a8a;
 }
@@ -62,6 +61,7 @@ body {
 .sign-up-text,
 .resend-text {
   color: #f78d1e;
+  font-weight: 600;
 }
 
 .otp-field {
@@ -189,4 +189,12 @@ height: 48px;
   background: #fff;
   box-shadow: 0px 5.048px 20.318px 0px rgba(182, 182, 182, 0.25);
   overflow: hidden;
+}
+
+#authModal{
+  z-index:9999;
+}
+
+#resendLinkContainer a{
+  color:#f78d1e;
 }
