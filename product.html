@@ -19,8 +19,9 @@
     <link rel="stylesheet" href="assets/css/menu.css">
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="stylesheet" href="assets/css/new-styles.css">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/js-image-zoom@0.4.1/js-image-zoom.js" type="application/javascript"></script>
-
+  <link  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+  />
 </head>
 
 <body>
@@ -257,7 +258,19 @@
 
   
           <div class="single-images-block bg-white d-flex justify-content-center align-items-center">
-            <img id="product-main-image" class="img-fluid" src="./assets/img/product/product.png" alt>
+            <!-- <img id="product-main-image" class="img-fluid" src="./assets/img/product/product.png" alt> -->
+          
+            <a
+            data-fancybox
+            href="./assets/img/product/product.png"
+            data-caption="product"
+            >
+            <img class="img-fluid product-main-image"  width="100%" height="auto"
+                               src="./assets/img/product/product.png"
+                               alt="product">
+                           
+         </a>
+          
           </div>
   
   
@@ -1314,17 +1327,22 @@
   <script src="assets/js/smartmenu.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
   <!-- <script src="https://unpkg.com/js-image-zoom@0.4.1/js-image-zoom.js" type="application/javascript"></script> -->
-<script src="test/jquery.ez-plus.js"></script>
+<!-- <script src="test/jquery.ez-plus.js"></script>
    
 
 
   <script>
     $('#product-main-image').ezPlus();
+</script> -->
+
+<script>
+  Fancybox.bind('[data-fancybox]', {
+    //
+  });    
 </script>
-
-
 
   <!-- <script>
        // Example array of image URLs
