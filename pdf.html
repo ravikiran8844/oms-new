@@ -489,24 +489,25 @@
         const element = document.getElementById("order-details");
         const options = {
           filename: "order-details.pdf",
-    
-          image: { type: "jpeg", quality: 0.98 },
+          image: { type: "jpeg", quality: 1 },
           html2canvas: {
-            scale: 2,
+            scale: 4,
             dpi: 192,
             letterRendering: true,
             useCORS: true,
           },
           jsPDF: {
             unit: "in",
-            format: "a4",  // Change "letter" to "a4" for A4 size
-            orientation: "portrait",  // Keep portrait orientation
+            format: "a4",  // A4 size
+            orientation: "portrait",  // Portrait orientation
           },
+          margin: [0,0, 0, 0]  // Top, left, bottom, right margins in inches
         };
     
         html2pdf().set(options).from(element).save();
       }
     </script>
+    
     
   </body>
 </html>
