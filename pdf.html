@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF</title>
+    <link rel="stylesheet" href="assets/lib/css/bootstrap.min.css" />
+    <style>
+      .order-details-pdf {
+        font-size: 15px;
+        color: #0A312D;
+      }
+      /* .order-details-pdf table td,   .order-details-pdf table th{
+            padding: 5px;
+        } */
+      .order-details-pdf table td,
+      .order-details-pdf table th {
+        text-align: center;
+        vertical-align: middle;
+      }
+      .pdf-header {
+        background-image: linear-gradient(90deg, #0a312d 0%, #0a312d 100%);
+      }
+      .pdf-table_header th {
+        background: #ccf0f0;
+        text-align: center;
+        vertical-align: middle;
+      }
+      @media print {
+        @page {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        @page :first {
+          margin-top: 0; /* Remove margin-top from the first page */
+        }
+      }
+      .header_grid {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 20px;
+      }
+
+      .header_grid-item {
+        display: grid;
+        grid-template-columns: 120px auto;
+        gap: 10px;
+      }
+      .header_grid-item__title {
+        position: relative;
+        font-weight: 600;
+      }
+      .header_grid-item__title::after {
+        content: ":";
+        position: absolute;
+        right: 0;
+      }
+      .order-summary{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .order-summary__item{
+        border-radius: 16px;
+        border: 1px solid #14744F;
+        background: #FFF;
+        width: 210px;
+        text-align: center;
+        overflow: hidden;
+      }
+      .order-summary__item__title{
+        font-weight: 700;
+        border-bottom: 1px solid #14744F;
+        background: #FFF9CA;
+        padding: 5px;
+      }
+      .order-summary__item__content{
+        padding: 5px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="order-details-pdf">
+      <section class="pdf-header">
+        <div class="py-4 container text-center">
+          <div class="mb-3">
+            <img
+              width="211.6"
+              height="66.8"
+              class="img-fluid"
+              src="assets/img/pdf-logo.svg"
+              alt=""
+            />
+          </div>
+          <div class="text-white m-auto" style="max-width: 640px">
+            Address for Unit 4: 460, Central Reserve Police Force Rd, opp. roots
+            industries india limited, Kathir Naickenpalayam, Coimbatore,
+            Narasimhanaickenpalayam, Tamil Nadu 641017
+          </div>
+        </div>
+      </section>
+
+      <section class="header_grid px-4 pt-4">
+        <div>
+          <div class="header_grid-item">
+            <div class="header_grid-item__title">Name</div>
+            <div>Alankar Agarwal</div>
+          </div>
+          <div class="header_grid-item">
+            <div class="header_grid-item__title">Date</div>
+            <div>2024-10-08 23:40:32</div>
+          </div>
+          <div class="header_grid-item">
+            <div class="header_grid-item__title">Email</div>
+            <div>alankar1777@gmail.com</div>
+          </div>
+          <div class="header_grid-item">
+            <div class="header_grid-item__title">Mobile</div>
+            <div>+91 99972 88669</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="header_grid-item">
+            <div class="header_grid-item__title">Order Reference</div>
+            <div>Alankar Agarwal</div>
+          </div>
+          <div class="header_grid-item">
+            <div class="header_grid-item__title">Remarks</div>
+            <div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="px-4 pt-4">
+        <div class="text-center fw-bold p-2" style="border-radius: 8px; background: #CCF0F0;">Order Summary</div>
+     
+
+        <div class="order-summary pt-4">
+            <div class="order-summary__item">
+                <div class="order-summary__item__title">Total Piece Ordered</div>
+                <div class="order-summary__item__content">29</div>
+            </div>
+            <div class="order-summary__item">
+                <div class="order-summary__item__title">Total Weight Ordered</div>
+                <div class="order-summary__item__content">29</div>
+            </div>
+        </div>
+    </section>
+
+      <section class="px-4 pt-4">
+        <table class="table">
+          <tr class="pdf-table_header">
+            <td
+              colspan="9"
+              class="text-center fw-semibold"
+              style="
+                border-radius: 30.2px 30.2px 0px 0px;
+                background: #0a312d;
+                color: #fff;
+              "
+            >
+              Order ID: EJRMS/2425/00000517
+            </td>
+          </tr>
+          <tr class="pdf-table_header">
+            <th>S.No</th>
+            <th>Product Image</th>
+            <th>Project</th>
+            <th>Product SKU</th>
+            <th>Purity</th>
+            <th>Weight Per Piece</th>
+            <th>Order Quantiy</th>
+            <th>Total Weight</th>
+            <th>Box</th>
+          </tr>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                <img
+                  height="80"
+                  width="80"
+                  class="img-fluid"
+                  style="aspect-ratio: 1"
+                  src="assets/img/product/CSIDOL004-003-L 1.png"
+                  alt=""
+                />
+              </td>
+              <td>SOLID IDOL</td>
+              <td>CSIDOL782-0002</td>
+              <td>92.5</td>
+              <td>85</td>
+              <td>1</td>
+              <td>85</td>
+              <td>NX</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <img
+                  height="80"
+                  width="80"
+                  class="img-fluid"
+                  style="aspect-ratio: 1"
+                  src="assets/img/product/CSIDOL004-003-L 1.png"
+                  alt=""
+                />
+              </td>
+              <td>SOLID IDOL</td>
+              <td>CSIDOL782-0002</td>
+              <td>92.5</td>
+              <td>85</td>
+              <td>1</td>
+              <td>85</td>
+              <td>NX</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                <img
+                  height="80"
+                  width="80"
+                  class="img-fluid"
+                  style="aspect-ratio: 1"
+                  src="assets/img/product/CSIDOL004-003-L 1.png"
+                  alt=""
+                />
+              </td>
+              <td>SOLID IDOL</td>
+              <td>CSIDOL782-0002</td>
+              <td>92.5</td>
+              <td>85</td>
+              <td>1</td>
+              <td>85</td>
+              <td>NX</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>
+                <img
+                  height="80"
+                  width="80"
+                  class="img-fluid"
+                  style="aspect-ratio: 1"
+                  src="assets/img/product/CSIDOL004-003-L 1.png"
+                  alt=""
+                />
+              </td>
+              <td>SOLID IDOL</td>
+              <td>CSIDOL782-0002</td>
+              <td>92.5</td>
+              <td>85</td>
+              <td>1</td>
+              <td>85</td>
+              <td>NX</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>
+                <img
+                  height="80"
+                  width="80"
+                  class="img-fluid"
+                  style="aspect-ratio: 1"
+                  src="assets/img/product/CSIDOL004-003-L 1.png"
+                  alt=""
+                />
+              </td>
+              <td>SOLID IDOL</td>
+              <td>CSIDOL782-0002</td>
+              <td>92.5</td>
+              <td>85</td>
+              <td>1</td>
+              <td>85</td>
+              <td>NX</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>
+                <img
+                  height="80"
+                  width="80"
+                  class="img-fluid"
+                  style="aspect-ratio: 1"
+                  src="assets/img/product/CSIDOL004-003-L 1.png"
+                  alt=""
+                />
+              </td>
+              <td>SOLID IDOL</td>
+              <td>CSIDOL782-0002</td>
+              <td>92.5</td>
+              <td>85</td>
+              <td>1</td>
+              <td>85</td>
+              <td>NX</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>
+                <img
+                  height="80"
+                  width="80"
+                  class="img-fluid"
+                  style="aspect-ratio: 1"
+                  src="assets/img/product/CSIDOL004-003-L 1.png"
+                  alt=""
+                />
+              </td>
+              <td>SOLID IDOL</td>
+              <td>CSIDOL782-0002</td>
+              <td>92.5</td>
+              <td>85</td>
+              <td>1</td>
+              <td>85</td>
+              <td>NX</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>
+                <img
+                  height="80"
+                  width="80"
+                  class="img-fluid"
+                  style="aspect-ratio: 1"
+                  src="assets/img/product/CSIDOL004-003-L 1.png"
+                  alt=""
+                />
+              </td>
+              <td>SOLID IDOL</td>
+              <td>CSIDOL782-0002</td>
+              <td>92.5</td>
+              <td>85</td>
+              <td>1</td>
+              <td>85</td>
+              <td>NX</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>
+                <img
+                  height="80"
+                  width="80"
+                  class="img-fluid"
+                  style="aspect-ratio: 1"
+                  src="assets/img/product/CSIDOL004-003-L 1.png"
+                  alt=""
+                />
+              </td>
+              <td>SOLID IDOL</td>
+              <td>CSIDOL782-0002</td>
+              <td>92.5</td>
+              <td>85</td>
+              <td>1</td>
+              <td>85</td>
+              <td>NX</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>
+                <img
+                  height="80"
+                  width="80"
+                  class="img-fluid"
+                  style="aspect-ratio: 1"
+                  src="assets/img/product/CSIDOL004-003-L 1.png"
+                  alt=""
+                />
+              </td>
+              <td>SOLID IDOL</td>
+              <td>CSIDOL782-0002</td>
+              <td>92.5</td>
+              <td>85</td>
+              <td>1</td>
+              <td>85</td>
+              <td>NX</td>
+            </tr>
+          </tbody>
+          <tr>
+            <th class="border-0" colspan="6"></th>
+            <th style="background: #ccf0f0">
+              <span style="font-size: 12px">Total Quantity:</span>
+              <span>29</span>
+            </th>
+            <th style="background: #ccf0f0">
+              <span style="font-size: 12px">Total Weight:</span>
+              <span>2673</span>
+            </th>
+            <th class="border-0"></th>
+          </tr>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
